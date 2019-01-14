@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "localhost/wordpress/",
+    "proxy": "ala-wordpress-2019.pub.localhost",
     "notify": false
   },
   "browserSyncWatchFiles" : [
