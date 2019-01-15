@@ -10,7 +10,13 @@ const getCookie = (name) => {
   return false;
 };
 
+($ => {
+
 $(document).ready(($) => {
+
+  $('[data-toggle="offcanvas"]').on('click', function () {
+    $('.offcanvas-collapse').toggleClass('open')
+  });
 
   // Banners
   $('.swiper-container').each((index) => {
@@ -118,9 +124,13 @@ $(document).ready(($) => {
           window.location.reload();
         }
       },
-    });
+  });
 
     return false;
   });
 
+
+
 });
+
+})(jQuery);
