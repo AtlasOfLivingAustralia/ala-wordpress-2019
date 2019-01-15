@@ -10994,7 +10994,8 @@ a.skip-link {
                 transform: translate3d(-10px, -50%, 0); } }
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: .7rem 1rem; }
   .navbar.navbar-dark .navbar-nav .nav-link {
     color: #FFF; }
   .navbar .navbar-nav .nav-link {
@@ -11010,10 +11011,7 @@ a.skip-link {
       background-color: #f26649;
       -webkit-transition: all 300ms ease;
       transition: all 300ms ease; }
-    .navbar .navbar-nav .nav-link:hover:before {
-      left: 0;
-      width: 100%; }
-  .navbar .navbar-nav .current-menu-item > .nav-link:before, .navbar .navbar-nav .current-menu-parent > .nav-link:before {
+  .navbar .navbar-nav .menu-item:hover > .nav-link:before, .navbar .navbar-nav .current-menu-item > .nav-link:before, .navbar .navbar-nav .current-menu-parent > .nav-link:before {
     left: 0;
     width: 100%; }
   .navbar.navbar-expand-md .navbar-nav .nav-link {
@@ -11046,7 +11044,7 @@ a.skip-link {
     padding-left: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.4); }
     .top-bar .account .btn:first-child, .top-bar .account .wpcf7 input:first-child[type=submit], .wpcf7 .top-bar .account input:first-child[type=submit] {
-      margin-right: 5px; }
+      margin-right: 7px; }
 
 .main-nav-wrapper {
   display: -webkit-box;
@@ -11071,5 +11069,30 @@ a.skip-link {
   padding: 7px 0px; }
   .search-trigger i {
     font-size: 1rem; }
+
+@media (max-width: 1199.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    z-index: 10000;
+    top: 72px;
+    /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-duration: .3s;
+            transition-duration: .3s;
+    -webkit-transition-property: left, visibility;
+    transition-property: left, visibility;
+    display: block !important; }
+  .offcanvas-collapse.open {
+    left: 0;
+    visibility: visible; } }
 
 /*# sourceMappingURL=child-theme.css.map */

@@ -1,5 +1,6 @@
 .navbar {
   background-color: rgba(0,0,0,0.6);
+  padding: .7rem 1rem;
   &.navbar-dark {
     .navbar-nav{
       .nav-link {
@@ -21,14 +22,9 @@
         background-color: $primary;
         transition: all 300ms ease;
       }
-      &:hover {
-        &:before {
-          left: 0;
-          width: 100%;
-        }
-      }
     }
-    .current-menu-item, .current-menu-parent {
+
+    .menu-item:hover, .current-menu-item, .current-menu-parent {
       > .nav-link:before {
         left: 0;
         width: 100%;
@@ -67,7 +63,7 @@
     padding-left: 20px;
     border-left: 1px solid rgba(255,255,255,0.4);
     .btn:first-child {
-      margin-right: 5px;
+      margin-right: 7px;
     }
   }
 }
@@ -90,5 +86,29 @@
   padding: 7px 0px;
   i {
     font-size: 1rem;
+  }
+}
+
+@include media-breakpoint-down(lg){
+  .offcanvas-collapse {
+    position: fixed;
+    z-index: 10000;
+    top: 72px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    transition-property: left, visibility;
+    display: block !important;
+  }
+  .offcanvas-collapse.open {
+    left: 0;
+    visibility: visible;
   }
 }

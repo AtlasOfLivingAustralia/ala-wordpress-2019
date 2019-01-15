@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-        <nav class="navbar navbar-expand-md navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
 
             <?php if ( 'container' == $container ) : ?>
             <div class="container">
@@ -55,7 +55,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     the_custom_logo();
                 } ?><!-- end custom logo -->
                 <div class="outer-nav-wrapper">
-                    <div class="top-bar">
+                    <div class="top-bar d-none d-lg-flex">
                         <?php if ( $xp = get_experience_group() ) { ?>
                             <button type="button" class="experience-group-change"><?php echo $xp === 'null' ? 'Customise Your Experience' : 'Viewing as ' . $xp; ?></button>
                         <?php } ?>
@@ -67,7 +67,8 @@ $container = get_theme_mod( 'understrap_container_type' );
                     </div>
 
                     <div class="main-nav-wrapper">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+                        <a href="#" class="search-trigger order-1 order-lg-3" title="search"><img src="<?= get_stylesheet_directory_uri(); ?>/images/icons/search-light.svg" alt="Search" width="25px" />Search</a>
+                        <button class="navbar-toggler order-3 order-lg-2" type="button" data-toggle="offcanvas" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
@@ -83,7 +84,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <?php wp_nav_menu(
                             array(
                                 'theme_location'  => $menu_location,
-                                'container_class' => 'collapse navbar-collapse',
+                                'container_class' => 'collapse navbar-collapse offcanvas-collapse',
                                 'container_id'    => 'navbarNavDropdown',
                                 'menu_class'      => 'navbar-nav ml-auto',
                                 'fallback_cb'     => '',
@@ -92,7 +93,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                                 'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
                             )
                         ); ?>
-                        <a href="#" class="search-trigger" title="search"><img src="<?= get_stylesheet_directory_uri(); ?>/images/icons/search-light.svg" alt="Search" width="25px" />Search</a>
+
                     </div>
 
                 </div>
