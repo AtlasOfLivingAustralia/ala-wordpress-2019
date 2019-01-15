@@ -10996,6 +10996,11 @@ a.skip-link {
 .navbar {
   background-color: rgba(0, 0, 0, 0.6);
   padding: .7rem 1rem; }
+  @media (max-width: 991.98px) {
+    .navbar {
+      background-color: #FFF;
+      -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+              box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15); } }
   .navbar.navbar-dark .navbar-nav .nav-link {
     color: #FFF; }
   .navbar .navbar-nav .nav-link {
@@ -11074,10 +11079,16 @@ a.skip-link {
   font-size: 0;
   color: #FFF;
   padding: 7px 0px; }
-  .search-trigger i {
-    font-size: 1rem; }
+  .search-trigger svg path {
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease; }
+  @media (max-width: 991.98px) {
+    .search-trigger svg path {
+      fill: #212121; } }
+  .search-trigger:hover svg path {
+    fill: #f26649; }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
   .offcanvas-collapse {
     position: fixed;
     z-index: 10000;

@@ -1,6 +1,10 @@
 .navbar {
   background-color: rgba(0,0,0,0.6);
   padding: .7rem 1rem;
+  @include media-breakpoint-down(md){
+    background-color: #FFF;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+  }
   &.navbar-dark {
     .navbar-nav{
       .nav-link {
@@ -95,12 +99,22 @@
   font-size: 0;
   color: #FFF;
   padding: 7px 0px;
-  i {
-    font-size: 1rem;
+  svg path {
+    transition: all 150ms ease;
+  }
+  @include media-breakpoint-down(md) {
+    svg path {
+      fill: #212121;
+    }
+  }
+  &:hover {
+    svg path {
+      fill: $primary
+    }
   }
 }
 
-@include media-breakpoint-down(lg){
+@include media-breakpoint-down(md){
   .offcanvas-collapse {
     position: fixed;
     z-index: 10000;
