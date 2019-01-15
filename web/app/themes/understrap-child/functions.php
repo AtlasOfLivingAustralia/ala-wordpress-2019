@@ -156,3 +156,111 @@ function escape_experience_groups( $groups ) {
     return $groups;
 }
 add_filter( 'experience_groups', 'escape_experience_groups' );
+
+
+
+/**
+ * Add Mobile Logo option to customizer
+ */
+function mobile_logo_customizer_settings($wp_customize) {
+// add a setting for the site logo
+    $wp_customize->add_setting('mobile_logo');
+// Add a control to upload the logo
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mobile_logo',
+        array(
+            'label' => 'Mobile Logo',
+            'description' => 'This logo will be shown in the mobile header',
+            'section' => 'title_tagline',
+            'settings' => 'mobile_logo',
+            'priority'   => 9,
+        ) ) );
+}
+add_action('customize_register', 'mobile_logo_customizer_settings');
+
+/**
+ * Returns a custom logo + custom mobile logo, linked to home.
+ *
+ */
+function get_custom_logo_pvtl( $blog_id = 0 ) {
+    $html = '';
+    $switched_blog = false;
+
+    if ( is_multisite() && ! empty( $blog_id ) && (int) $blog_id !== get_current_blog_id() ) {
+        switch_to_blog( $blog_id );
+        $switched_blog = true;
+    }
+
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $mobile_logo_path = get_theme_mod( 'mobile_logo' );
+
+    if ($mobile_logo_path) {
+        $mobile_logo_id = attachment_url_to_postid($mobile_logo_path);
+    } else {
+        $mobile_logo_id = $custom_logo_id;
+    }
+
+
+    // We have a logo. Logo is go.
+    if ( $custom_logo_id ) {
+        $custom_logo_attr = array(
+            'class'    => 'custom-logo',
+            'itemprop' => 'logo',
+        );
+        $mobile_logo_attr = array(
+            'class'    => 'mobile-logo',
+            'itemprop' => 'logo',
+        );
+
+        /*
+     * If the logo alt attribute is empty, get the site title and explicitly
+     * pass it to the attributes used by wp_get_attachment_image().
+     */
+        $image_alt = get_post_meta( $custom_logo_id, '_wp_attachment_image_alt', true );
+        if ( empty( $image_alt ) ) {
+            $custom_logo_attr['alt'] = get_bloginfo( 'name', 'display' );
+        }
+
+        /*
+     * If the alt attribute is not empty, there's no need to explicitly pass
+     * it because wp_get_attachment_image() already adds the alt attribute.
+     */
+        $html = sprintf( '<a href="%1$s" class="custom-logo-link navbar-brand" rel="home" itemprop="url">%2$s %3$s</a>',
+            esc_url( home_url( '/' ) ),
+            wp_get_attachment_image( $custom_logo_id, 'full', false, $custom_logo_attr ),
+            wp_get_attachment_image( $mobile_logo_id, 'full', false, $mobile_logo_attr )
+        );
+    }
+
+    // If no logo is set but we're in the Customizer, leave a placeholder (needed for the live preview).
+    elseif ( is_customize_preview() ) {
+        $html = sprintf( '<a href="%1$s" class="custom-logo-link navbar-brand" style="display:none;"><img class="custom-logo"/></a>',
+            esc_url( home_url( '/' ) )
+        );
+    }
+
+    if ( $switched_blog ) {
+        restore_current_blog();
+    }
+
+    /**
+     * Filters the custom logo output.
+     *
+     * @since 4.5.0
+     * @since 4.6.0 Added the `$blog_id` parameter.
+     *
+     * @param string $html    Custom logo HTML output.
+     * @param int    $blog_id ID of the blog to get the custom logo for.
+     */
+    return apply_filters( 'get_custom_logo_pvtl', $html, $blog_id );
+}
+
+/**
+ * Displays a custom logo, linked to home.
+ *
+ * @since 4.5.0
+ *
+ * @param int $blog_id Optional. ID of the blog in question. Default is the ID of the current blog.
+ */
+function the_custom_logo_pvtl( $blog_id = 0 ) {
+    echo get_custom_logo_pvtl( $blog_id );
+}

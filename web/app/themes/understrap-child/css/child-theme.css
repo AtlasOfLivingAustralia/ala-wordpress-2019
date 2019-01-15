@@ -11025,6 +11025,13 @@ a.skip-link {
   .navbar-brand img {
     max-height: 100%;
     width: auto; }
+    .navbar-brand img.mobile-logo {
+      display: none; }
+    @media (max-width: 991.98px) {
+      .navbar-brand img.mobile-logo {
+        display: block; }
+      .navbar-brand img.custom-logo {
+        display: none; } }
 
 .top-bar {
   display: -webkit-box;

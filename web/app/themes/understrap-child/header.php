@@ -52,7 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
                 <?php } else {
-                    the_custom_logo();
+                    the_custom_logo_pvtl();
                 } ?><!-- end custom logo -->
                 <div class="outer-nav-wrapper">
                     <div class="top-bar d-none d-lg-flex">

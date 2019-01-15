@@ -48,6 +48,17 @@
   img {
     max-height: 100%;
     width: auto;
+    &.mobile-logo {
+      display: none;
+    }
+    @include media-breakpoint-down(md){
+      &.mobile-logo {
+        display: block;
+      }
+      &.custom-logo {
+        display: none;
+      }
+    }
   }
 }
 
