@@ -1,0 +1,94 @@
+.navbar {
+  background-color: rgba(0,0,0,0.6);
+  &.navbar-dark {
+    .navbar-nav{
+      .nav-link {
+        color: #FFF;
+      }
+    }
+  }
+  .navbar-nav{
+    .nav-link {
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: $primary;
+        transition: all 300ms ease;
+      }
+      &:hover {
+        &:before {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+    .current-menu-item, .current-menu-parent {
+      > .nav-link:before {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+  &.navbar-expand-md {
+    .navbar-nav {
+      .nav-link {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: .5rem;
+        margin-right: .5rem;
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  height: 50px;
+  img {
+    max-height: 100%;
+    width: auto;
+  }
+}
+
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  .btn-link {
+    color: #FFF;
+  }
+  .account {
+    padding-left: 20px;
+    border-left: 1px solid rgba(255,255,255,0.4);
+    .btn:first-child {
+      margin-right: 5px;
+    }
+  }
+}
+
+.main-nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#navbarNavDropdown {
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid rgba(255,255,255,0.4);
+}
+
+.search-trigger {
+  font-size: 0;
+  color: #FFF;
+  padding: 7px 0px;
+  i {
+    font-size: 1rem;
+  }
+}
