@@ -231,9 +231,9 @@
             "placeholder": "https:\/\/twitter.com\/company"
         },
         {
-            "key": "field_5b90c814d7263",
-            "label": "Google+ Page",
-            "name": "google_page",
+            "key": "field_5b90c884d7266",
+            "label": "Youtube Page",
+            "name": "youtube_page",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -244,23 +244,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "https:\/\/plus.google.com\/company"
-        },
-        {
-            "key": "field_5b90c836d7264",
-            "label": "Snapchat Page",
-            "name": "snapchat_page",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "https:\/\/snapchat.com\/add\/company"
+            "placeholder": "https:\/\/youtube.com\/company"
         },
         {
             "key": "field_5b90c86bd7265",
@@ -279,9 +263,9 @@
             "placeholder": "https:\/\/linkedin.com\/company"
         },
         {
-            "key": "field_5b90c884d7266",
-            "label": "Youtube Page",
-            "name": "youtube_page",
+            "key": "field_5b90c836d7264",
+            "label": "Snapchat Page",
+            "name": "snapchat_page",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -292,7 +276,23 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "https:\/\/youtube.com\/company"
+            "placeholder": "https:\/\/snapchat.com\/add\/company"
+        },
+        {
+            "key": "field_5b90c814d7263",
+            "label": "Pinterest Page",
+            "name": "pinterest_page",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/www.pinterest.com.au\/company"
         },
         {
             "key": "field_5c1adde6ede3f",
@@ -425,5 +425,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1545285726
+    "modified": 1547604382
 }

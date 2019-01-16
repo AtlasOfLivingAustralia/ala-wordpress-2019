@@ -1,0 +1,32 @@
+.footer-top {
+  background: $c-text;
+  color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .custom-logo {
+    max-width: 290px;
+  }
+  .account {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    .btn {
+      margin-right: 10px;
+      font-size: 12px;
+    }
+    .social {
+      margin: 0 0 0 5px;
+      li {
+        margin: 0;
+      }
+      a {
+        color: #FFF;
+        padding: 5px 8px;
+        display: inline-block;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
