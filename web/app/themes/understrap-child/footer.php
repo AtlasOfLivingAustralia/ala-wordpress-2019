@@ -80,10 +80,11 @@ $custom_logo_attr = array(
     <div class="footer-bottom">
         <div class="<?php echo esc_attr( $container ); ?>">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="site-info">
-                        <?php understrap_site_info(); ?>
-                    </div><!-- .site-info -->
+                <div class="col-md-6 content-column">
+                    <?= get_field('content_left', 'option'); ?>
+                </div><!--col end -->
+                <div class="col-md-6 content-column">
+                    <?= get_field('content_right', 'option'); ?>
                 </div><!--col end -->
             </div><!-- row end -->
         </div><!-- container end -->
@@ -92,10 +93,17 @@ $custom_logo_attr = array(
     <div class="footer-copyright">
         <div class="<?php echo esc_attr( $container ); ?>">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="site-info">
-                        <?php understrap_site_info(); ?>
-                    </div><!-- .site-info -->
+                <div class="col-md-12 col-lg-7">
+                    <p class="alert-text text-creativecommons">
+                        This work is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/au/">Creative Commons Attribution 3.0 Australia License</a> <a rel="license" href="http://creativecommons.org/licenses/by/3.0/au/"><img alt="Creative Commons License" style="border-width:0" src="https://www.ala.org.au/wp-content/themes/ala-wordpress-theme/img/cc-by.png"></a>
+                    </p>
+                </div><!--col end -->
+                <div class="col-md-12 col-lg-5 text-lg-right">
+                    <ul class="menu horizontal">
+                        <li><a title="copyright" href="/copyright">Copyright</a></li>
+                        <li><a title="Terms of Use" href="/terms">Terms of Use</a></li>
+                        <li><a title="System Status" href="/status">System Status</a></li>
+                    </ul>
                 </div><!--col end -->
             </div><!-- row end -->
         </div><!-- container end -->

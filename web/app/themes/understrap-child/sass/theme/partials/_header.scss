@@ -23,6 +23,7 @@
   .navbar-nav{
     .nav-link {
       position: relative;
+      text-decoration: none;
       &:before {
         content: '';
         display: block;
@@ -34,6 +35,9 @@
         background-color: $primary;
         transition: all 300ms ease;
       }
+    }
+    .dropdown-item {
+      text-decoration: none;
     }
 
     .menu-item:hover, .current-menu-item, .current-menu-parent {

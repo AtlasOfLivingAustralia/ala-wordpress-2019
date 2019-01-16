@@ -33,7 +33,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: "Roboto", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -58,8 +58,8 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212121;
@@ -143,7 +143,7 @@ sup {
 
 a {
   color: #f26649;
-  text-decoration: none;
+  text-decoration: underline;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
@@ -306,31 +306,31 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
   line-height: 1.2;
   color: inherit; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 2.1875rem; }
 
 h2, .h2 {
-  font-size: 2rem; }
-
-h3, .h3 {
   font-size: 1.75rem; }
 
+h3, .h3 {
+  font-size: 1.53125rem; }
+
 h4, .h4 {
-  font-size: 1.5rem; }
+  font-size: 1.12437rem; }
 
 h5, .h5 {
-  font-size: 1.25rem; }
+  font-size: 0.9625rem; }
 
 h6, .h6 {
-  font-size: 1rem; }
+  font-size: 0.875rem; }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   font-weight: 300; }
 
 .display-1 {
@@ -388,7 +388,7 @@ mark,
 
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1.25rem; }
+  font-size: 1.09375rem; }
 
 .blockquote-footer {
   display: block;
@@ -1582,9 +1582,9 @@ pre {
 .wpcf7 textarea, .wpcf7 .wpcf7-validation-errors {
   display: block;
   width: 100%;
-  height: calc(2.25rem + 2px);
+  height: calc(2.0625rem + 2px);
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
@@ -1778,13 +1778,13 @@ select.form-control:focus::-ms-value,
 .col-form-label-lg {
   padding-top: calc(0.5rem + 1px);
   padding-bottom: calc(0.5rem + 1px);
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: 1.5; }
 
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
   padding-bottom: calc(0.25rem + 1px);
-  font-size: 0.875rem;
+  font-size: 0.76562rem;
   line-height: 1.5; }
 
 .form-control-plaintext {
@@ -1803,16 +1803,16 @@ select.form-control:focus::-ms-value,
     padding-left: 0; }
 
 .form-control-sm {
-  height: calc(1.8125rem + 2px);
+  height: calc(1.64844rem + 2px);
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.76562rem;
   line-height: 1.5;
   border-radius: 0; }
 
 .form-control-lg {
-  height: calc(2.875rem + 2px);
+  height: calc(2.64062rem + 2px);
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: 1.5;
   border-radius: 0; }
 
@@ -1890,7 +1890,7 @@ textarea.form-control,
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.875rem;
+  font-size: 0.76562rem;
   line-height: 1.5;
   color: #212121;
   background-color: rgba(40, 167, 69, 0.9);
@@ -2100,7 +2100,7 @@ textarea.form-control,
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.875rem;
+  font-size: 0.76562rem;
   line-height: 1.5;
   color: #fff;
   background-color: rgba(220, 53, 69, 0.9);
@@ -2401,7 +2401,7 @@ textarea.form-control,
           user-select: none;
   border: 1px solid transparent;
   padding: 5px 30px;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -2907,14 +2907,14 @@ fieldset:disabled a.btn {
 .btn-lg, .btn-group-lg > .btn,
 .wpcf7 .btn-group-lg > input[type=submit] {
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: 1.5;
   border-radius: 0; }
 
 .btn-sm, .btn-group-sm > .btn,
 .wpcf7 .btn-group-sm > input[type=submit] {
   padding: 4px 18px;
-  font-size: 0.875rem;
+  font-size: 0.76562rem;
   line-height: 20px;
   border-radius: 0; }
 
@@ -2984,7 +2984,7 @@ input[type="button"].btn-block {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #212121;
   text-align: left;
   list-style: none;
@@ -3118,7 +3118,7 @@ input[type="button"].btn-block {
   display: block;
   padding: 0.5rem 1.5rem;
   margin-bottom: 0;
-  font-size: 0.875rem;
+  font-size: 0.76562rem;
   color: #6c757d;
   white-space: nowrap; }
 
@@ -3873,7 +3873,7 @@ input[type="button"].btn-block {
           align-items: center;
   padding: 0.375rem 0.75rem;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
@@ -3910,9 +3910,9 @@ input[type="button"].btn-block {
 .wpcf7 .input-group-lg > .input-group-prepend > input[type=submit],
 .input-group-lg > .input-group-append > .btn,
 .wpcf7 .input-group-lg > .input-group-append > input[type=submit] {
-  height: calc(2.875rem + 2px);
+  height: calc(2.64062rem + 2px);
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: 1.5;
   border-radius: 0; }
 
@@ -3940,9 +3940,9 @@ input[type="button"].btn-block {
 .wpcf7 .input-group-sm > .input-group-prepend > input[type=submit],
 .input-group-sm > .input-group-append > .btn,
 .wpcf7 .input-group-sm > .input-group-append > input[type=submit] {
-  height: calc(1.8125rem + 2px);
+  height: calc(1.64844rem + 2px);
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.76562rem;
   line-height: 1.5;
   border-radius: 0; }
 
@@ -3973,7 +3973,7 @@ input[type="button"].btn-block {
 .custom-control {
   position: relative;
   display: block;
-  min-height: 1.5rem;
+  min-height: 1.3125rem;
   padding-left: 1.5rem; }
 
 .custom-control-inline {
@@ -4005,7 +4005,7 @@ input[type="button"].btn-block {
   margin-bottom: 0; }
   .custom-control-label::before {
     position: absolute;
-    top: 0.25rem;
+    top: 0.15625rem;
     left: -1.5rem;
     display: block;
     width: 1rem;
@@ -4019,7 +4019,7 @@ input[type="button"].btn-block {
     background-color: #dee2e6; }
   .custom-control-label::after {
     position: absolute;
-    top: 0.25rem;
+    top: 0.15625rem;
     left: -1.5rem;
     display: block;
     width: 1rem;
@@ -4065,7 +4065,7 @@ input[type="button"].btn-block {
 .custom-select {
   display: inline-block;
   width: 100%;
-  height: calc(2.25rem + 2px);
+  height: calc(2.0625rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
   line-height: 1.5;
   color: #495057;
@@ -4096,13 +4096,13 @@ input[type="button"].btn-block {
     opacity: 0; }
 
 .custom-select-sm {
-  height: calc(1.8125rem + 2px);
+  height: calc(1.64844rem + 2px);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-size: 75%; }
 
 .custom-select-lg {
-  height: calc(2.875rem + 2px);
+  height: calc(2.64062rem + 2px);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-size: 125%; }
@@ -4111,14 +4111,14 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: calc(2.25rem + 2px);
+  height: calc(2.0625rem + 2px);
   margin-bottom: 0; }
 
 .custom-file-input {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: calc(2.25rem + 2px);
+  height: calc(2.0625rem + 2px);
   margin: 0;
   opacity: 0; }
   .custom-file-input:focus ~ .custom-file-label {
@@ -4138,7 +4138,7 @@ input[type="button"].btn-block {
   right: 0;
   left: 0;
   z-index: 1;
-  height: calc(2.25rem + 2px);
+  height: calc(2.0625rem + 2px);
   padding: 0.375rem 0.75rem;
   line-height: 1.5;
   color: #495057;
@@ -4152,7 +4152,7 @@ input[type="button"].btn-block {
     bottom: 0;
     z-index: 3;
     display: block;
-    height: 2.25rem;
+    height: 2.0625rem;
     padding: 0.375rem 0.75rem;
     line-height: 1.5;
     color: #495057;
@@ -4382,10 +4382,10 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: 0.33594rem;
+  padding-bottom: 0.33594rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: inherit;
   white-space: nowrap; }
   .navbar-brand:hover, .navbar-brand:focus {
@@ -4426,7 +4426,7 @@ input[type="button"].btn-block {
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
@@ -5000,7 +5000,7 @@ input[type="button"].btn-block {
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.09375rem;
   line-height: 1.5; }
 
 .pagination-lg .page-item:first-child .page-link {
@@ -5013,7 +5013,7 @@ input[type="button"].btn-block {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.76562rem;
   line-height: 1.5; }
 
 .pagination-sm .page-item:first-child .page-link {
@@ -5146,7 +5146,7 @@ input[type="button"].btn-block {
   font-weight: 700; }
 
 .alert-dismissible {
-  padding-right: 4rem; }
+  padding-right: 3.8125rem; }
   .alert-dismissible .close {
     position: absolute;
     top: 0;
@@ -5253,7 +5253,7 @@ input[type="button"].btn-block {
   display: flex;
   height: 1rem;
   overflow: hidden;
-  font-size: 0.75rem;
+  font-size: 0.65625rem;
   background-color: #e5e5e5;
   border-radius: 0; }
 
@@ -5461,7 +5461,7 @@ input[type="button"].btn-block {
 
 .close {
   float: right;
-  font-size: 1.5rem;
+  font-size: 1.3125rem;
   font-weight: 700;
   line-height: 1;
   color: #000;
@@ -5633,7 +5633,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5647,7 +5647,7 @@ button.close {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.76562rem;
   word-wrap: break-word;
   opacity: 0; }
   .tooltip.show {
@@ -5718,7 +5718,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5732,7 +5732,7 @@ button.close {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.76562rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
@@ -5837,7 +5837,7 @@ button.close {
 .popover-header {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: inherit;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
@@ -10889,6 +10889,17 @@ body {
     margin: 5px;
     display: inline-block;
     line-height: 1; }
+
+.btn,
+.wpcf7 input[type=submit] {
+  text-decoration: none; }
+
+ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  ul.menu.horizontal li {
+    display: inline-block; }
 
 /*!
  * Font Awesome Pro 5.5.0 by @fontawesome - https://fontawesome.com
@@ -16627,7 +16638,8 @@ readers do not read off random characters that represent icons */
   .navbar.navbar-dark .navbar-nav .nav-link {
     color: #FFF; }
   .navbar .navbar-nav .nav-link {
-    position: relative; }
+    position: relative;
+    text-decoration: none; }
     .navbar .navbar-nav .nav-link:before {
       content: '';
       display: block;
@@ -16639,6 +16651,8 @@ readers do not read off random characters that represent icons */
       background-color: #f26649;
       -webkit-transition: all 300ms ease;
       transition: all 300ms ease; }
+  .navbar .navbar-nav .dropdown-item {
+    text-decoration: none; }
   .navbar .navbar-nav .menu-item:hover > .nav-link:before, .navbar .navbar-nav .current-menu-item > .nav-link:before, .navbar .navbar-nav .current-menu-parent > .nav-link:before {
     left: 0;
     width: 100%; }
@@ -16817,8 +16831,10 @@ readers do not read off random characters that represent icons */
   .footer-top .image {
     min-width: 50px;
     margin-right: 15px; }
-  .footer-top .content *:last-child {
-    margin-bottom: 0; }
+  .footer-top .content {
+    font-size: 1rem; }
+    .footer-top .content *:last-child {
+      margin-bottom: 0; }
   @media (max-width: 991.98px) {
     .footer-top .logo-column {
       text-align: center;
@@ -16827,8 +16843,38 @@ readers do not read off random characters that represent icons */
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center; } }
-  @media (max-width: 767.98px) {
-    .footer-top .content-column:not(:last-child) {
-      padding-bottom: 30px; } }
+
+@media (max-width: 767.98px) {
+  .site-footer .content-column:not(:last-child) {
+    padding-bottom: 30px; } }
+
+.footer-bottom {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #565656; }
+  .footer-bottom img {
+    margin-top: 20px; }
+
+.footer-copyright {
+  background-color: #f26649;
+  color: #FFF;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  .footer-copyright p {
+    margin: 0; }
+  .footer-copyright a {
+    color: #FFF;
+    -webkit-transition: color 150ms ease;
+    transition: color 150ms ease; }
+    .footer-copyright a:hover {
+      color: #212121; }
+  .footer-copyright .menu li:not(:last-child) {
+    margin-right: 30px; }
+  @media (max-width: 991.98px) {
+    .footer-copyright .menu {
+      margin-top: 15px; } }
+  @media (max-width: 575.98px) {
+    .footer-copyright .menu li:not(:last-child) {
+      margin-right: 20px; } }
 
 /*# sourceMappingURL=child-theme.css.map */
