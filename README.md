@@ -16,11 +16,9 @@ cp .env.example .env
 
 Once imported: scrub any sensitive data (eg. customer info, credit card tokens etc).
 
-#### 4. Install dependencies (composer, npm)
+#### 4. Install dependencies (composer)
 ```bash
 composer install --ignore-platform-reqs
-( cd web/app/themes/pvtl ; yarn )
-( cd web/app/themes/pvtl ; yarn production )
 ```
 
 ---
