@@ -16,9 +16,10 @@ cp .env.example .env
 
 Once imported: scrub any sensitive data (eg. customer info, credit card tokens etc).
 
-#### 4. Install dependencies (composer)
+#### 4. Install dependencies (composer, npm)
 ```bash
 composer install --ignore-platform-reqs
+( cd web/app/themes/understrap-child; yarn )
 ```
 
 ---
@@ -36,13 +37,9 @@ Working in the [Pivotal Docker Dev environment](https://github.com/pvtl/docker-d
 
 ## Developing With NPM, Gulp, SASS and Browser Sync
 
-### Installing Dependencies
-- Make sure you have installed Node.js, Gulp, and Browser-Sync [1] on your computer globally
-- Open your terminal and browse to the location of your UnderStrap copy
-- Run: `$ npm install` then: `$ gulp copy-assets`
-
 ### Running
-To work and compile your Sass files on the fly start:
+
+From the `understrap-child` theme directory: to work and compile your Sass files on the fly start:
 
 - `$ gulp watch`
 
