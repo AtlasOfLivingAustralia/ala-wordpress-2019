@@ -16814,5 +16814,21 @@ readers do not read off random characters that represent icons */
         display: inline-block; }
         .footer-top .account .social a:hover {
           color: #f26649; }
+  .footer-top .image {
+    min-width: 50px;
+    margin-right: 15px; }
+  .footer-top .content *:last-child {
+    margin-bottom: 0; }
+  @media (max-width: 991.98px) {
+    .footer-top .logo-column {
+      text-align: center;
+      padding-bottom: 30px; }
+      .footer-top .logo-column .account {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+  @media (max-width: 767.98px) {
+    .footer-top .content-column:not(:last-child) {
+      padding-bottom: 30px; } }
 
 /*# sourceMappingURL=child-theme.css.map */
