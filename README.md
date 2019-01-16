@@ -76,3 +76,23 @@ Simply update the plugin's version number (to the desired version) in `composer.
 ### Removing
 
 Simply run `composer remove wpackagist-plugin/plugin-name`
+
+---
+
+### Gutenburg (w/ ACF) Blocks
+
+#### Basics
+
+- All blocks must __reside in__ `/template-parts/blocks`
+- Blocks are a (PHP) Class __made up of__:
+    - Config (eg. it's name, icon for backend, description etc)
+    - A render method, which outputs HTML on the front-end (and a basic layout in the Gutenburg editor)
+- Blocks are __automatically registered__, based on the fact that they live in the blocks directory and contain what they need to (i.e. config, render method) in the correct format
+- A Block gets __fields__ from the ACF Pro plugin. After registering a plugin (by simply creating a correctly formatted block file), you must then create a new ACF Field Group, add the fields you need and assign that field group to the Block registered
+
+#### Requirements
+
+- Blocks are built with ACF Pro, so require the ACF Pro plugin v5.8.0+ (installed and activated)
+- Block file names (and Gutenburg blocks) must ONLY start with a letter (eg. NOT a number)
+- Your Block's Class name and file name must match (file name in dash-case and class name in CamelCase)
+    - eg. a filename of `hero-banner.php` must have the class name of `HeroBanner`

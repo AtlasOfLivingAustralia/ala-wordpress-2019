@@ -33,11 +33,6 @@ function add_child_theme_textdomain() {
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
-
-
-
-
-
 function setup_nav_menus() {
 
     unregister_nav_menu('primary');
@@ -199,7 +194,6 @@ function get_custom_logo_pvtl( $blog_id = 0 ) {
         $mobile_logo_id = $custom_logo_id;
     }
 
-
     // We have a logo. Logo is go.
     if ( $custom_logo_id ) {
         $custom_logo_attr = array(
@@ -264,3 +258,10 @@ function get_custom_logo_pvtl( $blog_id = 0 ) {
 function the_custom_logo_pvtl( $blog_id = 0 ) {
     echo get_custom_logo_pvtl( $blog_id );
 }
+
+
+/** Register each of the blocks */
+require_once( 'library/register-blocks.php' );
+
+/** Adds custom admin styles */
+require_once( 'library/custom-admin-styles.php' );
