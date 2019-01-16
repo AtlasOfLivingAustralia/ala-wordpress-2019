@@ -4,6 +4,14 @@
   @include media-breakpoint-down(md){
     background-color: #FFF;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+    > .container {
+      flex-wrap: nowrap;
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+      }
+    }
   }
   &.navbar-dark {
     .navbar-nav{
@@ -42,6 +50,48 @@
         padding-right: 0;
         margin-left: .5rem;
         margin-right: .5rem;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    color: $c-text;
+    border: none;
+    padding: 0;
+    margin: .25rem .5rem;
+    .navbar-toggler-icon {
+      background: $c-text;
+      height: 1px;
+      margin: 14px 0;
+      position: relative;
+      transition: all 600ms ease;
+      &:before, &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: inherit;
+        background-color: $c-text;
+        position: absolute;
+        left: 0;
+        transition: inherit;
+        transform: rotate(0);
+      }
+      &:before {
+        top: -10px;
+      }
+      &:after {
+        bottom: -10px;
+      }
+      .offcanvas-open & {
+        background: transparent;
+        &:before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+        &:after {
+          bottom: 0;
+          transform: rotate(-45deg);
+        }
       }
     }
   }
@@ -95,10 +145,10 @@
   border-right: 1px solid rgba(255,255,255,0.4);
 }
 
-.search-trigger {
+.search-trigger, .account-mobile {
   font-size: 0;
   color: #FFF;
-  padding: 7px 0px;
+  margin: .25rem .5rem;
   svg path {
     transition: all 150ms ease;
   }
@@ -115,25 +165,38 @@
 }
 
 @include media-breakpoint-down(md){
+  .site {
+    position: relative;
+    right: 0;
+    width: 100%;
+    transition: right 400ms ease;
+    &.offcanvas-open {
+      right: 300px;
+      overflow: hidden;
+      position: fixed;
+    }
+  }
+
   .offcanvas-collapse {
     position: fixed;
     z-index: 10000;
-    top: 72px; /* Height of navbar */
+    top: 0; /* Height of navbar */
     bottom: 0;
-    left: 100%;
-    width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    right: -300px;
+    width: 300px;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
     overflow-y: auto;
     visibility: hidden;
     background-color: #343a40;
-    transition-timing-function: ease-in-out;
-    transition-duration: .3s;
-    transition-property: left, visibility;
+    transition-timing-function: ease;
+    transition-duration: 400ms;
+    transition-property: right, visibility;
     display: block !important;
-  }
-  .offcanvas-collapse.open {
-    left: 0;
-    visibility: visible;
+    margin: 0 !important;
+    .offcanvas-open & {
+      right: 0;
+      visibility: visible;
+    }
   }
 }

@@ -1,4 +1,4 @@
-<div class="reveal experience-modal" id="experience-modal" data-animation-in="fade-in fast" data-close-on-click="false">
+<div class="reveal experience-modal" id="experience-modal" data-animation-in="fade-in fast" data-close-on-click="false" style="display: none;">
     <?php
 
     the_field( 'experience_content', 'option' );

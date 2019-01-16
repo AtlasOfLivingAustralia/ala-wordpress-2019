@@ -15,7 +15,7 @@ const getCookie = (name) => {
 $(document).ready(($) => {
 
   $('[data-toggle="offcanvas"]').on('click', function () {
-    $('.offcanvas-collapse').toggleClass('open')
+    $('.site').toggleClass('offcanvas-open')
   });
 
   // Banners
