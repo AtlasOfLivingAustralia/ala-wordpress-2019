@@ -60,6 +60,35 @@ function setup_nav_menus() {
 }
 add_action( 'init', 'setup_nav_menus' );
 
+
+/**
+ * Sets up theme Image sizes and registers support for featured images.
+ *
+ * @since 1.0
+ */
+function image_setup()
+{
+    add_theme_support('post-thumbnails', array('post', 'page'));
+
+    /**
+     * All these images are set to 1px larger than what is required for the location they are uploaded into.
+     * ACF then limits their size to 1420, 768, and 400 width respectively.
+     * This is so that Wordpress won't resize them and break the GIF functionality.
+     * Technically we could delete all of these sizes now and just return the 'full' image.
+     * Will look at this post launch.
+     */
+
+    //Full Width Image - max-width is 1420px and height is automatic depending on the image ratio
+    add_image_size('full-width-auto-height', 1920 );
+
+    //Half Width Image
+    add_image_size('half-width-auto-height', 768 );
+
+}
+
+add_action('after_setup_theme', 'image_setup');
+
+
 //Custom menu walker to add title attributes by default.
 //This is used for the footer menus.
 class pvtl_title_attr_walker extends Walker_Nav_Menu
