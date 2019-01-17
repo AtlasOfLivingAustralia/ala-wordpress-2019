@@ -40,6 +40,10 @@ function setup_nav_menus() {
 
     $menus = array(
         'mobile-nav' => esc_html__( 'Mobile', 'understrap' ),
+        'footer-1'  => esc_html__( 'Footer 1 (Double Width)', 'understrap' ),
+        'footer-2'  => esc_html__( 'Footer 2 (Single Column)', 'understrap' ),
+        'footer-3'  => esc_html__( 'Footer 3 (Single Column)', 'understrap' ),
+        'footer-4'  => esc_html__( 'Footer 4 (Horizontal)', 'understrap' ),
         'primary'  => esc_html__( 'User Group - All', 'understrap' ),
     );
 
@@ -55,6 +59,40 @@ function setup_nav_menus() {
     register_nav_menus( $menus );
 }
 add_action( 'init', 'setup_nav_menus' );
+
+//Custom menu walker to add title attributes by default.
+//This is used for the footer menus.
+class pvtl_title_attr_walker extends Walker_Nav_Menu
+{
+    function start_el(&$output, $item, $depth = 0, $args = Array(), $id = 0)
+    {
+        global $wp_query;
+        $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+
+        $class_names = $value = '';
+
+        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+
+        $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
+        $class_names = ' class="'. esc_attr( $class_names ) . '"';
+
+        $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+
+        $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : ' title="'  . esc_attr( $item->title ) .'"';
+        $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+        $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+        $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+
+        $item_output = $args->before;
+        $item_output .= '<a'. $attributes .'>';
+        $item_output .= $args->link_before .apply_filters( 'the_title', $item->title, $item->ID );
+        $item_output .= $args->link_after;
+        $item_output .= '</a>';
+        $item_output .= $args->after;
+
+        $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+    }
+}
 
 /**
  * Create Admin Pages for ACF fields
@@ -259,6 +297,9 @@ function get_custom_logo_pvtl( $blog_id = 0 ) {
 function the_custom_logo_pvtl( $blog_id = 0 ) {
     echo get_custom_logo_pvtl( $blog_id );
 }
+
+
+
 
 
 /** Register each of the blocks */

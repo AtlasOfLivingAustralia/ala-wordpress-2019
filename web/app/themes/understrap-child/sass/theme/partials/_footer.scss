@@ -50,6 +50,85 @@
   }
 }
 
+.footer-middle {
+  background-color: $gray-100;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-menu {
+  .menu {
+    margin-bottom: 30px;
+    //Top Level Items
+    > .menu-item {
+      > a {
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        font-size: 18px;
+        display: block;
+        border-bottom: 1px solid $primary;
+        text-decoration: none;
+        margin-bottom: 15px;
+      }
+    }
+    //Second  Level Items
+    .sub-menu {
+      list-style: none;
+      padding: 0;
+      a {
+        color: $c-text;
+        text-decoration: none;
+        margin-bottom: 4px;
+        display: inline-block;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    // 2 Column Menu
+    &.menu-2-col {
+      .sub-menu {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          flex-basis: 50%;
+          padding-right: 10px;
+        }
+        @include media-breakpoint-down(md) {
+          li {
+            flex-basis: 100%;
+          }
+        }
+        @include media-breakpoint-down(sm) {
+          li {
+            flex-basis: 50%;
+          }
+        }
+        @include media-breakpoint-down(xs) {
+          li {
+            flex-basis: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-menu-horizontal {
+  .menu.horizontal {
+    > li {
+      margin-right: 20px;
+    }
+    a {
+      color: $c-text;
+      font-weight: 500;
+      font-size: 1rem;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+  }
+}
+
 .site-footer {
   @include media-breakpoint-down(sm) {
     .content-column:not(:last-child) {
