@@ -15,37 +15,43 @@ const getCookie = (name) => {
 $(document).ready(($) => {
 
   $('[data-toggle="offcanvas"]').on('click', function () {
-    $('.site').toggleClass('offcanvas-open')
+    $('.site').toggleClass('offcanvas-open');
   });
 
-  // Banners
-  $('.swiper-container').each((index) => {
-    $(this).addClass(`swiper-${index}`);
 
-    new Swiper(`swiper-${index}`, {
+  // Hero Banner
+  $('.swiper-container').each((index, el) => {
+    $(el).addClass(`swiper-${index}`);
+
+    new Swiper(`.swiper-${index}`, {
       loop: true,
       slidesPerView: 1,
       spaceBetween: 0,
       speed: 1000,
-      autoplay: 5000,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
       preventClicks: false,
-      effect: 'slide',
+      effect: 'fade',
       preloadImages: false,
       lazy: {
         loadPrevNext: true,
       },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+      navigation: false,
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true,
       },
     });
+
+    const swiper = new Swiper;
+
+    console.log(swiper);
   });
 
+  /**
   // Get user experience group cookie.
   const experience = getCookie('experience');
   const experienceModal = $('#experience-modal');
@@ -129,7 +135,7 @@ $(document).ready(($) => {
     return false;
   });
 
-
+**/
 
 });
 

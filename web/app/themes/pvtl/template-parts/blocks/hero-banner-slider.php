@@ -25,7 +25,7 @@ class HeroBannerSlider extends RegisterBlocks
                     <div class="swiper-lazy-preloader"></div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-xs-12">
+                            <div class="col-md-12">
                                 <div class="authorship">
                                     <?php if($description): ?>
                                         <p class="description"><?=$description?></p>

@@ -1,3 +1,11 @@
+@include media-breakpoint-up(lg) {
+  #wrapper-navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+
 .navbar {
   background-color: rgba(0,0,0,0.6);
   padding: .7rem 1rem;
@@ -63,6 +71,7 @@
     border: none;
     padding: 0;
     margin: .25rem .5rem;
+    -webkit-appearance: none;
     .navbar-toggler-icon {
       background: $c-text;
       height: 1px;
@@ -153,6 +162,7 @@
   font-size: 0;
   color: #FFF;
   margin: .25rem .5rem;
+  padding: 2px 0;
   svg path {
     transition: all 150ms ease;
   }
