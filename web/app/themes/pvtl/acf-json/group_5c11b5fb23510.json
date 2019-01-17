@@ -71,7 +71,7 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "preview_size": "thumbnail",
+                    "preview_size": "medium",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -104,7 +104,7 @@
                     "key": "field_5a5ed1294ca18",
                     "label": "Image Description",
                     "name": "image_description",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -115,9 +115,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": ""
                 }
             ]
         }
@@ -139,5 +139,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1547695788
+    "modified": 1547698052
 }
