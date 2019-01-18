@@ -16,6 +16,11 @@ function pvtl_admin_theme_styles()
             border-left: 1px solid #eeeeee !important;
         }
 
+        /* Adds a class we can use in ACF to have WYSIWYG editors that aren't so huge */
+        .tiniest-mce iframe {
+            height: 200px !important;
+        }
+
         /* We hopefully won't need this long term */
         .acf-fields>.acf-tab-wrap:first-child .acf-tab-group { padding: 5px 5px 0 5px; }
     </style>

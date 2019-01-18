@@ -16958,7 +16958,8 @@ readers do not read off random characters that represent icons */
 
 .hero-slider {
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  margin-bottom: 30px; }
   .hero-slider .swiper-wrapper {
     position: absolute;
     top: 0;
@@ -17661,5 +17662,25 @@ button.swiper-pagination-bullet {
 .swiper-container-coverflow .swiper-wrapper {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px; }
+
+.nav-tabs {
+  display: none; }
+
+@media (min-width: 768px) {
+  .nav-tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .card {
+    border: none; }
+  .card .card-header {
+    display: none; }
+  .card .collapse {
+    display: block; } }
+
+@media (max-width: 991.98px) {
+  .tab-pane {
+    display: block !important;
+    opacity: 1; } }
 
 /*# sourceMappingURL=child-theme.css.map */

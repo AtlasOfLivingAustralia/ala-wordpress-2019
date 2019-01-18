@@ -1,0 +1,28 @@
+.nav-tabs {
+  display:none;
+}
+@include media-breakpoint-up(md) {
+  .nav-tabs {
+    display: flex;
+  }
+
+  .card {
+    border: none;
+  }
+
+  .card .card-header {
+    display:none;
+  }
+
+  .card .collapse{
+    display:block;
+  }
+}
+
+
+@include media-breakpoint-down(md){
+  .tab-pane {
+    display: block !important;
+    opacity: 1;
+  }
+}
