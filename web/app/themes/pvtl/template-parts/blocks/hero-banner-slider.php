@@ -13,8 +13,11 @@ class HeroBannerSlider extends RegisterBlocks
         $slides  = get_field('slides'); // arr
         $title = get_field('title'); // str
 
+
+
+
     ?>
-        <div class="hero-slider flexible-content swiper-container">
+        <div class="hero-slider flexible-content swiper-container align<?= $block['align']; ?>">
             <div class="swiper-wrapper">
             <?php foreach ($slides as $slide) :
                 $image = $slide['image']; // str
@@ -23,19 +26,13 @@ class HeroBannerSlider extends RegisterBlocks
             ?>
                 <div class="swiper-slide swiper-lazy" data-background="<?=$image['sizes']['full-width-auto-height']?>">
                     <div class="swiper-lazy-preloader"></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="authorship">
-                                    <?php if($description): ?>
-                                        <p class="description"><?=$description?></p>
-                                    <?php endif; ?>
-                                    <?php if($author): ?>
-                                        <h5 class="author"><?=$author?></h5>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="authorship">
+                        <?php if($description): ?>
+                            <p class="description"><?=$description?></p>
+                        <?php endif; ?>
+                        <?php if($author): ?>
+                            <p class="author"><img src="<?= get_stylesheet_directory_uri(); ?>/images/icons/camera-light.svg" alt="Camera Icon" width="20px" /> by <?=$author?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -46,12 +43,12 @@ class HeroBannerSlider extends RegisterBlocks
                 <div class="container">
                     <h1><?= $title; ?></h1>
                     <div class="search-container row">
-                        <div class="col-xs-12 col-md-6">
-                            <div class="d-flex">
+                        <div class="col-6 text-center">
+                            <div class="d-inline-flex align-items-center">
                                 <div class="image">
-                                    <img src="<?= get_stylesheet_directory_uri(); ?>/images/icons/map-light.svg" alt="Map Icon" />
+                                    <img src="<?= get_stylesheet_directory_uri(); ?>/images/icons/map-light-shadow.svg" alt="Map Icon" />
                                 </div>
-                                <div class="content">
+                                <div class="content text-left">
                                     <h5>
                                         <span class="amount" data-occurrence>74,950,414</span>
                                         Occurrence Records
@@ -59,12 +56,12 @@ class HeroBannerSlider extends RegisterBlocks
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-6">
-                            <div class="d-flex">
+                        <div class="col-6 text-center">
+                            <div class="d-inline-flex align-items-center">
                                 <div class="image">
-                                    <img src="<?= get_stylesheet_directory_uri(); ?>/images/icons/browser-light.svg" alt="Browser Icon" />
+                                    <img src="<?= get_stylesheet_directory_uri(); ?>/images/icons/browser-light-shadow.svg" alt="Browser Icon" />
                                 </div>
-                                <div class="content">
+                                <div class="content text-left">
                                     <h5>
                                         <span class="amount" data-species>116,724</span>
                                         Species Recorded
@@ -72,14 +69,14 @@ class HeroBannerSlider extends RegisterBlocks
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12">
+                        <div class="col-md-12">
                             <form class="form-inline">
-                                <div class="form-group mb-2">
+                                <div class="form-group flex-grow-1">
                                     <label for="search" class="sr-only">Search Species Records</label>
-                                    <input type="search" class="form-control" id="search" placeholder="Search 116,724 Species Records...">
+                                    <input type="search" class="form-control flex-grow-1" id="search" placeholder="Search 116,724 Species Records...">
                                 </div>
-                                <button type="submit" class="btn btn-primary mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 22 22">
+                                <button type="submit" class="btn btn-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
                                         <defs>
                                             <style>
                                                 .search-icon {
