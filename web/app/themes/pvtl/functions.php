@@ -3,6 +3,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+/**
+ * Register support for Gutenberg wide images in your theme
+ */
+function theme_setup() {
+    add_theme_support( 'align-wide' );
+}
+add_action( 'after_setup_theme', 'theme_setup' );
+
+
 function understrap_remove_scripts() {
     wp_dequeue_style( 'understrap-styles' );
     wp_deregister_style( 'understrap-styles' );
