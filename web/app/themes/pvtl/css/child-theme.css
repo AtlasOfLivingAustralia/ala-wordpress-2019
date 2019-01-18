@@ -10904,6 +10904,16 @@ ul.menu {
   ul.menu.horizontal li {
     display: inline-block; }
 
+.entry-content .alignwide {
+  margin-left: -80px;
+  margin-right: -80px; }
+
+.entry-content .alignfull {
+  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-right: calc(-100vw / 2 + 100% / 2);
+  max-width: 100vw;
+  width: 100vw; }
+
 /*!
  * Font Awesome Pro 5.5.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)
@@ -16949,8 +16959,133 @@ readers do not read off random characters that represent icons */
 .hero-slider {
   overflow: hidden;
   position: relative; }
+  .hero-slider .swiper-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
   .hero-slider .swiper-slide {
-    height: 720px; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    color: #FFF;
+    background-size: cover;
+    background-position: center; }
+    .hero-slider .swiper-slide:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.25); }
+  .hero-slider .authorship {
+    position: relative;
+    z-index: 50;
+    width: 440px;
+    padding: 30px;
+    font-size: 12px;
+    font-weight: 400; }
+    .hero-slider .authorship .author {
+      line-height: 1;
+      font-size: 14px;
+      margin-bottom: 0; }
+      .hero-slider .authorship .author img {
+        margin-right: 5px;
+        vertical-align: bottom; }
+    @media (max-width: 767.98px) {
+      .hero-slider .authorship {
+        padding-bottom: 50px;
+        text-align: center;
+        width: 100%; }
+        .hero-slider .authorship .description {
+          display: none; } }
+  .hero-slider .search-overlay {
+    position: relative;
+    height: 720px;
+    z-index: 80;
+    color: #FFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .hero-slider .search-overlay h1 {
+      text-align: center;
+      text-shadow: 0 5px 30px #000; }
+    .hero-slider .search-overlay .search-container {
+      max-width: 600px;
+      margin: 30px auto; }
+      .hero-slider .search-overlay .search-container > div {
+        margin-bottom: 30px; }
+      .hero-slider .search-overlay .search-container .image {
+        margin-right: 20px;
+        text-shadow: 0 3px 20px #000; }
+      .hero-slider .search-overlay .search-container h5 {
+        font-size: 18px;
+        margin: 0;
+        text-shadow: 0 3px 20px #000; }
+        .hero-slider .search-overlay .search-container h5 .amount {
+          font-size: 24px;
+          display: block; }
+      .hero-slider .search-overlay .search-container .form-inline {
+        border: 10px solid rgba(0, 0, 0, 0.4);
+        font-size: 16px;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; }
+        .hero-slider .search-overlay .search-container .form-inline .form-group, .hero-slider .search-overlay .search-container .form-inline .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form .hero-slider .search-overlay .search-container .form-inline p {
+          margin: 0; }
+        .hero-slider .search-overlay .search-container .form-inline input {
+          border: none;
+          height: 60px;
+          padding-left: 30px;
+          padding-right: 30px; }
+        .hero-slider .search-overlay .search-container .form-inline button {
+          height: 60px;
+          color: #FFF;
+          font-weight: normal; }
+          .hero-slider .search-overlay .search-container .form-inline button svg {
+            margin-right: 5px; }
+    @media (max-width: 767.98px) {
+      .hero-slider .search-overlay {
+        height: auto;
+        padding: 80px 0; }
+        .hero-slider .search-overlay .search-container {
+          margin: 20px auto; }
+          .hero-slider .search-overlay .search-container > div {
+            margin-bottom: 20px; }
+          .hero-slider .search-overlay .search-container .image {
+            margin-right: 10px;
+            width: 50px; }
+          .hero-slider .search-overlay .search-container h5 {
+            font-size: 12px; }
+            .hero-slider .search-overlay .search-container h5 .amount {
+              font-size: 18px; } }
+    @media (max-width: 575.98px) {
+      .hero-slider .search-overlay h1 {
+        font-size: 30px; }
+      .hero-slider .search-overlay .search-container {
+        margin: 20px -5px; }
+        .hero-slider .search-overlay .search-container > div {
+          padding-left: 5px;
+          padding-right: 5px; }
+        .hero-slider .search-overlay .search-container .image {
+          margin-right: 5px;
+          width: 40px; }
+        .hero-slider .search-overlay .search-container .form-inline input, .hero-slider .search-overlay .search-container .form-inline button {
+          height: 45px; }
+        .hero-slider .search-overlay .search-container .form-inline button svg {
+          margin-right: 2px;
+          width: 18px; } }
 
 /**
  * Swiper 4.1.0
@@ -17150,7 +17285,7 @@ readers do not read off random characters that represent icons */
   transition: 300ms opacity;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  z-index: 10; }
+  z-index: 100; }
 
 .swiper-pagination.swiper-pagination-hidden {
   opacity: 0; }
@@ -17194,12 +17329,17 @@ readers do not read off random characters that represent icons */
   transform: scale(0.33); }
 
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   display: inline-block;
   border-radius: 100%;
-  background: #000;
-  opacity: 0.2; }
+  background: #fff;
+  opacity: 0.4;
+  -webkit-transition: opacity 150ms ease;
+  transition: opacity 150ms ease; }
+
+.swiper-pagination-bullet:hover {
+  opacity: 0.6; }
 
 button.swiper-pagination-bullet {
   border: none;
@@ -17216,7 +17356,7 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: #f26649; }
+  background: #fff; }
 
 .swiper-container-vertical > .swiper-pagination-bullets {
   right: 10px;
