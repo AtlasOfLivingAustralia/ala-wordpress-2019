@@ -17,8 +17,8 @@ class TabBox extends RegisterBlocks
 
         ?>
         <div class="tab-box flexible-content align<?= $block['align']; ?>">
-            <div class="container">
-                <div class="tab-wrap">
+            <div class="tab-wrap">
+                <div class="container">
                     <div class="tab-section-title">
                         Explore the Atlas for:
                     </div>
@@ -35,8 +35,9 @@ class TabBox extends RegisterBlocks
                         </li>
                     </ul>
                 </div>
+            </div>
 
-
+            <div class="container">
                 <div id="content" class="tab-content" role="tablist">
                     <div id="pane-A" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-A">
                         <div class="card-header" role="tab" id="heading-A">
@@ -67,9 +68,7 @@ class TabBox extends RegisterBlocks
                                 <div class="col-xs-12 col-ms-12 col-md-4">
                                     <h3><?= get_field('column_title_2') ?></h3>
                                     <?php $contentRepeater2 = get_field('text_with_icon_2');
-                                    foreach ($contentRepeater2 as $item) :
-
-                                        echo '<pre>' . print_r($item, 1) . '</pre>';?>
+                                    foreach ($contentRepeater2 as $item) : ?>
                                         <div class="d-flex">
                                             <div class="image">
                                                 <img src="<?= $item['icon']['sizes']['medium']; ?>"

@@ -152,9 +152,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "",
+                    "return_format": "array",
                     "preview_size": "thumbnail",
-                    "library": "",
+                    "library": "all",
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
@@ -329,9 +329,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "",
+                    "return_format": "array",
                     "preview_size": "thumbnail",
-                    "library": "",
+                    "library": "all",
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
@@ -412,9 +412,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "",
+                    "return_format": "array",
                     "preview_size": "thumbnail",
-                    "library": "",
+                    "library": "all",
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
@@ -589,9 +589,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "",
+                    "return_format": "array",
                     "preview_size": "thumbnail",
-                    "library": "",
+                    "library": "all",
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
@@ -800,5 +800,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1547792020
+    "modified": 1548026926
 }
