@@ -11,15 +11,13 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			  </button>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
 
 			<div class="modal-body">
-				<?php // phpcs:ignore -- Error is from a plugin
-					the_field( 'experience_content', 'option' );
-				?>
+				<?php the_field( 'experience_content', 'option' ); ?>
 				<?php
 				if ( have_rows( 'experience_groups', 'option' ) ) :
 					$count = 0;
