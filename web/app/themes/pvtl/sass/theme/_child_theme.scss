@@ -47,3 +47,37 @@ ul.menu {
   width:        100vw;
 }
 
+ul.links {
+  list-style: none;
+  margin:     0;
+  padding:    0;
+  li {
+    a {
+      display: flex;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $c-border;
+      color: $c-text;
+      text-decoration: none;
+      font-weight: 500;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 200ms ease;
+      i {
+        margin-right: 20px;
+        transition: inherit;
+      }
+      &:hover {
+        color: $primary;
+        i {
+          margin-right: 0;
+        }
+      }
+    }
+    &:first-child {
+      a {
+        border-top: 1px solid $c-border;
+      }
+    }
+  }
+}

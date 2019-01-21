@@ -108,51 +108,49 @@ class TabBox extends RegisterBlocks
                             </h5>
                         </div>
                         <div id="collapse-B" class="collapse" role="tabpanel" aria-labelledby="heading-B">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-xs-12 col-ms-12 col-md-4">
-                                        <h3><?= get_field('column_title_4') ?></h3>
-                                        <?php $contentRepeater3 = get_field('text_with_icon_3');
-                                        foreach ($contentRepeater3 as $item) : ?>
-                                            <div class="d-flex">
-                                                <div class="image">
-                                                    <img src="<?= $item['icon']['sizes']['medium']; ?>"
-                                                         alt="<?= $item['icon']['alt']; ?>"/>
-                                                </div>
-                                                <div class="content">
-                                                    <?= $item['text'] ?>
-                                                </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                    <h3><?= get_field('column_title_4') ?></h3>
+                                    <?php $contentRepeater3 = get_field('text_with_icon_3');
+                                    foreach ($contentRepeater3 as $item) : ?>
+                                        <div class="d-flex">
+                                            <div class="image">
+                                                <img src="<?= $item['icon']['sizes']['medium']; ?>"
+                                                     alt="<?= $item['icon']['alt']; ?>"/>
                                             </div>
-                                        <?php endforeach; ?>
-                                    </div>
-                                    <div class="col-xs-12 col-ms-12 col-md-4">
-                                        <h3><?= get_field('column_title_5') ?></h3>
-                                        <?php $contentRepeater4 = get_field('text_with_icon_4');
-                                        foreach ($contentRepeater4 as $item) : ?>
-                                            <div class="d-flex">
-                                                <div class="image">
-                                                    <img src="<?= $item['icon']['sizes']['medium']; ?>"
-                                                         alt="<?= $item['icon']['alt']; ?>"/>
-                                                </div>
-                                                <div class="content">
-                                                    <?= $item['text'] ?>
-                                                </div>
+                                            <div class="content">
+                                                <?= $item['text'] ?>
                                             </div>
-                                        <?php endforeach; ?>
-                                    </div>
-                                    <div class="col-xs-12 col-ms-12 col-md-4">
-                                        <h3><?= get_field('column_title_6') ?></h3>
-                                        <?php $links2 = get_field('links_2');
-                                        if ($links2) : ?>
-                                            <ul class="links">
-                                                <?php foreach ($links2 as $link) : ?>
-                                                    <li><a href="<?= $link['link_path'] ?>"
-                                                           title="<?= $link['link_title']; ?>"><?= $link['link_title']; ?>
-                                                            <i class="fal fa-long-arrow-right"></i></a></li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                        <?php endif; ?>
-                                    </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                    <h3><?= get_field('column_title_5') ?></h3>
+                                    <?php $contentRepeater4 = get_field('text_with_icon_4');
+                                    foreach ($contentRepeater4 as $item) : ?>
+                                        <div class="d-flex">
+                                            <div class="image">
+                                                <img src="<?= $item['icon']['sizes']['medium']; ?>"
+                                                     alt="<?= $item['icon']['alt']; ?>"/>
+                                            </div>
+                                            <div class="content">
+                                                <?= $item['text'] ?>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                    <h3><?= get_field('column_title_6') ?></h3>
+                                    <?php $links2 = get_field('links_2');
+                                    if ($links2) : ?>
+                                        <ul class="links">
+                                            <?php foreach ($links2 as $link) : ?>
+                                                <li><a href="<?= $link['link_path'] ?>"
+                                                       title="<?= $link['link_title']; ?>"><?= $link['link_title']; ?>
+                                                        <i class="fal fa-long-arrow-right"></i></a></li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -169,51 +167,49 @@ class TabBox extends RegisterBlocks
                             </h5>
                         </div>
                         <div id="collapse-C" class="collapse" role="tabpanel" aria-labelledby="heading-C">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-xs-12 col-ms-12 col-md-4">
-                                        <h3><?= get_field('column_title_7') ?></h3>
-                                        <?php $contentRepeater5 = get_field('text_with_icon_5');
-                                        foreach ($contentRepeater5 as $item) : ?>
-                                            <div class="d-flex">
-                                                <div class="image">
-                                                    <img src="<?= $item['icon']['sizes']['medium']; ?>"
-                                                         alt="<?= $item['icon']['alt']; ?>"/>
-                                                </div>
-                                                <div class="content">
-                                                    <?= $item['text'] ?>
-                                                </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                    <h3><?= get_field('column_title_7') ?></h3>
+                                    <?php $contentRepeater5 = get_field('text_with_icon_5');
+                                    foreach ($contentRepeater5 as $item) : ?>
+                                        <div class="d-flex">
+                                            <div class="image">
+                                                <img src="<?= $item['icon']['sizes']['medium']; ?>"
+                                                     alt="<?= $item['icon']['alt']; ?>"/>
                                             </div>
-                                        <?php endforeach; ?>
-                                    </div>
-                                    <div class="col-xs-12 col-ms-12 col-md-4">
-                                        <h3><?= get_field('column_title_8') ?></h3>
-                                        <?php $contentRepeater6 = get_field('text_with_icon_6');
-                                        foreach ($contentRepeater6 as $item) : ?>
-                                            <div class="d-flex">
-                                                <div class="image">
-                                                    <img src="<?= $item['icon']['sizes']['medium']; ?>"
-                                                         alt="<?= $item['icon']['alt']; ?>"/>
-                                                </div>
-                                                <div class="content">
-                                                    <?= $item['text'] ?>
-                                                </div>
+                                            <div class="content">
+                                                <?= $item['text'] ?>
                                             </div>
-                                        <?php endforeach; ?>
-                                    </div>
-                                    <div class="col-xs-12 col-ms-12 col-md-4">
-                                        <h3><?= get_field('column_title_9') ?></h3>
-                                        <?php $links3 = get_field('links_3');
-                                        if ($links3) : ?>
-                                            <ul class="links">
-                                                <?php foreach ($links3 as $link) : ?>
-                                                    <li><a href="<?= $link['link_path'] ?>"
-                                                           title="<?= $link['link_title']; ?>"><?= $link['link_title']; ?>
-                                                            <i class="fal fa-long-arrow-right"></i></a></li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                        <?php endif; ?>
-                                    </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                    <h3><?= get_field('column_title_8') ?></h3>
+                                    <?php $contentRepeater6 = get_field('text_with_icon_6');
+                                    foreach ($contentRepeater6 as $item) : ?>
+                                        <div class="d-flex">
+                                            <div class="image">
+                                                <img src="<?= $item['icon']['sizes']['medium']; ?>"
+                                                     alt="<?= $item['icon']['alt']; ?>"/>
+                                            </div>
+                                            <div class="content">
+                                                <?= $item['text'] ?>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                    <h3><?= get_field('column_title_9') ?></h3>
+                                    <?php $links3 = get_field('links_3');
+                                    if ($links3) : ?>
+                                        <ul class="links">
+                                            <?php foreach ($links3 as $link) : ?>
+                                                <li><a href="<?= $link['link_path'] ?>"
+                                                       title="<?= $link['link_title']; ?>"><?= $link['link_title']; ?>
+                                                        <i class="fal fa-long-arrow-right"></i></a></li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

@@ -10916,6 +10916,39 @@ ul.menu {
   max-width: 100vw;
   width: 100vw; }
 
+ul.links {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  ul.links li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #212121;
+    text-decoration: none;
+    font-weight: 500;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease; }
+    ul.links li a i {
+      margin-right: 20px;
+      -webkit-transition: inherit;
+      transition: inherit; }
+    ul.links li a:hover {
+      color: #f26649; }
+      ul.links li a:hover i {
+        margin-right: 0; }
+  ul.links li:first-child a {
+    border-top: 1px solid #e5e5e5; }
+
 /*!
  * Font Awesome Pro 5.5.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)
@@ -17716,6 +17749,17 @@ button.swiper-pagination-bullet {
     padding-top: 80px;
     padding-bottom: 80px;
     background: #FFF; }
+  .tab-box h3 {
+    margin-bottom: 2rem; }
+  .tab-box .image {
+    min-width: 50px;
+    margin-right: 20px; }
+  .tab-box .content {
+    color: #565656; }
+    .tab-box .content *:last-child {
+      margin-bottom: 0; }
+  .tab-box .d-flex:not(:last-child) {
+    margin-bottom: 2rem; }
 
 @media (min-width: 768px) {
   .nav-tabs {
