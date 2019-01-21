@@ -28,25 +28,25 @@
 <?php if ( $socialCount > 0 ) : ?>
 	<ul class="social">
 	<?php if ( ! empty( $social['facebook'] ) ) : ?>
-		<li><a href="<?php echo esc_html( $social['facebook'] ); ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+		<li><a href="<?php echo esc_url( $social['facebook'] ); ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 	<?php endif; ?>
 	<?php if ( ! empty( $social['instagram'] ) ) : ?>
-		<li><a href="<?php echo esc_html( $social['instagram'] ); ?>" target="_blank"><i class="fab fa-instagram"></i></a></li>
+		<li><a href="<?php echo esc_url( $social['instagram'] ); ?>" target="_blank"><i class="fab fa-instagram"></i></a></li>
 	<?php endif; ?>
 	<?php if ( ! empty( $social['twitter'] ) ) : ?>
-		<li><a href="<?php echo esc_html( $social['twitter'] ); ?>" target="_blank"><i class="fab fa-twitter"></i></a></li>
+		<li><a href="<?php echo esc_url( $social['twitter'] ); ?>" target="_blank"><i class="fab fa-twitter"></i></a></li>
 	<?php endif; ?>
 	<?php if ( ! empty( $social['youtube'] ) ) : ?>
-		<li><a href="<?php echo esc_html( $social['youtube'] ); ?>" target="_blank"><i class="fab fa-youtube"></i></a></li>
+		<li><a href="<?php echo esc_url( $social['youtube'] ); ?>" target="_blank"><i class="fab fa-youtube"></i></a></li>
 	<?php endif; ?>
 	<?php if ( ! empty( $social['linkedin'] ) ) : ?>
-		<li><a href="<?php echo esc_html( $social['linkedin'] ); ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+		<li><a href="<?php echo esc_url( $social['linkedin'] ); ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
 	<?php endif; ?>
 	<?php if ( ! empty( $social['snapchat'] ) ) : ?>
-		<li><a href="<?php echo esc_html( $social['snapchat'] ); ?>" target="_blank"><i class="fab fa-snapchat-ghost"></i></a></li>
+		<li><a href="<?php echo esc_url( $social['snapchat'] ); ?>" target="_blank"><i class="fab fa-snapchat-ghost"></i></a></li>
 	<?php endif; ?>
 	<?php if ( ! empty( $social['pinterest'] ) ) : ?>
-		<li><a href="<?php echo esc_html( $social['pinterest'] ); ?>" target="_blank"><i class="fab fa-pinterest"></i></a></li>
+		<li><a href="<?php echo esc_url( $social['pinterest'] ); ?>" target="_blank"><i class="fab fa-pinterest"></i></a></li>
 	<?php endif; ?>
 	</ul>
 <?php endif; ?>
