@@ -1,59 +1,58 @@
-<div class="reveal experience-modal" id="experience-modal" data-animation-in="fade-in fast" data-close-on-click="false" style="display: none;">
-    <?php
+<div
+    class="modal fade experience-modal"
+    id="experience-modal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="experience-modal"
+    aria-hidden="true"
+    data-show="false"
+    data-backdrop="true"
+>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
 
-    the_field( 'experience_content', 'option' );
+            <div class="modal-body">
+                <?php the_field( 'experience_content', 'option' ); ?>
+                <?php if ( have_rows( 'experience_groups', 'option' ) ) : $count = 0; ?>
+                    <div class="experience-groups">
+                        <?php while ( have_rows( 'experience_groups', 'option' ) ) : the_row(); $count++; ?>
+                            <div class="experience-group">
+                            <?php
+                                vprintf(
+                                    '<button
+                                        type="button"
+                                        data-name="%1$s"
+                                        class="group-btn group-btn-red group-btn-%2$s"
+                                        data-toggle="tooltip"
+                                        data-placement="right"
+                                        title="%3$s"
+                                    >
+                                        %1$s
+                                    </button>',
+                                    [
+                                        get_sub_field( 'name' ),
+                                        $count,
+                                        get_sub_field( 'description' )
+                                    ]
+                                );
+                            ?>
+                            </div>
+                        <?php endwhile; ?>
+                        <div class="experience-group">
+                            <button type="button" data-name="null" class="group-btn group-btn-grey">
+                                None of the above
+                            </button>
+                        </div>
+                    </div>
+                <?php endif; ?>
 
-    if ( have_rows( 'experience_groups', 'option' ) ) :
-        $count = 0;
-
-        ?>
-        <div class="experience-groups">
-            <?php
-
-            while ( have_rows( 'experience_groups', 'option' ) ) : the_row();
-                $count++;
-
-                ?>
-                <div class="experience-group">
-                    <?php
-
-                    vprintf( '<button type="button" data-name="%1$s" class="group-btn group-btn-red group-btn-%2$s">%1$s</button>', [
-                        get_sub_field( 'name' ),
-                        $count,
-                    ] );
-
-                    if ( get_sub_field( 'description' ) ) {
-
-                        ?>
-                        <span class="group-description">
-                        <?php the_sub_field( 'description' ); ?>
-                    </span>
-                        <?php
-
-                    }
-
-                    ?>
-                </div>
-            <?php
-
-            endwhile;
-
-            ?>
-            <div class="experience-group">
-                <button type="button" data-name="null" class="group-btn group-btn-grey">None of the above</button>
+                <?php the_field( 'experience_footer_content', 'option' ); ?>
             </div>
         </div>
-    <?php
-
-    endif;
-
-    ?>
-
-    <div class="footer-content">
-        <?php the_field( 'experience_footer_content', 'option' ); ?>
     </div>
-
-    <button class="close-button" data-close data-name="<?php echo get_experience_group() !== 'null' ? get_experience_group() : 'null' ?>" aria-label="Close modal" type="button">
-        <span aria-hidden="true">&times;</span>
-    </button>
 </div>
