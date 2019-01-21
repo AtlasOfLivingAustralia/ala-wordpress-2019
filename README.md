@@ -19,7 +19,7 @@ Once imported: scrub any sensitive data (eg. customer info, credit card tokens e
 #### 4. Install dependencies (composer, npm)
 ```bash
 composer install --ignore-platform-reqs
-( cd web/app/themes/understrap-child; yarn )
+( cd web/app/themes/pvtl; yarn )
 ```
 
 ---
@@ -39,7 +39,7 @@ Working in the [Pivotal Docker Dev environment](https://github.com/pvtl/docker-d
 
 ### Running
 
-From the `understrap-child` theme directory: to work and compile your Sass files on the fly start:
+From the `pvtl` theme directory: to work and compile your Sass files on the fly start:
 
 - `$ gulp watch`
 
