@@ -43,11 +43,11 @@
                                     >
                                         %1$s
                                     </button>',
-									[
-										esc_html( get_sub_field( 'name' ) ),
+									array(
 										esc_html( $count ),
+										esc_html( get_sub_field( 'name' ) ),
 										esc_html( get_sub_field( 'description' ) ),
-									]
+									)
 								);
 							?>
 							</div>
