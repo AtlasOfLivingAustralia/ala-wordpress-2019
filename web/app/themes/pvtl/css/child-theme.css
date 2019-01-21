@@ -16782,6 +16782,8 @@ readers do not read off random characters that represent icons */
   margin-bottom: 10px; }
   .top-bar .btn-link {
     color: #FFF; }
+  .top-bar .xp-btn {
+    border-right: 1px solid rgba(255, 255, 255, 0.4); }
   .top-bar .account {
     padding-left: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.4); }

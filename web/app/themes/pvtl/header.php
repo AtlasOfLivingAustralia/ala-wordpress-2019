@@ -54,8 +54,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						$xp = get_experience_group();
 						if ( $xp ) :
 							?>
-							<button type="button" data-toggle="modal" data-target="#experience-modal">
-								<?php echo 'null' === $xp ? 'Customise Your Experience' : esc_html( 'Viewing as ' . $xp ); ?>
+							<button type="button" data-toggle="modal" data-target="#experience-modal" class="btn btn-link btn-sm xp-btn">
+								<?php echo 'null' === $xp ? 'Customise Your Experience' : esc_html( 'Viewing as ' . $xp ); ?> <i class="far fa-angle-down ml-1"></i>
 							</button>
 						<?php endif; ?>
 						<a href="/contact" class="btn btn-link btn-sm">Contact Us</a>
