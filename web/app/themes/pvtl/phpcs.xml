@@ -12,7 +12,10 @@
   <!-- Exclude Composer vendor directory. -->
   <exclude-pattern>*/vendor/*</exclude-pattern>
 
-  <rule ref="WordPress-Extra"/>
+  <rule ref="WordPress-Extra">
+    <exclude name="WordPress.Files.FileName"/>
+  </rule>
+
   <!-- <rule ref="WordPress-Docs"/> -->
 
   <!-- Enforce PSR1 compatible namespaces. -->

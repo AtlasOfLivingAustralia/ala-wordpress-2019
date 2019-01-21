@@ -17,15 +17,16 @@
 		'pinterest' => get_field( 'pinterest_page', 'option' ),
 	);
 	// Do a count of active social accounts.
-	$socialCount = count(
+	$social_count = count(
 		array_filter(
-			$social, function ( $link ) {
+			$social,
+			function( $link ) {
 				return $link;
 			}
 		)
 	);
 	?>
-<?php if ( $socialCount > 0 ) : ?>
+<?php if ( $social_count > 0 ) : ?>
 	<ul class="social">
 	<?php if ( ! empty( $social['facebook'] ) ) : ?>
 		<li><a href="<?php echo esc_url( $social['facebook'] ); ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
