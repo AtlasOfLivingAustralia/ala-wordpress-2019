@@ -37,29 +37,29 @@ $custom_logo_attr = array(
 				</div><!--col end -->
 				<div class="col-md-6 col-lg-4 content-column">
 					<?php
-						$imageCol1   = get_field( 'col_1_image', 'option' );
-						$contentCol1 = get_field( 'col_1_content', 'option' );
+						$image_col_1   = get_field( 'col_1_image', 'option' );
+						$content_col_1 = get_field( 'col_1_content', 'option' );
 					?>
 					<div class="d-flex">
 						<div class="image">
-							<img src="<?php echo esc_html( $imageCol1['sizes']['medium'] ); ?>" alt="<?php echo esc_html( $imageCol1['alt'] ); ?>" />
+							<img src="<?php echo esc_html( $image_col_1['sizes']['medium'] ); ?>" alt="<?php echo esc_html( $image_col_1['alt'] ); ?>" />
 						</div>
 						<div class="content">
-							<?php echo wp_kses_post( $contentCol1 ); ?>
+							<?php echo wp_kses_post( $content_col_1 ); ?>
 						</div>
 					</div>
 				</div><!--col end -->
 				<div class="col-md-6 col-lg-4 content-column">
 					<?php
-						$imageCol2   = get_field( 'col_2_image', 'option' );
-						$contentCol2 = get_field( 'col_2_content', 'option' );
+						$image_col_2   = get_field( 'col_2_image', 'option' );
+						$content_col_2 = get_field( 'col_2_content', 'option' );
 					?>
 					<div class="d-flex">
 						<div class="image">
-							<img src="<?php echo esc_html( $imageCol2['sizes']['medium'] ); ?>" alt="<?php echo esc_html( $imageCol2['alt'] ); ?>" />
+							<img src="<?php echo esc_html( $image_col_2['sizes']['medium'] ); ?>" alt="<?php echo esc_html( $image_col_2['alt'] ); ?>" />
 						</div>
 						<div class="content">
-							<?php echo wp_kses_post( $contentCol2 ); ?>
+							<?php echo wp_kses_post( $content_col_2 ); ?>
 						</div>
 					</div>
 				</div><!--col end -->
