@@ -37,10 +37,11 @@ class TabBox extends RegisterBlocks
                 </div>
             </div>
 
-            <div class="container">
-                <div id="content" class="tab-content" role="tablist">
-                    <div id="pane-A" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-A">
-                        <div class="card-header" role="tab" id="heading-A">
+
+            <div id="content" class="tab-content" role="tablist">
+                <div id="pane-A" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab-A">
+                    <div class="accordion-tab" role="tab" id="heading-A">
+                        <div class="container">
                             <h5 class="mb-0">
                                 <a data-toggle="collapse" href="#collapse-A" data-parent="#content" aria-expanded="true"
                                    aria-controls="collapse-A">
@@ -48,9 +49,11 @@ class TabBox extends RegisterBlocks
                                 </a>
                             </h5>
                         </div>
-                        <div id="collapse-A" class="collapse show" role="tabpanel" aria-labelledby="heading-A">
+                    </div>
+                    <div id="collapse-A" class="collapse accordion-content show" role="tabpanel" aria-labelledby="heading-A">
+                        <div class="container">
                             <div class="row">
-                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
                                     <h3><?= get_field('column_title_1') ?></h3>
                                     <?php $contentRepeater1 = get_field('text_with_icon');
                                     foreach ($contentRepeater1 as $item) : ?>
@@ -65,7 +68,7 @@ class TabBox extends RegisterBlocks
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
-                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
                                     <h3><?= get_field('column_title_2') ?></h3>
                                     <?php $contentRepeater2 = get_field('text_with_icon_2');
                                     foreach ($contentRepeater2 as $item) : ?>
@@ -80,7 +83,7 @@ class TabBox extends RegisterBlocks
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
-                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
                                     <h3><?= get_field('column_title_3') ?></h3>
                                     <?php $links = get_field('links');
                                     if ($links) : ?>
@@ -96,9 +99,11 @@ class TabBox extends RegisterBlocks
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div id="pane-B" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-B">
-                        <div class="card-header" role="tab" id="heading-B">
+                <div id="pane-B" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-B">
+                    <div class="accordion-tab" role="tab" id="heading-B">
+                        <div class="container">
                             <h5 class="mb-0">
                                 <a class="collapsed" data-toggle="collapse" href="#collapse-B" data-parent="#content"
                                    aria-expanded="false"
@@ -107,9 +112,11 @@ class TabBox extends RegisterBlocks
                                 </a>
                             </h5>
                         </div>
-                        <div id="collapse-B" class="collapse" role="tabpanel" aria-labelledby="heading-B">
+                    </div>
+                    <div id="collapse-B" class="collapse accordion-content" role="tabpanel" aria-labelledby="heading-B">
+                        <div class="container">
                             <div class="row">
-                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
                                     <h3><?= get_field('column_title_4') ?></h3>
                                     <?php $contentRepeater3 = get_field('text_with_icon_3');
                                     foreach ($contentRepeater3 as $item) : ?>
@@ -124,7 +131,7 @@ class TabBox extends RegisterBlocks
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
-                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
                                     <h3><?= get_field('column_title_5') ?></h3>
                                     <?php $contentRepeater4 = get_field('text_with_icon_4');
                                     foreach ($contentRepeater4 as $item) : ?>
@@ -139,7 +146,7 @@ class TabBox extends RegisterBlocks
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
-                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
                                     <h3><?= get_field('column_title_6') ?></h3>
                                     <?php $links2 = get_field('links_2');
                                     if ($links2) : ?>
@@ -155,9 +162,11 @@ class TabBox extends RegisterBlocks
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div id="pane-C" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-C">
-                        <div class="card-header" role="tab" id="heading-C">
+                <div id="pane-C" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-C">
+                    <div class="accordion-tab" role="tab" id="heading-C">
+                        <div class="container">
                             <h5 class="mb-0">
                                 <a class="collapsed" data-toggle="collapse" href="#collapse-C" data-parent="#content"
                                    aria-expanded="false"
@@ -166,9 +175,11 @@ class TabBox extends RegisterBlocks
                                 </a>
                             </h5>
                         </div>
-                        <div id="collapse-C" class="collapse" role="tabpanel" aria-labelledby="heading-C">
+                    </div>
+                    <div id="collapse-C" class="collapse accordion-content" role="tabpanel" aria-labelledby="heading-C">
+                        <div class="container">
                             <div class="row">
-                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
                                     <h3><?= get_field('column_title_7') ?></h3>
                                     <?php $contentRepeater5 = get_field('text_with_icon_5');
                                     foreach ($contentRepeater5 as $item) : ?>
@@ -183,7 +194,7 @@ class TabBox extends RegisterBlocks
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
-                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
                                     <h3><?= get_field('column_title_8') ?></h3>
                                     <?php $contentRepeater6 = get_field('text_with_icon_6');
                                     foreach ($contentRepeater6 as $item) : ?>
@@ -198,7 +209,7 @@ class TabBox extends RegisterBlocks
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
-                                <div class="col-xs-12 col-ms-12 col-md-4">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
                                     <h3><?= get_field('column_title_9') ?></h3>
                                     <?php $links3 = get_field('links_3');
                                     if ($links3) : ?>
