@@ -39,36 +39,42 @@ class FeatureBox extends RegisterBlocks
 				   <div class="col-md-12">
 					   <h3><?= $title; ?></h3>
 				   </div>
-				   <div class="col-xs-12 col-md-4">
-					   <a href="<?= $link1; ?>" title="<?= $title1; ?>" class="featured-item">
-						   <img src="<?= $image1['sizes']['featured'] ?>" alt="<?= $title1; ?>" />
-						   <div class="overlay">
-							   <?= ($date1) ? '<time class="date" title="' .$date1 . '"><i class="fal fa-calendar-alt"></i> ' . $date1 . '</time>' : '' ?>
-							   <?= ($author1) ? '<p class="author"><img src="' . get_stylesheet_directory_uri() . '/images/icons/camera-light-shadow.svg" alt="author icon" />' . $author1 . '</p>' : '' ?>
-							   <h4 class="title"><?= $title1; ?> <span class="arrow"><i class="far fa-long-arrow-right"></i></span></h4>
-						   </div>
-					   </a>
+			   </div>
+			   <div class="featured-swiper">
+				   <div class="row swiper-wrapper">
+					   <div class="col-xs-12 col-md-4 swiper-slide">
+						   <a href="<?= $link1; ?>" title="<?= $title1; ?>" class="featured-item">
+							   <img src="<?= $image1['sizes']['featured'] ?>" alt="<?= $title1; ?>" />
+							   <div class="overlay">
+								   <?= ($date1) ? '<time class="date" title="' .$date1 . '"><i class="fal fa-calendar-alt"></i> ' . $date1 . '</time>' : '' ?>
+								   <?= ($author1) ? '<p class="author"><img src="' . get_stylesheet_directory_uri() . '/images/icons/camera-light-shadow.svg" alt="author icon" />' . $author1 . '</p>' : '' ?>
+								   <h4 class="title"><?= $title1; ?> <span class="arrow"><i class="far fa-long-arrow-right"></i></span></h4>
+							   </div>
+						   </a>
+					   </div>
+					   <div class="col-xs-12 col-md-4 swiper-slide">
+						   <a href="<?= $link2; ?>" title="<?= $title2; ?>" class="featured-item">
+							   <img src="<?= $image2['sizes']['featured'] ?>" alt="<?= $title2; ?>" />
+							   <div class="overlay">
+								   <?= ($date2) ? '<time class="date" title="' .$date2 . '"><i class="fal fa-calendar-alt"></i> ' . $date2 . '</time>' : '' ?>
+								   <?= ($author2) ? '<p class="author"><img src="' . get_stylesheet_directory_uri() . '/images/icons/camera-light-shadow.svg" alt="author icon" />' . $author2 . '</p>' : '' ?>
+								   <h4 class="title"><?= $title2; ?> <span class="arrow"><i class="far fa-long-arrow-right"></i></span></h4>
+							   </div>
+						   </a>
+					   </div>
+					   <div class="col-xs-12 col-md-4 swiper-slide">
+						   <a href="<?= $link3; ?>" title="<?= $title3; ?>" class="featured-item">
+							   <img src="<?= $image3['sizes']['featured'] ?>" alt="<?= $title3; ?>" />
+							   <div class="overlay">
+								   <?= ($date3) ? '<time class="date" title="' .$date3 . '"><i class="fal fa-calendar-alt"></i> ' . $date3 . '</time>' : '' ?>
+								   <?= ($author3) ? '<p class="author"><img src="' . get_stylesheet_directory_uri() . '/images/icons/camera-light-shadow.svg" alt="author icon" />' . $author3 . '</p>' : '' ?>
+								   <h4 class="title"><?= $title3; ?> <span class="arrow"><i class="far fa-long-arrow-right"></i></span></h4>
+							   </div>
+						   </a>
+					   </div>
 				   </div>
-				   <div class="col-xs-12 col-md-4">
-					   <a href="<?= $link2; ?>" title="<?= $title2; ?>" class="featured-item">
-						   <img src="<?= $image2['sizes']['featured'] ?>" alt="<?= $title2; ?>" />
-						   <div class="overlay">
-							   <?= ($date2) ? '<time class="date" title="' .$date2 . '"><i class="fal fa-calendar-alt"></i> ' . $date2 . '</time>' : '' ?>
-							   <?= ($author2) ? '<p class="author"><img src="' . get_stylesheet_directory_uri() . '/images/icons/camera-light-shadow.svg" alt="author icon" />' . $author2 . '</p>' : '' ?>
-							   <h4 class="title"><?= $title2; ?> <span class="arrow"><i class="far fa-long-arrow-right"></i></span></h4>
-						   </div>
-					   </a>
-				   </div>
-				   <div class="col-xs-12 col-md-4">
-					   <a href="<?= $link3; ?>" title="<?= $title3; ?>" class="featured-item">
-						   <img src="<?= $image3['sizes']['featured'] ?>" alt="<?= $title3; ?>" />
-						   <div class="overlay">
-							   <?= ($date3) ? '<time class="date" title="' .$date3 . '"><i class="fal fa-calendar-alt"></i> ' . $date3 . '</time>' : '' ?>
-							   <?= ($author3) ? '<p class="author"><img src="' . get_stylesheet_directory_uri() . '/images/icons/camera-light-shadow.svg" alt="author icon" />' . $author3 . '</p>' : '' ?>
-							   <h4 class="title"><?= $title3; ?> <span class="arrow"><i class="far fa-long-arrow-right"></i></span></h4>
-						   </div>
-					   </a>
-				   </div>
+				   <div class="featured-button-next"><i class="fal fa-angle-right"></i></div>
+				   <div class="featured-button-prev"><i class="fal fa-angle-left"></i></div>
 			   </div>
 		   </div>
         </div>

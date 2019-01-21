@@ -17906,5 +17906,58 @@ button.swiper-pagination-bullet {
           -ms-flex: 1 1;
               flex: 1 1;
       padding-left: 10px; }
+  @media (max-width: 767.98px) {
+    .feature-box {
+      padding: 60px 0; }
+      .feature-box h3 {
+        text-align: center; } }
+
+.featured-swiper {
+  position: relative; }
+  .featured-swiper .featured-button-next, .featured-swiper .featured-button-prev {
+    display: none; }
+  .featured-swiper.swiper-container-horizontal .featured-button-next, .featured-swiper.swiper-container-horizontal .featured-button-prev {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    font-size: 48px;
+    color: #212121;
+    z-index: 50;
+    background-color: #FFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease; }
+    .featured-swiper.swiper-container-horizontal .featured-button-next.swiper-button-disabled, .featured-swiper.swiper-container-horizontal .featured-button-prev.swiper-button-disabled {
+      opacity: 0.4; }
+  .featured-swiper.swiper-container-horizontal .featured-button-next {
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+    right: 0;
+    padding-left: 5px; }
+  .featured-swiper.swiper-container-horizontal .featured-button-prev {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: 0;
+    padding-right: 5px; }
+  .featured-swiper.swiper-container-horizontal .row {
+    margin: 0;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+    .featured-swiper.swiper-container-horizontal .row .swiper-slide {
+      max-width: none;
+      -webkit-box-flex: 0;
+          -ms-flex: none;
+              flex: none;
+      padding: 0; }
+  @media (max-width: 575.98px) {
+    .featured-swiper {
+      margin: 0 20px; } }
 
 /*# sourceMappingURL=child-theme.css.map */
