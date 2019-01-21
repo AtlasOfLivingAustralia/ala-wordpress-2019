@@ -97,6 +97,9 @@ function image_setup()
     //Half Width Image
     add_image_size('half-width-auto-height', 768 );
 
+    //Featured Image
+    add_image_size('featured', 640, 480, true );
+
 }
 
 add_action('after_setup_theme', 'image_setup');
