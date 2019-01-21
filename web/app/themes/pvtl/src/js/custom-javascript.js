@@ -82,8 +82,8 @@
 
         return false;
       });
-    });
-  }
+    }
+  });
 })(jQuery);
 
 /**
