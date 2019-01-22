@@ -42,7 +42,6 @@
     /**
      * Featured Box
      */
-
     $('.featured-swiper').each(function (index, el) {
       $(el).addClass(`featured-${index}`);
 
@@ -94,7 +93,6 @@
       $(window).on('resize', function(){
         initFeaturedSwiper();
       });
-
     });
 
 
@@ -107,7 +105,7 @@
     /**
      * Get/Set user experience group cookie
      */
-    () => {
+    const initExperiencePopup = () => {
       let settingExperienceCookie = false;
       const experience = getCookie('experience');
       const experienceModal = $('#experience-modal');
@@ -142,6 +140,8 @@
         return false;
       });
     }
+    initExperiencePopup();
+
   });
 })(jQuery);
 
