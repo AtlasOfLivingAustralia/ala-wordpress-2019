@@ -150,6 +150,30 @@
             "maxlength": ""
         },
         {
+            "key": "field_5c4696529770c",
+            "label": "Default Page Banner",
+            "name": "default_page_banner",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5b90c94374440",
             "label": "Social",
             "name": "",
@@ -599,5 +623,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1547615500
+    "modified": 1548129920
 }
