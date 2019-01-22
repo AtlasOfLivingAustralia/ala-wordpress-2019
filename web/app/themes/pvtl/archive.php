@@ -16,9 +16,7 @@ get_header();
 $container = get_theme_mod('understrap_container_type');
 ?>
 
-<?php if (is_front_page() && is_home()) : ?>
-	<?php get_template_part('global-templates/hero'); ?>
-<?php endif; ?>
+<?php get_template_part('template-parts/featured-image'); ?>
 
 <div class="wrapper" id="archive-wrapper">
 
