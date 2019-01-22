@@ -55,11 +55,12 @@ if ( ! empty( $post ) && has_post_thumbnail( $post->ID ) && get_post_type( $post
                 <h1 class="banner-title"><?= $banner_title ?></h1>
 			<?php } ?>
 
-            <?php if ( function_exists( 'yoast_breadcrumb' ) && ! is_front_page() ) { ?>
-                <div class="breadcrumbs-wrap">
-                        <?php yoast_breadcrumb( '<nav role="navigation" class="breadcrumbs">', '</nav>' ); ?>
-                </div>
-            <?php } ?>
-
     </div>
 </div>
+<?php if ( function_exists( 'yoast_breadcrumb' ) && ! is_front_page() ) { ?>
+	<div class="breadcrumbs-wrap">
+		<div class="container">
+			<?php yoast_breadcrumb( '<nav role="navigation" class="breadcrumbs">', '</nav>' ); ?>
+		</div>
+	</div>
+<?php } ?>

@@ -10969,6 +10969,23 @@ ul.links {
   ul.links li:first-child a {
     border-top: 1px solid #e5e5e5; }
 
+.breadcrumbs-wrap {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px 0; }
+  .breadcrumbs-wrap i {
+    margin-left: 5px;
+    margin-right: 5px;
+    vertical-align: middle; }
+  .breadcrumbs-wrap a {
+    color: #565656;
+    text-decoration: none; }
+    .breadcrumbs-wrap a:hover {
+      color: #f26649;
+      text-decoration: underline; }
+  @media (max-width: 767.98px) {
+    .breadcrumbs-wrap {
+      display: none; } }
+
 /*!
  * Font Awesome Pro 5.5.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)
