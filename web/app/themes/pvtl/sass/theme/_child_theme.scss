@@ -6,7 +6,7 @@ body {
 }
 
 .wrapper {
-  padding-top: 0;
+  padding: 0;
 }
 
 .social {
@@ -125,4 +125,9 @@ ul.links {
   @include media-breakpoint-down(sm) {
     display: none;
   }
+}
+
+#primary {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }

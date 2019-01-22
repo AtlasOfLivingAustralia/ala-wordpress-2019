@@ -1,0 +1,17 @@
+#right-sidebar {
+  position: relative;
+  padding: 40px 0 40px 40px;
+  &:before {
+    content: '';
+    display: block;
+    background-color: $c-page-background;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50vw;
+  }
+  aside {
+    position: relative;
+  }
+}

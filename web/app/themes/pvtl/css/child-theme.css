@@ -10884,7 +10884,7 @@ body {
     overflow: hidden; }
 
 .wrapper {
-  padding-top: 0; }
+  padding: 0; }
 
 .social {
   list-style: none;
@@ -10985,6 +10985,10 @@ ul.links {
   @media (max-width: 767.98px) {
     .breadcrumbs-wrap {
       display: none; } }
+
+#primary {
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
 /*!
  * Font Awesome Pro 5.5.0 by @fontawesome - https://fontawesome.com
@@ -18178,5 +18182,20 @@ button.swiper-pagination-bullet {
       height: 200px; }
       .featured-hero .banner-title {
         font-size: 28px; } }
+
+#right-sidebar {
+  position: relative;
+  padding: 40px 0 40px 40px; }
+  #right-sidebar:before {
+    content: '';
+    display: block;
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50vw; }
+  #right-sidebar aside {
+    position: relative; }
 
 /*# sourceMappingURL=child-theme.css.map */

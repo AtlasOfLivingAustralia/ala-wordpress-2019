@@ -97,6 +97,7 @@ $theme-colors: map-merge(
 $c-text: $gray-900;
 $c-text-light: #565656;
 $c-border: $gray-200;
+$c-page-background: $gray-100;
 $c-page-background-dark: #637073;
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
