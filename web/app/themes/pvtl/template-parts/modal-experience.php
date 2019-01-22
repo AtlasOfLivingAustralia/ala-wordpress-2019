@@ -5,7 +5,6 @@
 	role="dialog"
 	aria-labelledby="experience-modal"
 	aria-hidden="true"
-	data-show="false"
 	data-backdrop="true"
 >
 	<div class="modal-dialog" role="document">
