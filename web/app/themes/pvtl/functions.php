@@ -362,7 +362,7 @@ if ( ! function_exists( 'pvtl_posted_on' ) ) {
 		);
 		$posted_on   = apply_filters(
 			'understrap_posted_on', sprintf(
-				'<span class="posted-on"><span class="hide">%1$s </span>%3$s</span>',
+				'<span class="posted-on"><span class="sr-only">%1$s </span>%3$s</span>',
 				esc_html_x( 'Posted on', 'post date', 'understrap' ),
 				esc_url( get_permalink() ),
 				apply_filters( 'understrap_posted_on_time', $time_string )

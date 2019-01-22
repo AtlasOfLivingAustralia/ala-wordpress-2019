@@ -9,10 +9,6 @@
     }
   }
     .type-post {
-      //Hide 'Posted on' Label
-      .hide {
-        display: none;
-      }
       a, img {
         display: block;
       }
@@ -146,5 +142,73 @@
   select {
     display: inline-block;
     width: auto;
+  }
+}
+
+
+.addthis_inline_share_toolbox {
+  border:        1px solid $c-text;
+  padding:       7px 10px 2px;
+  height:        auto;
+  border-radius: 0;
+  display:       inline-block;
+  position:      relative;
+  min-width:     100px;
+  min-height:    40px;
+  background-color: $c-page-background;
+  &:before {
+    content:     'Share';
+    display:     inline-block;
+    padding:     0 8px;
+    background:  $c-page-background;
+    color:       $c-text;
+    position:    absolute;
+    top: -1px;
+    font-size: 12px;
+    line-height: 1px;
+    left:        6px;
+    font-weight: normal;
+  }
+  &:after {
+    content: '';
+    display: table;
+    clear:   both;
+  }
+  .at-style-responsive .at-share-btn {
+    padding: 2px;
+  }
+}
+
+// These are the styles for the post single pages
+.single-post {
+  .content-area {
+    padding-right: 70px;
+  }
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .entry-meta {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+  }
+  .wp-post-image {
+    float: right;
+    width: 50%;
+    margin: 0 0 20px 20px;
+  }
+  .entry-content {
+    font-size: 16px;
+  }
+  .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 0;
+    padding: 30px;
+    background-color: $c-page-background;
   }
 }
