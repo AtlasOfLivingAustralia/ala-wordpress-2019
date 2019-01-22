@@ -18059,6 +18059,10 @@ button.swiper-pagination-bullet {
           -ms-flex-pack: end;
               justify-content: flex-end;
       border-top: 1px solid #e5e5e5; }
+      @media (max-width: 767.98px) {
+        .post-list .text-only article:last-child {
+          margin-top: 1.5rem;
+          padding-top: 1.5rem; } }
   .post-list .text-only .type-post a {
     color: #212121;
     text-decoration: none; }
@@ -18076,7 +18080,10 @@ button.swiper-pagination-bullet {
     .post-list .text-only .type-post a .entry-header, .post-list .text-only .type-post a .entry-content {
       text-shadow: none; }
     .post-list .text-only .type-post a .entry-content {
-      max-height: 5em; }
+      max-height: 4.6em; }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        .post-list .text-only .type-post a .entry-content {
+          max-height: 3em; } }
     .post-list .text-only .type-post a:hover .entry-header h2 {
       color: #f26649; }
     .post-list .text-only .type-post a:hover .overlay {

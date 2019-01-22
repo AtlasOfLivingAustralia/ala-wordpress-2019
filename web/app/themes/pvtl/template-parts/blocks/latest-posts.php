@@ -37,7 +37,7 @@ class LatestPosts extends RegisterBlocks
 				<?php while ($wp_query->have_posts()) :
 					$wp_query->the_post();
 				if ($counter == 0) {
-					echo '<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">';
+					echo '<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 mb-md-0">';
 				}
 				?>
 
@@ -53,7 +53,7 @@ class LatestPosts extends RegisterBlocks
 
 				<?php
 				if($counter == 0) {
-					echo '</div><div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 text-only">';
+					echo '</div><div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 text-only">';
 				}
 				if($counter == 2) {
 					echo '</div>';
