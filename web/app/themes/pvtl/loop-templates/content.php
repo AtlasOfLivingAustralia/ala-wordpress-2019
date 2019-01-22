@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<a href="<?= get_permalink(); ?>" rel="bookmark">
+	<a href="<?= get_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'post' ); ?>
 

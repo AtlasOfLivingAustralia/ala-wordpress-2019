@@ -181,24 +181,43 @@
 
 // These are the styles for the post single pages
 .single-post {
-  .content-area {
-    padding-right: 70px;
+  @include media-breakpoint-up(md) {
+    .content-area {
+      padding-right: 70px;
+    }
   }
   .entry-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+    @include media-breakpoint-down(xs) {
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
   }
   .entry-meta {
     font-family: 'Lato', sans-serif;
     font-size: 24px;
     font-weight: 900;
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 18px;
+      order: 1;
+      margin-top: 30px;
+    }
   }
   .wp-post-image {
     float: right;
     width: 50%;
     margin: 0 0 20px 20px;
+    @include media-breakpoint-down(xs) {
+      float: none;
+      width: 100%;
+      margin: 0 0 20px;
+    }
   }
   .entry-content {
     font-size: 16px;
@@ -210,5 +229,49 @@
     margin: 40px 0 0;
     padding: 30px;
     background-color: $c-page-background;
+    @include media-breakpoint-down(xs) {
+      flex-direction: column;
+      .btn {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+
+.pvtl-recent-posts-class {
+  .recent-post {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $gray-500;
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    a {
+      color: $c-text;
+      display: block;
+      text-decoration: none;
+      &:hover {
+        .recent-title {
+          color: $primary;
+        }
+      }
+    }
+    .recent-meta {
+      display: block;
+      margin-bottom: 4px;
+    }
+    .recent-title {
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      color: $c-text;
+      transition: color 200ms ease;
+    }
+    .recent-content {
+      max-height: 4.6em;
+      overflow: hidden;
+    }
   }
 }
