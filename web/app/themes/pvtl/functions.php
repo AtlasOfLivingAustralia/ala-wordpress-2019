@@ -100,6 +100,9 @@ function image_setup()
     //Featured Image
     add_image_size('featured', 640, 480, true );
 
+    //Post Image
+    add_image_size('post', 790, 670, true );
+
 }
 
 add_action('after_setup_theme', 'image_setup');
@@ -345,6 +348,41 @@ function the_custom_logo_pvtl( $blog_id = 0 ) {
 
 
 
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+if ( ! function_exists( 'pvtl_posted_on' ) ) {
+	function pvtl_posted_on() {
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		$time_string = sprintf( $time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date( 'jS F Y' ) ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date( 'jS F Y' ) )
+		);
+		$posted_on   = apply_filters(
+			'understrap_posted_on', sprintf(
+				'<span class="posted-on"><span class="hide">%1$s </span>%3$s</span>',
+				esc_html_x( 'Posted on', 'post date', 'understrap' ),
+				esc_url( get_permalink() ),
+				apply_filters( 'understrap_posted_on_time', $time_string )
+			)
+		);
+
+		echo $posted_on; // WPCS: XSS OK.
+	}
+}
+
+function pvtl_get_excerpt($chars = 150){
+
+	$excerpt = strip_tags(get_the_content());
+
+	$excerpt = substr($excerpt, 0, $chars);
+
+	$excerpt .= '…';
+
+	return $excerpt;
+};
 
 
 /** Register each of the blocks */

@@ -33,11 +33,11 @@ class FeatureBox extends RegisterBlocks
 
 
     ?>
-        <div class="flexible-content feature-box align<?= $block['align']; ?>">
+        <div class="pt pb feature-box align<?= $block['align']; ?>">
            <div class="container">
 			   <div class="row">
 				   <div class="col-md-12">
-					   <h3><?= $title; ?></h3>
+					   <h3 role="heading" aria-level="2"><?= $title; ?></h3>
 				   </div>
 			   </div>
 			   <div class="featured-swiper">

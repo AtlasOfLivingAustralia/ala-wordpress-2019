@@ -11,8 +11,6 @@ class LatestPosts extends RegisterBlocks
     public function render($block = [], $content = '', $is_preview = false)
     {
         $title = get_field('block_title');
-        $number_of_posts = get_field('number_of_posts') ?: 4;
-        $section_colour = get_field('section_colour') ?: 'white'; // str
 
         if ($is_preview) {
             echo $title;
@@ -21,68 +19,58 @@ class LatestPosts extends RegisterBlocks
 
         $wp_query = new \WP_Query([
             'post_type' => 'post',
-            'posts_per_page' => $number_of_posts,
+            'posts_per_page' => 3,
         ]);
     ?>
-        <div class="flexible-content latest-posts-widget <?=$section_colour?>">
-            <div class="grid-container">
-                <div class="grid-x grid-padding-y">
-                    <div class="cell block block-latest-posts">
-                        <div class="block-title">
-                            <strong role="heading" aria-level="2">
-                                <?=$title?><a href="/blog" class="va">View All »</a>
-                            </strong>
-                        </div>
+        <div class="pt pb latest-posts-block align<?= $block['align']; ?>">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 role="heading" aria-level="2"><?= $title; ?></h3>
+				</div>
+			</div>
 
-                        <div class="block-content">
-                        <?php if ($wp_query->have_posts()) :
-                            $counter = 0;
-                        ?>
-                            <ol class="post-list no-feature-style grid-x grid-padding-x grid-padding-y small-up-2 large-up-4">
-                            <?php while ($wp_query->have_posts()) :
-                                $wp_query->the_post();
-                            ?>
-                                <li class="item item-<?=$counter++?> cell">
-                                    <div class="post-image">
-                                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                            <?php echo the_post_thumbnail('post-thumb'); ?>
-                                        </a>
-                                    </div>
-                                    <div class="post-entry">
-                                        <h2 class="post-name">
-                                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                                <?php the_title(); ?>
-                                            </a>
-                                        </h2>
-                                        <div class="post-meta">
-                                            <div class="post-meta">
-                                                <?php foundationpress_entry_meta(); ?>
-                                            </div>
-                                        </div>
+			<div class="row post-list">
+			<?php if ($wp_query->have_posts()) :
+				$counter = 0;
+			?>
 
-                                        <div class="post-excerpt"><?php the_excerpt(); ?></div>
+				<?php while ($wp_query->have_posts()) :
+					$wp_query->the_post();
+				if ($counter == 0) {
+					echo '<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">';
+				}
+				?>
 
-                                        <div class="post-readmore">
-                                            <a
-                                                href="<?php the_permalink(); ?>"
-                                                title="<?php the_title(); ?>"
-                                                class="button"
-                                            >
-                                                Read more »
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            <?php endwhile; ?>
-                            </ol>
-                            <?php wp_reset_postdata(); ?>
-                        <?php else : ?>
-                            <p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
-                        <?php endif; ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
+					<?php
+
+					/*
+					 * Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'loop-templates/content', get_post_format() );
+					?>
+
+				<?php
+				if($counter == 0) {
+					echo '</div><div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 text-only">';
+				}
+				if($counter == 2) {
+					echo '</div>';
+				}
+					$counter++;
+					endwhile; ?>
+
+				<?php wp_reset_postdata(); wp_reset_query(); ?>
+			<?php else : ?>
+				<div class="col-xs-12 col-sm-12 col-md-8">
+					<p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
+				</div>
+			<?php endif; ?>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+					This is the social feed
+				</div>
+			</div>
         </div>
     <?php
     }

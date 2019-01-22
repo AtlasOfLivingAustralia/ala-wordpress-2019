@@ -47,6 +47,30 @@ ul.menu {
   width:        100vw;
 }
 
+.pt {
+  padding-top: 80px;
+}
+.pb {
+  padding-bottom: 80px;
+}
+@include media-breakpoint-down(sm) {
+  .pt {
+    padding-top: 60px;
+  }
+  .pb {
+    padding-bottom: 60px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
 ul.links {
   list-style: none;
   margin:     0;

@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "This field will add a block with the X most recent posts.",
+            "message": "This field will add a block with the 3 most recent posts and a social widget",
             "new_lines": "",
             "esc_html": 0
         },
@@ -32,62 +32,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Latest Posts",
+            "default_value": "",
             "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_5a7a998e88ca9",
-            "label": "Number of posts",
-            "name": "number_of_posts",
-            "type": "number",
-            "instructions": "Will be displayed 4 across.",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": 4,
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
-        },
-        {
-            "key": "field_5b9083de2a3ae",
-            "label": "Section Colour",
-            "name": "section_colour",
-            "type": "select",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "white": "White (Default)",
-                "black": "Black",
-                "primary": "Primary Colour",
-                "secondary": "Secondary Colour",
-                "alternative": "Alternative Colour"
-            },
-            "default_value": [
-                "white"
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
         }
     ],
     "location": [
@@ -107,5 +56,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1544683099
+    "modified": 1548112363
 }
