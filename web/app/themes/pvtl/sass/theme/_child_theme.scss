@@ -22,6 +22,9 @@ body {
 
 .btn {
   text-decoration: none;
+  i {
+    vertical-align: middle;
+  }
 }
 
 ul.menu {
@@ -130,4 +133,8 @@ ul.links {
 #primary {
   padding-top: 40px;
   padding-bottom: 40px;
+  .home & {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }

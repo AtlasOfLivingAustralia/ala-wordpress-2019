@@ -4,7 +4,7 @@
 		<?php
 		$args = array(
 			'posts_per_page' => '3',
-			'exclude' => $currentPost
+			'post__not_in' => [$currentPost]
 		);
 		$recents = new WP_Query( $args );
 		if ( $recents->have_posts() ) :

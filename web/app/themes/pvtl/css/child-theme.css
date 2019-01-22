@@ -10898,6 +10898,8 @@ body {
 .btn,
 .wpcf7 input[type=submit] {
   text-decoration: none; }
+  .btn i, .wpcf7 input[type=submit] i {
+    vertical-align: middle; }
 
 ul.menu {
   list-style: none;
@@ -10989,6 +10991,9 @@ ul.links {
 #primary {
   padding-top: 40px;
   padding-bottom: 40px; }
+  .home #primary {
+    padding-top: 0;
+    padding-bottom: 0; }
 
 /*!
  * Font Awesome Pro 5.5.0 by @fontawesome - https://fontawesome.com
