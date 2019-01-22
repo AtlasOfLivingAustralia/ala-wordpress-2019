@@ -139,3 +139,12 @@
     font-size: 16px;
   }
 }
+
+.category-selector {
+  margin: 40px auto;
+  text-align: center;
+  select {
+    display: inline-block;
+    width: auto;
+  }
+}

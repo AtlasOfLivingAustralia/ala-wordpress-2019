@@ -27,7 +27,8 @@ $container = get_theme_mod('understrap_container_type');
 <div class="wrapper" id="index-wrapper">
 
 	<div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
-
+		<div style="height: 300px;"></div>
+		<?php get_template_part('template-parts/category-bar'); ?>
 
 		<main class="site-main post-list" id="main">
 			<div class="row">
