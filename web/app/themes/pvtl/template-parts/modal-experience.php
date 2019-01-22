@@ -33,13 +33,13 @@
 								vprintf(
 									'<button
                                         type="button"
-                                        data-name="%1$s"
-                                        class="group-btn group-btn-red group-btn-%2$s"
+                                        data-name="%2$s"
+                                        class="group-btn group-btn-red group-btn-%1$s"
                                         data-toggle="tooltip"
                                         data-placement="right"
                                         title="%3$s"
                                     >
-                                        %1$s
+                                        %2$s
                                     </button>',
 									array(
 										esc_html( $count ),
