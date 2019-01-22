@@ -2,6 +2,12 @@
 // Styles for all post lists
 .post-list {
 
+  //Add margin to main post loop items
+  &.site-main {
+    .type-post {
+      margin-bottom: 25px;
+    }
+  }
     .type-post {
       //Hide 'Posted on' Label
       .hide {

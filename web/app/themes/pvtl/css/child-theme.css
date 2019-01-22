@@ -17977,6 +17977,9 @@ button.swiper-pagination-bullet {
     .featured-swiper {
       margin: 0 20px; } }
 
+.post-list.site-main .type-post {
+  margin-bottom: 25px; }
+
 .post-list .type-post .hide {
   display: none; }
 
