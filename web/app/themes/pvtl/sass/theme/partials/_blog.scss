@@ -75,6 +75,11 @@
         flex-direction: column;
         justify-content: flex-end;
         border-top: 1px solid $c-border;
+        //Add some padding on mobile
+        @include media-breakpoint-down(sm) {
+          margin-top: 1.5rem;
+          padding-top: 1.5rem;
+        }
       }
     }
     .type-post {
@@ -99,7 +104,10 @@
           text-shadow: none;
         }
         .entry-content {
-          max-height: 5em;
+          max-height: 4.6em;
+          @include media-breakpoint-only(lg) {
+            max-height: 3em;
+          }
         }
         &:hover {
           .entry-header h2 {
