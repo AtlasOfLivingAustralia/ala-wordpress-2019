@@ -139,8 +139,48 @@
 
         return false;
       });
-    }
+    };
     initExperiencePopup();
+
+    $('[data-sticky]').stickybits({
+      useStickyClasses: true,
+      stickyBitStickyOffset: 20
+    });
+
+
+    // filter handling for a /dir/ OR /indexordefault.page
+    function filterPath(string) {
+      return string
+        .replace(/^\//, '')
+        .replace(/(index|default).[a-zA-Z]{3,4}$/, '')
+        .replace(/\/$/, '');
+    }
+
+    const locationPath = filterPath(location.pathname);
+    $('a[href*="#"]').each(function () {
+      const thisPath = filterPath(this.pathname) || locationPath;
+      const hash = this.hash;
+      if ($("#" + hash.replace(/#/, '')).length) {
+        if (locationPath == thisPath && (location.hostname == this.hostname || !this.hostname) && this.hash.replace(/#/, '')) {
+          const $target = $(hash), target = this.hash;
+          if (target) {
+            $(this).click(function (event) {
+              event.preventDefault();
+              $('html, body').animate({scrollTop: $target.offset().top}, 1000, function () {
+                location.hash = target;
+                $target.focus();
+                if ($target.is(":focus")){ //checking if the target was focused
+                  return false;
+                }else{
+                  $target.attr('tabindex','-1'); //Adding tabindex for elements not focusable
+                  $target.focus(); //Setting focus
+                };
+              });
+            });
+          }
+        }
+      }
+    });
 
   });
 })(jQuery);

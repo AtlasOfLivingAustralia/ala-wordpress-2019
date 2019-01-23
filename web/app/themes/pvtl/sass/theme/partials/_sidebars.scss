@@ -31,6 +31,7 @@
 
 .sidebar-anchors {
   border-right: 1px solid $gray-500;
+  height: 100%;
   .back {
     text-decoration: none;
     color: $gray-500;
@@ -80,6 +81,27 @@
         span {
           left: 10px;
         }
+      }
+    }
+  }
+  .scrollable {
+    @include media-breakpoint-up(lg) {
+      width: 245px;
+    }
+    @include media-breakpoint-only(lg) {
+      width: 200px;
+    }
+    @include media-breakpoint-only(md) {
+      width: 140px;
+    }
+    @include media-breakpoint-up(md) {
+      &.js-is-sticky {
+        position: fixed !important;
+      }
+      &.js-is-stuck {
+        position: absolute !important;
+        bottom: 0;
+        top: auto !important;
       }
     }
   }

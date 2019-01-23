@@ -1778,7 +1778,7 @@ select.form-control:focus::-ms-value,
 .col-form-label-lg {
   padding-top: calc(0.5rem + 2px);
   padding-bottom: calc(0.5rem + 2px);
-  font-size: 0.98438rem;
+  font-size: 1.09375rem;
   line-height: 1.5; }
 
 .col-form-label-sm {
@@ -1810,9 +1810,9 @@ select.form-control:focus::-ms-value,
   border-radius: 0; }
 
 .form-control-lg {
-  height: calc(2.47656rem + 4px);
+  height: calc(2.64062rem + 4px);
   padding: 0.5rem 1rem;
-  font-size: 0.98438rem;
+  font-size: 1.09375rem;
   line-height: 1.5;
   border-radius: 0; }
 
@@ -2907,7 +2907,7 @@ fieldset:disabled a.btn {
 .btn-lg, .btn-group-lg > .btn,
 .wpcf7 .btn-group-lg > input[type=submit] {
   padding: 0.5rem 1rem;
-  font-size: 0.98438rem;
+  font-size: 1.09375rem;
   line-height: 22px;
   border-radius: 0; }
 
@@ -3910,9 +3910,9 @@ input[type="button"].btn-block {
 .wpcf7 .input-group-lg > .input-group-prepend > input[type=submit],
 .input-group-lg > .input-group-append > .btn,
 .wpcf7 .input-group-lg > .input-group-append > input[type=submit] {
-  height: calc(2.47656rem + 4px);
+  height: calc(2.64062rem + 4px);
   padding: 0.5rem 1rem;
-  font-size: 0.98438rem;
+  font-size: 1.09375rem;
   line-height: 1.5;
   border-radius: 0; }
 
@@ -4382,10 +4382,10 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.41797rem;
-  padding-bottom: 0.41797rem;
+  padding-top: 0.33594rem;
+  padding-bottom: 0.33594rem;
   margin-right: 1rem;
-  font-size: 0.98438rem;
+  font-size: 1.09375rem;
   line-height: inherit;
   white-space: nowrap; }
   .navbar-brand:hover, .navbar-brand:focus {
@@ -4426,7 +4426,7 @@ input[type="button"].btn-block {
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 0.98438rem;
+  font-size: 1.09375rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
@@ -5000,7 +5000,7 @@ input[type="button"].btn-block {
 
 .pagination-lg .page-link {
   padding: 0.75rem 1rem;
-  font-size: 0.98438rem;
+  font-size: 1.09375rem;
   line-height: 1.5; }
 
 .pagination-lg .page-item:first-child .page-link {
@@ -18344,7 +18344,8 @@ button.swiper-pagination-bullet {
   margin-bottom: 30px; }
 
 .sidebar-anchors {
-  border-right: 1px solid #9d9d9d; }
+  border-right: 1px solid #9d9d9d;
+  height: 100%; }
   .sidebar-anchors .back {
     text-decoration: none;
     color: #9d9d9d;
@@ -18391,5 +18392,21 @@ button.swiper-pagination-bullet {
           background-color: #f26649; }
         .sidebar-anchors .anchors a:hover span, .sidebar-anchors .anchors a.active span {
           left: 10px; }
+  @media (min-width: 992px) {
+    .sidebar-anchors .scrollable {
+      width: 245px; } }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .sidebar-anchors .scrollable {
+      width: 200px; } }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .sidebar-anchors .scrollable {
+      width: 140px; } }
+  @media (min-width: 768px) {
+    .sidebar-anchors .scrollable.js-is-sticky {
+      position: fixed !important; }
+    .sidebar-anchors .scrollable.js-is-stuck {
+      position: absolute !important;
+      bottom: 0;
+      top: auto !important; } }
 
 /*# sourceMappingURL=child-theme.css.map */

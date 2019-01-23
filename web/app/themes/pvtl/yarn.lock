@@ -7250,6 +7250,11 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
+stickybits@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/stickybits/-/stickybits-3.6.1.tgz#270fa4d0fb34691e356a6c0a16dd5a8f3bbac4fe"
+  integrity sha512-8T+513bEHJs5MYoqN1UUnWBkNwGk0brvUzuQZZSAasWqkLWf7g3lWfJSDpRVNQ1czj/2ijIpDKPuigjkvKzA5g==
+
 stream-combiner2@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/stream-combiner2/-/stream-combiner2-1.1.1.tgz#fb4d8a1420ea362764e21ad4780397bebcb41cbe"
