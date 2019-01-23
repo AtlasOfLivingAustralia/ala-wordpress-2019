@@ -10996,17 +10996,28 @@ ul.links {
     padding-bottom: 0; }
 
 .wp-block-pullquote {
-  padding: 1em 3em;
-  text-align: left; }
+  padding: 2em 0; }
   .wp-block-pullquote blockquote {
     margin: 0; }
   .wp-block-pullquote p {
     font-size: 20px;
     font-style: italic; }
   @media (max-width: 575.98px) {
-    .wp-block-pullquote {
+    .wp-block-pullquote p {
+      font-size: 18px; } }
+
+.wp-block-quote {
+  padding: 1em 3em;
+  text-align: left; }
+  .wp-block-quote blockquote {
+    margin: 0; }
+  .wp-block-quote p {
+    font-size: 20px;
+    font-style: italic; }
+  @media (max-width: 575.98px) {
+    .wp-block-quote {
       padding: 1em 2em; }
-      .wp-block-pullquote p {
+      .wp-block-quote p {
         font-size: 18px; } }
 
 @media (min-width: 600px) {
