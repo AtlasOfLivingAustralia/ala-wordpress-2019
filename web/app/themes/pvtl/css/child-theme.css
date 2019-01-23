@@ -10996,7 +10996,8 @@ ul.links {
     padding-bottom: 0; }
 
 .wp-block-pullquote {
-  padding: 2em 0; }
+  margin: 2em 0;
+  padding: 0; }
   .wp-block-pullquote blockquote {
     margin: 0; }
   .wp-block-pullquote p {
@@ -11007,7 +11008,8 @@ ul.links {
       font-size: 18px; } }
 
 .wp-block-quote {
-  padding: 1em 3em;
+  margin: 1em 3em;
+  padding: 0;
   text-align: left; }
   .wp-block-quote blockquote {
     margin: 0; }

@@ -140,7 +140,8 @@ ul.links {
 }
 
 .wp-block-pullquote {
-  padding: 2em 0;
+  margin: 2em 0;
+  padding: 0;
   blockquote {
     margin: 0;
   }
@@ -156,7 +157,8 @@ ul.links {
 }
 
 .wp-block-quote {
-  padding: 1em 3em;
+  margin: 1em 3em;
+  padding: 0;
   text-align: left;
   blockquote {
     margin: 0;
