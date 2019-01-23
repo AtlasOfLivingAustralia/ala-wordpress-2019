@@ -10995,32 +10995,26 @@ ul.links {
     padding-top: 0;
     padding-bottom: 0; }
 
-.wp-block-pullquote {
-  margin: 2em 0;
+.wp-block-pullquote, .wp-block-quote {
   padding: 0; }
-  .wp-block-pullquote blockquote {
+  .wp-block-pullquote blockquote, .wp-block-quote blockquote {
     margin: 0; }
-  .wp-block-pullquote p {
+  .wp-block-pullquote p, .wp-block-quote p {
     font-size: 20px;
     font-style: italic; }
   @media (max-width: 575.98px) {
-    .wp-block-pullquote p {
+    .wp-block-pullquote p, .wp-block-quote p {
       font-size: 18px; } }
+
+.wp-block-pullquote {
+  margin: 2em 0; }
 
 .wp-block-quote {
   margin: 1em 3em;
-  padding: 0;
   text-align: left; }
-  .wp-block-quote blockquote {
-    margin: 0; }
-  .wp-block-quote p {
-    font-size: 20px;
-    font-style: italic; }
   @media (max-width: 575.98px) {
     .wp-block-quote {
-      padding: 1em 2em; }
-      .wp-block-quote p {
-        font-size: 18px; } }
+      padding: 1em 2em; } }
 
 @media (min-width: 600px) {
   .wp-block-column:nth-child(odd) {
@@ -11043,6 +11037,10 @@ ul.links {
 
 .icon-text:not(:last-child) {
   margin-bottom: 2rem; }
+
+.entry-content {
+  font-size: 16px;
+  color: #565656; }
 
 /*!
  * Font Awesome Pro 5.5.0 by @fontawesome - https://fontawesome.com
