@@ -251,7 +251,7 @@ class PVTL_Recent_Posts extends WP_Widget {
 
 } // end class
 
-add_action( 'widgets_init', create_function( '', 'register_widget("PVTL_Recent_Posts");' ) );
+add_action( 'widgets_init', function(){register_widget("PVTL_Recent_Posts");} );
 
 // Hooks fired when the Widget is activated and deactivated
 register_activation_hook( __FILE__, array( 'PVTL_Recent_Posts', 'activate' ) );
