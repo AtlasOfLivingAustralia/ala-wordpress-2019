@@ -1,6 +1,6 @@
 <?php
 /**
- * The right sidebar containing the main widget area.
+ * The sidebar containing the main widget area.
  *
  * @package understrap
  */
@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( ! is_active_sidebar( 'right-sidebar' ) ) {
+if ( ! is_active_sidebar( 'left-sidebar' ) ) {
 	return;
 }
 
@@ -17,8 +17,8 @@ if ( ! is_active_sidebar( 'right-sidebar' ) ) {
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
-<div class="col-md-3 widget-area" id="right-sidebar" role="complementary">
+<div class="col-md-3 widget-area" id="left-sidebar" role="complementary">
 
-<?php dynamic_sidebar( 'right-sidebar' ); ?>
+	<?php dynamic_sidebar( 'left-sidebar' ); ?>
 
-</div><!-- #right-sidebar -->
+</div><!-- #left-sidebar -->
