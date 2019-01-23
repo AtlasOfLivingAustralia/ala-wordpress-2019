@@ -10995,6 +10995,42 @@ ul.links {
     padding-top: 0;
     padding-bottom: 0; }
 
+.wp-block-pullquote {
+  padding: 1em 3em;
+  text-align: left; }
+  .wp-block-pullquote blockquote {
+    margin: 0; }
+  .wp-block-pullquote p {
+    font-size: 20px;
+    font-style: italic; }
+  @media (max-width: 575.98px) {
+    .wp-block-pullquote {
+      padding: 1em 2em; }
+      .wp-block-pullquote p {
+        font-size: 18px; } }
+
+@media (min-width: 600px) {
+  .wp-block-column:nth-child(odd) {
+    margin-right: 15px; }
+  .wp-block-column:nth-child(even) {
+    margin-left: 15px; }
+  .wp-block-column:not(:first-child) {
+    margin-left: 15px; }
+  .wp-block-column:not(:last-child) {
+    margin-right: 15px; } }
+
+.icon-text .image {
+  min-width: 50px;
+  margin-right: 20px; }
+
+.icon-text .content {
+  color: #565656; }
+  .icon-text .content *:last-child {
+    margin-bottom: 0; }
+
+.icon-text:not(:last-child) {
+  margin-bottom: 2rem; }
+
 /*!
  * Font Awesome Pro 5.5.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)

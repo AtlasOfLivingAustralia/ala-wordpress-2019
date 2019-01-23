@@ -138,3 +138,49 @@ ul.links {
     padding-bottom: 0;
   }
 }
+
+.wp-block-pullquote {
+  padding: 1em 3em;
+  text-align: left;
+  blockquote {
+    margin: 0;
+  }
+  p {
+    font-size: 20px;
+    font-style: italic;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 1em 2em;
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+//More sensible WP column gutters
+@media (min-width: 600px) {
+  .wp-block-column:nth-child(odd) {
+    margin-right: 15px; }
+  .wp-block-column:nth-child(even) {
+    margin-left: 15px; }
+  .wp-block-column:not(:first-child) {
+    margin-left: 15px; }
+  .wp-block-column:not(:last-child) {
+    margin-right: 15px; }
+}
+
+.icon-text {
+  .image {
+    min-width: 50px;
+    margin-right: 20px;
+  }
+  .content {
+    color: $c-text-light;
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
