@@ -23,14 +23,18 @@ $custom_logo_attr = array(
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
 <footer class="site-footer" id="colophon">
+	<?php
+	$cta = get_field('add_call_to_action');
+	if ($cta) : ?>
 	<div class="footer-top-bar">
 		<div class="<?php echo esc_attr( $container ); ?>">
 			<div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
-				<h3>Have a question or looking for help? Check out our support portal</h3>
-				<a href="#" class="btn btn-outline-white btn-lg">Visit the Support Portal</a>
+				<h3><?= get_field( 'cta_title', 'option' ); ?></h3>
+				<a href="<?= get_field( 'cta_button_link', 'option' ); ?>" class="btn btn-outline-white btn-lg"><?= get_field( 'cta_button_text', 'option' ); ?></a>
 			</div>
 		</div>
 	</div>
+	<?php endif; ?>
 	<div class="footer-top">
 		<div class="<?php echo esc_attr( $container ); ?>">
 			<div class="row align-items-center">
