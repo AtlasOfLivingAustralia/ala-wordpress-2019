@@ -63,6 +63,7 @@
       .entry-content {
         max-height: 3em;
         overflow: hidden;
+        font-size: 14px;
       }
     }
 
@@ -105,6 +106,7 @@
         }
         .entry-header, .entry-content {
           text-shadow: none;
+          color: $c-text;
         }
         .entry-content {
           max-height: 4.6em;
