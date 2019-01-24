@@ -157,7 +157,7 @@
     }
 
     const locationPath = filterPath(location.pathname);
-    $('a[href*="#"]').each(function () {
+    $('a[href*="#"]').not('[data-toggle=tab]').each(function () {
       const thisPath = filterPath(this.pathname) || locationPath;
       const hash = this.hash;
       if ($("#" + hash.replace(/#/, '')).length) {
