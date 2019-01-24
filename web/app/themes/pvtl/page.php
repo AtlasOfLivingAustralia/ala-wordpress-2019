@@ -20,7 +20,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<?php get_template_part('template-parts/featured-image'); ?>
+<?php
+/** Output the featured image banner on all pages except for the homepage */
+if (!is_front_page()) {
+	get_template_part('template-parts/featured-image');
+} ?>
 
 <div class="wrapper" id="page-wrapper">
 

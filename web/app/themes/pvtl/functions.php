@@ -100,6 +100,9 @@ function image_setup()
     //Featured Image
     add_image_size('featured', 640, 480, true );
 
+    // Team Member
+    add_image_size('team', 768, 870, true );
+
     //Post Image
     add_image_size('post', 790, 670, true );
 
