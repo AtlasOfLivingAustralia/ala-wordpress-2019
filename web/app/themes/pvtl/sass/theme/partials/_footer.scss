@@ -179,3 +179,23 @@
     }
   }
 }
+
+
+.footer-top-bar {
+  background-color: $primary;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #FFF;
+  h3 {
+    margin: 0;
+  }
+  .btn {
+    margin-left: 15px;
+  }
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    .btn {
+      margin: 15px 0 0;
+    }
+  }
+}

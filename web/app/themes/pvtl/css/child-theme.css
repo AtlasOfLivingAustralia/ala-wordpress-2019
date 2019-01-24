@@ -17048,6 +17048,23 @@ readers do not read off random characters that represent icons */
     .footer-copyright .menu li:not(:last-child) {
       margin-right: 20px; } }
 
+.footer-top-bar {
+  background-color: #f26649;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #FFF; }
+  .footer-top-bar h3 {
+    margin: 0; }
+  .footer-top-bar .btn,
+  .footer-top-bar .wpcf7 input[type=submit], .wpcf7 .footer-top-bar input[type=submit] {
+    margin-left: 15px; }
+  @media (max-width: 767.98px) {
+    .footer-top-bar {
+      text-align: center; }
+      .footer-top-bar .btn,
+      .footer-top-bar .wpcf7 input[type=submit], .wpcf7 .footer-top-bar input[type=submit] {
+        margin: 15px 0 0; } }
+
 .hero-slider {
   overflow: hidden;
   position: relative;
@@ -17761,7 +17778,8 @@ button.swiper-pagination-bullet {
   .tab-wrap .tab-section-title {
     font-weight: bold;
     font-family: 'Lato', sans-serif;
-    font-size: 18px; }
+    font-size: 18px;
+    color: #212121; }
 
 .tab-box {
   border-bottom: 1px solid #e5e5e5; }
@@ -17778,6 +17796,8 @@ button.swiper-pagination-bullet {
     color: #565656; }
     .tab-box .content *:last-child {
       margin-bottom: 0; }
+    .tab-box .content h4 {
+      margin-bottom: 0.5rem; }
   .tab-box .d-flex:not(:last-child) {
     margin-bottom: 2rem; }
 
@@ -18072,7 +18092,8 @@ button.swiper-pagination-bullet {
 
 .post-list .type-post .entry-content {
   max-height: 3em;
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: 14px; }
 
 .post-list .text-only {
   display: -webkit-box;
@@ -18117,7 +18138,8 @@ button.swiper-pagination-bullet {
       -webkit-transition: color 200ms ease;
       transition: color 200ms ease; }
     .post-list .text-only .type-post a .entry-header, .post-list .text-only .type-post a .entry-content {
-      text-shadow: none; }
+      text-shadow: none;
+      color: #212121; }
     .post-list .text-only .type-post a .entry-content {
       max-height: 4.6em; }
       @media (min-width: 992px) and (max-width: 1199.98px) {

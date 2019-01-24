@@ -23,7 +23,14 @@ $custom_logo_attr = array(
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
 <footer class="site-footer" id="colophon">
-
+	<div class="footer-top-bar">
+		<div class="<?php echo esc_attr( $container ); ?>">
+			<div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
+				<h3>Have a question or looking for help? Check out our support portal</h3>
+				<a href="#" class="btn btn-outline-white btn-lg">Visit the Support Portal</a>
+			</div>
+		</div>
+	</div>
 	<div class="footer-top">
 		<div class="<?php echo esc_attr( $container ); ?>">
 			<div class="row align-items-center">
