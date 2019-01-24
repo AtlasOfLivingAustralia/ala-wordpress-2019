@@ -6,7 +6,7 @@ use App\Themes\Pvtl\Library\RegisterBlocks;
 class IconWithText extends RegisterBlocks
 {
     protected $title = 'Icon with Text';
-    protected $icon = 'id-alt'; // https://developer.wordpress.org/resource/dashicons/
+    protected $icon = 'excerpt-view'; // https://developer.wordpress.org/resource/dashicons/
 
     public function render($block = [], $content = '', $is_preview = false)
     {
