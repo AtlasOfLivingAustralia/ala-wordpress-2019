@@ -199,3 +199,17 @@
     }
   }
 }
+
+.footer-subscribe {
+  .gform_wrapper {
+    .gfield_label {
+      display: none;
+    }
+    .ginput_container {
+      input {
+        width: 100%;
+        border: none;
+      }
+    }
+  }
+}

@@ -17117,6 +17117,9 @@ readers do not read off random characters that represent icons */
       .footer-top-bar .wpcf7 input[type=submit], .wpcf7 .footer-top-bar input[type=submit], .footer-top-bar .gform_button {
         margin: 20px 0 0; } }
 
+.footer-subscribe .gform_wrapper .gfield_label {
+  display: none; }
+
 .hero-slider {
   overflow: hidden;
   position: relative;

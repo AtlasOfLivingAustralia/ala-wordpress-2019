@@ -40,7 +40,7 @@ $custom_logo_attr = array(
 	<?php
 	/** Adds the subscribe bar if we are on the blog list or single page. */
 	if (is_home() || is_single()) : ?>
-		<div class="footer-top-bar">
+		<div class="footer-top-bar footer-subscribe">
 			<div class="<?php echo esc_attr( $container ); ?>">
 				<div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
 					<h3>Subscribe to receive the latest news & updates</h3>
