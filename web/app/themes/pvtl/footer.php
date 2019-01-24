@@ -44,16 +44,7 @@ $custom_logo_attr = array(
 			<div class="<?php echo esc_attr( $container ); ?>">
 				<div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
 					<h3>Subscribe to receive the latest news & updates</h3>
-					<form class="form-inline">
-						<div class="form-group flex-grow-1">
-							<label for="email" class="sr-only">Email Address</label>
-							<input type="email" class="form-control flex-grow-1" id="email" placeholder="Email Address">
-						</div>
-						<button type="submit" class="btn btn-primary">
-							<i class="fal fa-long-arrow-right"></i>
-							Subscribe
-						</button>
-					</form>
+					<?php echo do_shortcode('[gravityform id=2 title=false description=false ajax=true]'); ?>
 				</div>
 			</div>
 		</div>
