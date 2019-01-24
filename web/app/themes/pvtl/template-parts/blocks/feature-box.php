@@ -43,7 +43,7 @@ class FeatureBox extends RegisterBlocks
 			   <div class="featured-swiper">
 				   <div class="row swiper-wrapper">
 					   <div class="col-xs-12 col-md-4 swiper-slide">
-						   <a href="<?= $link1; ?>" title="<?= $title1; ?>" class="featured-item">
+						   <a href="<?= $link1; ?>" title="<?= $title1; ?>" class="link-box">
 							   <img src="<?= $image1['sizes']['featured'] ?>" alt="<?= $title1; ?>" />
 							   <div class="overlay">
 								   <?= ($date1) ? '<time class="date" title="' .$date1 . '"><i class="fal fa-calendar-alt"></i> ' . $date1 . '</time>' : '' ?>
@@ -53,7 +53,7 @@ class FeatureBox extends RegisterBlocks
 						   </a>
 					   </div>
 					   <div class="col-xs-12 col-md-4 swiper-slide">
-						   <a href="<?= $link2; ?>" title="<?= $title2; ?>" class="featured-item">
+						   <a href="<?= $link2; ?>" title="<?= $title2; ?>" class="link-box">
 							   <img src="<?= $image2['sizes']['featured'] ?>" alt="<?= $title2; ?>" />
 							   <div class="overlay">
 								   <?= ($date2) ? '<time class="date" title="' .$date2 . '"><i class="fal fa-calendar-alt"></i> ' . $date2 . '</time>' : '' ?>
@@ -63,7 +63,7 @@ class FeatureBox extends RegisterBlocks
 						   </a>
 					   </div>
 					   <div class="col-xs-12 col-md-4 swiper-slide">
-						   <a href="<?= $link3; ?>" title="<?= $title3; ?>" class="featured-item">
+						   <a href="<?= $link3; ?>" title="<?= $title3; ?>" class="link-box">
 							   <img src="<?= $image3['sizes']['featured'] ?>" alt="<?= $title3; ?>" />
 							   <div class="overlay">
 								   <?= ($date3) ? '<time class="date" title="' .$date3 . '"><i class="fal fa-calendar-alt"></i> ' . $date3 . '</time>' : '' ?>

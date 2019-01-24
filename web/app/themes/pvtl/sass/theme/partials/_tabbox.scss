@@ -81,8 +81,8 @@
 
   .tab-box {
     .tab-content {
-      padding-top: 80px;
-      padding-bottom: 80px;
+      padding-top: $block-spacing;
+      padding-bottom: $block-spacing;
     }
   }
 
@@ -108,8 +108,8 @@
   }
   .tab-box {
     .tab-content {
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding-top: $block-spacing-small;
+      padding-bottom: $block-spacing-small;
     }
   }
 }

@@ -103,6 +103,8 @@ $c-page-background-dark: #637073;
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold:  115;
 
+$block-spacing: 80px;
+$block-spacing-small: 60px;
 
 $btn-padding-y:               5px;
 $btn-padding-x:               30px;
@@ -124,6 +126,8 @@ $border-radius-sm:        0;
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      'Roboto', sans-serif;
 $font-family-base:            $font-family-sans-serif;
+
+$headings-margin-bottom:      1rem;
 
 $headings-font-family:        'Lato', sans-serif;
 $headings-font-weight:        900;

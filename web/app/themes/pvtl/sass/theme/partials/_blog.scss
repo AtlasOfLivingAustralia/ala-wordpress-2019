@@ -183,8 +183,13 @@
 // These are the styles for the post single pages
 .single-post {
   @include media-breakpoint-up(md) {
-    .content-area {
+    #primary {
+      padding-top: 40px;
       padding-right: 70px;
+      padding-bottom: 40px;
+    }
+    #right-sidebar {
+      padding-top: 40px;
     }
   }
   .entry-header {
