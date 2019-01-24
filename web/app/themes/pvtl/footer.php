@@ -24,6 +24,7 @@ $custom_logo_attr = array(
 
 <footer class="site-footer" id="colophon">
 	<?php
+	/** Adds the call to action bar if it is set to yes in the page options. */
 	$cta = get_field('add_call_to_action');
 	if ($cta) : ?>
 	<div class="footer-top-bar">
@@ -35,6 +36,29 @@ $custom_logo_attr = array(
 		</div>
 	</div>
 	<?php endif; ?>
+
+	<?php
+	/** Adds the subscribe bar if we are on the blog list or single page. */
+	if (is_home() || is_single()) : ?>
+		<div class="footer-top-bar">
+			<div class="<?php echo esc_attr( $container ); ?>">
+				<div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
+					<h3>Subscribe to receive the latest news & updates</h3>
+					<form class="form-inline">
+						<div class="form-group flex-grow-1">
+							<label for="email" class="sr-only">Email Address</label>
+							<input type="email" class="form-control flex-grow-1" id="email" placeholder="Email Address">
+						</div>
+						<button type="submit" class="btn btn-primary">
+							<i class="fal fa-long-arrow-right"></i>
+							Subscribe
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	<?php endif; ?>
+
 	<div class="footer-top">
 		<div class="<?php echo esc_attr( $container ); ?>">
 			<div class="row align-items-center">
