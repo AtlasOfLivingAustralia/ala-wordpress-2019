@@ -202,14 +202,47 @@
 
 .footer-subscribe {
   .gform_wrapper {
+    margin: 0 0 0 30px;
+    @include media-breakpoint-down(sm) {
+      margin: 20px 0 0;
+    }
+    .gfield {
+      padding: 0 !important;
+      margin: 0;
+    }
     .gfield_label {
-      display: none;
+      display: none !important;
     }
     .ginput_container {
+      margin-top: 0 !important;
       input {
-        width: 100%;
-        border: none;
+        width: 100% !important;
+        border: none !important;
+        padding: 15px 20px !important;
+        line-height: 20px !important;
       }
+    }
+    .gform_body {
+      width: 260px;
+    }
+    .gform_footer {
+      padding: 0 !important;
+      margin: 0 !important;
+      width: 34px;
+      input[type=image] {
+        height: 50px;
+        padding: 20px 10px !important;
+        margin: 0 !important;
+        background: #FFF !important;
+        &:hover {
+          background-color: $c-page-background !important;
+        }
+      }
+    }
+    form {
+      display: flex;
     }
   }
 }
+
+

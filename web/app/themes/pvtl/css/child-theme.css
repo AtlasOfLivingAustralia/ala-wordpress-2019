@@ -17117,8 +17117,40 @@ readers do not read off random characters that represent icons */
       .footer-top-bar .wpcf7 input[type=submit], .wpcf7 .footer-top-bar input[type=submit], .footer-top-bar .gform_button {
         margin: 20px 0 0; } }
 
-.footer-subscribe .gform_wrapper .gfield_label {
-  display: none; }
+.footer-subscribe .gform_wrapper {
+  margin: 0 0 0 30px; }
+  @media (max-width: 767.98px) {
+    .footer-subscribe .gform_wrapper {
+      margin: 20px 0 0; } }
+  .footer-subscribe .gform_wrapper .gfield {
+    padding: 0 !important;
+    margin: 0; }
+  .footer-subscribe .gform_wrapper .gfield_label {
+    display: none !important; }
+  .footer-subscribe .gform_wrapper .ginput_container {
+    margin-top: 0 !important; }
+    .footer-subscribe .gform_wrapper .ginput_container input {
+      width: 100% !important;
+      border: none !important;
+      padding: 15px 20px !important;
+      line-height: 20px !important; }
+  .footer-subscribe .gform_wrapper .gform_body {
+    width: 260px; }
+  .footer-subscribe .gform_wrapper .gform_footer {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 34px; }
+    .footer-subscribe .gform_wrapper .gform_footer input[type=image] {
+      height: 50px;
+      padding: 20px 10px !important;
+      margin: 0 !important;
+      background: #FFF !important; }
+      .footer-subscribe .gform_wrapper .gform_footer input[type=image]:hover {
+        background-color: #f2f2f2 !important; }
+  .footer-subscribe .gform_wrapper form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 .hero-slider {
   overflow: hidden;
