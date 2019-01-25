@@ -65,6 +65,12 @@ ul.menu {
   }
 }
 
+#search-wrapper {
+  article:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -153,6 +159,8 @@ ul.menu {
   font-size: 16px;
   color: $c-text-light;
 }
+
+
 
 
 .gform_button {

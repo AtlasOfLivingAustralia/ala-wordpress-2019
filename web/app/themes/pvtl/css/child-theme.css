@@ -10982,6 +10982,9 @@ ul.menu {
   .pb {
     padding-bottom: 60px; } }
 
+#search-wrapper article:not(:last-child) {
+  margin-bottom: 30px; }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -16938,7 +16941,9 @@ readers do not read off random characters that represent icons */
   font-size: 0;
   color: #FFF;
   margin: .25rem .5rem;
-  padding: 2px 0; }
+  padding: 2px 0;
+  background-color: transparent;
+  border: none; }
   .search-trigger svg path, .account-mobile svg path {
     -webkit-transition: all 150ms ease;
     transition: all 150ms ease; }

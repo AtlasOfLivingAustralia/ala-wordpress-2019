@@ -27,26 +27,13 @@ if (!is_front_page()) {
 
 		<div class="row">
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<div class="col-md-12 content-area" id="primary">
 
 			<main class="site-main" id="main">
 
 				<?php if ( have_posts() ) : ?>
 
-					<header class="page-header">
 
-							<h1 class="page-title">
-								<?php
-								printf(
-									/* translators: %s: query term */
-									esc_html__( 'Search Results for: %s', 'understrap' ),
-									'<span>' . get_search_query() . '</span>'
-								);
-								?>
-							</h1>
-
-					</header><!-- .page-header -->
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -73,8 +60,7 @@ if (!is_front_page()) {
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+			</div>
 
 		</div><!-- .row -->
 

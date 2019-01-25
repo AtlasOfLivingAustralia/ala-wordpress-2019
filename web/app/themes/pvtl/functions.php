@@ -243,6 +243,14 @@ function escape_experience_groups( $groups ) {
 add_filter( 'experience_groups', 'escape_experience_groups' );
 
 
+/**
+ * Outputs the search modal in the footer.
+ */
+function display_search_popup() {
+	get_template_part( 'template-parts/modal', 'search' );
+}
+add_action( 'wp_footer', 'display_search_popup' );
+
 
 /**
  * Add Mobile Logo option to customizer
