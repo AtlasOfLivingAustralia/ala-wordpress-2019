@@ -58,7 +58,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<?php echo 'null' === $xp ? 'Customise Your Experience' : esc_html( 'Viewing as ' . $xp ); ?> <i class="far fa-angle-down ml-1"></i>
 							</button>
 						<?php endif; ?>
-						<a href="/contact" class="btn btn-link btn-sm d-none d-lg-inline-block">Contact Us</a>
+						<a href="/contact-us" class="btn btn-link btn-sm d-none d-lg-inline-block">Contact Us</a>
 						<div class="account d-none d-lg-block">
 							<a href="#" class="btn btn-outline-white btn-sm">Sign Up</a>
 							<a href="#" class="btn btn-primary btn-sm">Login</a>
