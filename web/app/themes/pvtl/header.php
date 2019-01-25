@@ -49,7 +49,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<!-- end custom logo -->
 
 				<div class="outer-nav-wrapper">
-					<div class="top-bar d-none d-lg-flex">
+					<div class="top-bar d-flex">
 						<?php
 						$xp = get_experience_group();
 						if ( $xp ) :
@@ -58,8 +58,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<?php echo 'null' === $xp ? 'Customise Your Experience' : esc_html( 'Viewing as ' . $xp ); ?> <i class="far fa-angle-down ml-1"></i>
 							</button>
 						<?php endif; ?>
-						<a href="/contact" class="btn btn-link btn-sm">Contact Us</a>
-						<div class="account">
+						<a href="/contact" class="btn btn-link btn-sm d-none d-lg-inline-block">Contact Us</a>
+						<div class="account d-none d-lg-block">
 							<a href="#" class="btn btn-outline-white btn-sm">Sign Up</a>
 							<a href="#" class="btn btn-primary btn-sm">Login</a>
 						</div>

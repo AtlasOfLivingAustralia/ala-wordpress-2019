@@ -16828,6 +16828,20 @@ readers do not read off random characters that represent icons */
     padding: 0;
     margin: .25rem .5rem;
     -webkit-appearance: none; }
+    .navbar .navbar-toggler:after {
+      content: '';
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      right: 300px;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      -webkit-transition: visibility 0ms ease 0ms, opacity 0ms ease 0ms;
+      transition: visibility 0ms ease 0ms, opacity 0ms ease 0ms; }
     .navbar .navbar-toggler .navbar-toggler-icon {
       background: #212121;
       height: 1px;
@@ -16851,16 +16865,22 @@ readers do not read off random characters that represent icons */
         top: -10px; }
       .navbar .navbar-toggler .navbar-toggler-icon:after {
         bottom: -10px; }
-      .offcanvas-open .navbar .navbar-toggler .navbar-toggler-icon {
-        background: transparent; }
-        .offcanvas-open .navbar .navbar-toggler .navbar-toggler-icon:before {
-          top: 0;
-          -webkit-transform: rotate(45deg);
-                  transform: rotate(45deg); }
-        .offcanvas-open .navbar .navbar-toggler .navbar-toggler-icon:after {
-          bottom: 0;
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg); }
+    .offcanvas-open .navbar .navbar-toggler:after {
+      visibility: visible;
+      opacity: 1;
+      z-index: 9000;
+      -webkit-transition: visibility 0ms ease 400ms, opacity 300ms ease 400ms;
+      transition: visibility 0ms ease 400ms, opacity 300ms ease 400ms; }
+    .offcanvas-open .navbar .navbar-toggler .navbar-toggler-icon {
+      background: transparent; }
+      .offcanvas-open .navbar .navbar-toggler .navbar-toggler-icon:before {
+        top: 0;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      .offcanvas-open .navbar .navbar-toggler .navbar-toggler-icon:after {
+        bottom: 0;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
 
 .navbar-brand {
   height: 50px; }
@@ -16939,14 +16959,42 @@ readers do not read off random characters that represent icons */
       right: 300px;
       overflow: hidden;
       position: fixed; }
+  .top-bar {
+    position: fixed;
+    z-index: 10001;
+    top: 0;
+    bottom: 0;
+    right: -300px;
+    width: 300px;
+    height: 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #495057;
+    visibility: hidden;
+    -webkit-transition-timing-function: ease;
+            transition-timing-function: ease;
+    -webkit-transition-duration: 400ms;
+            transition-duration: 400ms;
+    -webkit-transition-property: right, visibility;
+    transition-property: right, visibility; }
+    .top-bar .btn,
+    .top-bar .wpcf7 input[type=submit], .wpcf7 .top-bar input[type=submit], .top-bar .gform_button {
+      border: none;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+    .offcanvas-open .top-bar {
+      right: 0;
+      visibility: visible; }
   .offcanvas-collapse {
     position: fixed;
     z-index: 10000;
     top: 0;
-    /* Height of navbar */
     bottom: 0;
     right: -300px;
     width: 300px;
+    padding-top: 50px;
     padding-right: 1rem !important;
     padding-left: 1rem !important;
     overflow-y: auto;
@@ -16962,7 +17010,15 @@ readers do not read off random characters that represent icons */
     margin: 0 !important; }
     .offcanvas-open .offcanvas-collapse {
       right: 0;
-      visibility: visible; } }
+      visibility: visible; }
+    .offcanvas-collapse .navbar-nav .nav-link:before {
+      display: none !important; }
+    .offcanvas-collapse .navbar-nav .dropdown-menu {
+      margin: 0 0 10px;
+      border: none;
+      background-color: #f2f2f2; }
+    .offcanvas-collapse .navbar-nav .dropdown-item {
+      padding: 0.5rem 1rem; } }
 
 .footer-top {
   background: #212121;
