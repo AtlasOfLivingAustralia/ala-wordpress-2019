@@ -283,3 +283,45 @@
     }
   }
 }
+
+.social-tabs {
+  border: 1px solid $gray-400;
+  .nav {
+    display: flex;
+    li {
+      flex: 1;
+      &:first-child {
+        border-right: 1px solid $gray-400;
+      }
+    }
+    a {
+      display: block;
+      line-height: 40px;
+      font-size: 18px;
+      color: $c-text-light;
+      text-decoration: none;
+      text-align: center;
+      background-color: $c-page-background;
+      border-bottom: 1px solid $gray-400;
+      &.active {
+        background-color: #FFF;
+        border-bottom-color: #FFF;
+      }
+    }
+  }
+  .tab-pane {
+    transition: opacity .2s ease;
+  }
+  //Re-enable those tabs on mobile
+  @include media-breakpoint-down(sm) {
+    .tab-pane {
+      display: none !important;
+      opacity: 0 !important;
+      border-bottom: none;
+      &.active {
+        display: block !important;
+        opacity: 1 !important;
+      }
+    }
+  }
+}

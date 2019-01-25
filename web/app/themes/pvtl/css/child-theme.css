@@ -18390,6 +18390,42 @@ button.swiper-pagination-bullet {
     max-height: 4.6em;
     overflow: hidden; }
 
+.social-tabs {
+  border: 1px solid #ced4da; }
+  .social-tabs .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .social-tabs .nav li {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+      .social-tabs .nav li:first-child {
+        border-right: 1px solid #ced4da; }
+    .social-tabs .nav a {
+      display: block;
+      line-height: 40px;
+      font-size: 18px;
+      color: #565656;
+      text-decoration: none;
+      text-align: center;
+      background-color: #f2f2f2;
+      border-bottom: 1px solid #ced4da; }
+      .social-tabs .nav a.active {
+        background-color: #FFF;
+        border-bottom-color: #FFF; }
+  .social-tabs .tab-pane {
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease; }
+  @media (max-width: 767.98px) {
+    .social-tabs .tab-pane {
+      display: none !important;
+      opacity: 0 !important;
+      border-bottom: none; }
+      .social-tabs .tab-pane.active {
+        display: block !important;
+        opacity: 1 !important; } }
+
 .featured-hero {
   background-color: #f26649;
   background-size: cover;

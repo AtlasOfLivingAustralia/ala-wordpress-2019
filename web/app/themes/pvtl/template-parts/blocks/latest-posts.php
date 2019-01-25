@@ -34,7 +34,7 @@ class LatestPosts extends RegisterBlocks
 				</div>
 			</div>
 
-			<div class="row post-list">
+			<div class="row post-list justify-content-center">
 			<?php if ($wp_query->have_posts()) :
 				$counter = 0;
 			?>
@@ -72,8 +72,37 @@ class LatestPosts extends RegisterBlocks
 					<p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p>
 				</div>
 			<?php endif; ?>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-					This is the social feed
+				<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4  mt-4 mt-lg-0">
+
+					<div class="social-tabs">
+						<ul  class="nav nav-pills">
+							<li>
+								<a class="active" href="#twitter" data-toggle="tab">Twitter</a>
+							</li>
+							<li>
+								<a href="#facebook" data-toggle="tab">Facebook</a>
+							</li>
+						</ul>
+
+						<div class="tab-content clearfix">
+							<div class="tab-pane fade active show" id="twitter">
+								<a class="twitter-timeline" data-height="246" href="https://twitter.com/atlaslivingaust?ref_src=twsrc%5Etfw">Tweets by atlaslivingaust</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+							</div>
+							<div class="tab-pane fade" id="facebook">
+								<div id="fb-root"></div>
+								<script>(function(d, s, id) {
+										var js, fjs = d.getElementsByTagName(s)[0];
+										if (d.getElementById(id)) return;
+										js = d.createElement(s); js.id = id;
+										js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+										fjs.parentNode.insertBefore(js, fjs);
+									}(document, 'script', 'facebook-jssdk'));</script>
+								<div class="fb-page" data-href="https://www.facebook.com/atlasoflivingaustralia/" data-tabs="timeline" data-height="253" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/atlasoflivingaustralia/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/atlasoflivingaustralia/">Atlas of Living Australia</a></blockquote></div>
+							</div>
+						</div>
+					</div>
+
+
 				</div>
 			</div>
         </div>
