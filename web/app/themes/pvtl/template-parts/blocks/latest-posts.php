@@ -21,6 +21,11 @@ class LatestPosts extends RegisterBlocks
             'post_type' => 'post',
             'posts_per_page' => 3,
         ]);
+
+		$visibility = get_field('visibility');
+		$xp = get_experience_group();
+
+		if(!$visibility || in_array($xp, $visibility)) :
     ?>
         <div class="pt pb latest-posts-block align<?= $block['align']; ?>">
 			<div class="row">
@@ -72,6 +77,6 @@ class LatestPosts extends RegisterBlocks
 				</div>
 			</div>
         </div>
-    <?php
+    <?php endif;
     }
 }

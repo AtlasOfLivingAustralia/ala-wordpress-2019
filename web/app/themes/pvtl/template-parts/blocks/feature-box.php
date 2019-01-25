@@ -31,7 +31,10 @@ class FeatureBox extends RegisterBlocks
 		$author3 = get_field('author_3'); // date (jS F Y)
 		$image3 = get_field('image_3'); // array
 
+		$visibility = get_field('visibility');
+		$xp = get_experience_group();
 
+		if(!$visibility || in_array($xp, $visibility)) :
     ?>
         <div class="pt pb feature-box align<?= $block['align']; ?>">
            <div class="container">
@@ -79,6 +82,6 @@ class FeatureBox extends RegisterBlocks
 		   </div>
         </div>
 
-    <?php
+    <?php endif;
     }
 }

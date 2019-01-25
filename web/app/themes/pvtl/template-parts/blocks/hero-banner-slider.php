@@ -13,9 +13,10 @@ class HeroBannerSlider extends RegisterBlocks
         $slides  = get_field('slides'); // arr
         $title = get_field('title'); // str
 
+		$visibility = get_field('visibility');
+		$xp = get_experience_group();
 
-
-
+		if(!$visibility || in_array($xp, $visibility)) :
     ?>
         <div class="hero-slider flexible-content swiper-container align<?= $block['align']; ?>">
             <div class="swiper-wrapper">
@@ -96,6 +97,6 @@ class HeroBannerSlider extends RegisterBlocks
             </div>
 
         </div>
-    <?php
+    <?php endif;
     }
 }

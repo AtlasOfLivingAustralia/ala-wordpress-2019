@@ -11,9 +11,11 @@ class TabBox extends RegisterBlocks
 
     public function render($block = [], $content = '', $is_preview = false)
     {
-        $slides = get_field('slides'); // arr
-        $title = get_field('title'); // str
 
+		$visibility = get_field('visibility');
+		$xp = get_experience_group();
+
+		if(!$visibility || in_array($xp, $visibility)) :
 
         ?>
         <div class="tab-box flexible-content align<?= $block['align']; ?>">
@@ -228,6 +230,6 @@ class TabBox extends RegisterBlocks
                 </div>
             </div>
         </div>
-        <?php
+        <?php endif;
     }
 }

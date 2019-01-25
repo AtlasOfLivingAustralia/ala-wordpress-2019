@@ -781,6 +781,47 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5c4a6061e8df1",
+            "label": "Visible",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 1
+        },
+        {
+            "key": "field_5c4a606fe8df2",
+            "label": "Only show for the following groups",
+            "name": "visibility",
+            "type": "checkbox",
+            "instructions": "Leave all unticked to show for all",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Researcher": "Researcher",
+                "Land Manager\/Consultant": "Land Manager \/ Consultant",
+                "Community and Schools": "Community \/ Schools"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
         }
     ],
     "location": [
@@ -800,5 +841,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548026926
+    "modified": 1548380045
 }

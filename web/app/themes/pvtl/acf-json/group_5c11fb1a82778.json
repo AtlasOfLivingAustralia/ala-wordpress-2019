@@ -37,6 +37,31 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5c4a601c8ebed",
+            "label": "Only show for the following groups",
+            "name": "visibility",
+            "type": "checkbox",
+            "instructions": "Leave all unticked to show for all",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Researcher": "Researcher",
+                "Land Manager\/Consultant": "Land Manager \/ Consultant",
+                "Community and Schools": "Community \/ Schools"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
         }
     ],
     "location": [
@@ -56,5 +81,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548112363
+    "modified": 1548380396
 }
