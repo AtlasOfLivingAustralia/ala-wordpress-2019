@@ -142,12 +142,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #f26649;
+  color: #c44d34;
   text-decoration: underline;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #df3310;
+    color: #883524;
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -2891,10 +2891,10 @@ fieldset:disabled a.gform_button {
 
 .btn-link {
   font-weight: 400;
-  color: #f26649;
+  color: #c44d34;
   background-color: transparent; }
   .btn-link:hover {
-    color: #df3310;
+    color: #883524;
     text-decoration: underline;
     background-color: transparent;
     border-color: transparent; }
@@ -17095,6 +17095,10 @@ readers do not read off random characters that represent icons */
   padding-bottom: 50px; }
   .footer-top .custom-logo {
     max-width: 290px; }
+  .footer-top a:not(.btn):not(.gform_button) {
+    color: #f26649; }
+    .footer-top a:not(.btn):not(.gform_button):hover {
+      color: #c44d34; }
   .footer-top .account {
     margin-top: 20px;
     display: -webkit-box;
@@ -17116,7 +17120,7 @@ readers do not read off random characters that represent icons */
         padding: 5px 8px;
         display: inline-block; }
         .footer-top .account .social a:hover {
-          color: #f26649; }
+          color: #c44d34; }
   .footer-top .image {
     min-width: 50px;
     margin-right: 15px; }
@@ -17145,8 +17149,8 @@ readers do not read off random characters that represent icons */
     font-weight: 900;
     font-size: 18px;
     display: block;
-    border-bottom: 1px solid #d0300f;
-    color: #d0300f;
+    border-bottom: 1px solid #c44d34;
+    color: #c44d34;
     text-decoration: none;
     margin-bottom: 15px; }
   .footer-menu .menu .sub-menu {
@@ -17204,7 +17208,7 @@ readers do not read off random characters that represent icons */
     margin-top: 20px; }
 
 .footer-copyright {
-  background-color: #d0300f;
+  background-color: #c44d34;
   color: #f2f2f2;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -17227,7 +17231,7 @@ readers do not read off random characters that represent icons */
       margin-right: 20px; } }
 
 .footer-top-bar {
-  background-color: #f26649;
+  background-color: #c44d34;
   padding-top: 40px;
   padding-bottom: 40px;
   color: #FFF; }
@@ -18649,7 +18653,7 @@ button.swiper-pagination-bullet {
     -webkit-transition: color 150ms ease;
     transition: color 150ms ease; }
     .sidebar-anchors .back:hover {
-      color: #f26649; }
+      color: #c44d34; }
   .sidebar-anchors .anchors {
     padding: 0;
     margin: 0 0 25px;
@@ -18683,9 +18687,9 @@ button.swiper-pagination-bullet {
         -webkit-transition: all 150ms ease;
         transition: all 150ms ease; }
       .sidebar-anchors .anchors a:hover, .sidebar-anchors .anchors a.active {
-        color: #f26649; }
+        color: #c44d34; }
         .sidebar-anchors .anchors a:hover:after, .sidebar-anchors .anchors a.active:after {
-          background-color: #f26649; }
+          background-color: #c44d34; }
         .sidebar-anchors .anchors a:hover span, .sidebar-anchors .anchors a.active span {
           left: 10px; }
   @media (min-width: 992px) {
@@ -18736,7 +18740,7 @@ ul.links {
       -webkit-transition: inherit;
       transition: inherit; }
     ul.links li a:hover {
-      color: #f26649; }
+      color: #c44d34; }
       ul.links li a:hover i {
         margin-right: 0; }
   ul.links li:first-child a {

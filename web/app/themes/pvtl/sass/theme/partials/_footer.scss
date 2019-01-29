@@ -6,6 +6,12 @@
   .custom-logo {
     max-width: 290px;
   }
+  a:not(.btn) {
+    color: $primary;
+    &:hover {
+      color: $primary-dark;
+    }
+  }
   .account {
     margin-top: 20px;
     display: flex;
@@ -24,7 +30,7 @@
         padding: 5px 8px;
         display: inline-block;
         &:hover {
-          color: $primary;
+          color: $primary-dark;
         }
       }
     }
@@ -66,8 +72,8 @@
         font-weight: 900;
         font-size: 18px;
         display: block;
-        border-bottom: 1px solid darken($primary, 18%);
-        color: darken($primary, 18%);
+        border-bottom: 1px solid $primary-dark;
+        color: $primary-dark;
         text-decoration: none;
         margin-bottom: 15px;
       }
@@ -148,7 +154,7 @@
 }
 
 .footer-copyright {
-  background-color: darken($primary, 18%);
+  background-color: $primary-dark;
   color: $c-page-background;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -184,7 +190,7 @@
 
 
 .footer-top-bar {
-  background-color: $primary;
+  background-color: $primary-dark;
   padding-top: 40px;
   padding-bottom: 40px;
   color: #FFF;
