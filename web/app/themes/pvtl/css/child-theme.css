@@ -17082,7 +17082,8 @@ readers do not read off random characters that represent icons */
     font-weight: 900;
     font-size: 18px;
     display: block;
-    border-bottom: 1px solid #f26649;
+    border-bottom: 1px solid #d0300f;
+    color: #d0300f;
     text-decoration: none;
     margin-bottom: 15px; }
   .footer-menu .menu .sub-menu {
@@ -17140,7 +17141,7 @@ readers do not read off random characters that represent icons */
     margin-top: 20px; }
 
 .footer-copyright {
-  background-color: #f26649;
+  background-color: #d0300f;
   color: #FFF;
   padding-top: 15px;
   padding-bottom: 15px; }
