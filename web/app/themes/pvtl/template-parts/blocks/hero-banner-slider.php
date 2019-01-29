@@ -50,10 +50,10 @@ class HeroBannerSlider extends RegisterBlocks
                                     <img src="<?= get_stylesheet_directory_uri(); ?>/images/icons/map-light-shadow.svg" alt="Map Icon" />
                                 </div>
                                 <div class="content text-left">
-                                    <h5>
+                                    <p class="h5">
                                         <span class="amount" data-occurrence>74,950,414</span>
                                         Occurrence Records
-                                    </h5>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -63,10 +63,10 @@ class HeroBannerSlider extends RegisterBlocks
                                     <img src="<?= get_stylesheet_directory_uri(); ?>/images/icons/browser-light-shadow.svg" alt="Browser Icon" />
                                 </div>
                                 <div class="content text-left">
-                                    <h5>
+                                    <p class="h5">
                                         <span class="amount" data-species>116,724</span>
                                         Species Recorded
-                                    </h5>
+                                    </p>
                                 </div>
                             </div>
                         </div>

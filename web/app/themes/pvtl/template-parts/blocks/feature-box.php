@@ -49,7 +49,7 @@ class FeatureBox extends RegisterBlocks
 						   <a href="<?= $link1; ?>" title="<?= $title1; ?>" class="link-box">
 							   <img src="<?= $image1['sizes']['featured'] ?>" alt="<?= $title1; ?>" />
 							   <div class="overlay">
-								   <?= ($date1) ? '<time class="date" title="' .$date1 . '"><i class="fal fa-calendar-alt"></i> ' . $date1 . '</time>' : '' ?>
+								   <?= ($date1) ? '<time class="date" title="' .$date1 . '"><i class="fal fa-calendar-alt" aria-hidden="true"></i> ' . $date1 . '</time>' : '' ?>
 								   <?= ($author1) ? '<p class="author"><img src="' . get_stylesheet_directory_uri() . '/images/icons/camera-light-shadow.svg" alt="author icon" />' . $author1 . '</p>' : '' ?>
 								   <h4 class="title"><?= $title1; ?> <span class="arrow"><i class="far fa-long-arrow-right"></i></span></h4>
 							   </div>
@@ -59,7 +59,7 @@ class FeatureBox extends RegisterBlocks
 						   <a href="<?= $link2; ?>" title="<?= $title2; ?>" class="link-box">
 							   <img src="<?= $image2['sizes']['featured'] ?>" alt="<?= $title2; ?>" />
 							   <div class="overlay">
-								   <?= ($date2) ? '<time class="date" title="' .$date2 . '"><i class="fal fa-calendar-alt"></i> ' . $date2 . '</time>' : '' ?>
+								   <?= ($date2) ? '<time class="date" title="' .$date2 . '"><i class="fal fa-calendar-alt" aria-hidden="true"></i> ' . $date2 . '</time>' : '' ?>
 								   <?= ($author2) ? '<p class="author"><img src="' . get_stylesheet_directory_uri() . '/images/icons/camera-light-shadow.svg" alt="author icon" />' . $author2 . '</p>' : '' ?>
 								   <h4 class="title"><?= $title2; ?> <span class="arrow"><i class="far fa-long-arrow-right"></i></span></h4>
 							   </div>
@@ -69,7 +69,7 @@ class FeatureBox extends RegisterBlocks
 						   <a href="<?= $link3; ?>" title="<?= $title3; ?>" class="link-box">
 							   <img src="<?= $image3['sizes']['featured'] ?>" alt="<?= $title3; ?>" />
 							   <div class="overlay">
-								   <?= ($date3) ? '<time class="date" title="' .$date3 . '"><i class="fal fa-calendar-alt"></i> ' . $date3 . '</time>' : '' ?>
+								   <?= ($date3) ? '<time class="date" title="' .$date3 . '"><i class="fal fa-calendar-alt" aria-hidden="true"></i> ' . $date3 . '</time>' : '' ?>
 								   <?= ($author3) ? '<p class="author"><img src="' . get_stylesheet_directory_uri() . '/images/icons/camera-light-shadow.svg" alt="author icon" />' . $author3 . '</p>' : '' ?>
 								   <h4 class="title"><?= $title3; ?> <span class="arrow"><i class="far fa-long-arrow-right"></i></span></h4>
 							   </div>

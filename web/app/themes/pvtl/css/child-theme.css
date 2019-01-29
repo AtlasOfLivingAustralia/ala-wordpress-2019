@@ -17362,11 +17362,11 @@ readers do not read off random characters that represent icons */
       .hero-slider .search-overlay .search-container .image {
         margin-right: 20px;
         text-shadow: 0 3px 20px #000; }
-      .hero-slider .search-overlay .search-container h5 {
+      .hero-slider .search-overlay .search-container .h5 {
         font-size: 18px;
         margin: 0;
         text-shadow: 0 3px 20px #000; }
-        .hero-slider .search-overlay .search-container h5 .amount {
+        .hero-slider .search-overlay .search-container .h5 .amount {
           font-size: 24px;
           display: block; }
       .hero-slider .search-overlay .search-container .form-inline {
@@ -17398,9 +17398,9 @@ readers do not read off random characters that represent icons */
           .hero-slider .search-overlay .search-container .image {
             margin-right: 10px;
             width: 50px; }
-          .hero-slider .search-overlay .search-container h5 {
+          .hero-slider .search-overlay .search-container .h5 {
             font-size: 12px; }
-            .hero-slider .search-overlay .search-container h5 .amount {
+            .hero-slider .search-overlay .search-container .h5 .amount {
               font-size: 18px; } }
     @media (max-width: 575.98px) {
       .hero-slider .search-overlay h1 {

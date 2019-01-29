@@ -29,19 +29,19 @@
 <?php if ( $social_count > 0 ) : ?>
 	<ul class="social">
 	<?php if ( ! empty( $social['facebook'] ) ) : ?>
-		<li><a href="<?php echo esc_url( $social['facebook'] ); ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+		<li><a href="<?php echo esc_url( $social['facebook'] ); ?>" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
 	<?php endif; ?>
 	<?php if ( ! empty( $social['instagram'] ) ) : ?>
-		<li><a href="<?php echo esc_url( $social['instagram'] ); ?>" target="_blank"><i class="fab fa-instagram"></i></a></li>
+		<li><a href="<?php echo esc_url( $social['instagram'] ); ?>" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
 	<?php endif; ?>
 	<?php if ( ! empty( $social['twitter'] ) ) : ?>
-		<li><a href="<?php echo esc_url( $social['twitter'] ); ?>" target="_blank"><i class="fab fa-twitter"></i></a></li>
+		<li><a href="<?php echo esc_url( $social['twitter'] ); ?>" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
 	<?php endif; ?>
 	<?php if ( ! empty( $social['youtube'] ) ) : ?>
-		<li><a href="<?php echo esc_url( $social['youtube'] ); ?>" target="_blank"><i class="fab fa-youtube"></i></a></li>
+		<li><a href="<?php echo esc_url( $social['youtube'] ); ?>" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
 	<?php endif; ?>
 	<?php if ( ! empty( $social['linkedin'] ) ) : ?>
-		<li><a href="<?php echo esc_url( $social['linkedin'] ); ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+		<li><a href="<?php echo esc_url( $social['linkedin'] ); ?>" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
 	<?php endif; ?>
 	<?php if ( ! empty( $social['snapchat'] ) ) : ?>
 		<li><a href="<?php echo esc_url( $social['snapchat'] ); ?>" target="_blank"><i class="fab fa-snapchat-ghost"></i></a></li>

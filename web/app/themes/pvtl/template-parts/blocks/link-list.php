@@ -18,7 +18,7 @@ class LinkList extends RegisterBlocks
 				<?php foreach ($links as $link) : ?>
 					<li><a href="<?= $link['link_path'] ?>"
 						   title="<?= $link['link_title']; ?>"><?= $link['link_title']; ?>
-							<i class="fal fa-long-arrow-right"></i></a></li>
+							<i class="fal fa-long-arrow-right" aria-hidden="true"></i></a></li>
 				<?php endforeach; ?>
 			</ul>
 		<?php endif; ?>
