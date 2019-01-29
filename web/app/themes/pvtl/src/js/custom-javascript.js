@@ -157,7 +157,7 @@
     }
 
     const locationPath = filterPath(location.pathname);
-    $('a[href*="#"]').not('[data-toggle=tab]').each(function () {
+    $('a[href*="#"]').not('[data-toggle]').each(function () {
       const thisPath = filterPath(this.pathname) || locationPath;
       const hash = this.hash;
       if ($("#" + hash.replace(/#/, '')).length) {
@@ -183,6 +183,16 @@
     });
 
   });
+
+  //Collapse tabs if opened on mobile
+  const collapseTabs = () => {
+    if($(window).outerWidth() < 768) {
+      $('.tab-box').find('[aria-expanded=true]').click();
+    }
+  };
+
+  collapseTabs();
+
 })(jQuery);
 
 /**
