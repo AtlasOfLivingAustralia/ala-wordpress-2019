@@ -20,9 +20,11 @@ if ( ! empty( $post ) && has_post_thumbnail( $post->ID ) && get_post_type( $post
 	$page_banner = $default_page_banner['sizes']['full-width-auto-height'];
 }
 
+$no_image = get_field('remove_banner_image', $post);
+
 
 ?>
-<div class="featured-hero" role="banner" style="background-image: url(<?= $page_banner; ?>)">
+<div class="featured-hero<?= ($no_image) ? ' no_banner_image' : '' ?>" role="banner" <?= (!$no_image) ?  'style="background-image: url(' . $page_banner . ');"' : '' ?>>
     <div class="bg-overlay"></div>
     <div class="container">
 			<?php

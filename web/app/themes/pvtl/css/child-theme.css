@@ -18591,6 +18591,8 @@ button.swiper-pagination-bullet {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  .featured-hero.no_banner_image {
+    height: auto; }
   .featured-hero .bg-overlay {
     background-color: rgba(0, 0, 0, 0.25);
     position: absolute;

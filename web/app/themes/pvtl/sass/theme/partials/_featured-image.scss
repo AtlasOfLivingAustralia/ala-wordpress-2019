@@ -13,6 +13,10 @@
   align-items: center;
   justify-content: center;
 
+  &.no_banner_image {
+    height: auto;
+  }
+
   .bg-overlay {
     background-color: rgba(0,0,0, 0.25);
     position: absolute;
