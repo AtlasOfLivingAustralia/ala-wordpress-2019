@@ -158,6 +158,9 @@ ul.menu {
 .entry-content {
   font-size: 16px;
   color: $c-text-light;
+  h2, h3 {
+    color: $c-text;
+  }
 }
 
 

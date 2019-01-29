@@ -4,6 +4,7 @@
   color: #FFF;
   h3 {
     margin-bottom: 1.5em;
+    color: inherit;
   }
   @include media-breakpoint-down(sm) {
     h3 {
