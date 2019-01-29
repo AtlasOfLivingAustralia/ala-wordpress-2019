@@ -17203,13 +17203,14 @@ readers do not read off random characters that represent icons */
 
 .footer-copyright {
   background-color: #d0300f;
-  color: #FFF;
+  color: #f2f2f2;
   padding-top: 15px;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  font-size: 12px; }
   .footer-copyright p {
     margin: 0; }
   .footer-copyright a {
-    color: #FFF;
+    color: #f2f2f2;
     -webkit-transition: color 150ms ease;
     transition: color 150ms ease; }
     .footer-copyright a:hover {

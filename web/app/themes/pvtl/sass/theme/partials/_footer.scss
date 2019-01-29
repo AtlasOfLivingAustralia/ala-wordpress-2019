@@ -149,14 +149,15 @@
 
 .footer-copyright {
   background-color: darken($primary, 18%);
-  color: #FFF;
+  color: $c-page-background;
   padding-top: 15px;
   padding-bottom: 15px;
+  font-size: 12px;
   p {
     margin: 0;
   }
   a {
-    color: #FFF;
+    color: $c-page-background;
     transition: color 150ms ease;
     &:hover {
       color: $c-text;
