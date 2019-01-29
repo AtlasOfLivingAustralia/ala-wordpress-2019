@@ -17338,7 +17338,8 @@ readers do not read off random characters that represent icons */
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    padding-top: 105px; }
     .hero-slider .search-overlay h1 {
       text-align: center;
       text-shadow: 0 5px 30px #000; }
