@@ -18777,6 +18777,8 @@ ul.links {
     margin-top: 0; }
   .icon-text:last-child {
     margin-bottom: 0; }
+  .icon-text h4, .icon-text h5 {
+    margin-bottom: 0.6rem; }
   .icon-text .image {
     min-width: 50px;
     margin-right: 20px; }
