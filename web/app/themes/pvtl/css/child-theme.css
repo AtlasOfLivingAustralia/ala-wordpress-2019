@@ -11023,13 +11023,17 @@ ul.menu {
 
 @media (min-width: 600px) {
   .wp-block-column:nth-child(odd) {
-    margin-right: 15px; }
+    margin-right: 0;
+    padding-right: 15px; }
   .wp-block-column:nth-child(even) {
-    margin-left: 15px; }
+    margin-left: 0;
+    padding-left: 15px; }
   .wp-block-column:not(:first-child) {
-    margin-left: 15px; }
+    margin-left: 0;
+    padding-left: 15px; }
   .wp-block-column:not(:last-child) {
-    margin-right: 15px; } }
+    margin-right: 0;
+    padding-right: 15px; } }
 
 .wp-block-columns.alt-bg {
   position: relative;
