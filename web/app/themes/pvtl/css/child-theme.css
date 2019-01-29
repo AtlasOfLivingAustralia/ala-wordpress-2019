@@ -16774,6 +16774,65 @@ readers do not read off random characters that represent icons */
         -webkit-transform: translate3d(-10px, -50%, 0);
                 transform: translate3d(-10px, -50%, 0); } }
 
+.search-modal .modal-dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transform: translate(0, 0) !important;
+          transform: translate(0, 0) !important; }
+  .search-modal .modal-dialog .modal-content {
+    max-width: 500px;
+    background-color: transparent;
+    color: #FFF;
+    -webkit-transform: translate(0, -25%);
+            transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease; }
+    .search-modal .modal-dialog .modal-content .close {
+      color: #FFF;
+      text-shadow: 0 1px 0 #555; }
+  .search-modal .modal-dialog .modal-header {
+    border-bottom: #495057 1px solid; }
+  .search-modal .modal-dialog .modal-body .form-control, .search-modal .modal-dialog .modal-body .wpcf7 input[type=text], .wpcf7 .search-modal .modal-dialog .modal-body input[type=text],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=search], .wpcf7 .search-modal .modal-dialog .modal-body input[type=search],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=url], .wpcf7 .search-modal .modal-dialog .modal-body input[type=url],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=tel], .wpcf7 .search-modal .modal-dialog .modal-body input[type=tel],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=number], .wpcf7 .search-modal .modal-dialog .modal-body input[type=number],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=range], .wpcf7 .search-modal .modal-dialog .modal-body input[type=range],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=date], .wpcf7 .search-modal .modal-dialog .modal-body input[type=date],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=month], .wpcf7 .search-modal .modal-dialog .modal-body input[type=month],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=week], .wpcf7 .search-modal .modal-dialog .modal-body input[type=week],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=time], .wpcf7 .search-modal .modal-dialog .modal-body input[type=time],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=datetime], .wpcf7 .search-modal .modal-dialog .modal-body input[type=datetime],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=datetime-local], .wpcf7 .search-modal .modal-dialog .modal-body input[type=datetime-local],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=color], .wpcf7 .search-modal .modal-dialog .modal-body input[type=color],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=email], .wpcf7 .search-modal .modal-dialog .modal-body input[type=email],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=file], .wpcf7 .search-modal .modal-dialog .modal-body input[type=file],
+  .search-modal .modal-dialog .modal-body .wpcf7 input[type=submit], .wpcf7 .search-modal .modal-dialog .modal-body input[type=submit],
+  .search-modal .modal-dialog .modal-body .wpcf7 select, .wpcf7 .search-modal .modal-dialog .modal-body select,
+  .search-modal .modal-dialog .modal-body .wpcf7 textarea, .wpcf7 .search-modal .modal-dialog .modal-body textarea, .search-modal .modal-dialog .modal-body .wpcf7 .wpcf7-validation-errors, .wpcf7 .search-modal .modal-dialog .modal-body .wpcf7-validation-errors {
+    height: 50px; }
+
+.search-modal.show .modal-content {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0); }
+
 @media (min-width: 992px) {
   #wrapper-navbar {
     position: absolute;
