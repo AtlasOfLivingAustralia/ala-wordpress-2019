@@ -284,6 +284,13 @@
   }
 }
 
+.latest-posts-block {
+  h3 {
+    color: $c-text;
+    margin-bottom: 1em;
+  }
+}
+
 .social-tabs {
   border: 1px solid $gray-400;
   .nav {

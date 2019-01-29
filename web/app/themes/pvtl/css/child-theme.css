@@ -16803,7 +16803,8 @@ readers do not read off random characters that represent icons */
     color: #FFF; }
   .navbar .navbar-nav .nav-link {
     position: relative;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 18px; }
     .navbar .navbar-nav .nav-link:before {
       content: '';
       display: block;
@@ -16886,7 +16887,7 @@ readers do not read off random characters that represent icons */
                 transform: rotate(-45deg); }
 
 .navbar-brand {
-  height: 50px; }
+  height: 55px; }
   .navbar-brand img {
     max-height: 100%;
     width: auto; }
@@ -16911,7 +16912,8 @@ readers do not read off random characters that represent icons */
           justify-content: flex-end;
   margin-bottom: 10px; }
   .top-bar .btn-link {
-    color: #FFF; }
+    color: #FFF;
+    font-size: 14px; }
   .top-bar .xp-btn {
     border-right: 1px solid rgba(255, 255, 255, 0.4); }
   .top-bar .account {
@@ -17937,7 +17939,8 @@ button.swiper-pagination-bullet {
     z-index: 30;
     background: #FFF; }
   .tab-box h3 {
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    color: #212121; }
   .tab-box .image {
     min-width: 50px;
     margin-right: 20px; }
@@ -18451,6 +18454,10 @@ button.swiper-pagination-bullet {
   .pvtl-recent-posts-class .recent-post .recent-content {
     max-height: 4.6em;
     overflow: hidden; }
+
+.latest-posts-block h3 {
+  color: #212121;
+  margin-bottom: 1em; }
 
 .social-tabs {
   border: 1px solid #ced4da; }
