@@ -17137,7 +17137,7 @@ readers do not read off random characters that represent icons */
     transition: right 400ms ease; }
     .site.offcanvas-open {
       right: 300px;
-      overflow: hidden;
+      overflow: visible;
       position: fixed; }
   .top-bar {
     position: fixed;
@@ -17151,13 +17151,9 @@ readers do not read off random characters that represent icons */
         -ms-flex-pack: center;
             justify-content: center;
     background-color: #495057;
-    visibility: hidden;
-    -webkit-transition-timing-function: ease;
-            transition-timing-function: ease;
-    -webkit-transition-duration: 400ms;
-            transition-duration: 400ms;
-    -webkit-transition-property: right, visibility;
-    transition-property: right, visibility; }
+    visibility: visible;
+    -webkit-transition: right 400ms ease;
+    transition: right 400ms ease; }
     .top-bar .btn,
     .top-bar .wpcf7 input[type=submit], .wpcf7 .top-bar input[type=submit], .top-bar .gform_button {
       border: none;
@@ -17165,8 +17161,7 @@ readers do not read off random characters that represent icons */
           -ms-flex: 1;
               flex: 1; }
     .offcanvas-open .top-bar {
-      right: 0;
-      visibility: visible; }
+      right: 0; }
   .offcanvas-collapse {
     position: fixed;
     z-index: 10000;
@@ -17470,6 +17465,8 @@ readers do not read off random characters that represent icons */
       .hero-slider .search-overlay .search-container .image {
         margin-right: 20px;
         text-shadow: 0 3px 20px #000; }
+        .hero-slider .search-overlay .search-container .image svg {
+          max-width: 100%; }
       .hero-slider .search-overlay .search-container .h5 {
         font-size: 18px;
         margin: 0;

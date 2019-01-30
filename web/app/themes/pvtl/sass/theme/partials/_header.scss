@@ -216,7 +216,7 @@
     transition: right 400ms ease;
     &.offcanvas-open {
       right: 300px;
-      overflow: hidden;
+      overflow: visible;
       position: fixed;
     }
   }
@@ -231,17 +231,14 @@
     height: 40px;
     justify-content: center;
     background-color: $gray-700;
-    visibility: hidden;
-    transition-timing-function: ease;
-    transition-duration: 400ms;
-    transition-property: right, visibility;
+    visibility: visible;
+    transition: right 400ms ease;
     .btn {
       border: none;
       flex: 1;
     }
     .offcanvas-open & {
       right: 0;
-      visibility: visible;
     }
   }
 
