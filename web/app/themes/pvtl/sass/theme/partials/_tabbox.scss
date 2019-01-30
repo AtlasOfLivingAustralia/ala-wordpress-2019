@@ -72,7 +72,7 @@
         border-color: #FFF;
         box-shadow:  0 0 4px 0 rgba(0,0,0,0.15);
         z-index: 20;
-        color: $primary;
+        color: $primary-dark;
       }
       &:hover {
         border-color: #FFF;
@@ -152,7 +152,7 @@
       font-weight: 300;
     }
     &[aria-expanded=true] {
-      color: $primary;
+      color: $primary-dark;
       &:after {
         content: '\f068';
       }

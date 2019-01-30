@@ -18172,7 +18172,7 @@ button.swiper-pagination-bullet {
         -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
                 box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
         z-index: 20;
-        color: #f26649; }
+        color: #c44d34; }
       .tab-wrap .nav-link:hover {
         border-color: #FFF;
         background-color: #FFF; }
@@ -18229,7 +18229,7 @@ button.swiper-pagination-bullet {
       font-family: 'Font Awesome 5 Pro';
       font-weight: 300; }
     .accordion-tab a[aria-expanded=true] {
-      color: #f26649; }
+      color: #c44d34; }
       .accordion-tab a[aria-expanded=true]:after {
         content: '\f068'; }
   .accordion-content {
