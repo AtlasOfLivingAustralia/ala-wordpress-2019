@@ -114,6 +114,10 @@ ul.menu {
   }
 }
 
+#main {
+  position: relative;
+}
+
 //More sensible WP column gutters
 @media (min-width: 600px) {
   .wp-block-columns {

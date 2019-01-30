@@ -13,10 +13,10 @@ class ContentAnchor extends RegisterBlocks
 
         $title = get_field('section_title'); // str
 
-		$name = str_replace(' ', '_', $title);
+		$name = str_replace(' ', '-', $title);
 
     ?>
-		<a name="<?= $name; ?>" id="<?= $name; ?>" title="<?= $title; ?>" class="sr-only">$title</a>
+		<a name="<?= $name; ?>" id="<?= $name; ?>" title="<?= $title; ?>" class="sr-only"></a>
 
     <?php
     }

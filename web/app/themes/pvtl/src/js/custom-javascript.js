@@ -147,6 +147,9 @@
       stickyBitStickyOffset: 20
     });
 
+    if($('#anchorList').length) {
+      $('body').scrollspy({ target: '#anchorList' });
+    }
 
     // filter handling for a /dir/ OR /indexordefault.page
     function filterPath(string) {
@@ -174,7 +177,7 @@
                 }else{
                   $target.attr('tabindex','-1'); //Adding tabindex for elements not focusable
                   $target.focus(); //Setting focus
-                };
+                }
               });
             });
           }

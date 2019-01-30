@@ -23,7 +23,7 @@ $post = get_post();
 		<aside class="sidebar-anchors">
 			<div class="scrollable" data-sticky>
 				<h3 class="widget-title">Jump to section...</h3>
-				<ul class="anchors">
+				<div class="anchors list-group" id="anchorList">
 				<?php //Check if any gutenberg blocks are on page
 					if ( has_blocks( $post->post_content ) ) :
 						$blocks = parse_blocks( $post->post_content );
@@ -32,12 +32,12 @@ $post = get_post();
 							if ($block['blockName'] == 'acf/content-anchor') :
 
 								$title = reset($block['attrs']['data']);
-								$name = str_replace(' ', '_', $title); ?>
-					<li><a href="#<?= $name; ?>" title="<?= $title; ?>"><span><?= $title; ?></span></a></li>
+								$name = str_replace(' ', '-', $title); ?>
+					<a href="#<?= $name; ?>" title="<?= $title; ?>" class="list-group-item list-group-item-action"><span><?= $title; ?></span></a>
 							<?php endif;
 						endforeach;
 					endif; ?>
-				</ul>
+				</div>
 				<a href="#page" title="Back to Top" class="back"><i class="fas fa-arrow-to-top"></i> Back to Top</a>
 			</div>
 		</aside>

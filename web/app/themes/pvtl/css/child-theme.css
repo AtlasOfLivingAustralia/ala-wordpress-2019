@@ -11128,6 +11128,9 @@ ul.menu {
       padding-top: 60px;
       padding-bottom: 60px; } }
 
+#main {
+  position: relative; }
+
 @media (min-width: 600px) {
   .wp-block-columns {
     margin-left: -15px;
@@ -18786,7 +18789,10 @@ button.swiper-pagination-bullet {
       font-weight: 500;
       -webkit-transition: all 100ms ease;
       transition: all 100ms ease;
-      position: relative; }
+      position: relative;
+      padding: 0;
+      background-color: transparent;
+      border: none; }
       .sidebar-anchors .anchors a span {
         position: relative;
         left: 0;
