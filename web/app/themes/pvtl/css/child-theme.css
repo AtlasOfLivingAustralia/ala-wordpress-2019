@@ -18375,6 +18375,9 @@ button.swiper-pagination-bullet {
     .featured-swiper {
       margin: 0 20px; } }
 
+.blog .wrapper {
+  margin-bottom: 40px; }
+
 .post-list.site-main .type-post {
   margin-bottom: 25px; }
 
