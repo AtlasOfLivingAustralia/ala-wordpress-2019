@@ -11102,7 +11102,7 @@ ul.menu {
 
 .breadcrumbs-wrap {
   border-bottom: 1px solid #e5e5e5;
-  padding: 10px 0; }
+  padding: 15px 0; }
   .breadcrumbs-wrap i {
     margin-left: 5px;
     margin-right: 5px;
@@ -11129,27 +11129,26 @@ ul.menu {
       padding-bottom: 60px; } }
 
 @media (min-width: 600px) {
-  .wp-block-column:nth-child(odd) {
-    margin-right: 0;
-    padding-right: 15px; }
-  .wp-block-column:nth-child(even) {
-    margin-left: 0;
-    padding-left: 15px; }
-  .wp-block-column:not(:first-child) {
-    margin-left: 0;
-    padding-left: 15px; }
-  .wp-block-column:not(:last-child) {
-    margin-right: 0;
-    padding-right: 15px; } }
+  .wp-block-columns {
+    margin-left: -15px;
+    margin-right: -15px; }
+    .wp-block-columns .wp-block-column {
+      margin: 0;
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .wp-block-columns.alt-bg {
   position: relative;
-  margin: 80px 0;
-  padding: 80px 0; }
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px; }
   @media (max-width: 767.98px) {
     .wp-block-columns.alt-bg {
-      margin: 60px 0;
-      padding: 60px 0; } }
+      margin-top: 60px;
+      margin-bottom: 60px;
+      padding-top: 60px;
+      padding-bottom: 60px; } }
   .wp-block-columns.alt-bg:before {
     content: '';
     display: block;
@@ -11161,7 +11160,8 @@ ul.menu {
     margin-right: calc(-100vw / 2 + 100% / 2);
     max-width: 100vw;
     width: 100vw;
-    height: 100%; }
+    height: 100%;
+    border-bottom: 1px solid #e5e5e5; }
   .wp-block-columns.alt-bg .wp-block-column {
     position: relative;
     z-index: 10; }
