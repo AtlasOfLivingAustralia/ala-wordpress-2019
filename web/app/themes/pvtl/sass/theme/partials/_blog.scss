@@ -162,12 +162,12 @@
   position:      relative;
   min-width:     100px;
   min-height:    40px;
-  background-color: $c-page-background;
+  background-color: transparent;
   &:before {
     content:     'Share';
     display:     inline-block;
     padding:     0 8px;
-    background:  $c-page-background;
+    background:  #FFF;
     color:       $c-text;
     position:    absolute;
     top: -1px;
@@ -183,6 +183,7 @@
   }
   .at-style-responsive .at-share-btn {
     padding: 2px;
+    background-color: transparent !important;
   }
 }
 
@@ -234,6 +235,23 @@
   .entry-content {
     font-size: 16px;
   }
+  .tags {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: $c-text-light;
+    margin-top: 30px;
+    a {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      color: inherit;
+      display: inline-block;
+      &:first-of-type {
+        margin-left: 10px;
+      }
+    }
+  }
   .post-footer {
     display: flex;
     justify-content: space-between;
@@ -241,6 +259,13 @@
     margin: 40px 0 0;
     padding: 30px;
     background-color: $c-page-background;
+    .addthis_inline_share_toolbox:before {
+      background-color: $c-page-background;
+    }
+    .btn {
+      border-width: 2px;
+      padding: 7px 25px;
+    }
     @include media-breakpoint-down(xs) {
       flex-direction: column;
       .btn {

@@ -18522,12 +18522,12 @@ button.swiper-pagination-bullet {
   position: relative;
   min-width: 100px;
   min-height: 40px;
-  background-color: #f2f2f2; }
+  background-color: transparent; }
   .addthis_inline_share_toolbox:before {
     content: 'Share';
     display: inline-block;
     padding: 0 8px;
-    background: #f2f2f2;
+    background: #FFF;
     color: #212121;
     position: absolute;
     top: -1px;
@@ -18540,7 +18540,8 @@ button.swiper-pagination-bullet {
     display: table;
     clear: both; }
   .addthis_inline_share_toolbox .at-style-responsive .at-share-btn {
-    padding: 2px; }
+    padding: 2px;
+    background-color: transparent !important; }
 
 @media (min-width: 768px) {
   .single-post #primary {
@@ -18597,6 +18598,21 @@ button.swiper-pagination-bullet {
 .single-post .entry-content {
   font-size: 16px; }
 
+.single-post .tags {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #565656;
+  margin-top: 30px; }
+  .single-post .tags a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: inherit;
+    display: inline-block; }
+    .single-post .tags a:first-of-type {
+      margin-left: 10px; }
+
 .single-post .post-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18610,6 +18626,12 @@ button.swiper-pagination-bullet {
   margin: 40px 0 0;
   padding: 30px;
   background-color: #f2f2f2; }
+  .single-post .post-footer .addthis_inline_share_toolbox:before {
+    background-color: #f2f2f2; }
+  .single-post .post-footer .btn,
+  .single-post .post-footer .wpcf7 input[type=submit], .wpcf7 .single-post .post-footer input[type=submit], .single-post .post-footer .gform_button {
+    border-width: 2px;
+    padding: 7px 25px; }
   @media (max-width: 575.98px) {
     .single-post .post-footer {
       -webkit-box-orient: vertical;
