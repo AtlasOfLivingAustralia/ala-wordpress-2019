@@ -50,7 +50,7 @@
       h2 {
         font-family: 'Lato', sans-serif;
         font-size: 18px;
-        font-weight: 900;
+        font-weight: 700;
         color: inherit;
       }
       //move content on top of overlay gradient
@@ -208,7 +208,7 @@
   .entry-meta {
     font-family: 'Lato', sans-serif;
     font-size: 24px;
-    font-weight: 900;
+    font-weight: 700;
     @include media-breakpoint-down(md) {
       font-size: 20px;
     }
@@ -274,7 +274,7 @@
     .recent-title {
       font-family: 'Lato', sans-serif;
       font-size: 18px;
-      font-weight: 900;
+      font-weight: 700;
       color: $c-text;
       transition: color 200ms ease;
     }

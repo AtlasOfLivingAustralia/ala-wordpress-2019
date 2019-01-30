@@ -307,12 +307,12 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 1rem;
   font-family: "Lato", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.2;
   color: inherit; }
 
 h1, .h1 {
-  font-size: 2.1875rem; }
+  font-size: 2.625rem; }
 
 h2, .h2 {
   font-size: 1.75rem; }
@@ -18307,7 +18307,7 @@ button.swiper-pagination-bullet {
 .post-list .type-post h2 {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 700;
   color: inherit; }
 
 .post-list .type-post .entry-header, .post-list .type-post .entry-content {
@@ -18454,7 +18454,7 @@ button.swiper-pagination-bullet {
 .single-post .entry-meta {
   font-family: 'Lato', sans-serif;
   font-size: 24px;
-  font-weight: 900; }
+  font-weight: 700; }
   @media (max-width: 991.98px) {
     .single-post .entry-meta {
       font-size: 20px; } }
@@ -18521,7 +18521,7 @@ button.swiper-pagination-bullet {
   .pvtl-recent-posts-class .recent-post .recent-title {
     font-family: 'Lato', sans-serif;
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 700;
     color: #212121;
     -webkit-transition: color 200ms ease;
     transition: color 200ms ease; }
