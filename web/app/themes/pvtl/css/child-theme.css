@@ -18297,7 +18297,8 @@ button.swiper-pagination-bullet {
     z-index: 10;
     font-size: 14px;
     font-weight: 300;
-    margin-bottom: 2px;
+    display: block;
+    margin-bottom: 4px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6); }
     .link-box .date i {
       margin-right: 5px;
@@ -18305,7 +18306,9 @@ button.swiper-pagination-bullet {
   .link-box .author {
     position: relative;
     z-index: 10;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6); }
+    font-size: 14px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    margin: 0; }
     .link-box .author img {
       max-width: 18px;
       margin-left: -2px;
