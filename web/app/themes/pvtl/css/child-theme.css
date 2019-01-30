@@ -11123,7 +11123,7 @@ ul.menu {
   .home #primary {
     padding-top: 0;
     padding-bottom: 0; }
-  @media (min-width: 768px) and (max-width: 991.98px) {
+  @media (max-width: 991.98px) {
     #primary {
       padding-top: 60px;
       padding-bottom: 60px; } }
@@ -18884,7 +18884,7 @@ ul.links {
   text-align: left; }
   @media (max-width: 575.98px) {
     .wp-block-quote {
-      padding: 1em 2em; } }
+      margin: 1em 2em; } }
 
 .wp-block-column > .link-box {
   margin-top: 2rem;

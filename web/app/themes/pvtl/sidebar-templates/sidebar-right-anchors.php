@@ -18,7 +18,7 @@ $post = get_post();
 
 ?>
 
-<div class="col-md-3 widget-area" id="right-sidebar" role="complementary">
+<div class="col-md-3 order-0 order-md-1 widget-area" id="right-sidebar" role="complementary">
 
 		<aside class="sidebar-anchors">
 			<div class="scrollable" data-sticky>

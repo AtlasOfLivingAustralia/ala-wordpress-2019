@@ -27,8 +27,10 @@ if (!is_front_page()) {
 
 		<div class="row">
 
+			<?php get_template_part( 'sidebar-templates/sidebar', 'right-anchors' ); ?>
+
 			<div
-				class="<?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area"
+				class="<?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>col-md-8 order-1 order-md-0<?php else : ?>col-md-12<?php endif; ?> content-area"
 				id="primary">
 
 				<main class="site-main" id="main" role="main">
@@ -49,8 +51,6 @@ if (!is_front_page()) {
 				</main><!-- #main -->
 
 			</div><!-- #primary -->
-
-			<?php get_template_part( 'sidebar-templates/sidebar', 'right-anchors' ); ?>
 
 		</div><!-- .row -->
 
