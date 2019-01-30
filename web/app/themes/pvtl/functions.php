@@ -358,6 +358,26 @@ function the_custom_logo_pvtl( $blog_id = 0 ) {
 }
 
 
+function remove_unused_widgets(){
+
+	// Unregister some of the TwentyTen sidebars
+	unregister_sidebar( 'left-sidebar' );
+	unregister_sidebar( 'hero' );
+	unregister_sidebar( 'herocanvas' );
+	unregister_sidebar( 'statichero' );
+	unregister_sidebar( 'footerfull' );
+}
+add_action( 'widgets_init', 'remove_unused_widgets', 11 );
+
+
+function pvtl_remove_page_templates( $templates ) {
+	unset( $templates['page-templates/both-sidebarspage.php'] );
+	unset( $templates['page-templates/left-sidebarpage.php'] );
+	unset( $templates['page-templates/empty.php'] );
+	unset( $templates['page-templates/blank.php'] );
+	return $templates;
+}
+add_filter( 'theme_page_templates', 'pvtl_remove_page_templates' );
 
 /**
  * Prints HTML with meta information for the current post-date/time and author.
