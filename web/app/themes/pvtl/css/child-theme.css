@@ -16952,7 +16952,8 @@ readers do not read off random characters that represent icons */
                 transform: rotate(-45deg); }
 
 .navbar-brand {
-  height: 55px; }
+  height: 50px;
+  padding: 0; }
   .navbar-brand img {
     max-height: 100%;
     width: auto; }
