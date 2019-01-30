@@ -101,6 +101,9 @@
           height: 60px;
           color: #FFF;
           font-weight: normal;
+          font-size: 1rem;
+          padding-left: 22px;
+          padding-right: 22px;
           svg {
             margin-right: 5px;
           }
@@ -144,6 +147,8 @@
         .form-inline {
           input, button {
             height: 45px;
+            padding-left: 15px;
+            padding-right: 15px;
           }
           button svg {
             margin-right: 2px;
