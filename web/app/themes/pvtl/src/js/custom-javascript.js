@@ -196,7 +196,34 @@
 
   collapseTabs();
 
-})(jQuery);
+
+  //Count up to data-count num
+  $('[data-count]').each(function() {
+    const $this = $(this),
+      countTo = $this.attr('data-count');
+
+    $this.html('0');
+
+    $({countNum: $this.text()}).animate({
+        countNum: countTo
+      },
+
+      {
+
+        duration: 4000,
+        easing: 'linear',
+        step: function () {
+          const countNumFloor = Math.floor(this.countNum);
+          $this.text(countNumFloor.toLocaleString());
+        },
+        complete: function () {
+          $this.text(this.countNum.toLocaleString());
+        }
+
+      });
+  });
+
+  })(jQuery);
 
 /**
  * Return cookie if there's a match
