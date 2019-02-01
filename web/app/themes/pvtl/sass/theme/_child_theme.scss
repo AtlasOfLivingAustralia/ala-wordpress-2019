@@ -41,6 +41,10 @@ ul.menu {
 .entry-content .alignwide {
   margin-left:  -80px;
   margin-right: -80px;
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .entry-content .alignfull {
@@ -178,4 +182,5 @@ ul.menu {
   @extend .btn;
   @extend .btn-primary;
 }
+
 

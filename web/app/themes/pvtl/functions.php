@@ -415,6 +415,57 @@ function pvtl_get_excerpt($chars = 150){
 };
 
 
+// Specify allowed gutenberg blocks
+add_filter( 'allowed_block_types', 'pvtl_allowed_block_types' );
+
+function pvtl_allowed_block_types( $allowed_blocks ) {
+
+	return array(
+		'core/image',
+		'core/paragraph',
+		'core/heading',
+		'core/list',
+		'core/quote',
+		'core/audio',
+		'core/cover',
+		'core/file',
+		'core/video',
+		'core/table',
+		'core/code',
+		'core/freeform',
+		'core/html',
+		'core/pullquote',
+		'core/button',
+		'core/columns',
+		'core/separator',
+		'core/spacer',
+		'core/shortcode',
+		'core/embed',
+		'core-embed/youtube',
+		'core-embed/vimeo',
+		'acf/content-anchor',
+		'acf/feature-box',
+		'acf/hero-banner-slider',
+		'acf/icon-with-text',
+		'acf/latest-posts',
+		'acf/link-box',
+		'acf/link-list',
+		'acf/tab-box',
+		'acf/team-member',
+	);
+
+}
+
+function myguten_enqueue() {
+	wp_enqueue_script( 'myguten-script',
+		get_stylesheet_directory_uri() . '/js/gutenberg-scripts.js',
+		array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' )
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'myguten_enqueue' );
+
+
+
 /** Register each of the blocks */
 require_once( 'library/register-blocks.php' );
 
