@@ -47,17 +47,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 				endif;
 				?>
 				<!-- end custom logo -->
-
+				
 				<div class="outer-nav-wrapper">
 					<div class="top-bar d-flex">
-						<?php
-						$xp = get_experience_group();
-						if ( $xp ) :
-							?>
+						<?php if ( $xp = get_experience_group() ) { ?>
 							<button type="button" data-toggle="modal" data-target="#experience-modal" class="btn btn-link btn-sm xp-btn">
 								<?php echo 'null' === $xp ? 'Customise Your Experience' : esc_html( 'Viewing as ' . $xp ); ?> <i class="far fa-angle-down ml-1"></i>
 							</button>
-						<?php endif; ?>
+						<?php } else { ?>
+							<button style="display: none;" type="button" data-toggle="modal" data-target="#experience-modal" class="btn btn-link btn-sm xp-btn">
+								Which group do you associate with? <i class="far fa-angle-down ml-1"></i>
+							</button>
+						<?php } ?>
 						<a href="/contact-us" class="btn btn-link btn-sm d-none d-lg-inline-block">Contact Us</a>
 						<div class="account d-none d-lg-block">
 							<a href="#" class="btn btn-outline-white btn-sm">Sign Up</a>
