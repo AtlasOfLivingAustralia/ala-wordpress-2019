@@ -190,9 +190,13 @@
       }
     }
 
-    gtag('event', 'optimize.callback', {
-      callback: implementExperiment
-    });
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'optimize.callback', {
+        callback: implementExperiment
+      });
+    } else {
+      initExperiencePopup();
+    }
 
     $('[data-sticky]').stickybits({
       useStickyClasses: true,
