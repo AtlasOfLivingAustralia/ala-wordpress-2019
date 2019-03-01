@@ -133,6 +133,7 @@
             settingExperienceCookie = true;
           },
           complete: () => {
+            settingExperienceCookie = false;
             if (group !== 'null') window.location.reload();
           },
         });
@@ -140,7 +141,58 @@
         return false;
       });
     };
-    initExperiencePopup();
+
+    /**
+     * Get/Set user experience group cookie
+     */
+    const initExperiencePopupVariant = () => {
+      let settingExperienceCookie = false;
+      const experience = getCookie('experience');
+      const experienceModal = $('#experience-modal');
+
+      // If the experience cookie has not been set, show the popup after a delay.
+      if (experience === false) {
+        $('.xp-btn').show();
+      }
+
+      // Change the experience group
+      experienceModal.on('click', '.group-btn', (e) => {
+        e.preventDefault();
+
+        // Don't proceed if 'in progress'
+        if (settingExperienceCookie) return false;
+
+        const button = $(e.currentTarget);
+        const group = button.data('name');
+
+        $.ajax({
+          url: wp_ajax_object.ajax_url,
+          method: 'POST',
+          data: { action: 'set_experience_cookie', group },
+          beforeSend: () => {
+            settingExperienceCookie = true;
+          },
+          complete: () => {
+            settingExperienceCookie = false;
+            experienceModal.modal('hide');
+          },
+        });
+
+        return false;
+      });
+    };
+
+    function implementExperiment(value) {
+      if (value ===  '0') {
+        initExperiencePopup();
+      } else if (value === '1') {
+        initExperiencePopupVariant();
+      }
+    }
+
+    gtag('event', 'optimize.callback', {
+      callback: implementExperiment
+    });
 
     $('[data-sticky]').stickybits({
       useStickyClasses: true,
@@ -222,8 +274,7 @@
 
       });
   });
-
-  })(jQuery);
+})(jQuery);
 
 /**
  * Return cookie if there's a match
