@@ -91,6 +91,9 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 
 		// Set up the WordPress Theme logo feature.
 		add_theme_support( 'custom-logo' );
+		
+		// Add support for responsive embedded content.
+		add_theme_support( 'responsive-embeds' );
 
 		// Check and setup theme default settings.
 		understrap_setup_theme_default_settings();
@@ -130,7 +133,7 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
 			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
-							'understrap' ) . '</a></p>';
+			'understrap' ) . '</a></p>';
 		}
 		return $post_excerpt;
 	}

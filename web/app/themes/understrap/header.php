@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </head>
 
 <body <?php body_class(); ?>>
-
+<?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
@@ -55,26 +55,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 						the_custom_logo();
 					} ?><!-- end custom logo -->
 
-				<?php if ( $xp = get_experience_group() ) { ?>
-					<button type="button" class="experience-group-change"><?php echo $xp === 'null' ? 'Customise Your Experience' : 'Viewing as ' . $xp; ?></button>
-				<?php } ?>
-
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<?php
-					$menu_location = strtolower( preg_replace( "/(\W)+/", '-', get_experience_group( false ) ) );
-
-					if ( ! $menu_location || $menu_location === 'null' ) {
-						$menu_location = 'primary';
-					}
-				?>
-
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
 					array(
-						'theme_location'  => $menu_location,
+						'theme_location'  => 'primary',
 						'container_class' => 'collapse navbar-collapse',
 						'container_id'    => 'navbarNavDropdown',
 						'menu_class'      => 'navbar-nav ml-auto',
