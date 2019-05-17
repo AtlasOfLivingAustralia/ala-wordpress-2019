@@ -165,6 +165,7 @@
   a {
     color: $c-page-background;
     transition: color 150ms ease;
+    text-decoration: underline;
     &:hover {
       color: $c-text;
     }
@@ -253,4 +254,10 @@
   }
 }
 
+.signedIn .signUpBtn, .signedIn .loginBtn {
+  display: none;
+}
 
+.signedOut .myProfileBtn, .signedOut .logoutBtn {
+  display: none;
+}
