@@ -22,14 +22,14 @@ class TabBox extends RegisterBlocks
             <div class="tab-wrap">
                 <div class="container">
                     <div class="tab-section-title">
-                        Explore the Atlas for:
+                        Explore the ALA for:
                     </div>
                     <ul id="tabs" class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
                             <a id="tab-A" href="#pane-A" class="nav-link active" data-toggle="tab" role="tab">Researchers</a>
                         </li>
                         <li class="nav-item">
-                            <a id="tab-B" href="#pane-B" class="nav-link" data-toggle="tab" role="tab">Managers/Consultants</a>
+                            <a id="tab-B" href="#pane-B" class="nav-link" data-toggle="tab" role="tab">Government and Land Managers</a>
                         </li>
                         <li class="nav-item">
                             <a id="tab-C" href="#pane-C" class="nav-link" data-toggle="tab" role="tab">Community and

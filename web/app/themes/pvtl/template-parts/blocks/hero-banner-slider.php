@@ -70,7 +70,7 @@ class HeroBannerSlider extends RegisterBlocks
 								</div>
                                 <div class="content text-left">
                                     <p class="h5">
-                                        <span class="amount" data-occurrence data-count="74950414">74,950,414</span>
+                                        <span class="amount" data-occurrence data-count="86033584">86,033,584</span>
                                         Occurrence Records
                                     </p>
                                 </div>
@@ -111,8 +111,8 @@ class HeroBannerSlider extends RegisterBlocks
                         <div class="col-md-12">
                             <form class="form-inline">
                                 <div class="form-group flex-grow-1">
-                                    <label for="search" class="sr-only">Search Species Records</label>
-                                    <input type="search" class="form-control flex-grow-1" id="search" placeholder="Search 116,724 Species Records...">
+                                    <label for="search" class="sr-only">Search species, data sets, and more</label>
+                                    <input type="search" class="form-control flex-grow-1" id="search" placeholder="Search species, data sets, and more...">
                                 </div>
                                 <button type="submit" class="btn btn-primary-dark">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
