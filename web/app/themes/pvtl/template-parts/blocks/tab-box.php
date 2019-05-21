@@ -110,7 +110,7 @@ class TabBox extends RegisterBlocks
                                 <a class="collapsed" data-toggle="collapse" href="#collapse-B" data-parent="#content"
                                    aria-expanded="false"
                                    aria-controls="collapse-B">
-                                    Managers/Consultants
+                                    Government and Land Managers
                                 </a>
                             </h5>
                         </div>
