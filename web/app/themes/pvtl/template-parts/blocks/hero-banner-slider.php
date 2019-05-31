@@ -70,8 +70,8 @@ class HeroBannerSlider extends RegisterBlocks
 								</div>
                                 <div class="content text-left">
                                     <p class="h5">
-                                        <span class="amount" data-occurrence data-count="86033584">86,033,584</span>
-                                        Occurrence Records
+                                        <span class="amount" data-occurrence data-count="86035623">86,035,623</span>
+                                        occurrence records
                                     </p>
                                 </div>
                             </div>
@@ -102,8 +102,8 @@ class HeroBannerSlider extends RegisterBlocks
 								</div>
                                 <div class="content text-left">
                                     <p class="h5">
-                                        <span class="amount" data-species data-count="116724">116,724</span>
-                                        Species Recorded
+                                        <span class="amount" data-species data-count="10319">10,319</span>
+                                        data sets
                                     </p>
                                 </div>
                             </div>
