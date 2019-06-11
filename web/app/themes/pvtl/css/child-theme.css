@@ -18012,6 +18012,46 @@ readers do not read off random characters that represent icons */
   .search-trigger:hover svg path, .account-mobile:hover svg path {
     fill: #f26649; }
 
+#autocompleteSearchALA {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px; }
+  #autocompleteSearchALA input {
+    padding: 10px;
+    margin-right: 20px;
+    color: rgba(0, 0, 0, 0.85) !important;
+    background-color: #fff;
+    border: 0;
+    width: 100%;
+    border-radius: 3px; }
+  #autocompleteSearchALA .search-submit {
+    color: #fff;
+    margin: .25rem .5rem;
+    padding: 2px 0;
+    background-color: transparent;
+    border: 0; }
+
+.main-nav-wrapper .collapse-trigger-button:not(.collapsed) .visible-on-show {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  height: 25px;
+  width: 25px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition: height 2s;
+  transition: height 2s; }
+
+.main-nav-wrapper .collapse-trigger-button:not(.collapsed) svg, #wrapper-navbar .collapse-trigger-button:not(.collapsed) div {
+  display: none;
+  -webkit-transition: height 2s;
+  transition: height 2s; }
+
 @media (max-width: 991.98px) {
   .site {
     position: relative;

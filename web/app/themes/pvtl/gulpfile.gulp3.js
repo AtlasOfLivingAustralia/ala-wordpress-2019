@@ -1,4 +1,3 @@
-// gulp 4 version
 // Defining requirements
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
@@ -71,10 +70,10 @@ gulp.task('imagemin', function () {
  * Ensures the 'imagemin' task is complete before reloading browsers
  * @verbose
  */
-gulp.task('imagemin-watch', gulp.series('imagemin', function () {
+gulp.task('imagemin-watch', ['imagemin'], function () {
   browserSync.reload();
 
-}));
+});
 
 // Run:
 // gulp cssnano
@@ -115,7 +114,9 @@ gulp.task('cleancss', function () {
     .pipe(rimraf());
 });
 
-gulp.task('styles', gulp.series('sass', 'minifycss'));
+gulp.task('styles', function (callback) {
+  gulpSequence('sass', 'minifycss')(callback);
+});
 
 // Run:
 // gulp browser-sync
@@ -125,24 +126,32 @@ gulp.task('browser-sync', function () {
 });
 
 // Run:
+// gulp watch-bs
+// Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
+gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () {
+});
+
+// Run:
 // gulp scripts.
 // Uglifies and concat all JS files into one
-gulp.task('scripts', function(done) {
+gulp.task('scripts', function () {
 
   var customScripts = [
     paths.dev + '/js/custom-javascript.js'
   ];
 
-  var customScriptsStream = gulp.src(customScripts)
+  gulp.src(customScripts)
     .pipe(babel({presets: ['@babel/env']}))
     .pipe(concat('js/custom-javascript.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(paths.dev));
 
+
   var scripts = [
 
     // Start - All BS4 stuff
     paths.dev + '/js/bootstrap4/bootstrap.js',
+
     // End - All BS4 stuff
 
     paths.dev + '/js/skip-link-focus-fix.js',
@@ -153,20 +162,17 @@ gulp.task('scripts', function(done) {
 
     // Adding currently empty javascript file to add on for your own themes´ customizations
     // Please add any customizations to this .js file only!
-    paths.dev + '/js/custom-javascript.min.js'
+    paths.dev + '/js/custom-javascript.min.js',
 
   ];
-  var childThemeMinJsStream = gulp.src(scripts)
+  gulp.src(scripts)
     .pipe(concat('child-theme.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));
 
-  var childThemeJsStream = gulp.src(scripts)
+  gulp.src(scripts)
     .pipe(concat('child-theme.js'))
     .pipe(gulp.dest(paths.js));
-
-  done();
-
 });
 
 // Deleting any file inside the /src folder
@@ -206,8 +212,8 @@ gulp.task('copy-assets', function () {
     .pipe(gulp.dest(paths.dev + '/sass/underscores'));
 
 // _s JS files into /src/js
-  // TEMP SANITY FIX gulp.src(paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js')
-  // TEMP SANITY FIX   .pipe(gulp.dest(paths.dev + '/js'));
+  gulp.src(paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js')
+    .pipe(gulp.dest(paths.dev + '/js'));
 
 // Copy Popper JS files
   gulp.src(paths.node + 'popper.js/dist/umd/popper.min.js')
@@ -222,31 +228,21 @@ gulp.task('copy-assets', function () {
   return stream;
 });
 
-// Run:
-// gulp watch-bs
-// Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task('watch-bs', gulp.series('browser-sync', 'watch', 'scripts', function () {
-  done();
-}));
-
 // Deleting the files distributed by the copy-assets task
 gulp.task('clean-vendor-assets', function () {
   return del([paths.dev + '/js/bootstrap4/**', paths.dev + '/sass/bootstrap4/**', './fonts/*wesome*.{ttf,woff,woff2,eot,svg}', paths.dev + '/sass/fontawesome/**', paths.dev + '/sass/underscores/**', paths.dev + '/js/skip-link-focus-fix.js', paths.js + '/**/skip-link-focus-fix.js', paths.js + '/**/popper.min.js', paths.js + '/**/popper.js', (paths.vendor !== '' ? (paths.js + paths.vendor + '/**') : '')]);
 });
 
-// Deleting any file inside the /dist-product folder
-gulp.task('clean-dist-product', function () {
-  return del([paths.distprod + '/**']);
-});
-
 // Run
-// gulp dist-product
-// Copies the files to the /dist-prod folder for distribution as theme with all assets
-gulp.task('dist-product', gulp.series('clean-dist-product', function () {
-  return gulp.src(['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node + '/**', '!' + paths.dist, '!' + paths.dist + '/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '*'])
-    .pipe(gulp.dest(paths.distprod));
-}));
-
+// gulp dist
+// Copies the files to the /dist folder for distribution as simple theme
+gulp.task('dist', ['clean-dist'], function () {
+  return gulp.src(['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node + '/**', '!' + paths.dev, '!' + paths.dev + '/**', '!' + paths.dist, '!' + paths.dist + '/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '!' + paths.sass, '!' + paths.sass + '/**', '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore', '!codesniffer.ruleset.xml', '*'], {'buffer': false})
+    .pipe(replace('/js/jquery.slim.min.js', '/js' + paths.vendor + '/jquery.slim.min.js', {'skipBinary': true}))
+    .pipe(replace('/js/popper.min.js', '/js' + paths.vendor + '/popper.min.js', {'skipBinary': true}))
+    .pipe(replace('/js/skip-link-focus-fix.js', '/js' + paths.vendor + '/skip-link-focus-fix.js', {'skipBinary': true}))
+    .pipe(gulp.dest(paths.dist));
+});
 
 // Deleting any file inside the /dist folder
 gulp.task('clean-dist', function () {
@@ -254,15 +250,14 @@ gulp.task('clean-dist', function () {
 });
 
 // Run
-// gulp dist
-// Copies the files to the /dist folder for distribution as simple theme
-gulp.task('dist', gulp.series('clean-dist', function () {
-  return gulp.src(['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node + '/**', '!' + paths.dev, '!' + paths.dev + '/**', '!' + paths.dist, '!' + paths.dist + '/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '!' + paths.sass, '!' + paths.sass + '/**', '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore', '!codesniffer.ruleset.xml', '*'], {'buffer': false})
-    .pipe(replace('/js/jquery.slim.min.js', '/js' + paths.vendor + '/jquery.slim.min.js', {'skipBinary': true}))
-    .pipe(replace('/js/popper.min.js', '/js' + paths.vendor + '/popper.min.js', {'skipBinary': true}))
-    .pipe(replace('/js/skip-link-focus-fix.js', '/js' + paths.vendor + '/skip-link-focus-fix.js', {'skipBinary': true}))
-    .pipe(gulp.dest(paths.dist));
-}));
+// gulp dist-product
+// Copies the files to the /dist-prod folder for distribution as theme with all assets
+gulp.task('dist-product', ['clean-dist-product'], function () {
+  return gulp.src(['**/*', '!' + paths.bower, '!' + paths.bower + '/**', '!' + paths.node, '!' + paths.node + '/**', '!' + paths.dist, '!' + paths.dist + '/**', '!' + paths.distprod, '!' + paths.distprod + '/**', '*'])
+    .pipe(gulp.dest(paths.distprod));
+});
 
-
-
+// Deleting any file inside the /dist-product folder
+gulp.task('clean-dist-product', function () {
+  return del([paths.distprod + '/**']);
+});

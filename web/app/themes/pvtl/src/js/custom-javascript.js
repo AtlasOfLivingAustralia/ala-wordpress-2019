@@ -38,6 +38,10 @@
       });
     });
 
+    $('#autocompleteSearchALA').on('shown.bs.collapse', function () {
+      // focus on search input
+      $('#autocompleteSearchALA input').focus();
+    })
 
     /**
      * Featured Box

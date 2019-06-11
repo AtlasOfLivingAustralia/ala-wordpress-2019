@@ -740,15 +740,15 @@
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
-            "version": "0.9.7.4",
+            "version": "0.9.7.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "tags/0.9.7.4"
+                "reference": "tags/0.9.7.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.7.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.7.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -758,15 +758,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "11.2.1",
+            "version": "11.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/11.2.1"
+                "reference": "tags/11.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.11.2.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.11.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"

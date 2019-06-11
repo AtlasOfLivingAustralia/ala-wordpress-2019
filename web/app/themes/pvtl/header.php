@@ -30,10 +30,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
 		<nav class="navbar navbar-expand-lg navbar-dark">
-			<?php if ( 'container' === $container ) : ?>
+		<?php if ( 'container' === $container ) : ?>
 			<div class="container">
-				<?php endif; ?>
-
+		<?php endif; ?>
 				<!-- Your site title as branding in the menu -->
 				<?php if ( ! has_custom_logo() ) : ?>
 					<?php if ( is_front_page() && is_home() ) : ?>
@@ -47,7 +46,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 				endif;
 				?>
 				<!-- end custom logo -->
-				
 				<div class="outer-nav-wrapper">
 					<div class="top-bar d-flex">
 						<?php if ( $xp = get_experience_group() ) { ?>
@@ -63,7 +61,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="account d-none d-lg-block">
 							<?php if (is_user_logged_in() ) { ?>
 								<a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
-								<a href="<?php echo wp_logout_url(); ?>" class="btn btn-primary btn-sm">Logout</a>
+								<a href="<?php echo wp_logout_url(); ?>" class="btn btn-outline-white btn-sm">Logout</a>
 							<?php } else { ?>
 								<a href="https://auth.ala.org.au/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign Up</a>
 								<a href="<?php echo wp_login_url(); ?>" class="btn btn-primary btn-sm">Login</a>
@@ -72,7 +70,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 
 					<div class="main-nav-wrapper">
-						<button data-toggle="modal" data-target="#search-modal" class="search-trigger order-1 order-lg-3" title="search">
+						<button data-toggle="collapse" data-target="#autocompleteSearchALA" class="search-trigger hidden-xs hidden-sm collapsed collapse-trigger-button order-1 order-lg-3" title="search">
 							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 22 22">
 								<defs>
 									<style>
@@ -84,6 +82,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</defs>
 								<path class="search-icon" d="M1524.33,60v1.151a7.183,7.183,0,1,1-2.69.523,7.213,7.213,0,0,1,2.69-.523V60m0,0a8.333,8.333,0,1,0,7.72,5.217A8.323,8.323,0,0,0,1524.33,60h0Zm6.25,13.772-0.82.813,7.25,7.254a0.583,0.583,0,0,0,.82,0,0.583,0.583,0,0,0,0-.812l-7.25-7.254h0Zm-0.69-7.684,0.01,0c0-.006-0.01-0.012-0.01-0.018s-0.01-.015-0.01-0.024a6,6,0,0,0-7.75-3.3l-0.03.009-0.02.006v0a0.6,0.6,0,0,0-.29.293,0.585,0.585,0,0,0,.31.756,0.566,0.566,0,0,0,.41.01V63.83a4.858,4.858,0,0,1,6.32,2.688l0.01,0a0.559,0.559,0,0,0,.29.29,0.57,0.57,0,0,0,.75-0.305A0.534,0.534,0,0,0,1529.89,66.089Z" transform="translate(-1516 -60)"/>
 							</svg>
+							<span class="collapse visible-on-show" aria-hidden="true">×</span>
 							Search</button>
 						<a href="#" class="account-mobile order-2 d-lg-none" title="My Account">
 							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 37 41">
@@ -127,12 +126,35 @@ $container = get_theme_mod( 'understrap_container_type' );
 						?>
 
 					</div>
-
 				</div>
-				<?php if ( 'container' === $container ) : ?>
-			</div><!-- .container -->
-		<?php endif; ?>
 
+	        <?php if ( 'container' === $container ) : ?>
+	        </div>
+		    <?php endif; ?>
 		</nav><!-- .site-navigation -->
-
+		    <div id="autocompleteSearchALA" class="collapse">
+		    	<div class="container">
+		        <form method="get" action="https://bie.ala.org.au/search" class="search-form">
+		            <div class="d-flex justify-content-between">
+		                <input id="autocompleteHeader" type="text" name="q" placeholder="Search ..." class="search-input" autocomplete="off"/>
+		                <button class="search-submit" title="submit">
+		                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 22 22">
+		                        <defs>
+		                            <style>
+		                                .search-icon {
+		                                    fill: #fff;
+		                                    fill-rule: evenodd;
+		                                }
+		                            </style>
+		                        </defs>
+		                        <path class="search-icon"
+		                              d="M1524.33,60v1.151a7.183,7.183,0,1,1-2.69.523,7.213,7.213,0,0,1,2.69-.523V60m0,0a8.333,8.333,0,1,0,7.72,5.217A8.323,8.323,0,0,0,1524.33,60h0Zm6.25,13.772-0.82.813,7.25,7.254a0.583,0.583,0,0,0,.82,0,0.583,0.583,0,0,0,0-.812l-7.25-7.254h0Zm-0.69-7.684,0.01,0c0-.006-0.01-0.012-0.01-0.018s-0.01-.015-0.01-0.024a6,6,0,0,0-7.75-3.3l-0.03.009-0.02.006v0a0.6,0.6,0,0,0-.29.293,0.585,0.585,0,0,0,.31.756,0.566,0.566,0,0,0,.41.01V63.83a4.858,4.858,0,0,1,6.32,2.688l0.01,0a0.559,0.559,0,0,0,.29.29,0.57,0.57,0,0,0,.75-0.305A0.534,0.534,0,0,0,1529.89,66.089Z"
+		                              transform="translate(-1516 -60)"></path>
+		                    </svg>
+		                </button>
+		            </div>
+		        </form>
+		    </div>
+		    </div>
 	</div><!-- #wrapper-navbar end -->
+
