@@ -18365,7 +18365,7 @@ readers do not read off random characters that represent icons */
           display: none; } }
   .hero-slider .search-overlay {
     position: relative;
-    height: 720px;
+    height: 600px;
     z-index: 80;
     color: #FFF;
     display: -webkit-box;
@@ -19637,7 +19637,7 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   color: #fff;
   position: relative;
-  height: 500px;
+  height: 300px;
   padding-top: 150px;
   padding-bottom: 50px;
   display: -webkit-box;
