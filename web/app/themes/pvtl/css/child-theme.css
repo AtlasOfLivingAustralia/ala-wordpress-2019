@@ -18386,6 +18386,11 @@ readers do not read off random characters that represent icons */
       margin: 30px auto; }
       .hero-slider .search-overlay .search-container > div {
         margin-bottom: 30px; }
+      .hero-slider .search-overlay .search-container a {
+        text-decoration: none;
+        color: inherit; }
+      .hero-slider .search-overlay .search-container a:hover {
+        text-decoration: underline; }
       .hero-slider .search-overlay .search-container .image {
         margin-right: 20px;
         text-shadow: 0 3px 20px #000; }

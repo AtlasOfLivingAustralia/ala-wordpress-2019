@@ -71,6 +71,13 @@
       > div {
         margin-bottom: 30px;
       }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
       .image {
         margin-right: 20px;
         text-shadow: 0 3px 20px #000;
