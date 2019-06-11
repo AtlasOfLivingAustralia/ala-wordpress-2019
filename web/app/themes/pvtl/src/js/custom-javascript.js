@@ -270,7 +270,7 @@
 
       {
 
-        duration: 4000,
+        duration: 1000,
         easing: 'linear',
         step: function () {
           const countNumFloor = Math.floor(this.countNum);
