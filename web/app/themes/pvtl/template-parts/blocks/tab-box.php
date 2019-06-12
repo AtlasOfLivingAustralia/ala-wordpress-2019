@@ -21,9 +21,6 @@ class TabBox extends RegisterBlocks
         <div class="tab-box flexible-content align<?= $block['align']; ?>">
             <div class="tab-wrap">
                 <div class="container">
-                    <div class="tab-section-title">
-                        Explore the ALA for:
-                    </div>
                     <ul id="tabs" class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
                             <a id="tab-A" href="#pane-A" class="nav-link active" data-toggle="tab" role="tab">Researchers</a>
