@@ -48,6 +48,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<!-- end custom logo -->
 				<div class="outer-nav-wrapper">
 					<div class="top-bar d-flex">
+						<?php if (false) {
+							// commenting out user groups for now
+						?>
 						<?php if ( $xp = get_experience_group() ) { ?>
 							<button type="button" data-toggle="modal" data-target="#experience-modal" class="btn btn-link btn-sm xp-btn">
 								<?php echo 'null' === $xp ? 'Customise Your Experience' : esc_html( 'Viewing as ' . $xp ); ?> <i class="far fa-angle-down ml-1"></i>
@@ -57,6 +60,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								Which group do you associate with? <i class="far fa-angle-down ml-1"></i>
 							</button>
 						<?php } ?>
+					<?php } // end commenting out user groups ?>
 						<a href="/contact-us" class="btn btn-link btn-sm d-none d-lg-inline-block">Contact Us</a>
 						<div class="account d-none d-lg-block">
 							<?php if (is_user_logged_in() ) { ?>

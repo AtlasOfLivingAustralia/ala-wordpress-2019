@@ -116,7 +116,7 @@
 
       // If the experience cookie has not been set, show the popup after a delay.
       if (experience === false) {
-        setTimeout(() => experienceModal.modal('show'), 5000);
+        // setTimeout(() => experienceModal.modal('show'), 5000);
       }
 
       // Change the experience group
@@ -199,7 +199,7 @@
         callback: implementExperiment
       });
     } else {
-      initExperiencePopup();
+      // initExperiencePopup();
     }
 
     $('[data-sticky]').stickybits({
