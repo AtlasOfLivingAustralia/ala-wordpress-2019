@@ -113,10 +113,10 @@ class HeroBannerSlider extends RegisterBlocks
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <form class="form-inline">
+                            <form class="form-inline" method="get" action="https://bie.ala.org.au/search" >
                                 <div class="form-group flex-grow-1">
                                     <label for="search" class="sr-only">Search species, data sets, and more</label>
-                                    <input type="search" class="form-control flex-grow-1" id="search" placeholder="Search species, data sets, and more...">
+                                    <input type="search" name="q" class="form-control flex-grow-1 autocompleteHome" id="search" placeholder="Search species, data sets, and more..." autocomplete="off">
                                 </div>
                                 <button type="submit" class="btn btn-primary-dark">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">

@@ -106,6 +106,7 @@
           height: 60px;
           padding-left: 30px;
           padding-right: 30px;
+          width: 100%;
         }
         button {
           height: 60px;
@@ -116,6 +117,24 @@
           padding-right: 22px;
           svg {
             margin-right: 5px;
+          }
+        }
+        .easy-autocomplete {
+          width: 100%;
+        }
+        .easy-autocomplete-container {
+          position: absolute;
+          ul {
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: white;
+            margin-bottom: 0;
+          }
+          li {
+            color: black;
+            list-style-type: none;
+            padding: 0.3rem 0;
+            font-size: .875rem;
           }
         }
       }

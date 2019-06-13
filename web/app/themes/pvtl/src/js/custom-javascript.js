@@ -52,37 +52,28 @@
       requestDelay: 300,
       adjustWidth: false,
       minCharNumber: 3,
-      maxNumberOfElements: 10,
-      listLocation: "autoCompleteList"
+      listLocation: "autoCompleteList",
+      list: {
+        maxNumberOfElements: 10
+      }
     };
     $('.autocompleteBIE').easyAutocomplete(autocompleteBIEoptions);
 
-    // OLD Wordpress
-    // 'https://bie.ala.org.au/ws/search/auto.jsonp', {
-    //   extraParams: {limit: 100},
-    //   dataType: 'jsonp',
-    //   parse: function(data) {
-    //     var rows = new Array();
-    //     data = data.autoCompleteList;
-    //     for(var i=0; i<data.length; i++){
-    //       rows[i] = {
-    //         data: data[i],
-    //         value: data[i].matchedNames[0],
-    //         result: data[i].matchedNames[0]
-    //       };
-    //     }
-    //     return rows;
-    //   },
-    //   matchSubset: false,
-    //   formatItem: function(row, i, n) {
-    //     return row.matchedNames[0];
-    //   },
-    //   cacheLength: 10,
-    //   minChars: 3,
-    //   scroll: false,
-    //   max: 10,
-    //   selectFirst: false
-    // }
+    var autocompleteHomeoptions = {
+      url: function(phrase) {
+        return "https://bie-ws.ala.org.au/ws/search/auto.json?q=" + phrase;
+      },
+      getValue: "matchedNames",
+      requestDelay: 300,
+      adjustWidth: false,
+      minCharNumber: 3,
+      listLocation: "autoCompleteList",
+      list: {
+        maxNumberOfElements: 4
+      }
+    };
+    $('.autocompleteHome').easyAutocomplete(autocompleteHomeoptions);
+
 
     $('#autocompleteSearchALA').on('shown.bs.collapse', function () {
       // focus on search input
