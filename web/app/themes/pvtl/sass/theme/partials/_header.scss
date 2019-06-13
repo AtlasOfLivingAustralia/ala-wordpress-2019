@@ -227,6 +227,20 @@
     background-color: transparent;
     border: 0;
   }
+  .easy-autocomplete {
+    width: 100%;
+  }
+  .easy-autocomplete-container {
+    ul {
+      padding-left: 10px;
+      background-color: white;
+    }
+    li {
+      color: black;
+      list-style-type: none;
+      padding: 0.3rem 0.3rem 0.3rem 0;
+    }
+  }
 }
 
 .main-nav-wrapper .collapse-trigger-button:not(.collapsed) .visible-on-show {

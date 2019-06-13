@@ -18029,6 +18029,15 @@ readers do not read off random characters that represent icons */
     padding: 2px 0;
     background-color: transparent;
     border: 0; }
+  #autocompleteSearchALA .easy-autocomplete {
+    width: 100%; }
+  #autocompleteSearchALA .easy-autocomplete-container ul {
+    padding-left: 10px;
+    background-color: white; }
+  #autocompleteSearchALA .easy-autocomplete-container li {
+    color: black;
+    list-style-type: none;
+    padding: 0.3rem 0.3rem 0.3rem 0; }
 
 .main-nav-wrapper .collapse-trigger-button:not(.collapsed) .visible-on-show {
   color: #fff;

@@ -151,6 +151,8 @@ gulp.task('scripts', function(done) {
 
     paths.node + '/stickybits/dist/jquery.stickybits.min.js',
 
+    paths.dev + '/js/wordpress.jquery.easy-autocomplete.min.js',
+
     // Adding currently empty javascript file to add on for your own themes´ customizations
     // Please add any customizations to this .js file only!
     paths.dev + '/js/custom-javascript.min.js'
