@@ -107,7 +107,7 @@ class TabBox extends RegisterBlocks
                                 <a class="collapsed" data-toggle="collapse" href="#collapse-B" data-parent="#content"
                                    aria-expanded="false"
                                    aria-controls="collapse-B">
-                                    Government and Land Managers
+                                    Government and land managers
                                 </a>
                             </h5>
                         </div>
@@ -170,7 +170,7 @@ class TabBox extends RegisterBlocks
                                 <a class="collapsed" data-toggle="collapse" href="#collapse-C" data-parent="#content"
                                    aria-expanded="false"
                                    aria-controls="collapse-C">
-                                    Community and Schools
+                                    Community and schools
                                 </a>
                             </h5>
                         </div>
