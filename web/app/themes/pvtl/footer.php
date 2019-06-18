@@ -233,6 +233,11 @@ $custom_logo_attr = array(
 
 <?php wp_footer(); ?>
 
+<script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js"></script>
+<script type="text/javascript">
+FreshWidget.init("", {"queryString": "&widgetType=popup&helpdesk_ticket[group_id]=6000207804&helpdesk_ticket[product_id]=6000005589&formTitle=ALA+support", "utf8": "✓", "widgetType": "popup", "buttonType": "text", "buttonText": "Support", "buttonColor": "white", "buttonBg": "#d5502a", "alignment": "2", "offset": "197px", "formHeight": "500px", "url": "https://support.ala.org.au"} );
+</script>
+
 </body>
 
 </html>
