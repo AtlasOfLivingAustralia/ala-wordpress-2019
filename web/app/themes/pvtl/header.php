@@ -140,7 +140,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		    	<div class="container">
 		        <form method="get" action="https://bie.ala.org.au/search" class="search-form">
 		            <div class="d-flex justify-content-between">
-		                <input id="autocompleteHeader" type="text" name="q" placeholder="Search ..." class="search-input autocompleteBIE" autocomplete="off"/>
+		                <input id="autocompleteHeader" type="text" name="q" placeholder="Search species, data sets, and more..." class="search-input autocompleteBIE" autocomplete="off"/>
 		                <button class="search-submit" title="submit">
 		                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 22 22">
 		                        <defs>
