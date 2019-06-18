@@ -26,11 +26,11 @@ class TabBox extends RegisterBlocks
                             <a id="tab-A" href="#pane-A" class="nav-link" data-toggle="tab" role="tab">Researchers</a>
                         </li>
                         <li class="nav-item">
-                            <a id="tab-B" href="#pane-B" class="nav-link" data-toggle="tab" role="tab">Government and Land Managers</a>
+                            <a id="tab-B" href="#pane-B" class="nav-link" data-toggle="tab" role="tab">Government and land managers</a>
                         </li>
                         <li class="nav-item">
                             <a id="tab-C" href="#pane-C" class="nav-link active" data-toggle="tab" role="tab">Community and
-                                Schools</a>
+                                schools</a>
                         </li>
                     </ul>
                 </div>
