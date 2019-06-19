@@ -81,6 +81,16 @@
     })
 
     /**
+     * Support (knowledge base) links to open new tab/window
+     */
+    $('a').each(function(index, el) {
+      var supportURL = 'https://support.ala.org.au/support/home';
+      if($(el).is("[href*=" + supportURL + "]")){
+          $(el).attr('target','_blank');
+      }
+    });
+
+    /**
      * Featured Box
      */
     $('.featured-swiper').each(function (index, el) {
