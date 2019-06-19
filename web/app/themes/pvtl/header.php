@@ -61,13 +61,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</button>
 						<?php } ?>
 					<?php } // end commenting out user groups ?>
-						<a href="/contact-us" class="btn btn-link btn-sm d-none d-lg-inline-block">Contact Us</a>
+						<a href="/contact-us" class="btn btn-link btn-sm d-none d-lg-inline-block">Contact us</a>
 						<div class="account d-none d-lg-block">
 							<?php if (is_user_logged_in() ) { ?>
 								<a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
 								<a href="<?php echo wp_logout_url(); ?>" class="btn btn-outline-white btn-sm">Logout</a>
 							<?php } else { ?>
-								<a href="https://auth.ala.org.au/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign Up</a>
+								<a href="https://auth.ala.org.au/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign up</a>
 								<a href="<?php echo wp_login_url(); ?>" class="btn btn-primary btn-sm">Login</a>
 							<?php } ?>
 						</div>
