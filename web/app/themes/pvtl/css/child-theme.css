@@ -19129,8 +19129,8 @@ button.swiper-pagination-bullet {
     .tab-wrap .nav-item:first-child .nav-link {
       border-left: 1px solid #df3310; }
   .tab-box .tab-content {
-    padding-top: 80px;
-    padding-bottom: 80px; }
+    padding-top: 60px;
+    padding-bottom: 60px; }
   .tab-pane .accordion-tab {
     display: none; }
   .tab-pane .collapse {

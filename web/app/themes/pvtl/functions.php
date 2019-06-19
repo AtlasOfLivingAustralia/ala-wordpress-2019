@@ -77,6 +77,42 @@ add_action( 'init', 'setup_nav_menus' );
 
 
 /**
+ * Returns the user (experience) group name for an index (0, 1 or 2)
+ *
+ */
+
+function get_experience_group_name( $groupIndex )
+{
+    $groups = get_field_object( 'experience_groups', 'option' );
+    if (is_int ( $groupIndex ))
+    {
+        if (count( $groups['value'] ) > $groupIndex )
+        {
+            return $groups['value'][$groupIndex]['name'];
+        }
+    }
+}
+
+
+/**
+ * Returns the user (experience) group description for an index (0, 1 or 2)
+ *
+ */
+
+function get_experience_group_description( $groupIndex )
+{
+    $groups = get_field_object( 'experience_groups', 'option' );
+    if (is_int ( $groupIndex ))
+    {
+        if (count( $groups['value'] ) > $groupIndex )
+        {
+            return $groups['value'][$groupIndex]['description'];
+        }
+    }
+}
+
+
+/**
  * Sets up theme Image sizes and registers support for featured images.
  *
  * @since 1.0

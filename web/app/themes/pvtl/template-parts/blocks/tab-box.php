@@ -23,14 +23,13 @@ class TabBox extends RegisterBlocks
                 <div class="container">
                     <ul id="tabs" class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a id="tab-A" href="#pane-A" class="nav-link" data-toggle="tab" role="tab">Researchers</a>
+                            <a id="tab-A" href="#pane-A" class="nav-link" data-toggle="tab" role="tab"><?= get_experience_group_name(0) ?></a>
                         </li>
                         <li class="nav-item">
-                            <a id="tab-B" href="#pane-B" class="nav-link" data-toggle="tab" role="tab">Government and land managers</a>
+                            <a id="tab-B" href="#pane-B" class="nav-link" data-toggle="tab" role="tab"><?= get_experience_group_name(1) ?></a>
                         </li>
                         <li class="nav-item">
-                            <a id="tab-C" href="#pane-C" class="nav-link active" data-toggle="tab" role="tab">Community and
-                                schools</a>
+                            <a id="tab-C" href="#pane-C" class="nav-link active" data-toggle="tab" role="tab"><?= get_experience_group_name(2) ?></a>
                         </li>
                     </ul>
                 </div>
@@ -44,13 +43,20 @@ class TabBox extends RegisterBlocks
                             <h5 class="mb-0">
                                 <a data-toggle="collapse" href="#collapse-A" data-parent="#content" aria-expanded="true"
                                    aria-controls="collapse-A">
-                                    Researchers
+                                    <?= get_experience_group_name(0) ?>
                                 </a>
                             </h5>
                         </div>
                     </div>
                     <div id="collapse-A" class="collapse accordion-content" role="tabpanel" aria-labelledby="heading-A">
                         <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-12 mb-lg-12">
+                                    <p>
+                                        <?php echo get_experience_group_description(0) ?>
+                                    </p>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
                                     <h3><?= get_field('column_title_1') ?></h3>
@@ -107,13 +113,20 @@ class TabBox extends RegisterBlocks
                                 <a class="collapsed" data-toggle="collapse" href="#collapse-B" data-parent="#content"
                                    aria-expanded="false"
                                    aria-controls="collapse-B">
-                                    Government and land managers
+                                    <?= get_experience_group_name(1) ?>
                                 </a>
                             </h5>
                         </div>
                     </div>
                     <div id="collapse-B" class="collapse accordion-content" role="tabpanel" aria-labelledby="heading-B">
                         <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-12 mb-lg-12">
+                                    <p>
+                                        <?php echo get_experience_group_description(1) ?>
+                                    </p>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
                                     <h3><?= get_field('column_title_4') ?></h3>
@@ -170,13 +183,20 @@ class TabBox extends RegisterBlocks
                                 <a class="collapsed" data-toggle="collapse" href="#collapse-C" data-parent="#content"
                                    aria-expanded="false"
                                    aria-controls="collapse-C">
-                                    Community and schools
+                                    <?= get_experience_group_name(2) ?>
                                 </a>
                             </h5>
                         </div>
                     </div>
                     <div id="collapse-C" class="collapse accordion-content show" role="tabpanel" aria-labelledby="heading-C">
                         <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-12 mb-lg-12">
+                                    <p>
+                                        <?php echo get_experience_group_description(2) ?>
+                                    </p>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
                                     <h3><?= get_field('column_title_7') ?></h3>
