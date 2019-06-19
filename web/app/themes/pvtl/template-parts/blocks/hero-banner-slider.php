@@ -100,7 +100,7 @@ class HeroBannerSlider extends RegisterBlocks
                                 <div class="content text-left">
                                     <p class="h5">
                                         <a href="https://biocache.ala.org.au/occurrences/search?q=*%3A*">
-                                        <span class="amount" data-occurrence data-count="86017198">86,017,198</span>
+                                        <span class="amount" data-occurrence data-count="84958352">84,958,352</span>
                                         occurrence records</a>
                                     </p>
                                 </div>
@@ -155,7 +155,7 @@ class HeroBannerSlider extends RegisterBlocks
                                 <div class="content text-left">
                                     <p class="h5">
                                         <a href="https://collections.ala.org.au/datasets">
-                                        <span class="amount" data-species data-count="10498">10,498</span>
+                                        <span class="amount" data-species data-count="10633">10,633</span>
                                         data sets</a>
                                     </p>
                                 </div>
