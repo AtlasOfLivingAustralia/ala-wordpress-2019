@@ -19131,6 +19131,8 @@ button.swiper-pagination-bullet {
   .tab-box .tab-content {
     padding-top: 60px;
     padding-bottom: 60px; }
+  .tab-box .tab-group-description {
+    padding-bottom: 20px; }
   .tab-pane .accordion-tab {
     display: none; }
   .tab-pane .collapse {

@@ -50,7 +50,7 @@ class TabBox extends RegisterBlocks
                     </div>
                     <div id="collapse-A" class="collapse accordion-content" role="tabpanel" aria-labelledby="heading-A">
                         <div class="container">
-                            <div class="row">
+                            <div class="row tab-group-description">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-12 mb-lg-12">
                                     <p>
                                         <?php echo get_experience_group_description(0) ?>
@@ -120,7 +120,7 @@ class TabBox extends RegisterBlocks
                     </div>
                     <div id="collapse-B" class="collapse accordion-content" role="tabpanel" aria-labelledby="heading-B">
                         <div class="container">
-                            <div class="row">
+                            <div class="row tab-group-description">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-12 mb-lg-12">
                                     <p>
                                         <?php echo get_experience_group_description(1) ?>
@@ -190,7 +190,7 @@ class TabBox extends RegisterBlocks
                     </div>
                     <div id="collapse-C" class="collapse accordion-content show" role="tabpanel" aria-labelledby="heading-C">
                         <div class="container">
-                            <div class="row">
+                            <div class="row tab-group-description">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-12 mb-lg-12">
                                     <p>
                                         <?php echo get_experience_group_description(2) ?>
