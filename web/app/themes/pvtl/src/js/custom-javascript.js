@@ -154,6 +154,30 @@
 
 
     /**
+     * Tabs / URLs
+     */
+
+    function scrollToAnchor(aid){
+      var aTag = $("a[name='"+ aid +"']");
+      $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+    }
+
+    // Javascript to enable link to tab
+    var url = document.location.toString();
+    if (url.match('#pane')) {
+      $('.nav-tabs a[href="#pane' + url.split('#pane')[1] + '"]').tab('show');
+    } 
+
+    // Change hash for page-reload
+    $('.nav-tabs a').on('shown.bs.tab', function (e) {
+        window.location.hash = e.target.hash;
+        // Scroll to top of tabs if below them
+        var tabTopView = $('.tab-box')[0].getBoundingClientRect().top;
+        console.log('tabTopView='+tabTopView);
+        if (tabTopView < 0) scrollToAnchor('tabsTop');
+    })
+
+    /**
      * Get/Set user experience group cookie
      */
     const initExperiencePopup = () => {

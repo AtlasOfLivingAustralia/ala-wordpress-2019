@@ -19,6 +19,7 @@ class TabBox extends RegisterBlocks
 
         ?>
         <div class="tab-box flexible-content align<?= $block['align']; ?>">
+            <a name="tabsTop"></a>
             <div class="tab-wrap">
                 <div class="container">
                     <ul id="tabs" class="nav nav-tabs" role="tablist">
