@@ -17841,9 +17841,7 @@ readers do not read off random characters that represent icons */
   padding: .7rem 1rem; }
   @media (max-width: 991.98px) {
     .navbar {
-      background-color: #FFF;
-      -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
-              box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15); }
+      background-color: #000; }
       .navbar > .container {
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap; }
@@ -17883,7 +17881,7 @@ readers do not read off random characters that represent icons */
     margin-left: .5rem;
     margin-right: .5rem; }
   .navbar .navbar-toggler {
-    color: #212121;
+    color: #fff;
     border: none;
     padding: 0;
     margin: .25rem .5rem;
@@ -17903,7 +17901,7 @@ readers do not read off random characters that represent icons */
       -webkit-transition: visibility 0ms ease 0ms, opacity 0ms ease 0ms;
       transition: visibility 0ms ease 0ms, opacity 0ms ease 0ms; }
     .navbar .navbar-toggler .navbar-toggler-icon {
-      background: #212121;
+      background: #fff;
       height: 1px;
       margin: 14px 0;
       position: relative;
@@ -17914,7 +17912,7 @@ readers do not read off random characters that represent icons */
         display: block;
         width: 100%;
         height: inherit;
-        background-color: #212121;
+        background-color: #fff;
         position: absolute;
         left: 0;
         -webkit-transition: inherit;
@@ -17998,7 +17996,7 @@ readers do not read off random characters that represent icons */
 
 .search-trigger, .account-mobile {
   font-size: 0;
-  color: #FFF;
+  color: #fff;
   margin: .25rem .5rem;
   padding: 2px 0;
   background-color: transparent;
@@ -18008,7 +18006,7 @@ readers do not read off random characters that represent icons */
     transition: all 150ms ease; }
   @media (max-width: 991.98px) {
     .search-trigger svg path, .account-mobile svg path {
-      fill: #212121; } }
+      fill: #fff; } }
   .search-trigger:hover svg path, .account-mobile:hover svg path {
     fill: #f26649; }
 
@@ -18124,9 +18122,13 @@ readers do not read off random characters that represent icons */
     .offcanvas-collapse .navbar-nav .dropdown-menu {
       margin: 0 0 10px;
       border: none;
-      background-color: #f2f2f2; }
+      color: #fff;
+      background-color: #343a40; }
     .offcanvas-collapse .navbar-nav .dropdown-item {
-      padding: 0.5rem 1rem; } }
+      padding: 0.5rem 1rem;
+      color: #fff; }
+    .offcanvas-collapse .navbar-nav .dropdown-item:hover {
+      background-color: #000; } }
 
 .footer-top {
   background: #212121;

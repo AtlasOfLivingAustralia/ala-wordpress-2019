@@ -10,8 +10,7 @@
   background-color: rgba(0,0,0,0.6);
   padding: .7rem 1rem;
   @include media-breakpoint-down(md){
-    background-color: #FFF;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+    background-color: $black;
     > .container {
       flex-wrap: nowrap;
       .navbar-brand {
@@ -68,7 +67,7 @@
   }
 
   .navbar-toggler {
-    color: $c-text;
+    color: $white;
     border: none;
     padding: 0;
     margin: .25rem .5rem;
@@ -88,7 +87,7 @@
       transition: visibility 0ms ease 0ms, opacity 0ms ease 0ms;
     }
     .navbar-toggler-icon {
-      background: $c-text;
+      background: $white;
       height: 1px;
       margin: 14px 0;
       position: relative;
@@ -98,7 +97,7 @@
         display: block;
         width: 100%;
         height: inherit;
-        background-color: $c-text;
+        background-color: $white;
         position: absolute;
         left: 0;
         transition: inherit;
@@ -188,7 +187,7 @@
 
 .search-trigger, .account-mobile {
   font-size: 0;
-  color: #FFF;
+  color: $white;
   margin: .25rem .5rem;
   padding: 2px 0;
   background-color: transparent;
@@ -198,7 +197,7 @@
   }
   @include media-breakpoint-down(md) {
     svg path {
-      fill: #212121;
+      fill: $white;
     }
   }
   &:hover {
@@ -329,10 +328,15 @@
       .dropdown-menu {
         margin: 0 0 10px;
         border: none;
-        background-color: $c-page-background;
+        color: $white;
+        background-color: $gray-800;
       }
       .dropdown-item {
         padding: 0.5rem 1rem;
+        color: $white;
+      }
+      .dropdown-item:hover {
+        background-color: $black;
       }
     }
   }

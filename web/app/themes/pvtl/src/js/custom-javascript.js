@@ -173,7 +173,7 @@
         window.location.hash = e.target.hash;
         // Scroll to top of tabs if below them
         var tabTopView = $('.tab-box')[0].getBoundingClientRect().top;
-        console.log('tabTopView='+tabTopView);
+        // console.log('tabTopView='+tabTopView);
         if (tabTopView < 0) scrollToAnchor('tabsTop');
     })
 
