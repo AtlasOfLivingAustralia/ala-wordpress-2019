@@ -207,8 +207,21 @@
   }
 }
 
+.account-mobile-fa {
+  .fa {
+    font-size: $h3-font-size;
+    font-weight: 200;
+  }
+  &:hover {
+    color: $primary;
+  }
+}
+
 #autocompleteSearchALA {
   background-color: rgba(0,0,0,0.6);
+  @include media-breakpoint-down(md) {
+    background-color: $black;
+  }
   padding: 10px;
   input {
     padding: 10px;

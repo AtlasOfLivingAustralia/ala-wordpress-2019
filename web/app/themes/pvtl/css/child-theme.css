@@ -18010,9 +18010,19 @@ readers do not read off random characters that represent icons */
   .search-trigger:hover svg path, .account-mobile:hover svg path {
     fill: #f26649; }
 
+.account-mobile-fa .fa {
+  font-size: 1.53125rem;
+  font-weight: 200; }
+
+.account-mobile-fa:hover {
+  color: #f26649; }
+
 #autocompleteSearchALA {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 10px; }
+  @media (max-width: 991.98px) {
+    #autocompleteSearchALA {
+      background-color: #000; } }
   #autocompleteSearchALA input {
     padding: 10px;
     margin-right: 20px;

@@ -88,7 +88,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</svg>
 							<span class="collapse visible-on-show" aria-hidden="true">×</span>
 							Search</button>
-						<a href="#" class="account-mobile order-2 d-lg-none" title="My Account">
+					<?php if (is_user_logged_in() ) { ?>
+						<a href="https://auth.ala.org.au/userdetails/myprofile/" class="account-mobile order-2 d-lg-none" title="My Account">
 							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 37 41">
 								<defs>
 									<style>
@@ -101,7 +102,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<path id="Account" class="account-icon" d="M614.5,107.1a11.549,11.549,0,1,0-11.459-11.549A11.516,11.516,0,0,0,614.5,107.1Zm0-21.288a9.739,9.739,0,1,1-9.664,9.739A9.711,9.711,0,0,1,614.5,85.81Zm9.621,23.452H604.874a8.927,8.927,0,0,0-8.881,8.949V125h37v-6.785A8.925,8.925,0,0,0,624.118,109.262Zm7.084,13.924H597.789v-4.975a7.12,7.12,0,0,1,7.085-7.139h19.244a7.119,7.119,0,0,1,7.084,7.139v4.975Z" transform="translate(-596 -84)"/>
 							</svg>
 							Account</a>
-						<a href="javascript:" class="navbar-toggler order-3 order-lg-2" type="button" data-toggle="offcanvas" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+						<a href="<?php echo wp_logout_url(); ?>" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Logout"><i class="fa fa-sign-out"></i></a>
+					<?php } else { ?>
+						<a href="<?php echo wp_login_url(); ?>" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Login or register"><i class="fa fa-sign-in"></i></a>
+					<?php } ?>
+						<a href="javascript:" class="navbar-toggler order-4 order-lg-2" type="button" data-toggle="offcanvas" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 							<span class="navbar-toggler-icon"></span>
 						</a>
 
