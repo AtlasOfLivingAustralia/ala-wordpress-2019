@@ -143,10 +143,10 @@
     }
     @include media-breakpoint-down(md){
       &.mobile-logo {
-        display: block;
+        /* display: block; */
       }
       &.custom-logo {
-        display: none;
+        /* display: none; */
       }
     }
   }

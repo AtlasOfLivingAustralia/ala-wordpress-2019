@@ -17950,9 +17950,9 @@ readers do not read off random characters that represent icons */
       display: none; }
     @media (max-width: 991.98px) {
       .navbar-brand img.mobile-logo {
-        display: block; }
+        /* display: block; */ }
       .navbar-brand img.custom-logo {
-        display: none; } }
+        /* display: none; */ } }
 
 .top-bar {
   display: -webkit-box;
