@@ -59,6 +59,7 @@ function setup_nav_menus() {
         'footer-4'  => esc_html__( 'Footer 4 (Horizontal)', 'understrap' ),
         'footer-5'  => esc_html__( 'Footer 5 (Double Width)', 'understrap' ),
         'footer-6'  => esc_html__( 'Footer 6 (Single Column)', 'understrap' ),
+        'footer-7'  => esc_html__( 'Footer 7 (Single Column)', 'understrap' ),
         'primary'  => esc_html__( 'User Group - All', 'understrap' ),
     );
 

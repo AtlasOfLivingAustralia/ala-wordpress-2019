@@ -176,6 +176,21 @@ $custom_logo_attr = array(
 					);
 					?>
 				</div><!--col end -->
+				<div class="col-md-4 col-lg-3">
+					<!-- The WordPress Menu goes here -->
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'footer-7',
+							'container_class' => 'footer-menu',
+							'menu_class'      => 'menu',
+							'fallback_cb'     => '',
+							'depth'           => 2,
+							'walker'          => new pvtl_title_attr_walker(),
+						)
+					);
+					?>
+				</div><!--col end -->
 				<div class="col-md-12">
 					<!-- The WordPress Menu goes here -->
 					<?php
