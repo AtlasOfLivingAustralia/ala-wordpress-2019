@@ -157,25 +157,18 @@
      * Tabs / URLs
      */
 
-    function scrollToAnchor(aid){
-      var aTag = $("a[name='"+ aid +"']");
-      $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+        // console.log("this", $(this).attr('id'));
+        var id = $(this).attr('id');
+        location.hash = 'tab_'+ $(e.target).attr('href').substr(1);
+    });
+    // catch hash URIs and trigger tabs
+    if (location.hash !== '') {
+        $('.nav-tabs a[href="' + location.hash.replace('tab_','') + '"]').tab('show');
+        //$('.nav-tabs li a[href="' + location.hash.replace('tab_','') + '"]').click();
+    } else {
+        $('.nav-tabs a:first').tab('show');
     }
-
-    // Javascript to enable link to tab
-    var url = document.location.toString();
-    if (url.match('#pane')) {
-      $('.nav-tabs a[href="#pane' + url.split('#pane')[1] + '"]').tab('show');
-    } 
-
-    // Change hash for page-reload
-    $('.nav-tabs a').on('shown.bs.tab', function (e) {
-        window.location.hash = e.target.hash;
-        // Scroll to top of tabs if below them
-        var tabTopView = $('.tab-box')[0].getBoundingClientRect().top;
-        // console.log('tabTopView='+tabTopView);
-        if (tabTopView < 0) scrollToAnchor('tabsTop');
-    })
 
     /**
      * Get/Set user experience group cookie

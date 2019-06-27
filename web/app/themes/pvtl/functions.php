@@ -112,6 +112,16 @@ function get_experience_group_description( $groupIndex )
     }
 }
 
+/**
+ * Returns the url to use for logout
+ *
+ */
+
+function get_ala_logout_url() {
+    return 'https://auth.ala.org.au/cas/logout';
+    // return wp_logout_url();
+}
+
 
 /**
  * Sets up theme Image sizes and registers support for featured images.

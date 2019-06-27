@@ -58,7 +58,7 @@ $custom_logo_attr = array(
 					<div class="account">
 						<?php if (is_user_logged_in() ) { ?>
 							<a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
-							<a href="<?php echo wp_logout_url(); ?>" class="btn btn-primary btn-sm">Logout</a>
+							<a href="<?php echo get_ala_logout_url(); ?>" class="btn btn-primary btn-sm">Logout</a>
 						<?php } else { ?>
 							<a href="https://auth.ala.org.au/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign Up</a>
 							<a href="<?php echo wp_login_url(); ?>" class="btn btn-primary btn-sm">Login</a>
