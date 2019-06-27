@@ -24,13 +24,13 @@ class TabBox extends RegisterBlocks
                 <div class="container">
                     <ul id="tabs" class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a id="tab-A" href="#pane-A" class="nav-link" data-toggle="tab" role="tab"><?= get_experience_group_name(0) ?></a>
+                            <a id="tab-A" href="#pane-A" class="nav-link active" data-toggle="tab" role="tab"><?= get_experience_group_name(0) ?></a>
                         </li>
                         <li class="nav-item">
                             <a id="tab-B" href="#pane-B" class="nav-link" data-toggle="tab" role="tab"><?= get_experience_group_name(1) ?></a>
                         </li>
                         <li class="nav-item">
-                            <a id="tab-C" href="#pane-C" class="nav-link active" data-toggle="tab" role="tab"><?= get_experience_group_name(2) ?></a>
+                            <a id="tab-C" href="#pane-C" class="nav-link" data-toggle="tab" role="tab"><?= get_experience_group_name(2) ?></a>
                         </li>
                     </ul>
                 </div>
@@ -38,7 +38,7 @@ class TabBox extends RegisterBlocks
 
 
             <div id="content" class="tab-content" role="tablist">
-                <div id="pane-A" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-A">
+                <div id="pane-A" class="tab-pane fade active show" role="tabpanel" aria-labelledby="tab-A">
                     <div class="accordion-tab" role="tab" id="heading-A">
                         <div class="container">
                             <h5 class="mb-0">
@@ -49,7 +49,7 @@ class TabBox extends RegisterBlocks
                             </h5>
                         </div>
                     </div>
-                    <div id="collapse-A" class="collapse accordion-content" role="tabpanel" aria-labelledby="heading-A">
+                    <div id="collapse-A" class="collapse accordion-content show" role="tabpanel" aria-labelledby="heading-A">
                         <div class="container">
                             <div class="row tab-group-description">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-12 mb-lg-12">
@@ -177,7 +177,7 @@ class TabBox extends RegisterBlocks
                     </div>
                 </div>
 
-                <div id="pane-C" class="tab-pane fade active show" role="tabpanel" aria-labelledby="tab-C">
+                <div id="pane-C" class="tab-pane fade" role="tabpanel" aria-labelledby="tab-C">
                     <div class="accordion-tab" role="tab" id="heading-C">
                         <div class="container">
                             <h5 class="mb-0">
@@ -189,7 +189,7 @@ class TabBox extends RegisterBlocks
                             </h5>
                         </div>
                     </div>
-                    <div id="collapse-C" class="collapse accordion-content show" role="tabpanel" aria-labelledby="heading-C">
+                    <div id="collapse-C" class="collapse accordion-content" role="tabpanel" aria-labelledby="heading-C">
                         <div class="container">
                             <div class="row tab-group-description">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mb-12 mb-lg-12">
