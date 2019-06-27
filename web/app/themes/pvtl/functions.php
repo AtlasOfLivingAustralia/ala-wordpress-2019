@@ -396,6 +396,57 @@ function the_custom_logo_pvtl( $blog_id = 0 ) {
     echo get_custom_logo_pvtl( $blog_id );
 }
 
+/**
+ * Right table-of-contents nav - parse headings -
+ * used if $auto_toc_headings is set to true in
+ * sidebar-templates/sidebar-right-anchors.php
+ *
+ * Pass in $blocks for the page; 
+ * prints links (should be inside #anchorList)
+ */
+
+function ala_heading_anchor_link( $blocks ){
+    $dom = new DOMDocument();
+
+    foreach ( $blocks as $block ) {
+        @$dom->loadHTML($block['innerHTML']);
+
+        $h3 = $dom->getElementsByTagName('h3');
+        $title = 'Title';
+
+        foreach ( $h3 as $node ){
+            $title = $node->nodeValue;
+            //$title = 'title';
+            //$name = str_replace(' ', '-', $title);
+            //$anchor = 'anchor';
+            //$title = $h2[0]->nodeValue;
+            $anchor = 'something';
+            $anchor = filter_var ( $anchor, FILTER_SANITIZE_STRING);
+
+            $heading_link_output = sprintf( '<a href="#%1$s" title="%2$s" class="list-group-item list-group-item-action"><span>%2$s</span></a>',
+                $anchor,
+                $title
+            );
+            echo $heading_link_output;
+        }
+    }
+}
+
+
+/**
+ * Automatically add IDs to headings such as <h2></h2>
+ */
+function auto_id_headings( $content ) {
+    $content = preg_replace_callback( '/(\<h[1-6](.*?))\>(.*)(<\/h[1-6]>)/i', function( $matches ) {
+        if ( ! stripos( $matches[0], 'id=' ) ) :
+            $matches[0] = $matches[1] . $matches[2] . ' id="' . sanitize_title( $matches[3] ) . '">' . $matches[3] . $matches[4];
+        endif;
+        return $matches[0];
+    }, $content );
+    return $content;
+}
+add_filter( 'the_content', 'auto_id_headings' );
+
 
 function remove_unused_widgets(){
 
