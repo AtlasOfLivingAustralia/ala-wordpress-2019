@@ -60,11 +60,16 @@
       margin-bottom: 0;
     }
     .nav-link {
-      padding: 30px 40px;
+      padding: 15px 40px;
+      margin-top: 5px;
+      margin-right: 15px;
       text-decoration: none;
       color: $c-text;
       border: none;
-      border-right: 1px solid darken($primary, 15%);
+      border-right: 1px solid darken($primary, 5%);
+      border-left: 1px solid darken($primary, 5%);
+      border-top: 1px solid darken($primary, 5%);
+      background-color: #f37457;
       z-index: 10;
       position: relative;
       font-size: 18px;
