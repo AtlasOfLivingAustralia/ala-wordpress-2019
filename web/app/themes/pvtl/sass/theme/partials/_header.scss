@@ -3,6 +3,11 @@
     position: absolute;
     width: 100%;
     z-index: 1000;
+    .alert-ala {
+      color: black;
+      background-color: $primary;
+      border-color: darken($primary, 5%);
+    }
   }
 }
 

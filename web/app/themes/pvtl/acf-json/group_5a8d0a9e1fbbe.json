@@ -677,6 +677,64 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5d1571ec554dc",
+            "label": "Alert",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d15723d554dd",
+            "label": "Alert display",
+            "name": "alert_display",
+            "type": "checkbox",
+            "instructions": "Check to display banner alert.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "active": "active"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_5d1572b0554de",
+            "label": "Alert text",
+            "name": "alert_text",
+            "type": "text",
+            "instructions": "Text to be shown in the alert.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -696,5 +754,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548309334
+    "modified": 1561686772
 }

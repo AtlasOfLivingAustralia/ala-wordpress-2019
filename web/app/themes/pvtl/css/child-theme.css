@@ -17834,7 +17834,11 @@ readers do not read off random characters that represent icons */
   #wrapper-navbar {
     position: absolute;
     width: 100%;
-    z-index: 1000; } }
+    z-index: 1000; }
+    #wrapper-navbar .alert-ala {
+      color: black;
+      background-color: #f26649;
+      border-color: #f05231; } }
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.6);

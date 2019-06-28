@@ -141,8 +141,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	        </div>
 		    <?php endif; ?>
 		</nav><!-- .site-navigation -->
-		    <div id="autocompleteSearchALA" class="collapse">
-		    	<div class="container">
+	    <div id="autocompleteSearchALA" class="collapse">
+	    	<div class="container">
 		        <form method="get" action="https://bie.ala.org.au/search" class="search-form">
 		            <div class="d-flex justify-content-between">
 		                <input id="autocompleteHeader" type="text" name="q" placeholder="Search species, data sets, and more..." class="search-input autocompleteBIE" autocomplete="off"/>
@@ -164,6 +164,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 		            </div>
 		        </form>
 		    </div>
-		    </div>
+	    </div>
+        <?php if ( get_field( 'alert_display', 'option' ) ) : ?>
+	    <div class="alert alert-ala fade show" role="alert">
+    	    <div class="container">
+    	    	<div class="row">
+                    <?php echo wp_kses_post( get_field( 'alert_text', 'option' ) ); ?>
+        		</div>
+    		</div>
+		</div>
+        <?php endif; ?>
 	</div><!-- #wrapper-navbar end -->
 
