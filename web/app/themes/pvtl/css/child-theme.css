@@ -18261,7 +18261,8 @@ readers do not read off random characters that represent icons */
   padding-bottom: 50px;
   color: #565656; }
   .footer-bottom img {
-    margin-top: 20px; }
+    margin-top: 20px;
+    margin-right: 15px; }
 
 .footer-copyright {
   background-color: #c44d34;
