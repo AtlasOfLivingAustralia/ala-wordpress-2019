@@ -43,7 +43,7 @@ class HeroBannerSlider extends RegisterBlocks
             <div class="search-overlay">
                 <div class="container">
                     <h1><?= $title; ?></h1>
-                    <div class="search-container row">
+                    <div class="search-container row ala-home-stats">
                         <div class="col-6 text-center">
                             <div class="d-inline-flex align-items-center">
                                 <div class="image">
@@ -100,7 +100,7 @@ class HeroBannerSlider extends RegisterBlocks
                                 <div class="content text-left">
                                     <p class="h5">
                                         <a href="https://biocache.ala.org.au/occurrences/search?q=*%3A*">
-                                        <span class="amount" data-occurrence data-count="84958352">84,958,352</span>
+                                        <span id="alaOccurrencesTotal" class="amount ala-stats-data" data-occurrence data-count="84958352">84,958,352</span>
                                         occurrence records</a>
                                     </p>
                                 </div>
@@ -155,8 +155,8 @@ class HeroBannerSlider extends RegisterBlocks
                                 <div class="content text-left">
                                     <p class="h5">
                                         <a href="https://collections.ala.org.au/datasets">
-                                        <span class="amount" data-species data-count="10633">10,633</span>
-                                        data sets</a>
+                                        <span id="alaDatasetsTotal" class="amount ala-stats-data" data-species data-count="10633">10,000</span>
+                                        datasets</a>
                                     </p>
                                 </div>
                             </div>
@@ -165,7 +165,7 @@ class HeroBannerSlider extends RegisterBlocks
                             <form class="form-inline" method="get" action="https://bie.ala.org.au/search" >
                                 <div class="form-group flex-grow-1">
                                     <label for="search" class="sr-only">Search species, data sets, and more</label>
-                                    <input type="search" name="q" class="form-control flex-grow-1 autocompleteHome" id="search" placeholder="Search species, data sets, and more..." autocomplete="off">
+                                    <input type="search" name="q" class="form-control flex-grow-1 autocompleteHome" id="search" placeholder="Search species, datasets, and more..." autocomplete="off">
                                 </div>
                                 <button type="submit" class="btn btn-primary-dark">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">

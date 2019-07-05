@@ -134,6 +134,12 @@ gulp.task('scripts', function(done) {
   ];
 
   var customScriptsStream = gulp.src(customScripts)
+    .pipe(plumber({
+      errorHandler: function (err) {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
     .pipe(babel({presets: ['@babel/env']}))
     .pipe(concat('js/custom-javascript.min.js'))
     .pipe(uglify())
@@ -159,6 +165,12 @@ gulp.task('scripts', function(done) {
 
   ];
   var childThemeMinJsStream = gulp.src(scripts)
+    .pipe(plumber({
+      errorHandler: function (err) {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
     .pipe(concat('child-theme.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));

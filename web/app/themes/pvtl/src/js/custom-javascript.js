@@ -321,9 +321,29 @@
   collapseTabs();
 
 
+  // update ALA stats
+  const getLatestStats = () => {
+    if ($(".ala-home-stats").length) {
+      $("#alaOccurrencesTotal").html('0');
+      $("#alaDatasetsTotal").html('0');
+      var statsUrl = "https://dashboard.ala.org.au/dashboard/homePageStats";
+      //console.log("About to retrieve stats...");
+      $.getJSON(statsUrl, function(data) {
+        //console.log("retrieved occurrences total: " + data.recordCounts.count);
+        //console.log("retrieved datasets total: " + data.datasetCounts.count);
+        $("#alaOccurrencesTotal").attr('data-count',data.recordCounts.count);
+        $("#alaDatasetsTotal").attr('data-count',data.datasetCounts.count);
+        updateStats($("#alaOccurrencesTotal"));
+        updateStats($("#alaDatasetsTotal"));
+      });
+    }
+  };
+
+  getLatestStats();
+
   //Count up to data-count num
-  $('[data-count]').each(function() {
-    const $this = $(this),
+  function updateStats(countElement) {
+    const $this = countElement,
       countTo = $this.attr('data-count');
 
     $this.html('0');
@@ -344,8 +364,11 @@
           $this.text(this.countNum.toLocaleString());
         }
 
-      });
-  });
+      }
+    );
+  }
+
+  // end document.ready
 })(jQuery);
 
 /**
