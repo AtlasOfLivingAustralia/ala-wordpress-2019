@@ -324,10 +324,7 @@
   // update ALA stats
   const getLatestStats = () => {
     if ($(".ala-home-stats").length) {
-      $("#alaOccurrencesTotal").html('0');
-      $("#alaDatasetsTotal").html('0');
       var statsUrl = "https://dashboard.ala.org.au/dashboard/homePageStats";
-      //console.log("About to retrieve stats...");
       $.getJSON(statsUrl, function(data) {
         //console.log("retrieved occurrences total: " + data.recordCounts.count);
         //console.log("retrieved datasets total: " + data.datasetCounts.count);
