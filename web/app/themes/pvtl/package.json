@@ -55,7 +55,7 @@
     "run-sequence": "^2.2.1",
     "stickybits": "^3.6.1",
     "swiper": "^4.4.6",
-    "understrap": "^0.9.3",
+    "understrap": "^0.9.4",
     "undescores-for-npm": "^1.0.0"
   },
   "devDependencies": {
