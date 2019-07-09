@@ -293,6 +293,19 @@ add_filter( 'experience_groups', 'escape_experience_groups' );
 
 
 /**
+ * Convert menu items with '---' as link text into menu separators
+ * Based on https://wordpress.org/plugins/mhm-menu-separator (but without conversion of # URLs into unlinked items)
+*/
+function menu_separatorisationise( $item_output, $item ) {
+        if ( '---' === $item->post_title ) {
+                return '<hr class="menu-separator">'; // Horizontal line
+        } else {
+                return $item_output; // Unmodified output for this link
+        }
+}
+add_filter( 'walker_nav_menu_start_el', 'menu_separatorisationise', 10, 2 );
+
+/**
  * Outputs the search modal in the footer.
  */
 function display_search_popup() {
