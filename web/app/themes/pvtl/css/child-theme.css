@@ -18073,6 +18073,9 @@ readers do not read off random characters that represent icons */
   -webkit-transition: height 2s;
   transition: height 2s; }
 
+.menu-separator {
+  margin: 0.3rem 0; }
+
 @media (max-width: 991.98px) {
   .site {
     position: relative;

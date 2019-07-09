@@ -282,6 +282,9 @@
     -o-transition: height 2s;
     transition: height 2s;
 }
+.menu-separator {
+  margin: 0.3rem 0;
+}
 
 @include media-breakpoint-down(md){
   .site {
