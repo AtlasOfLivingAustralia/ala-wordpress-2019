@@ -446,10 +446,16 @@ form.search-form {
   margin-bottom: 0px;
 }
 
-.signedIn .signUpBtn, .signedIn .loginBtn {
-  display: none;
-}
+&>nav {
+  .signUpBtn, .loginBtn, .myProfileBtn, .logoutBtn , .outer-nav-wrapper .top-bar .account{
+    display: none;
+  }
 
-.signedOut .myProfileBtn, .signedOut .logoutBtn {
-  display: none;
+  .signedIn .myProfileBtn, .signedIn .logoutBtn, .outer-nav-wrapper .top-bar .account.signedIn {
+    display: inline-block;
+  }
+
+  .signedOut .signUpBtn, .signedOut .loginBtn, .outer-nav-wrapper .top-bar .account.signedOut{
+    display: inline-block;
+  }
 }

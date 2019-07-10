@@ -259,10 +259,14 @@
   }
 }
 
-.signedIn .signUpBtn, .signedIn .loginBtn {
+.signUpBtn, .loginBtn, .myProfileBtn, .logoutBtn {
   display: none;
 }
 
-.signedOut .myProfileBtn, .signedOut .logoutBtn {
-  display: none;
+.signedIn .myProfileBtn, .signedIn .logoutBtn {
+  display: inline-block;
+}
+
+.signedOut .signUpBtn, .signedOut .loginBtn {
+  display: inline-block;
 }
