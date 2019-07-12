@@ -121,6 +121,10 @@ $background-color-header: rgba(0,0,0,0.85) !important;
       margin-bottom: 4px;
     }
 
+    .horizontal-line:first-child {
+      margin-top: 4px;
+    }
+
     &:hover .horizontal-line, &:focus .horizontal-line {
       background-color: $primary;
       border-color: $primary;
@@ -269,13 +273,21 @@ $background-color-header: rgba(0,0,0,0.85) !important;
   }
 }
 
-.mobile-logout-btn {
-  width: 25px;
-  height: 35px;
-  font-size: 26px;
+.account-mobile {
   display: flex;
   align-items: start;
 
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+
+  .fas {
+    font-size: 1.53125rem;
+    font-weight: 200;
+  }
+}
+
+.mobile-logout-btn, .mobile-login-btn {
   &:hover, &:focus {
     color: $primary
   }
@@ -447,15 +459,36 @@ form.search-form {
 }
 
 &>nav {
-  .signUpBtn, .loginBtn, .myProfileBtn, .logoutBtn , .outer-nav-wrapper .top-bar .account{
+  .account-mobile {
+    display: flex;
+  }
+
+  // by default hide all buttons. Apps like regions will be using this feature.
+  .signUpBtn, .loginBtn, .myProfileBtn, .logoutBtn , .outer-nav-wrapper .top-bar &.account{
     display: none;
   }
 
-  .signedIn .myProfileBtn, .signedIn .logoutBtn, .outer-nav-wrapper .top-bar .account.signedIn {
-    display: inline-block;
+  .signedIn {
+    .myProfileBtn, .logoutBtn, .outer-nav-wrapper .top-bar &.account {
+      display: inline-block;
+    }
+
+    .account-mobile {
+      &.myProfileBtn, &.logoutBtn {
+        display: flex;
+      }
+    }
   }
 
-  .signedOut .signUpBtn, .signedOut .loginBtn, .outer-nav-wrapper .top-bar .account.signedOut{
-    display: inline-block;
+  .signedOut {
+    .signUpBtn, .loginBtn, .outer-nav-wrapper .top-bar &.account {
+      display: inline-block;
+    }
+
+    .account-mobile {
+      &.signUpBtn, &.loginBtn{
+        display: flex;
+      }
+    }
   }
 }
