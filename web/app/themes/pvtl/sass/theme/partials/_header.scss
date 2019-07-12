@@ -464,31 +464,27 @@ form.search-form {
   }
 
   // by default hide all buttons. Apps like regions will be using this feature.
-  .signUpBtn, .loginBtn, .myProfileBtn, .logoutBtn , .outer-nav-wrapper .top-bar &.account{
+  .signUpBtn, .loginBtn, .myProfileBtn, .logoutBtn , .outer-nav-wrapper .top-bar .account{
     display: none;
   }
 
-  .signedIn {
-    .myProfileBtn, .logoutBtn, .outer-nav-wrapper .top-bar &.account {
-      display: inline-block;
-    }
+  .signedIn .myProfileBtn,.signedIn .logoutBtn, .outer-nav-wrapper .top-bar .signedIn.account {
+    display: inline-block;
+  }
 
-    .account-mobile {
-      &.myProfileBtn, &.logoutBtn {
-        display: flex;
-      }
+  .signedIn .account-mobile {
+    &.myProfileBtn, &.logoutBtn {
+      display: flex;
     }
   }
 
-  .signedOut {
-    .signUpBtn, .loginBtn, .outer-nav-wrapper .top-bar &.account {
-      display: inline-block;
-    }
+  .signedOut .signUpBtn,.signedOut .loginBtn, .outer-nav-wrapper .top-bar .signedOut.account {
+    display: inline-block;
+  }
 
-    .account-mobile {
-      &.signUpBtn, &.loginBtn{
-        display: flex;
-      }
+  .signedOut .account-mobile {
+    &.signUpBtn, &.loginBtn{
+      display: flex;
     }
   }
 }
