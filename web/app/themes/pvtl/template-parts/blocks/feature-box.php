@@ -14,18 +14,21 @@ class FeatureBox extends RegisterBlocks
         $title = get_field('title'); // str
 
 		$title1 = get_field('title_1'); // str
+		$title1esc = strip_tags($title1);
 		$link1 = get_field('link_1'); // str
 		$date1 = get_field('date_1'); // str
 		$author1 = get_field('author_1'); // date (jS F Y)
 		$image1 = get_field('image_1'); // array
 
 		$title2 = get_field('title_2'); // str
+		$title2esc = strip_tags($title2);
 		$link2 = get_field('link_2'); // str
 		$date2 = get_field('date_2'); // str
 		$author2 = get_field('author_2'); // date (jS F Y)
 		$image2 = get_field('image_2'); // array
 
 		$title3 = get_field('title_3'); // str
+		$title3esc = strip_tags($title3);
 		$link3 = get_field('link_3'); // str
 		$date3 = get_field('date_3'); // str
 		$author3 = get_field('author_3'); // date (jS F Y)
@@ -46,8 +49,8 @@ class FeatureBox extends RegisterBlocks
 			   <div class="featured-swiper">
 				   <div class="row swiper-wrapper">
 					   <div class="col-xs-12 col-md-4 swiper-slide">
-						   <a href="<?= $link1; ?>" title="<?= $title1; ?>" class="link-box">
-							   <img src="<?= $image1['sizes']['featured'] ?>" alt="<?= $title1; ?>" />
+						   <a href="<?= $link1; ?>" title="<?= $title1esc; ?>" class="link-box">
+							   <img src="<?= $image1['sizes']['featured'] ?>" alt="<?= $title1esc; ?>" />
 							   <div class="overlay">
 								   <?= ($date1) ? '<time class="date" title="' .$date1 . '"><i class="fal fa-calendar-alt" aria-hidden="true"></i> ' . $date1 . '</time>' : '' ?>
 								   <?= ($author1) ? '<p class="author"><img src="' . get_stylesheet_directory_uri() . '/images/icons/camera-light-shadow.svg" alt="author icon" />' . $author1 . '</p>' : '' ?>
@@ -56,8 +59,8 @@ class FeatureBox extends RegisterBlocks
 						   </a>
 					   </div>
 					   <div class="col-xs-12 col-md-4 swiper-slide">
-						   <a href="<?= $link2; ?>" title="<?= $title2; ?>" class="link-box">
-							   <img src="<?= $image2['sizes']['featured'] ?>" alt="<?= $title2; ?>" />
+						   <a href="<?= $link2; ?>" title="<?= $title2esc; ?>" class="link-box">
+							   <img src="<?= $image2['sizes']['featured'] ?>" alt="<?= $title2esc; ?>" />
 							   <div class="overlay">
 								   <?= ($date2) ? '<time class="date" title="' .$date2 . '"><i class="fal fa-calendar-alt" aria-hidden="true"></i> ' . $date2 . '</time>' : '' ?>
 								   <?= ($author2) ? '<p class="author"><img src="' . get_stylesheet_directory_uri() . '/images/icons/camera-light-shadow.svg" alt="author icon" />' . $author2 . '</p>' : '' ?>
@@ -66,8 +69,8 @@ class FeatureBox extends RegisterBlocks
 						   </a>
 					   </div>
 					   <div class="col-xs-12 col-md-4 swiper-slide">
-						   <a href="<?= $link3; ?>" title="<?= $title3; ?>" class="link-box">
-							   <img src="<?= $image3['sizes']['featured'] ?>" alt="<?= $title3; ?>" />
+						   <a href="<?= $link3; ?>" title="<?= $title3esc; ?>" class="link-box">
+							   <img src="<?= $image3['sizes']['featured'] ?>" alt="<?= $title3esc; ?>" />
 							   <div class="overlay">
 								   <?= ($date3) ? '<time class="date" title="' .$date3 . '"><i class="fal fa-calendar-alt" aria-hidden="true"></i> ' . $date3 . '</time>' : '' ?>
 								   <?= ($author3) ? '<p class="author"><img src="' . get_stylesheet_directory_uri() . '/images/icons/camera-light-shadow.svg" alt="author icon" />' . $author3 . '</p>' : '' ?>
