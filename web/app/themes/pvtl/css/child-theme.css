@@ -19408,8 +19408,11 @@ button.swiper-pagination-bullet {
 .post-list .type-post .entry-header, .post-list .type-post .entry-content {
   position: relative;
   z-index: 10;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   color: #FFF; }
+
+.post-list .type-post .entry-header .entry-meta {
+  text-shadow: 1px 1px 3px black; }
 
 .post-list .type-post .entry-content {
   max-height: 3em;

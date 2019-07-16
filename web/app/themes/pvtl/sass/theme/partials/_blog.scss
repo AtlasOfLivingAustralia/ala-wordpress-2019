@@ -60,8 +60,11 @@
       .entry-header, .entry-content {
         position: relative;
         z-index: 10;
-        text-shadow: 0 2px 8px rgba(0,0,0,.6);
+        text-shadow: 0 2px 4px rgba(0,0,0,.8);
         color: #FFF;
+      }
+      .entry-header .entry-meta {
+        text-shadow: 1px 1px 3px rgba(0,0,0,1);
       }
       //truncate excerpt to 2 lines
       .entry-content {
