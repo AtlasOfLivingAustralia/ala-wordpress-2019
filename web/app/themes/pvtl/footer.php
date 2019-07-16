@@ -43,8 +43,8 @@ $custom_logo_attr = array(
 		<div class="footer-top-bar footer-subscribe">
 			<div class="<?php echo esc_attr( $container ); ?>">
 				<div class="d-flex align-items-center justify-content-center flex-column flex-md-row">
-					<h3>Subscribe to receive the latest news & updates</h3>
-					<?php echo do_shortcode('[gravityform id=2 title=false description=false ajax=true]'); ?>
+					<h3>Want the latest ALA news & updates?</h3>
+					<a href="https://alerts.ala.org.au/notification/myAlerts" class="btn btn-outline-white btn-lg">Get email alerts</a>
 				</div>
 			</div>
 		</div>

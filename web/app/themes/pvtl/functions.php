@@ -311,7 +311,7 @@ add_filter( 'walker_nav_menu_start_el', 'menu_separatorisationise', 10, 2 );
 function display_search_popup() {
 	get_template_part( 'template-parts/modal', 'search' );
 }
-add_action( 'wp_footer', 'display_search_popup' );
+//add_action( 'wp_footer', 'display_search_popup' );
 
 
 /**
