@@ -111,7 +111,7 @@
           color: $c-text;
           transition: color 200ms ease;
         }
-        .entry-header, .entry-content {
+        .entry-header, .entry-content, .entry-header .entry-meta {
           text-shadow: none;
           color: $c-text;
         }

@@ -19461,7 +19461,7 @@ button.swiper-pagination-bullet {
       color: #212121;
       -webkit-transition: color 200ms ease;
       transition: color 200ms ease; }
-    .post-list .text-only .type-post a .entry-header, .post-list .text-only .type-post a .entry-content {
+    .post-list .text-only .type-post a .entry-header, .post-list .text-only .type-post a .entry-content, .post-list .text-only .type-post a .entry-header .entry-meta {
       text-shadow: none;
       color: #212121; }
     .post-list .text-only .type-post a .entry-content {
