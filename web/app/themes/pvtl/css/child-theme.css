@@ -2580,32 +2580,30 @@ fieldset:disabled .is-style-outline-button a.wp-block-button__link,
 .is-style-outline-button fieldset:disabled a.wp-block-button__link {
   pointer-events: none; }
 
-.btn-primary, .gform_button, .ala-big-button {
+.btn-primary, .gform_button {
   color: #212121;
   background-color: #f26649;
   border-color: #f26649; }
-  .btn-primary:hover, .gform_button:hover, .ala-big-button:hover {
+  .btn-primary:hover, .gform_button:hover {
     color: #212121;
     background-color: #ef4825;
     border-color: #ef3e19; }
-  .btn-primary:focus, .gform_button:focus, .ala-big-button:focus, .btn-primary.focus, .focus.gform_button, .focus.ala-big-button {
+  .btn-primary:focus, .gform_button:focus, .btn-primary.focus, .focus.gform_button {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(211, 92, 67, 0.5);
             box-shadow: 0 0 0 0.2rem rgba(211, 92, 67, 0.5); }
-  .btn-primary.disabled, .disabled.gform_button, .disabled.ala-big-button, .btn-primary:disabled, .gform_button:disabled, .ala-big-button:disabled {
+  .btn-primary.disabled, .disabled.gform_button, .btn-primary:disabled, .gform_button:disabled {
     color: #212121;
     background-color: #f26649;
     border-color: #f26649; }
-  .btn-primary:not(:disabled):not(.disabled):active, .gform_button:not(:disabled):not(.disabled):active, .ala-big-button:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .gform_button:not(:disabled):not(.disabled).active, .ala-big-button:not(:disabled):not(.disabled).active,
+  .btn-primary:not(:disabled):not(.disabled):active, .gform_button:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .gform_button:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle,
-  .show > .dropdown-toggle.gform_button,
-  .show > .dropdown-toggle.ala-big-button {
+  .show > .dropdown-toggle.gform_button {
     color: #fff;
     background-color: #ef3e19;
     border-color: #eb3611; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, .gform_button:not(:disabled):not(.disabled):active:focus, .ala-big-button:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .gform_button:not(:disabled):not(.disabled).active:focus, .ala-big-button:not(:disabled):not(.disabled).active:focus,
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .gform_button:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .gform_button:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary.dropdown-toggle:focus,
-    .show > .dropdown-toggle.gform_button:focus,
-    .show > .dropdown-toggle.ala-big-button:focus {
+    .show > .dropdown-toggle.gform_button:focus {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(211, 92, 67, 0.5);
               box-shadow: 0 0 0 0.2rem rgba(211, 92, 67, 0.5); }
 
@@ -2784,29 +2782,31 @@ fieldset:disabled .is-style-outline-button a.wp-block-button__link,
       -webkit-box-shadow: 0 0 0 0.2rem rgba(66, 66, 66, 0.5);
               box-shadow: 0 0 0 0.2rem rgba(66, 66, 66, 0.5); }
 
-.btn-primary-dark, .is-style-standard-button .wp-block-button__link {
+.btn-primary-dark, .ala-big-button, .is-style-standard-button .wp-block-button__link {
   color: #fff;
   background-color: #c44d34;
   border-color: #c44d34; }
-  .btn-primary-dark:hover, .is-style-standard-button .wp-block-button__link:hover {
+  .btn-primary-dark:hover, .ala-big-button:hover, .is-style-standard-button .wp-block-button__link:hover {
     color: #fff;
     background-color: #a6412c;
     border-color: #9c3d29; }
-  .btn-primary-dark:focus, .is-style-standard-button .wp-block-button__link:focus, .btn-primary-dark.focus, .is-style-standard-button .focus.wp-block-button__link {
+  .btn-primary-dark:focus, .ala-big-button:focus, .is-style-standard-button .wp-block-button__link:focus, .btn-primary-dark.focus, .focus.ala-big-button, .is-style-standard-button .focus.wp-block-button__link {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(205, 104, 82, 0.5);
             box-shadow: 0 0 0 0.2rem rgba(205, 104, 82, 0.5); }
-  .btn-primary-dark.disabled, .is-style-standard-button .disabled.wp-block-button__link, .btn-primary-dark:disabled, .is-style-standard-button .wp-block-button__link:disabled {
+  .btn-primary-dark.disabled, .disabled.ala-big-button, .is-style-standard-button .disabled.wp-block-button__link, .btn-primary-dark:disabled, .ala-big-button:disabled, .is-style-standard-button .wp-block-button__link:disabled {
     color: #fff;
     background-color: #c44d34;
     border-color: #c44d34; }
-  .btn-primary-dark:not(:disabled):not(.disabled):active, .is-style-standard-button .wp-block-button__link:not(:disabled):not(.disabled):active, .btn-primary-dark:not(:disabled):not(.disabled).active, .is-style-standard-button .wp-block-button__link:not(:disabled):not(.disabled).active,
+  .btn-primary-dark:not(:disabled):not(.disabled):active, .ala-big-button:not(:disabled):not(.disabled):active, .is-style-standard-button .wp-block-button__link:not(:disabled):not(.disabled):active, .btn-primary-dark:not(:disabled):not(.disabled).active, .ala-big-button:not(:disabled):not(.disabled).active, .is-style-standard-button .wp-block-button__link:not(:disabled):not(.disabled).active,
   .show > .btn-primary-dark.dropdown-toggle,
+  .show > .dropdown-toggle.ala-big-button,
   .is-style-standard-button .show > .dropdown-toggle.wp-block-button__link {
     color: #fff;
     background-color: #9c3d29;
     border-color: #923927; }
-    .btn-primary-dark:not(:disabled):not(.disabled):active:focus, .is-style-standard-button .wp-block-button__link:not(:disabled):not(.disabled):active:focus, .btn-primary-dark:not(:disabled):not(.disabled).active:focus, .is-style-standard-button .wp-block-button__link:not(:disabled):not(.disabled).active:focus,
+    .btn-primary-dark:not(:disabled):not(.disabled):active:focus, .ala-big-button:not(:disabled):not(.disabled):active:focus, .is-style-standard-button .wp-block-button__link:not(:disabled):not(.disabled):active:focus, .btn-primary-dark:not(:disabled):not(.disabled).active:focus, .ala-big-button:not(:disabled):not(.disabled).active:focus, .is-style-standard-button .wp-block-button__link:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary-dark.dropdown-toggle:focus,
+    .show > .dropdown-toggle.ala-big-button:focus,
     .is-style-standard-button .show > .dropdown-toggle.wp-block-button__link:focus {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(205, 104, 82, 0.5);
               box-shadow: 0 0 0 0.2rem rgba(205, 104, 82, 0.5); }
