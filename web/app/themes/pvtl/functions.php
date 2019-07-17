@@ -520,13 +520,15 @@ function pvtl_get_excerpt($chars = 150){
 
     $my_excerpt = get_the_excerpt();
 
+    // if there is no excerpt, get the post content
+    if (strlen($my_excerpt) < 1):
+        $excerpt = strip_tags(get_the_content());
+    endif;
+
     // if excerpt/content is longer than limit, trim it and append the ellipsis
     if (strlen($my_excerpt) > $chars):
-
         $my_excerpt = substr($my_excerpt, 0, $chars);
-
         $my_excerpt .= '…';
-        
     endif;
 
 	return $my_excerpt;
