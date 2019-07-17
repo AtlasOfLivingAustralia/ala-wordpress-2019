@@ -57,7 +57,6 @@
         "wpackagist-plugin/w3-total-cache": "^0.9.7.4",
         "wpackagist-plugin/wp-migrate-db": "^1.0",
         "wpackagist-plugin/admin-menu-editor": "^1.8",
-        "wpackagist-plugin/better-wp-security": "^7.2",
         "wpackagist-plugin/custom-post-type-ui": "^1.6.2",
         "wpackagist-plugin/simple-custom-post-order": "^2.4.4",
         "wpackagist-plugin/duplicate-post": "^3.2",
