@@ -2533,7 +2533,7 @@ textarea.form-control,
       margin-bottom: 0; } }
 
 .btn,
-.wpcf7 input[type=submit], .gform_button, .is-style-standard-button .wp-block-button__link, .is-style-outline-button .wp-block-button__link {
+.wpcf7 input[type=submit], .gform_button, .ala-big-button, .is-style-standard-button .wp-block-button__link, .is-style-outline-button .wp-block-button__link {
   display: inline-block;
   font-weight: 400;
   color: #212121;
@@ -2555,54 +2555,57 @@ textarea.form-control,
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .btn,
-    .wpcf7 input[type=submit], .gform_button, .is-style-standard-button .wp-block-button__link, .is-style-outline-button .wp-block-button__link {
+    .wpcf7 input[type=submit], .gform_button, .ala-big-button, .is-style-standard-button .wp-block-button__link, .is-style-outline-button .wp-block-button__link {
       -webkit-transition: none;
       transition: none; } }
-  .btn:hover, .wpcf7 input:hover[type=submit], .gform_button:hover, .is-style-standard-button .wp-block-button__link:hover, .is-style-outline-button .wp-block-button__link:hover {
+  .btn:hover, .wpcf7 input:hover[type=submit], .gform_button:hover, .ala-big-button:hover, .is-style-standard-button .wp-block-button__link:hover, .is-style-outline-button .wp-block-button__link:hover {
     color: #212121;
     text-decoration: none; }
   .btn:focus,
-  .wpcf7 input:focus[type=submit], .gform_button:focus, .is-style-standard-button .wp-block-button__link:focus, .is-style-outline-button .wp-block-button__link:focus, .btn.focus, .wpcf7 input.focus[type=submit], .focus.gform_button, .is-style-standard-button .focus.wp-block-button__link, .is-style-outline-button .focus.wp-block-button__link {
+  .wpcf7 input:focus[type=submit], .gform_button:focus, .ala-big-button:focus, .is-style-standard-button .wp-block-button__link:focus, .is-style-outline-button .wp-block-button__link:focus, .btn.focus, .wpcf7 input.focus[type=submit], .focus.gform_button, .focus.ala-big-button, .is-style-standard-button .focus.wp-block-button__link, .is-style-outline-button .focus.wp-block-button__link {
     outline: 0;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(242, 102, 73, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(242, 102, 73, 0.25); }
-  .btn.disabled, .wpcf7 input.disabled[type=submit], .disabled.gform_button, .is-style-standard-button .disabled.wp-block-button__link, .is-style-outline-button .disabled.wp-block-button__link, .btn:disabled,
-  .wpcf7 input:disabled[type=submit], .gform_button:disabled, .is-style-standard-button .wp-block-button__link:disabled, .is-style-outline-button .wp-block-button__link:disabled {
+  .btn.disabled, .wpcf7 input.disabled[type=submit], .disabled.gform_button, .disabled.ala-big-button, .is-style-standard-button .disabled.wp-block-button__link, .is-style-outline-button .disabled.wp-block-button__link, .btn:disabled,
+  .wpcf7 input:disabled[type=submit], .gform_button:disabled, .ala-big-button:disabled, .is-style-standard-button .wp-block-button__link:disabled, .is-style-outline-button .wp-block-button__link:disabled {
     opacity: 0.65; }
 
-a.btn.disabled, a.disabled.gform_button, .is-style-standard-button a.disabled.wp-block-button__link, .is-style-outline-button a.disabled.wp-block-button__link,
+a.btn.disabled, a.disabled.gform_button, a.disabled.ala-big-button, .is-style-standard-button a.disabled.wp-block-button__link, .is-style-outline-button a.disabled.wp-block-button__link,
 fieldset:disabled a.btn,
 fieldset:disabled a.gform_button,
+fieldset:disabled a.ala-big-button,
 fieldset:disabled .is-style-standard-button a.wp-block-button__link,
 .is-style-standard-button fieldset:disabled a.wp-block-button__link,
 fieldset:disabled .is-style-outline-button a.wp-block-button__link,
 .is-style-outline-button fieldset:disabled a.wp-block-button__link {
   pointer-events: none; }
 
-.btn-primary, .gform_button {
+.btn-primary, .gform_button, .ala-big-button {
   color: #212121;
   background-color: #f26649;
   border-color: #f26649; }
-  .btn-primary:hover, .gform_button:hover {
+  .btn-primary:hover, .gform_button:hover, .ala-big-button:hover {
     color: #212121;
     background-color: #ef4825;
     border-color: #ef3e19; }
-  .btn-primary:focus, .gform_button:focus, .btn-primary.focus, .focus.gform_button {
+  .btn-primary:focus, .gform_button:focus, .ala-big-button:focus, .btn-primary.focus, .focus.gform_button, .focus.ala-big-button {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(211, 92, 67, 0.5);
             box-shadow: 0 0 0 0.2rem rgba(211, 92, 67, 0.5); }
-  .btn-primary.disabled, .disabled.gform_button, .btn-primary:disabled, .gform_button:disabled {
+  .btn-primary.disabled, .disabled.gform_button, .disabled.ala-big-button, .btn-primary:disabled, .gform_button:disabled, .ala-big-button:disabled {
     color: #212121;
     background-color: #f26649;
     border-color: #f26649; }
-  .btn-primary:not(:disabled):not(.disabled):active, .gform_button:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .gform_button:not(:disabled):not(.disabled).active,
+  .btn-primary:not(:disabled):not(.disabled):active, .gform_button:not(:disabled):not(.disabled):active, .ala-big-button:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .gform_button:not(:disabled):not(.disabled).active, .ala-big-button:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle,
-  .show > .dropdown-toggle.gform_button {
+  .show > .dropdown-toggle.gform_button,
+  .show > .dropdown-toggle.ala-big-button {
     color: #fff;
     background-color: #ef3e19;
     border-color: #eb3611; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, .gform_button:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .gform_button:not(:disabled):not(.disabled).active:focus,
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .gform_button:not(:disabled):not(.disabled):active:focus, .ala-big-button:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .gform_button:not(:disabled):not(.disabled).active:focus, .ala-big-button:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary.dropdown-toggle:focus,
-    .show > .dropdown-toggle.gform_button:focus {
+    .show > .dropdown-toggle.gform_button:focus,
+    .show > .dropdown-toggle.ala-big-button:focus {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(211, 92, 67, 0.5);
               box-shadow: 0 0 0 0.2rem rgba(211, 92, 67, 0.5); }
 
@@ -3086,14 +3089,14 @@ fieldset:disabled .is-style-outline-button a.wp-block-button__link,
     pointer-events: none; }
 
 .btn-lg, .btn-group-lg > .btn,
-.wpcf7 .btn-group-lg > input[type=submit], .btn-group-lg > .gform_button, .is-style-standard-button .btn-group-lg > .wp-block-button__link, .is-style-outline-button .btn-group-lg > .wp-block-button__link {
+.wpcf7 .btn-group-lg > input[type=submit], .btn-group-lg > .gform_button, .btn-group-lg > .ala-big-button, .is-style-standard-button .btn-group-lg > .wp-block-button__link, .is-style-outline-button .btn-group-lg > .wp-block-button__link {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   line-height: 22px;
   border-radius: 0; }
 
 .btn-sm, .btn-group-sm > .btn,
-.wpcf7 .btn-group-sm > input[type=submit], .btn-group-sm > .gform_button, .is-style-standard-button .btn-group-sm > .wp-block-button__link, .is-style-outline-button .btn-group-sm > .wp-block-button__link {
+.wpcf7 .btn-group-sm > input[type=submit], .btn-group-sm > .gform_button, .btn-group-sm > .ala-big-button, .is-style-standard-button .btn-group-sm > .wp-block-button__link, .is-style-outline-button .btn-group-sm > .wp-block-button__link {
   padding: 4px 18px;
   font-size: 0.75rem;
   line-height: 20px;
@@ -3344,38 +3347,43 @@ input[type="button"].btn-block {
   display: inline-flex;
   vertical-align: middle; }
   .btn-group > .btn,
-  .wpcf7 .btn-group > input[type=submit], .btn-group > .gform_button, .is-style-standard-button .btn-group > .wp-block-button__link, .is-style-outline-button .btn-group > .wp-block-button__link,
+  .wpcf7 .btn-group > input[type=submit], .btn-group > .gform_button, .btn-group > .ala-big-button, .is-style-standard-button .btn-group > .wp-block-button__link, .is-style-outline-button .btn-group > .wp-block-button__link,
   .btn-group-vertical > .btn,
   .wpcf7 .btn-group-vertical > input[type=submit],
   .btn-group-vertical > .gform_button,
+  .btn-group-vertical > .ala-big-button,
   .is-style-standard-button .btn-group-vertical > .wp-block-button__link,
   .is-style-outline-button .btn-group-vertical > .wp-block-button__link {
     position: relative;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto; }
-    .btn-group > .btn:hover, .wpcf7 .btn-group > input:hover[type=submit], .btn-group > .gform_button:hover, .is-style-standard-button .btn-group > .wp-block-button__link:hover, .is-style-outline-button .btn-group > .wp-block-button__link:hover,
+    .btn-group > .btn:hover, .wpcf7 .btn-group > input:hover[type=submit], .btn-group > .gform_button:hover, .btn-group > .ala-big-button:hover, .is-style-standard-button .btn-group > .wp-block-button__link:hover, .is-style-outline-button .btn-group > .wp-block-button__link:hover,
     .btn-group-vertical > .btn:hover,
     .wpcf7 .btn-group-vertical > input:hover[type=submit],
     .btn-group-vertical > .gform_button:hover,
+    .btn-group-vertical > .ala-big-button:hover,
     .is-style-standard-button .btn-group-vertical > .wp-block-button__link:hover,
     .is-style-outline-button .btn-group-vertical > .wp-block-button__link:hover {
       z-index: 1; }
     .btn-group > .btn:focus,
-    .wpcf7 .btn-group > input:focus[type=submit], .btn-group > .gform_button:focus, .is-style-standard-button .btn-group > .wp-block-button__link:focus, .is-style-outline-button .btn-group > .wp-block-button__link:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input:active[type=submit], .btn-group > .gform_button:active, .is-style-standard-button .btn-group > .wp-block-button__link:active, .is-style-outline-button .btn-group > .wp-block-button__link:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit], .btn-group > .active.gform_button, .is-style-standard-button .btn-group > .active.wp-block-button__link, .is-style-outline-button .btn-group > .active.wp-block-button__link,
+    .wpcf7 .btn-group > input:focus[type=submit], .btn-group > .gform_button:focus, .btn-group > .ala-big-button:focus, .is-style-standard-button .btn-group > .wp-block-button__link:focus, .is-style-outline-button .btn-group > .wp-block-button__link:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input:active[type=submit], .btn-group > .gform_button:active, .btn-group > .ala-big-button:active, .is-style-standard-button .btn-group > .wp-block-button__link:active, .is-style-outline-button .btn-group > .wp-block-button__link:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit], .btn-group > .active.gform_button, .btn-group > .active.ala-big-button, .is-style-standard-button .btn-group > .active.wp-block-button__link, .is-style-outline-button .btn-group > .active.wp-block-button__link,
     .btn-group-vertical > .btn:focus,
     .wpcf7 .btn-group-vertical > input:focus[type=submit],
     .btn-group-vertical > .gform_button:focus,
+    .btn-group-vertical > .ala-big-button:focus,
     .is-style-standard-button .btn-group-vertical > .wp-block-button__link:focus,
     .is-style-outline-button .btn-group-vertical > .wp-block-button__link:focus,
     .btn-group-vertical > .btn:active,
     .wpcf7 .btn-group-vertical > input:active[type=submit],
     .btn-group-vertical > .gform_button:active,
+    .btn-group-vertical > .ala-big-button:active,
     .is-style-standard-button .btn-group-vertical > .wp-block-button__link:active,
     .is-style-outline-button .btn-group-vertical > .wp-block-button__link:active,
     .btn-group-vertical > .btn.active,
     .wpcf7 .btn-group-vertical > input.active[type=submit],
     .btn-group-vertical > .active.gform_button,
+    .btn-group-vertical > .active.ala-big-button,
     .is-style-standard-button .btn-group-vertical > .active.wp-block-button__link,
     .is-style-outline-button .btn-group-vertical > .active.wp-block-button__link {
       z-index: 1; }
@@ -3392,23 +3400,25 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child), .wpcf7 .btn-group > input:not(:first-child)[type=submit], .btn-group > .gform_button:not(:first-child), .is-style-standard-button .btn-group > .wp-block-button__link:not(:first-child), .is-style-outline-button .btn-group > .wp-block-button__link:not(:first-child),
+.btn-group > .btn:not(:first-child), .wpcf7 .btn-group > input:not(:first-child)[type=submit], .btn-group > .gform_button:not(:first-child), .btn-group > .ala-big-button:not(:first-child), .is-style-standard-button .btn-group > .wp-block-button__link:not(:first-child), .is-style-outline-button .btn-group > .wp-block-button__link:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input:not(:last-child):not(.dropdown-toggle)[type=submit], .btn-group > .gform_button:not(:last-child):not(.dropdown-toggle), .is-style-standard-button .btn-group > .wp-block-button__link:not(:last-child):not(.dropdown-toggle), .is-style-outline-button .btn-group > .wp-block-button__link:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input:not(:last-child):not(.dropdown-toggle)[type=submit], .btn-group > .gform_button:not(:last-child):not(.dropdown-toggle), .btn-group > .ala-big-button:not(:last-child):not(.dropdown-toggle), .is-style-standard-button .btn-group > .wp-block-button__link:not(:last-child):not(.dropdown-toggle), .is-style-outline-button .btn-group > .wp-block-button__link:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 .wpcf7 .btn-group > .btn-group:not(:last-child) > input[type=submit],
 .btn-group > .btn-group:not(:last-child) > .gform_button,
+.btn-group > .btn-group:not(:last-child) > .ala-big-button,
 .is-style-standard-button .btn-group > .btn-group:not(:last-child) > .wp-block-button__link,
 .is-style-outline-button .btn-group > .btn-group:not(:last-child) > .wp-block-button__link {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), .wpcf7 .btn-group > input:not(:first-child)[type=submit], .btn-group > .gform_button:not(:first-child), .is-style-standard-button .btn-group > .wp-block-button__link:not(:first-child), .is-style-outline-button .btn-group > .wp-block-button__link:not(:first-child),
+.btn-group > .btn:not(:first-child), .wpcf7 .btn-group > input:not(:first-child)[type=submit], .btn-group > .gform_button:not(:first-child), .btn-group > .ala-big-button:not(:first-child), .is-style-standard-button .btn-group > .wp-block-button__link:not(:first-child), .is-style-outline-button .btn-group > .wp-block-button__link:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
 .wpcf7 .btn-group > .btn-group:not(:first-child) > input[type=submit],
 .btn-group > .btn-group:not(:first-child) > .gform_button,
+.btn-group > .btn-group:not(:first-child) > .ala-big-button,
 .is-style-standard-button .btn-group > .btn-group:not(:first-child) > .wp-block-button__link,
 .is-style-outline-button .btn-group > .btn-group:not(:first-child) > .wp-block-button__link {
   border-top-left-radius: 0;
@@ -3424,11 +3434,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, .btn-group-sm > .gform_button + .dropdown-toggle-split, .is-style-standard-button .btn-group-sm > .wp-block-button__link + .dropdown-toggle-split, .is-style-outline-button .btn-group-sm > .wp-block-button__link + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, .btn-group-sm > .gform_button + .dropdown-toggle-split, .btn-group-sm > .ala-big-button + .dropdown-toggle-split, .is-style-standard-button .btn-group-sm > .wp-block-button__link + .dropdown-toggle-split, .is-style-outline-button .btn-group-sm > .wp-block-button__link + .dropdown-toggle-split {
   padding-right: 13.5px;
   padding-left: 13.5px; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, .btn-group-lg > .gform_button + .dropdown-toggle-split, .is-style-standard-button .btn-group-lg > .wp-block-button__link + .dropdown-toggle-split, .is-style-outline-button .btn-group-lg > .wp-block-button__link + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, .btn-group-lg > .gform_button + .dropdown-toggle-split, .btn-group-lg > .ala-big-button + .dropdown-toggle-split, .is-style-standard-button .btn-group-lg > .wp-block-button__link + .dropdown-toggle-split, .is-style-outline-button .btn-group-lg > .wp-block-button__link + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -3447,52 +3457,59 @@ input[type="button"].btn-block {
   .btn-group-vertical > .btn,
   .wpcf7 .btn-group-vertical > input[type=submit],
   .btn-group-vertical > .gform_button,
+  .btn-group-vertical > .ala-big-button,
   .is-style-standard-button .btn-group-vertical > .wp-block-button__link,
   .is-style-outline-button .btn-group-vertical > .wp-block-button__link,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input:not(:first-child)[type=submit], .btn-group-vertical > .gform_button:not(:first-child), .is-style-standard-button .btn-group-vertical > .wp-block-button__link:not(:first-child), .is-style-outline-button .btn-group-vertical > .wp-block-button__link:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input:not(:first-child)[type=submit], .btn-group-vertical > .gform_button:not(:first-child), .btn-group-vertical > .ala-big-button:not(:first-child), .is-style-standard-button .btn-group-vertical > .wp-block-button__link:not(:first-child), .is-style-outline-button .btn-group-vertical > .wp-block-button__link:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input:not(:last-child):not(.dropdown-toggle)[type=submit], .btn-group-vertical > .gform_button:not(:last-child):not(.dropdown-toggle), .is-style-standard-button .btn-group-vertical > .wp-block-button__link:not(:last-child):not(.dropdown-toggle), .is-style-outline-button .btn-group-vertical > .wp-block-button__link:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input:not(:last-child):not(.dropdown-toggle)[type=submit], .btn-group-vertical > .gform_button:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .ala-big-button:not(:last-child):not(.dropdown-toggle), .is-style-standard-button .btn-group-vertical > .wp-block-button__link:not(:last-child):not(.dropdown-toggle), .is-style-outline-button .btn-group-vertical > .wp-block-button__link:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
   .wpcf7 .btn-group-vertical > .btn-group:not(:last-child) > input[type=submit],
   .btn-group-vertical > .btn-group:not(:last-child) > .gform_button,
+  .btn-group-vertical > .btn-group:not(:last-child) > .ala-big-button,
   .is-style-standard-button .btn-group-vertical > .btn-group:not(:last-child) > .wp-block-button__link,
   .is-style-outline-button .btn-group-vertical > .btn-group:not(:last-child) > .wp-block-button__link {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input:not(:first-child)[type=submit], .btn-group-vertical > .gform_button:not(:first-child), .is-style-standard-button .btn-group-vertical > .wp-block-button__link:not(:first-child), .is-style-outline-button .btn-group-vertical > .wp-block-button__link:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input:not(:first-child)[type=submit], .btn-group-vertical > .gform_button:not(:first-child), .btn-group-vertical > .ala-big-button:not(:first-child), .is-style-standard-button .btn-group-vertical > .wp-block-button__link:not(:first-child), .is-style-outline-button .btn-group-vertical > .wp-block-button__link:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
   .wpcf7 .btn-group-vertical > .btn-group:not(:first-child) > input[type=submit],
   .btn-group-vertical > .btn-group:not(:first-child) > .gform_button,
+  .btn-group-vertical > .btn-group:not(:first-child) > .ala-big-button,
   .is-style-standard-button .btn-group-vertical > .btn-group:not(:first-child) > .wp-block-button__link,
   .is-style-outline-button .btn-group-vertical > .btn-group:not(:first-child) > .wp-block-button__link {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
 .btn-group-toggle > .btn,
-.wpcf7 .btn-group-toggle > input[type=submit], .btn-group-toggle > .gform_button, .is-style-standard-button .btn-group-toggle > .wp-block-button__link, .is-style-outline-button .btn-group-toggle > .wp-block-button__link,
+.wpcf7 .btn-group-toggle > input[type=submit], .btn-group-toggle > .gform_button, .btn-group-toggle > .ala-big-button, .is-style-standard-button .btn-group-toggle > .wp-block-button__link, .is-style-outline-button .btn-group-toggle > .wp-block-button__link,
 .btn-group-toggle > .btn-group > .btn,
 .wpcf7 .btn-group-toggle > .btn-group > input[type=submit],
 .btn-group-toggle > .btn-group > .gform_button,
+.btn-group-toggle > .btn-group > .ala-big-button,
 .is-style-standard-button .btn-group-toggle > .btn-group > .wp-block-button__link,
 .is-style-outline-button .btn-group-toggle > .btn-group > .wp-block-button__link {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .wpcf7 .btn-group-toggle > input[type=submit] input[type="radio"], .btn-group-toggle > .gform_button input[type="radio"], .is-style-standard-button .btn-group-toggle > .wp-block-button__link input[type="radio"], .is-style-outline-button .btn-group-toggle > .wp-block-button__link input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .wpcf7 .btn-group-toggle > input[type=submit] input[type="radio"], .btn-group-toggle > .gform_button input[type="radio"], .btn-group-toggle > .ala-big-button input[type="radio"], .is-style-standard-button .btn-group-toggle > .wp-block-button__link input[type="radio"], .is-style-outline-button .btn-group-toggle > .wp-block-button__link input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
   .wpcf7 .btn-group-toggle > input[type=submit] input[type="checkbox"],
   .btn-group-toggle > .gform_button input[type="checkbox"],
+  .btn-group-toggle > .ala-big-button input[type="checkbox"],
   .is-style-standard-button .btn-group-toggle > .wp-block-button__link input[type="checkbox"],
   .is-style-outline-button .btn-group-toggle > .wp-block-button__link input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
   .wpcf7 .btn-group-toggle > .btn-group > input[type=submit] input[type="radio"],
   .btn-group-toggle > .btn-group > .gform_button input[type="radio"],
+  .btn-group-toggle > .btn-group > .ala-big-button input[type="radio"],
   .is-style-standard-button .btn-group-toggle > .btn-group > .wp-block-button__link input[type="radio"],
   .is-style-outline-button .btn-group-toggle > .btn-group > .wp-block-button__link input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
   .wpcf7 .btn-group-toggle > .btn-group > input[type=submit] input[type="checkbox"],
   .btn-group-toggle > .btn-group > .gform_button input[type="checkbox"],
+  .btn-group-toggle > .btn-group > .ala-big-button input[type="checkbox"],
   .is-style-standard-button .btn-group-toggle > .btn-group > .wp-block-button__link input[type="checkbox"],
   .is-style-outline-button .btn-group-toggle > .btn-group > .wp-block-button__link input[type="checkbox"] {
     position: absolute;
@@ -4070,11 +4087,12 @@ input[type="button"].btn-block {
   display: -ms-flexbox;
   display: flex; }
   .input-group-prepend .btn,
-  .input-group-prepend .wpcf7 input[type=submit], .wpcf7 .input-group-prepend input[type=submit], .input-group-prepend .gform_button, .input-group-prepend .is-style-standard-button .wp-block-button__link, .is-style-standard-button .input-group-prepend .wp-block-button__link, .input-group-prepend .is-style-outline-button .wp-block-button__link, .is-style-outline-button .input-group-prepend .wp-block-button__link,
+  .input-group-prepend .wpcf7 input[type=submit], .wpcf7 .input-group-prepend input[type=submit], .input-group-prepend .gform_button, .input-group-prepend .ala-big-button, .input-group-prepend .is-style-standard-button .wp-block-button__link, .is-style-standard-button .input-group-prepend .wp-block-button__link, .input-group-prepend .is-style-outline-button .wp-block-button__link, .is-style-outline-button .input-group-prepend .wp-block-button__link,
   .input-group-append .btn,
   .input-group-append .wpcf7 input[type=submit],
   .wpcf7 .input-group-append input[type=submit],
   .input-group-append .gform_button,
+  .input-group-append .ala-big-button,
   .input-group-append .is-style-standard-button .wp-block-button__link,
   .is-style-standard-button .input-group-append .wp-block-button__link,
   .input-group-append .is-style-outline-button .wp-block-button__link,
@@ -4082,26 +4100,29 @@ input[type="button"].btn-block {
     position: relative;
     z-index: 2; }
     .input-group-prepend .btn:focus,
-    .input-group-prepend .wpcf7 input:focus[type=submit], .wpcf7 .input-group-prepend input:focus[type=submit], .input-group-prepend .gform_button:focus, .input-group-prepend .is-style-standard-button .wp-block-button__link:focus, .is-style-standard-button .input-group-prepend .wp-block-button__link:focus, .input-group-prepend .is-style-outline-button .wp-block-button__link:focus, .is-style-outline-button .input-group-prepend .wp-block-button__link:focus,
+    .input-group-prepend .wpcf7 input:focus[type=submit], .wpcf7 .input-group-prepend input:focus[type=submit], .input-group-prepend .gform_button:focus, .input-group-prepend .ala-big-button:focus, .input-group-prepend .is-style-standard-button .wp-block-button__link:focus, .is-style-standard-button .input-group-prepend .wp-block-button__link:focus, .input-group-prepend .is-style-outline-button .wp-block-button__link:focus, .is-style-outline-button .input-group-prepend .wp-block-button__link:focus,
     .input-group-append .btn:focus,
     .input-group-append .wpcf7 input:focus[type=submit],
     .wpcf7 .input-group-append input:focus[type=submit],
     .input-group-append .gform_button:focus,
+    .input-group-append .ala-big-button:focus,
     .input-group-append .is-style-standard-button .wp-block-button__link:focus,
     .is-style-standard-button .input-group-append .wp-block-button__link:focus,
     .input-group-append .is-style-outline-button .wp-block-button__link:focus,
     .is-style-outline-button .input-group-append .wp-block-button__link:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .wpcf7 input[type=submit] + .btn, .wpcf7 .input-group-prepend input[type=submit] + .btn, .input-group-prepend .gform_button + .btn, .input-group-prepend .is-style-standard-button .wp-block-button__link + .btn, .is-style-standard-button .input-group-prepend .wp-block-button__link + .btn, .input-group-prepend .is-style-outline-button .wp-block-button__link + .btn, .is-style-outline-button .input-group-prepend .wp-block-button__link + .btn,
+  .input-group-prepend .btn + .btn, .input-group-prepend .wpcf7 input[type=submit] + .btn, .wpcf7 .input-group-prepend input[type=submit] + .btn, .input-group-prepend .gform_button + .btn, .input-group-prepend .ala-big-button + .btn, .input-group-prepend .is-style-standard-button .wp-block-button__link + .btn, .is-style-standard-button .input-group-prepend .wp-block-button__link + .btn, .input-group-prepend .is-style-outline-button .wp-block-button__link + .btn, .is-style-outline-button .input-group-prepend .wp-block-button__link + .btn,
   .input-group-prepend .wpcf7 .btn + input[type=submit], .wpcf7 .input-group-prepend .btn + input[type=submit],
   .input-group-prepend .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .input-group-prepend input[type=submit] + input[type=submit],
   .input-group-prepend .wpcf7 .gform_button + input[type=submit], .wpcf7 .input-group-prepend .gform_button + input[type=submit],
+  .input-group-prepend .wpcf7 .ala-big-button + input[type=submit], .wpcf7 .input-group-prepend .ala-big-button + input[type=submit],
   .input-group-prepend .is-style-standard-button .wpcf7 .wp-block-button__link + input[type=submit], .wpcf7 .input-group-prepend .is-style-standard-button .wp-block-button__link + input[type=submit], .is-style-standard-button .input-group-prepend .wpcf7 .wp-block-button__link + input[type=submit], .wpcf7 .is-style-standard-button .input-group-prepend .wp-block-button__link + input[type=submit],
-  .input-group-prepend .is-style-outline-button .wpcf7 .wp-block-button__link + input[type=submit], .wpcf7 .input-group-prepend .is-style-outline-button .wp-block-button__link + input[type=submit], .is-style-outline-button .input-group-prepend .wpcf7 .wp-block-button__link + input[type=submit], .wpcf7 .is-style-outline-button .input-group-prepend .wp-block-button__link + input[type=submit], .input-group-prepend .btn + .gform_button, .input-group-prepend .wpcf7 input[type=submit] + .gform_button, .wpcf7 .input-group-prepend input[type=submit] + .gform_button, .input-group-prepend .gform_button + .gform_button, .input-group-prepend .is-style-standard-button .wp-block-button__link + .gform_button, .is-style-standard-button .input-group-prepend .wp-block-button__link + .gform_button, .input-group-prepend .is-style-outline-button .wp-block-button__link + .gform_button, .is-style-outline-button .input-group-prepend .wp-block-button__link + .gform_button, .input-group-prepend .is-style-standard-button .btn + .wp-block-button__link, .is-style-standard-button .input-group-prepend .btn + .wp-block-button__link, .input-group-prepend .wpcf7 .is-style-standard-button input[type=submit] + .wp-block-button__link, .is-style-standard-button .input-group-prepend .wpcf7 input[type=submit] + .wp-block-button__link, .wpcf7 .input-group-prepend .is-style-standard-button input[type=submit] + .wp-block-button__link, .is-style-standard-button .wpcf7 .input-group-prepend input[type=submit] + .wp-block-button__link, .input-group-prepend .is-style-standard-button .gform_button + .wp-block-button__link, .is-style-standard-button .input-group-prepend .gform_button + .wp-block-button__link, .input-group-prepend .is-style-standard-button .wp-block-button__link + .wp-block-button__link, .is-style-standard-button .input-group-prepend .wp-block-button__link + .wp-block-button__link, .input-group-prepend .is-style-outline-button .btn + .wp-block-button__link, .is-style-outline-button .input-group-prepend .btn + .wp-block-button__link, .input-group-prepend .wpcf7 .is-style-outline-button input[type=submit] + .wp-block-button__link, .is-style-outline-button .input-group-prepend .wpcf7 input[type=submit] + .wp-block-button__link, .wpcf7 .input-group-prepend .is-style-outline-button input[type=submit] + .wp-block-button__link, .is-style-outline-button .wpcf7 .input-group-prepend input[type=submit] + .wp-block-button__link, .input-group-prepend .is-style-outline-button .gform_button + .wp-block-button__link, .is-style-outline-button .input-group-prepend .gform_button + .wp-block-button__link, .input-group-prepend .is-style-outline-button .wp-block-button__link + .wp-block-button__link, .is-style-outline-button .input-group-prepend .wp-block-button__link + .wp-block-button__link,
+  .input-group-prepend .is-style-outline-button .wpcf7 .wp-block-button__link + input[type=submit], .wpcf7 .input-group-prepend .is-style-outline-button .wp-block-button__link + input[type=submit], .is-style-outline-button .input-group-prepend .wpcf7 .wp-block-button__link + input[type=submit], .wpcf7 .is-style-outline-button .input-group-prepend .wp-block-button__link + input[type=submit], .input-group-prepend .btn + .gform_button, .input-group-prepend .wpcf7 input[type=submit] + .gform_button, .wpcf7 .input-group-prepend input[type=submit] + .gform_button, .input-group-prepend .gform_button + .gform_button, .input-group-prepend .ala-big-button + .gform_button, .input-group-prepend .is-style-standard-button .wp-block-button__link + .gform_button, .is-style-standard-button .input-group-prepend .wp-block-button__link + .gform_button, .input-group-prepend .is-style-outline-button .wp-block-button__link + .gform_button, .is-style-outline-button .input-group-prepend .wp-block-button__link + .gform_button, .input-group-prepend .btn + .ala-big-button, .input-group-prepend .wpcf7 input[type=submit] + .ala-big-button, .wpcf7 .input-group-prepend input[type=submit] + .ala-big-button, .input-group-prepend .gform_button + .ala-big-button, .input-group-prepend .ala-big-button + .ala-big-button, .input-group-prepend .is-style-standard-button .wp-block-button__link + .ala-big-button, .is-style-standard-button .input-group-prepend .wp-block-button__link + .ala-big-button, .input-group-prepend .is-style-outline-button .wp-block-button__link + .ala-big-button, .is-style-outline-button .input-group-prepend .wp-block-button__link + .ala-big-button, .input-group-prepend .is-style-standard-button .btn + .wp-block-button__link, .is-style-standard-button .input-group-prepend .btn + .wp-block-button__link, .input-group-prepend .wpcf7 .is-style-standard-button input[type=submit] + .wp-block-button__link, .is-style-standard-button .input-group-prepend .wpcf7 input[type=submit] + .wp-block-button__link, .wpcf7 .input-group-prepend .is-style-standard-button input[type=submit] + .wp-block-button__link, .is-style-standard-button .wpcf7 .input-group-prepend input[type=submit] + .wp-block-button__link, .input-group-prepend .is-style-standard-button .gform_button + .wp-block-button__link, .is-style-standard-button .input-group-prepend .gform_button + .wp-block-button__link, .input-group-prepend .is-style-standard-button .ala-big-button + .wp-block-button__link, .is-style-standard-button .input-group-prepend .ala-big-button + .wp-block-button__link, .input-group-prepend .is-style-standard-button .wp-block-button__link + .wp-block-button__link, .is-style-standard-button .input-group-prepend .wp-block-button__link + .wp-block-button__link, .input-group-prepend .is-style-outline-button .btn + .wp-block-button__link, .is-style-outline-button .input-group-prepend .btn + .wp-block-button__link, .input-group-prepend .wpcf7 .is-style-outline-button input[type=submit] + .wp-block-button__link, .is-style-outline-button .input-group-prepend .wpcf7 input[type=submit] + .wp-block-button__link, .wpcf7 .input-group-prepend .is-style-outline-button input[type=submit] + .wp-block-button__link, .is-style-outline-button .wpcf7 .input-group-prepend input[type=submit] + .wp-block-button__link, .input-group-prepend .is-style-outline-button .gform_button + .wp-block-button__link, .is-style-outline-button .input-group-prepend .gform_button + .wp-block-button__link, .input-group-prepend .is-style-outline-button .ala-big-button + .wp-block-button__link, .is-style-outline-button .input-group-prepend .ala-big-button + .wp-block-button__link, .input-group-prepend .is-style-outline-button .wp-block-button__link + .wp-block-button__link, .is-style-outline-button .input-group-prepend .wp-block-button__link + .wp-block-button__link,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend .wpcf7 input[type=submit] + .input-group-text,
   .wpcf7 .input-group-prepend input[type=submit] + .input-group-text,
   .input-group-prepend .gform_button + .input-group-text,
+  .input-group-prepend .ala-big-button + .input-group-text,
   .input-group-prepend .is-style-standard-button .wp-block-button__link + .input-group-text,
   .is-style-standard-button .input-group-prepend .wp-block-button__link + .input-group-text,
   .input-group-prepend .is-style-outline-button .wp-block-button__link + .input-group-text,
@@ -4111,6 +4132,7 @@ input[type="button"].btn-block {
   .input-group-prepend .wpcf7 .input-group-text + input[type=submit],
   .wpcf7 .input-group-prepend .input-group-text + input[type=submit],
   .input-group-prepend .input-group-text + .gform_button,
+  .input-group-prepend .input-group-text + .ala-big-button,
   .input-group-prepend .is-style-standard-button .input-group-text + .wp-block-button__link,
   .is-style-standard-button .input-group-prepend .input-group-text + .wp-block-button__link,
   .input-group-prepend .is-style-outline-button .input-group-text + .wp-block-button__link,
@@ -4119,6 +4141,7 @@ input[type="button"].btn-block {
   .input-group-append .wpcf7 input[type=submit] + .btn,
   .wpcf7 .input-group-append input[type=submit] + .btn,
   .input-group-append .gform_button + .btn,
+  .input-group-append .ala-big-button + .btn,
   .input-group-append .is-style-standard-button .wp-block-button__link + .btn,
   .is-style-standard-button .input-group-append .wp-block-button__link + .btn,
   .input-group-append .is-style-outline-button .wp-block-button__link + .btn,
@@ -4129,6 +4152,8 @@ input[type="button"].btn-block {
   .wpcf7 .input-group-append input[type=submit] + input[type=submit],
   .input-group-append .wpcf7 .gform_button + input[type=submit],
   .wpcf7 .input-group-append .gform_button + input[type=submit],
+  .input-group-append .wpcf7 .ala-big-button + input[type=submit],
+  .wpcf7 .input-group-append .ala-big-button + input[type=submit],
   .input-group-append .is-style-standard-button .wpcf7 .wp-block-button__link + input[type=submit],
   .wpcf7 .input-group-append .is-style-standard-button .wp-block-button__link + input[type=submit],
   .is-style-standard-button .input-group-append .wpcf7 .wp-block-button__link + input[type=submit],
@@ -4141,10 +4166,20 @@ input[type="button"].btn-block {
   .input-group-append .wpcf7 input[type=submit] + .gform_button,
   .wpcf7 .input-group-append input[type=submit] + .gform_button,
   .input-group-append .gform_button + .gform_button,
+  .input-group-append .ala-big-button + .gform_button,
   .input-group-append .is-style-standard-button .wp-block-button__link + .gform_button,
   .is-style-standard-button .input-group-append .wp-block-button__link + .gform_button,
   .input-group-append .is-style-outline-button .wp-block-button__link + .gform_button,
   .is-style-outline-button .input-group-append .wp-block-button__link + .gform_button,
+  .input-group-append .btn + .ala-big-button,
+  .input-group-append .wpcf7 input[type=submit] + .ala-big-button,
+  .wpcf7 .input-group-append input[type=submit] + .ala-big-button,
+  .input-group-append .gform_button + .ala-big-button,
+  .input-group-append .ala-big-button + .ala-big-button,
+  .input-group-append .is-style-standard-button .wp-block-button__link + .ala-big-button,
+  .is-style-standard-button .input-group-append .wp-block-button__link + .ala-big-button,
+  .input-group-append .is-style-outline-button .wp-block-button__link + .ala-big-button,
+  .is-style-outline-button .input-group-append .wp-block-button__link + .ala-big-button,
   .input-group-append .is-style-standard-button .btn + .wp-block-button__link,
   .is-style-standard-button .input-group-append .btn + .wp-block-button__link,
   .input-group-append .wpcf7 .is-style-standard-button input[type=submit] + .wp-block-button__link,
@@ -4153,6 +4188,8 @@ input[type="button"].btn-block {
   .is-style-standard-button .wpcf7 .input-group-append input[type=submit] + .wp-block-button__link,
   .input-group-append .is-style-standard-button .gform_button + .wp-block-button__link,
   .is-style-standard-button .input-group-append .gform_button + .wp-block-button__link,
+  .input-group-append .is-style-standard-button .ala-big-button + .wp-block-button__link,
+  .is-style-standard-button .input-group-append .ala-big-button + .wp-block-button__link,
   .input-group-append .is-style-standard-button .wp-block-button__link + .wp-block-button__link,
   .is-style-standard-button .input-group-append .wp-block-button__link + .wp-block-button__link,
   .input-group-append .is-style-outline-button .btn + .wp-block-button__link,
@@ -4163,12 +4200,15 @@ input[type="button"].btn-block {
   .is-style-outline-button .wpcf7 .input-group-append input[type=submit] + .wp-block-button__link,
   .input-group-append .is-style-outline-button .gform_button + .wp-block-button__link,
   .is-style-outline-button .input-group-append .gform_button + .wp-block-button__link,
+  .input-group-append .is-style-outline-button .ala-big-button + .wp-block-button__link,
+  .is-style-outline-button .input-group-append .ala-big-button + .wp-block-button__link,
   .input-group-append .is-style-outline-button .wp-block-button__link + .wp-block-button__link,
   .is-style-outline-button .input-group-append .wp-block-button__link + .wp-block-button__link,
   .input-group-append .btn + .input-group-text,
   .input-group-append .wpcf7 input[type=submit] + .input-group-text,
   .wpcf7 .input-group-append input[type=submit] + .input-group-text,
   .input-group-append .gform_button + .input-group-text,
+  .input-group-append .ala-big-button + .input-group-text,
   .input-group-append .is-style-standard-button .wp-block-button__link + .input-group-text,
   .is-style-standard-button .input-group-append .wp-block-button__link + .input-group-text,
   .input-group-append .is-style-outline-button .wp-block-button__link + .input-group-text,
@@ -4178,6 +4218,7 @@ input[type="button"].btn-block {
   .input-group-append .wpcf7 .input-group-text + input[type=submit],
   .wpcf7 .input-group-append .input-group-text + input[type=submit],
   .input-group-append .input-group-text + .gform_button,
+  .input-group-append .input-group-text + .ala-big-button,
   .input-group-append .is-style-standard-button .input-group-text + .wp-block-button__link,
   .is-style-standard-button .input-group-append .input-group-text + .wp-block-button__link,
   .input-group-append .is-style-outline-button .input-group-text + .wp-block-button__link,
@@ -4257,11 +4298,13 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .btn,
 .wpcf7 .input-group-lg > .input-group-prepend > input[type=submit],
 .input-group-lg > .input-group-prepend > .gform_button,
+.input-group-lg > .input-group-prepend > .ala-big-button,
 .is-style-standard-button .input-group-lg > .input-group-prepend > .wp-block-button__link,
 .is-style-outline-button .input-group-lg > .input-group-prepend > .wp-block-button__link,
 .input-group-lg > .input-group-append > .btn,
 .wpcf7 .input-group-lg > .input-group-append > input[type=submit],
 .input-group-lg > .input-group-append > .gform_button,
+.input-group-lg > .input-group-append > .ala-big-button,
 .is-style-standard-button .input-group-lg > .input-group-append > .wp-block-button__link,
 .is-style-outline-button .input-group-lg > .input-group-append > .wp-block-button__link {
   padding: 0.5rem 1rem;
@@ -4314,11 +4357,13 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .btn,
 .wpcf7 .input-group-sm > .input-group-prepend > input[type=submit],
 .input-group-sm > .input-group-prepend > .gform_button,
+.input-group-sm > .input-group-prepend > .ala-big-button,
 .is-style-standard-button .input-group-sm > .input-group-prepend > .wp-block-button__link,
 .is-style-outline-button .input-group-sm > .input-group-prepend > .wp-block-button__link,
 .input-group-sm > .input-group-append > .btn,
 .wpcf7 .input-group-sm > .input-group-append > input[type=submit],
 .input-group-sm > .input-group-append > .gform_button,
+.input-group-sm > .input-group-append > .ala-big-button,
 .is-style-standard-button .input-group-sm > .input-group-append > .wp-block-button__link,
 .is-style-outline-button .input-group-sm > .input-group-append > .wp-block-button__link {
   padding: 0.25rem 0.5rem;
@@ -4331,17 +4376,19 @@ input[type="button"].btn-block {
   padding-right: 2.25rem; }
 
 .input-group > .input-group-prepend > .btn,
-.wpcf7 .input-group > .input-group-prepend > input[type=submit], .input-group > .input-group-prepend > .gform_button, .is-style-standard-button .input-group > .input-group-prepend > .wp-block-button__link, .is-style-outline-button .input-group > .input-group-prepend > .wp-block-button__link,
+.wpcf7 .input-group > .input-group-prepend > input[type=submit], .input-group > .input-group-prepend > .gform_button, .input-group > .input-group-prepend > .ala-big-button, .is-style-standard-button .input-group > .input-group-prepend > .wp-block-button__link, .is-style-outline-button .input-group > .input-group-prepend > .wp-block-button__link,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
 .wpcf7 .input-group > .input-group-append:not(:last-child) > input[type=submit],
 .input-group > .input-group-append:not(:last-child) > .gform_button,
+.input-group > .input-group-append:not(:last-child) > .ala-big-button,
 .is-style-standard-button .input-group > .input-group-append:not(:last-child) > .wp-block-button__link,
 .is-style-outline-button .input-group > .input-group-append:not(:last-child) > .wp-block-button__link,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .wpcf7 .input-group > .input-group-append:last-child > input:not(:last-child):not(.dropdown-toggle)[type=submit],
 .input-group > .input-group-append:last-child > .gform_button:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .ala-big-button:not(:last-child):not(.dropdown-toggle),
 .is-style-standard-button .input-group > .input-group-append:last-child > .wp-block-button__link:not(:last-child):not(.dropdown-toggle),
 .is-style-outline-button .input-group > .input-group-append:last-child > .wp-block-button__link:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
@@ -4349,17 +4396,19 @@ input[type="button"].btn-block {
   border-bottom-right-radius: 0; }
 
 .input-group > .input-group-append > .btn,
-.wpcf7 .input-group > .input-group-append > input[type=submit], .input-group > .input-group-append > .gform_button, .is-style-standard-button .input-group > .input-group-append > .wp-block-button__link, .is-style-outline-button .input-group > .input-group-append > .wp-block-button__link,
+.wpcf7 .input-group > .input-group-append > input[type=submit], .input-group > .input-group-append > .gform_button, .input-group > .input-group-append > .ala-big-button, .is-style-standard-button .input-group > .input-group-append > .wp-block-button__link, .is-style-outline-button .input-group > .input-group-append > .wp-block-button__link,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 .wpcf7 .input-group > .input-group-prepend:not(:first-child) > input[type=submit],
 .input-group > .input-group-prepend:not(:first-child) > .gform_button,
+.input-group > .input-group-prepend:not(:first-child) > .ala-big-button,
 .is-style-standard-button .input-group > .input-group-prepend:not(:first-child) > .wp-block-button__link,
 .is-style-outline-button .input-group > .input-group-prepend:not(:first-child) > .wp-block-button__link,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 .wpcf7 .input-group > .input-group-prepend:first-child > input:not(:first-child)[type=submit],
 .input-group > .input-group-prepend:first-child > .gform_button:not(:first-child),
+.input-group > .input-group-prepend:first-child > .ala-big-button:not(:first-child),
 .is-style-standard-button .input-group > .input-group-prepend:first-child > .wp-block-button__link:not(:first-child),
 .is-style-outline-button .input-group > .input-group-prepend:first-child > .wp-block-button__link:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
@@ -5467,7 +5516,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge, .wpcf7 input[type=submit] .badge, .gform_button .badge, .is-style-standard-button .wp-block-button__link .badge, .is-style-outline-button .wp-block-button__link .badge {
+.btn .badge, .wpcf7 input[type=submit] .badge, .gform_button .badge, .ala-big-button .badge, .is-style-standard-button .wp-block-button__link .badge, .is-style-outline-button .wp-block-button__link .badge {
   position: relative;
   top: -1px; }
 
@@ -9413,7 +9462,7 @@ a.text-white:hover, a.text-white:focus {
     text-shadow: none !important;
     -webkit-box-shadow: none !important;
             box-shadow: none !important; }
-  a:not(.btn):not(.gform_button) {
+  a:not(.btn):not(.gform_button):not(.ala-big-button) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -11932,9 +11981,9 @@ body {
     line-height: 1; }
 
 .btn,
-.wpcf7 input[type=submit], .gform_button, .is-style-standard-button .wp-block-button__link, .is-style-outline-button .wp-block-button__link {
+.wpcf7 input[type=submit], .gform_button, .ala-big-button, .is-style-standard-button .wp-block-button__link, .is-style-outline-button .wp-block-button__link {
   text-decoration: none; }
-  .btn i, .wpcf7 input[type=submit] i, .gform_button i, .is-style-standard-button .wp-block-button__link i, .is-style-outline-button .wp-block-button__link i {
+  .btn i, .wpcf7 input[type=submit] i, .gform_button i, .ala-big-button i, .is-style-standard-button .wp-block-button__link i, .is-style-outline-button .wp-block-button__link i {
     vertical-align: middle; }
 
 ul.menu {
@@ -12055,6 +12104,17 @@ ul.menu {
   color: #565656; }
   .entry-content h2, .entry-content h3 {
     color: #212121; }
+
+.ala-big-button {
+  display: inline-block;
+  font-size: 1rem;
+  height: 3.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 2rem;
+  padding: 1rem 2rem; }
+  .ala-big-button:hover {
+    color: #f2f2f2; }
 
 /*!
  * Font Awesome Pro 5.5.0 by @fontawesome - https://fontawesome.com
@@ -17978,7 +18038,7 @@ readers do not read off random characters that represent icons */
   .top-bar .account {
     padding-left: 20px;
     border-left: 1px solid rgba(255, 255, 255, 0.4); }
-    .top-bar .account .btn:first-child, .top-bar .account .wpcf7 input:first-child[type=submit], .wpcf7 .top-bar .account input:first-child[type=submit], .top-bar .account .gform_button:first-child, .top-bar .account .is-style-standard-button .wp-block-button__link:first-child, .is-style-standard-button .top-bar .account .wp-block-button__link:first-child, .top-bar .account .is-style-outline-button .wp-block-button__link:first-child, .is-style-outline-button .top-bar .account .wp-block-button__link:first-child {
+    .top-bar .account .btn:first-child, .top-bar .account .wpcf7 input:first-child[type=submit], .wpcf7 .top-bar .account input:first-child[type=submit], .top-bar .account .gform_button:first-child, .top-bar .account .ala-big-button:first-child, .top-bar .account .is-style-standard-button .wp-block-button__link:first-child, .is-style-standard-button .top-bar .account .wp-block-button__link:first-child, .top-bar .account .is-style-outline-button .wp-block-button__link:first-child, .is-style-outline-button .top-bar .account .wp-block-button__link:first-child {
       margin-right: 7px; }
 
 .main-nav-wrapper {
@@ -18103,7 +18163,7 @@ readers do not read off random characters that represent icons */
     -webkit-transition: right 400ms ease;
     transition: right 400ms ease; }
     .top-bar .btn,
-    .top-bar .wpcf7 input[type=submit], .wpcf7 .top-bar input[type=submit], .top-bar .gform_button, .top-bar .is-style-standard-button .wp-block-button__link, .is-style-standard-button .top-bar .wp-block-button__link, .top-bar .is-style-outline-button .wp-block-button__link, .is-style-outline-button .top-bar .wp-block-button__link {
+    .top-bar .wpcf7 input[type=submit], .wpcf7 .top-bar input[type=submit], .top-bar .gform_button, .top-bar .ala-big-button, .top-bar .is-style-standard-button .wp-block-button__link, .is-style-standard-button .top-bar .wp-block-button__link, .top-bar .is-style-outline-button .wp-block-button__link, .is-style-outline-button .top-bar .wp-block-button__link {
       border: none;
       -webkit-box-flex: 1;
           -ms-flex: 1;
@@ -18154,9 +18214,9 @@ readers do not read off random characters that represent icons */
   padding-bottom: 50px; }
   .footer-top .custom-logo {
     max-width: 290px; }
-  .footer-top a:not(.btn):not(.gform_button) {
+  .footer-top a:not(.btn):not(.gform_button):not(.ala-big-button) {
     color: #f26649; }
-    .footer-top a:not(.btn):not(.gform_button):hover {
+    .footer-top a:not(.btn):not(.gform_button):not(.ala-big-button):hover {
       color: #c44d34; }
   .footer-top .account {
     margin-top: 20px;
@@ -18167,7 +18227,7 @@ readers do not read off random characters that represent icons */
         -ms-flex-align: center;
             align-items: center; }
     .footer-top .account .btn,
-    .footer-top .account .wpcf7 input[type=submit], .wpcf7 .footer-top .account input[type=submit], .footer-top .account .gform_button, .footer-top .account .is-style-standard-button .wp-block-button__link, .is-style-standard-button .footer-top .account .wp-block-button__link, .footer-top .account .is-style-outline-button .wp-block-button__link, .is-style-outline-button .footer-top .account .wp-block-button__link {
+    .footer-top .account .wpcf7 input[type=submit], .wpcf7 .footer-top .account input[type=submit], .footer-top .account .gform_button, .footer-top .account .ala-big-button, .footer-top .account .is-style-standard-button .wp-block-button__link, .is-style-standard-button .footer-top .account .wp-block-button__link, .footer-top .account .is-style-outline-button .wp-block-button__link, .is-style-outline-button .footer-top .account .wp-block-button__link {
       margin-right: 10px;
       font-size: 12px; }
     .footer-top .account .social {
@@ -18298,13 +18358,13 @@ readers do not read off random characters that represent icons */
   .footer-top-bar h3 {
     margin: 0; }
   .footer-top-bar .btn,
-  .footer-top-bar .wpcf7 input[type=submit], .wpcf7 .footer-top-bar input[type=submit], .footer-top-bar .gform_button, .footer-top-bar .is-style-standard-button .wp-block-button__link, .is-style-standard-button .footer-top-bar .wp-block-button__link, .footer-top-bar .is-style-outline-button .wp-block-button__link, .is-style-outline-button .footer-top-bar .wp-block-button__link {
+  .footer-top-bar .wpcf7 input[type=submit], .wpcf7 .footer-top-bar input[type=submit], .footer-top-bar .gform_button, .footer-top-bar .ala-big-button, .footer-top-bar .is-style-standard-button .wp-block-button__link, .is-style-standard-button .footer-top-bar .wp-block-button__link, .footer-top-bar .is-style-outline-button .wp-block-button__link, .is-style-outline-button .footer-top-bar .wp-block-button__link {
     margin-left: 30px; }
   @media (max-width: 767.98px) {
     .footer-top-bar {
       text-align: center; }
       .footer-top-bar .btn,
-      .footer-top-bar .wpcf7 input[type=submit], .wpcf7 .footer-top-bar input[type=submit], .footer-top-bar .gform_button, .footer-top-bar .is-style-standard-button .wp-block-button__link, .is-style-standard-button .footer-top-bar .wp-block-button__link, .footer-top-bar .is-style-outline-button .wp-block-button__link, .is-style-outline-button .footer-top-bar .wp-block-button__link {
+      .footer-top-bar .wpcf7 input[type=submit], .wpcf7 .footer-top-bar input[type=submit], .footer-top-bar .gform_button, .footer-top-bar .ala-big-button, .footer-top-bar .is-style-standard-button .wp-block-button__link, .is-style-standard-button .footer-top-bar .wp-block-button__link, .footer-top-bar .is-style-outline-button .wp-block-button__link, .is-style-outline-button .footer-top-bar .wp-block-button__link {
         margin: 20px 0 0; } }
 
 .footer-subscribe .gform_wrapper {
@@ -19609,7 +19669,7 @@ button.swiper-pagination-bullet {
   .single-post .post-footer .addthis_inline_share_toolbox:before {
     background-color: #f2f2f2; }
   .single-post .post-footer .btn,
-  .single-post .post-footer .wpcf7 input[type=submit], .wpcf7 .single-post .post-footer input[type=submit], .single-post .post-footer .gform_button, .single-post .post-footer .is-style-standard-button .wp-block-button__link, .is-style-standard-button .single-post .post-footer .wp-block-button__link, .single-post .post-footer .is-style-outline-button .wp-block-button__link, .is-style-outline-button .single-post .post-footer .wp-block-button__link {
+  .single-post .post-footer .wpcf7 input[type=submit], .wpcf7 .single-post .post-footer input[type=submit], .single-post .post-footer .gform_button, .single-post .post-footer .ala-big-button, .single-post .post-footer .is-style-standard-button .wp-block-button__link, .is-style-standard-button .single-post .post-footer .wp-block-button__link, .single-post .post-footer .is-style-outline-button .wp-block-button__link, .is-style-outline-button .single-post .post-footer .wp-block-button__link {
     border-width: 2px;
     padding: 7px 25px; }
   @media (max-width: 575.98px) {
@@ -19619,7 +19679,7 @@ button.swiper-pagination-bullet {
           -ms-flex-direction: column;
               flex-direction: column; }
       .single-post .post-footer .btn,
-      .single-post .post-footer .wpcf7 input[type=submit], .wpcf7 .single-post .post-footer input[type=submit], .single-post .post-footer .gform_button, .single-post .post-footer .is-style-standard-button .wp-block-button__link, .is-style-standard-button .single-post .post-footer .wp-block-button__link, .single-post .post-footer .is-style-outline-button .wp-block-button__link, .is-style-outline-button .single-post .post-footer .wp-block-button__link {
+      .single-post .post-footer .wpcf7 input[type=submit], .wpcf7 .single-post .post-footer input[type=submit], .single-post .post-footer .gform_button, .single-post .post-footer .ala-big-button, .single-post .post-footer .is-style-standard-button .wp-block-button__link, .is-style-standard-button .single-post .post-footer .wp-block-button__link, .single-post .post-footer .is-style-outline-button .wp-block-button__link, .is-style-outline-button .single-post .post-footer .wp-block-button__link {
         margin-top: 30px; } }
 
 .pvtl-recent-posts-class .recent-post {
@@ -19649,9 +19709,11 @@ button.swiper-pagination-bullet {
     max-height: 4.6em;
     overflow: hidden; }
 
-.latest-posts-block h3 {
-  color: #212121;
-  margin-bottom: 1em; }
+.latest-posts-block {
+  padding-bottom: 20px; }
+  .latest-posts-block h3 {
+    color: #212121;
+    margin-bottom: 1em; }
 
 .social-tabs {
   border: 1px solid #ced4da; }

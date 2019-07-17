@@ -75,7 +75,7 @@ class LatestPosts extends RegisterBlocks
 				<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4  mt-4 mt-lg-0">
 
 					<div class="social-tabs">
-						<ul  class="nav nav-pills">
+						<ul class="nav nav-pills">
 							<li>
 								<a class="active" href="#twitter" data-toggle="tab">Twitter</a>
 							</li>
@@ -103,6 +103,11 @@ class LatestPosts extends RegisterBlocks
 					</div>
 
 
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<a href="/blog/" class="ala-big-button">See all news & media articles</a>
 				</div>
 			</div>
         </div>
