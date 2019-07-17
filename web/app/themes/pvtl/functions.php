@@ -518,13 +518,18 @@ if ( ! function_exists( 'pvtl_posted_on' ) ) {
 
 function pvtl_get_excerpt($chars = 150){
 
-	$excerpt = strip_tags(get_the_content());
+    $my_excerpt = get_the_excerpt();
 
-	$excerpt = substr($excerpt, 0, $chars);
+    // if excerpt/content is longer than limit, trim it and append the ellipsis
+    if (strlen($my_excerpt) > $chars):
 
-	$excerpt .= '…';
+        $my_excerpt = substr($my_excerpt, 0, $chars);
 
-	return $excerpt;
+        $my_excerpt .= '…';
+        
+    endif;
+
+	return $my_excerpt;
 };
 
 
@@ -577,6 +582,14 @@ function myguten_enqueue() {
 }
 add_action( 'enqueue_block_editor_assets', 'myguten_enqueue' );
 
+
+// remove some understrap filters
+function remove_parent_filters(){ //Have to do it after theme setup, because child theme functions are loaded first
+    // stop understrap from adding "Read More" stuff after every excerpt
+    remove_filter('excerpt_more', 'understrap_custom_excerpt_more');
+    remove_filter('wp_trim_excerpt', 'understrap_all_excerpts_get_more_link');
+}
+add_action( 'init', 'remove_parent_filters' );
 
 
 /** Register each of the blocks */
