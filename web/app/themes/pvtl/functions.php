@@ -532,7 +532,25 @@ function pvtl_get_excerpt($chars = 150){
     endif;
 
 	return $my_excerpt;
-};
+}
+
+
+// returns an excerpt div if there is a real excerpt (not just the start of post text)
+function display_excerpt_single_post($chars = 60){
+    $ala_excerpt = get_the_excerpt();
+    $ala_post_content = wp_strip_all_tags( get_the_content() );
+
+    $ala_excerpt_start = substr($ala_excerpt, 0, $chars);
+    $ala_post_start = substr($ala_post_content, 0, $chars);
+    $ala_excerpt_output = '';
+
+    if ($ala_excerpt_start != $ala_post_start) {
+        $ala_excerpt_output .= '<div class="entry-excerpt">';
+        $ala_excerpt_output .= $ala_excerpt;
+        $ala_excerpt_output .= '</div>';
+    }
+    return $ala_excerpt_output;
+}
 
 
 // Specify allowed gutenberg blocks

@@ -33,6 +33,8 @@ $postLink = get_post_type_archive_link($postType);
 	<?php /* echo get_the_post_thumbnail( $post->ID, 'large' ); */
 	?>
 
+	<?php echo display_excerpt_single_post(); ?>
+
 	<div class="entry-content">
 
 		<?php the_content(); ?>
