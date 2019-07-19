@@ -228,14 +228,14 @@ $custom_logo_attr = array(
 			<div class="row">
 				<div class="col-md-12 col-lg-7">
 					<p class="alert-text text-creativecommons">
-						This work is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/au/">Creative Commons Attribution 3.0 Australia License</a> <a rel="license" href="http://creativecommons.org/licenses/by/3.0/au/"><img alt="Creative Commons License" style="border-width:0" src="https://www.ala.org.au/wp-content/themes/ala-wordpress-theme/img/cc-by.png"></a>
+						This work is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/au/">Creative Commons Attribution 3.0 Australia License</a> <a rel="license" href="http://creativecommons.org/licenses/by/3.0/au/"><img alt="Creative Commons License" style="border-width:0" src="/app/themes/pvtl/images/cc-by.png"></a>
 					</p>
 				</div><!--col end -->
 				<div class="col-md-12 col-lg-5 text-lg-right">
 					<ul class="menu horizontal">
-						<li><a title="copyright" href="/copyright">Copyright</a></li>
-						<li><a title="Terms of Use" href="/terms">Terms of Use</a></li>
-						<li><a title="System Status" href="/status">System Status</a></li>
+						<li><a href="/terms-of-use#cy">Copyright</a></li>
+						<li><a href="/terms-of-use">Terms of Use</a></li>
+						<li><a href="https://status.ala.org.au/">System Status</a></li>
 					</ul>
 				</div><!--col end -->
 			</div><!-- row end -->
