@@ -62,6 +62,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php } ?>
 					<?php } // end commenting out user groups ?>
 						<a href="/contact-us" class="btn btn-link btn-sm d-none d-lg-inline-block">Contact us</a>
+						<?php if ( get_field( 'auth_buttons_display', 'option' ) ) { ?>
 						<div class="account d-none d-lg-block">
 							<?php if (is_user_logged_in() ) { ?>
 								<a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
@@ -71,6 +72,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<a href="<?php echo wp_login_url(); ?>" class="btn btn-primary btn-sm">Login</a>
 							<?php } ?>
 						</div>
+						<?php } ?>
 					</div>
 
 					<div class="main-nav-wrapper">
@@ -88,6 +90,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</svg>
 							<span class="collapse visible-on-show" aria-hidden="true">×</span>
 							Search</button>
+					<?php if ( get_field( 'auth_buttons_display', 'option' ) ) { ?>
 					<?php if (is_user_logged_in() ) { ?>
 						<a href="https://auth.ala.org.au/userdetails/myprofile/" class="account-mobile order-2 d-lg-none" title="My Account">
 							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 37 41">
@@ -106,6 +109,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php } else { ?>
 						<a href="<?php echo wp_login_url(); ?>" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Login or register"><i class="fa fa-sign-in"></i></a>
 					<?php } ?>
+				<?php } ?>
 						<a href="javascript:" class="navbar-toggler order-4 order-lg-2" type="button" data-toggle="offcanvas" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 							<span class="navbar-toggler-icon"></span>
 						</a>

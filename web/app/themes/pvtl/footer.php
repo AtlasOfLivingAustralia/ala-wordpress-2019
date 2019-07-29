@@ -56,12 +56,14 @@ $custom_logo_attr = array(
 				<div class="col-md-12 col-lg-4 align-center logo-column">
 					<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php echo wp_get_attachment_image( $custom_logo_id, 'full', false, $custom_logo_attr ); ?></a>
 					<div class="account">
+						<?php if ( get_field( 'auth_buttons_display', 'option' ) ) { ?>
 						<?php if (is_user_logged_in() ) { ?>
 							<a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
 							<a href="<?php echo get_ala_logout_url(); ?>" class="btn btn-primary btn-sm">Logout</a>
 						<?php } else { ?>
 							<a href="https://auth.ala.org.au/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign Up</a>
 							<a href="<?php echo wp_login_url(); ?>" class="btn btn-primary btn-sm">Login</a>
+						<?php } ?>
 						<?php } ?>
 						<?php get_template_part( 'template-parts/social-icons' ); ?>
 					</div>

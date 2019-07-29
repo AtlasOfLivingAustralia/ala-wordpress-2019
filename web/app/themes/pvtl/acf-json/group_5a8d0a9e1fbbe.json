@@ -735,6 +735,45 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5d3e731bc88c2",
+            "label": "Auth buttons",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d3e7333c88c3",
+            "label": "Auth buttons display",
+            "name": "auth_buttons_display",
+            "type": "checkbox",
+            "instructions": "Check this to display auth buttons (sign up\/profile, login\/logout) in the header and footer.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "active": "active"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
         }
     ],
     "location": [
@@ -754,5 +793,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561686772
+    "modified": 1564373867
 }
