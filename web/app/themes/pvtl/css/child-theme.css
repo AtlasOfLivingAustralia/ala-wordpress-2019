@@ -17936,7 +17936,7 @@ readers do not read off random characters that represent icons */
       transition: all 300ms ease; }
   .navbar .navbar-nav .dropdown-item {
     text-decoration: none; }
-  .navbar .navbar-nav .menu-item:hover > .nav-link:before, .navbar .navbar-nav .current-menu-item > .nav-link:before, .navbar .navbar-nav .current-menu-parent > .nav-link:before {
+  .navbar .navbar-nav .menu-item:hover > .nav-link:before, .navbar .navbar-nav .current-menu-item > .nav-link:before {
     left: 0;
     width: 100%; }
   .navbar.navbar-expand-md .navbar-nav .nav-link {
