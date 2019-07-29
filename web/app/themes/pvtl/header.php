@@ -47,6 +47,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				?>
 				<!-- end custom logo -->
 				<div class="outer-nav-wrapper">
+					<?php if ( get_field( 'auth_buttons_display', 'option' ) ) { ?>
 					<div class="top-bar d-flex">
 						<?php if (false) {
 							// commenting out user groups for now
@@ -62,7 +63,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php } ?>
 					<?php } // end commenting out user groups ?>
 						<a href="/contact-us" class="btn btn-link btn-sm d-none d-lg-inline-block">Contact us</a>
-						<?php if ( get_field( 'auth_buttons_display', 'option' ) ) { ?>
+						
 						<div class="account d-none d-lg-block">
 							<?php if (is_user_logged_in() ) { ?>
 								<a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
@@ -72,8 +73,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<a href="<?php echo wp_login_url(); ?>" class="btn btn-primary btn-sm">Login</a>
 							<?php } ?>
 						</div>
-						<?php } ?>
+						
 					</div>
+					<?php } ?>
 
 					<div class="main-nav-wrapper">
 						<button data-toggle="collapse" data-target="#autocompleteSearchALA" class="search-trigger hidden-xs hidden-sm collapsed collapse-trigger-button order-1 order-lg-3" title="search">
