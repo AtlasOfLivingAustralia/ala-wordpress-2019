@@ -738,7 +738,7 @@
         },
         {
             "key": "field_5d3e731bc88c2",
-            "label": "Auth buttons",
+            "label": "UX options",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -774,6 +774,30 @@
             "toggle": 0,
             "return_format": "value",
             "save_custom": 0
+        },
+        {
+            "key": "field_5d3f9e3f96f44",
+            "label": "Search bar in header",
+            "name": "search_bar_in_header",
+            "type": "radio",
+            "instructions": "Select whether to have the header search bar always visible, or toggled (initially show only the magnifying-glass button, which toggles the search bar visibility).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "visible": "Always visible",
+                "toggled": "Toggled (initially hidden)"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "toggled",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -793,5 +817,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1564373867
+    "modified": 1564450884
 }
