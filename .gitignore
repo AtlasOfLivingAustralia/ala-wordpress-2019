@@ -5,6 +5,12 @@ web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
+web/app/themes/ala-wordpress-theme/*
+web/commonui-bs2/*
+web/commonui-bs3/*
+web/commonui-bs3-2019/*
+web/commonui-bs3-v2/*
+web/wp-content
 
 node_modules
 
