@@ -12,6 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $container = get_theme_mod( 'understrap_container_type' );
+$header_search_toggled = true;
+if ( get_field( 'search_bar_in_header', 'option' ) && get_field( 'search_bar_in_header', 'option' ) == 'visible') $header_search_toggled = false;
+$auth_buttons_display = 'visible';
+if ( get_field( 'auth_buttons_display', 'option' ) ) {
+	if ( get_field( 'auth_buttons_display', 'option' ) == 'hidden' ) $auth_buttons_display = 'hidden';
+	if ( get_field( 'auth_buttons_display', 'option' ) == 'profile' ) $auth_buttons_display = 'profile';
+}
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -47,8 +54,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 				?>
 				<!-- end custom logo -->
 				<div class="outer-nav-wrapper">
-					<?php if ( get_field( 'auth_buttons_display', 'option' ) ) { ?>
-					<div class="top-bar d-flex">
+					<?php if ( $auth_buttons_display != 'hidden' || !$header_search_toggled ) { ?>
+			<?php if (!$header_search_toggled ) { ?>
+						<div class="top-bar d-flex header-search-visible">
+			<?php } else { ?>
+						<div class="top-bar d-flex header-search-toggled">
+			<?php } ?>
 						<?php if (false) {
 							// commenting out user groups for now
 						?>
@@ -62,9 +73,40 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</button>
 						<?php } ?>
 					<?php } // end commenting out user groups ?>
+
+	    <?php if (!$header_search_toggled ) { ?>
+		<div id="autocompleteSearchALA" class="d-none d-lg-block">
+			<div class="container">
+		        <form class="form-inline" method="get" action="https://bie.ala.org.au/search" >
+                    <div class="form-group flex-grow-1">
+                        <label for="search" class="sr-only">Search species, data sets, and more</label>
+                        <input type="search" name="q" class="form-control flex-grow-1 autocompleteHome" id="search" placeholder="Search..." autocomplete="off">
+                    </div>
+                    <button type="submit" class="btn btn-primary-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                            <defs>
+                                <style>
+                                    .search-icon {
+                                        fill: #fff;
+                                        fill-rule: evenodd;
+                                    }
+                                </style>
+                            </defs>
+                            <path class="search-icon" d="M1524.33,60v1.151a7.183,7.183,0,1,1-2.69.523,7.213,7.213,0,0,1,2.69-.523V60m0,0a8.333,8.333,0,1,0,7.72,5.217A8.323,8.323,0,0,0,1524.33,60h0Zm6.25,13.772-0.82.813,7.25,7.254a0.583,0.583,0,0,0,.82,0,0.583,0.583,0,0,0,0-.812l-7.25-7.254h0Zm-0.69-7.684,0.01,0c0-.006-0.01-0.012-0.01-0.018s-0.01-.015-0.01-0.024a6,6,0,0,0-7.75-3.3l-0.03.009-0.02.006v0a0.6,0.6,0,0,0-.29.293,0.585,0.585,0,0,0,.31.756,0.566,0.566,0,0,0,.41.01V63.83a4.858,4.858,0,0,1,6.32,2.688l0.01,0a0.559,0.559,0,0,0,.29.29,0.57,0.57,0,0,0,.75-0.305A0.534,0.534,0,0,0,1529.89,66.089Z" transform="translate(-1516 -60)"/>
+                        </svg>
+                        Search
+                    </button>
+                </form>
+		    </div>
+	    </div>
+	    <?php } else { ?>
+
 						<a href="/contact-us" class="btn btn-link btn-sm d-none d-lg-inline-block">Contact us</a>
-						
+
+		<?php } ?>
+		<?php if ( $auth_buttons_display != 'hidden' ) { ?>
 						<div class="account d-none d-lg-block">
+						<?php if ( $auth_buttons_display == 'visible' ) { ?>
 							<?php if (is_user_logged_in() ) { ?>
 								<a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
 								<a href="<?php echo get_ala_logout_url(); ?>" class="btn btn-outline-white btn-sm">Logout</a>
@@ -72,13 +114,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<a href="https://auth.ala.org.au/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign up</a>
 								<a href="<?php echo wp_login_url(); ?>" class="btn btn-primary btn-sm">Login</a>
 							<?php } ?>
+						<?php } else { ?>
+							<a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
+						<?php } ?>
 						</div>
-						
+		<?php } ?>
+
 					</div>
-					<?php } ?>
+					<?php } // end if ( $auth_buttons_display != 'hidden' ) || !$header_search_toggled ?>
 
 					<div class="main-nav-wrapper">
-						<button data-toggle="collapse" data-target="#autocompleteSearchALA" class="search-trigger hidden-xs hidden-sm collapsed collapse-trigger-button order-1 order-lg-3" title="search">
+						<?php //if ( $header_search_toggled ) { ?>
+						<button data-toggle="collapse" data-target="#autocompleteSearchALA" id="headerSearchToggleButton" class="search-trigger hidden-xs hidden-sm collapsed collapse-trigger-button order-1 order-lg-3" title="search">
 							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 22 22">
 								<defs>
 									<style>
@@ -92,7 +139,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</svg>
 							<span class="collapse visible-on-show" aria-hidden="true">×</span>
 							Search</button>
-					<?php if ( get_field( 'auth_buttons_display', 'option' ) ) { ?>
+						<?php //} ?>
+					<?php if ( $auth_buttons_display != 'hidden' ) { ?>
+					<?php if ( $auth_buttons_display == 'visible' ) { ?>
 					<?php if (is_user_logged_in() ) { ?>
 						<a href="https://auth.ala.org.au/userdetails/myprofile/" class="account-mobile order-2 d-lg-none" title="My Account">
 							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 37 41">
@@ -110,6 +159,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<a href="<?php echo get_ala_logout_url(); ?>" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Logout"><i class="fa fa-sign-out"></i></a>
 					<?php } else { ?>
 						<a href="<?php echo wp_login_url(); ?>" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Login or register"><i class="fa fa-sign-in"></i></a>
+					<?php } ?>
+					<?php } else { ?>
+						<a href="https://auth.ala.org.au/userdetails/myprofile/" class="account-mobile order-2 d-lg-none" title="My Account">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 37 41">
+								<defs>
+									<style>
+										.account-icon {
+											fill: #212121;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<path id="Account" class="account-icon" d="M614.5,107.1a11.549,11.549,0,1,0-11.459-11.549A11.516,11.516,0,0,0,614.5,107.1Zm0-21.288a9.739,9.739,0,1,1-9.664,9.739A9.711,9.711,0,0,1,614.5,85.81Zm9.621,23.452H604.874a8.927,8.927,0,0,0-8.881,8.949V125h37v-6.785A8.925,8.925,0,0,0,624.118,109.262Zm7.084,13.924H597.789v-4.975a7.12,7.12,0,0,1,7.085-7.139h19.244a7.119,7.119,0,0,1,7.084,7.139v4.975Z" transform="translate(-596 -84)"/>
+							</svg>
+							Account</a>
+						<a href="<?php echo get_ala_logout_url(); ?>" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Logout"><i class="fa fa-sign-out"></i></a>
 					<?php } ?>
 				<?php } ?>
 						<a href="javascript:" class="navbar-toggler order-4 order-lg-2" type="button" data-toggle="offcanvas" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
@@ -147,6 +212,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	        </div>
 		    <?php endif; ?>
 		</nav><!-- .site-navigation -->
+		<?php //if ( $header_search_toggled ) { ?>
 	    <div id="autocompleteSearchALA" class="collapse">
 	    	<div class="container">
 		        <form method="get" action="https://bie.ala.org.au/search" class="search-form">
@@ -171,6 +237,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 		        </form>
 		    </div>
 	    </div>
+	    <?php //} ?>
+	    	
         <?php if ( get_field( 'alert_display', 'option' ) ) : ?>
 	    <div class="alert alert-ala fade show" role="alert">
     	    <div class="container">

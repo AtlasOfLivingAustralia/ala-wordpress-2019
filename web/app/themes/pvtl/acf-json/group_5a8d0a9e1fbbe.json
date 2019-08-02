@@ -756,8 +756,8 @@
             "key": "field_5d3e7333c88c3",
             "label": "Auth buttons display",
             "name": "auth_buttons_display",
-            "type": "checkbox",
-            "instructions": "Check this to display auth buttons (sign up\/profile, login\/logout) in the header and footer.",
+            "type": "radio",
+            "instructions": "Control the display of auth buttons (sign up\/profile, login\/logout) in the header and footer.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -766,14 +766,16 @@
                 "id": ""
             },
             "choices": {
-                "active": "active"
+                "hidden": "Hide auth buttons completely",
+                "visible": "Show buttons to log in to WordPress (needs CAS plugin)",
+                "profile": "Show button to log in to ALA user profile"
             },
-            "allow_custom": 0,
-            "default_value": [],
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
             "layout": "vertical",
-            "toggle": 0,
             "return_format": "value",
-            "save_custom": 0
+            "save_other_choice": 0
         },
         {
             "key": "field_5d3f9e3f96f44",
@@ -789,8 +791,8 @@
                 "id": ""
             },
             "choices": {
-                "visible": "Always visible",
-                "toggled": "Toggled (initially hidden)"
+                "visible": "Search bar in header is always visible",
+                "toggled": "Search bar in header is toggled (initially hidden)"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -817,5 +819,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1564450884
+    "modified": 1564709756
 }
