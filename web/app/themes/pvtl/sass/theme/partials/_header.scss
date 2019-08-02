@@ -3,12 +3,14 @@
     position: absolute;
     width: 100%;
     z-index: 1000;
-    .alert-ala {
-      color: black;
-      background-color: $primary;
-      border-color: darken($primary, 5%);
-    }
   }
+}
+
+.alert-ala {
+  color: black;
+  background-color: $primary;
+  border-color: darken($primary, 5%);
+  margin-bottom: 0;
 }
 
 .navbar {
@@ -177,6 +179,36 @@
     }
   }
 }
+.header-search-visible {
+  .account {
+    padding-top: 4px;
+    border-left: none;
+  }
+  #autocompleteSearchALA {
+    padding: 0;
+    background: none;
+    .container {
+      padding-right: 0;
+    }
+    .easy-autocomplete {
+      display: flex;
+      padding: 0;
+    }
+    input {
+      margin-right: 0;
+      border-radius: 0;
+      font-size: 0.95rem;
+    }
+    button {
+      padding: 7px 15px;
+    }
+    .easy-autocomplete-container {
+      position: absolute;
+      top: 3.1rem;
+      z-index: 9999;
+    }
+  }
+}
 
 .main-nav-wrapper {
   display: flex;
@@ -185,9 +217,13 @@
 }
 
 #navbarNavDropdown {
-  margin-right: 20px;
-  padding-right: 20px;
-  border-right: 1px solid rgba(255,255,255,0.4);
+
+}
+
+#headerSearchToggleButton {
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255,255,255,0.4);
 }
 
 .search-trigger, .account-mobile {

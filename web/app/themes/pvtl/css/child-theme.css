@@ -17894,11 +17894,13 @@ readers do not read off random characters that represent icons */
   #wrapper-navbar {
     position: absolute;
     width: 100%;
-    z-index: 1000; }
-    #wrapper-navbar .alert-ala {
-      color: black;
-      background-color: #f26649;
-      border-color: #f05231; } }
+    z-index: 1000; } }
+
+.alert-ala {
+  color: black;
+  background-color: #f26649;
+  border-color: #f05231;
+  margin-bottom: 0; }
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.6);
@@ -18041,6 +18043,31 @@ readers do not read off random characters that represent icons */
     .top-bar .account .btn:first-child, .top-bar .account .wpcf7 input:first-child[type=submit], .wpcf7 .top-bar .account input:first-child[type=submit], .top-bar .account .gform_button:first-child, .top-bar .account .ala-big-button:first-child, .top-bar .account .is-style-standard-button .wp-block-button__link:first-child, .is-style-standard-button .top-bar .account .wp-block-button__link:first-child, .top-bar .account .is-style-outline-button .wp-block-button__link:first-child, .is-style-outline-button .top-bar .account .wp-block-button__link:first-child {
       margin-right: 7px; }
 
+.header-search-visible .account {
+  padding-top: 4px;
+  border-left: none; }
+
+.header-search-visible #autocompleteSearchALA {
+  padding: 0;
+  background: none; }
+  .header-search-visible #autocompleteSearchALA .container {
+    padding-right: 0; }
+  .header-search-visible #autocompleteSearchALA .easy-autocomplete {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0; }
+  .header-search-visible #autocompleteSearchALA input {
+    margin-right: 0;
+    border-radius: 0;
+    font-size: 0.95rem; }
+  .header-search-visible #autocompleteSearchALA button {
+    padding: 7px 15px; }
+  .header-search-visible #autocompleteSearchALA .easy-autocomplete-container {
+    position: absolute;
+    top: 3.1rem;
+    z-index: 9999; }
+
 .main-nav-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18053,10 +18080,10 @@ readers do not read off random characters that represent icons */
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
-#navbarNavDropdown {
-  margin-right: 20px;
-  padding-right: 20px;
-  border-right: 1px solid rgba(255, 255, 255, 0.4); }
+#headerSearchToggleButton {
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.4); }
 
 .search-trigger, .account-mobile {
   font-size: 0;
