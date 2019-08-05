@@ -18071,6 +18071,9 @@ readers do not read off random characters that represent icons */
     top: 3.1rem;
     z-index: 9999; }
 
+.auth-buttons-visible.header-search-visible #autocompleteSearchALA form input {
+  width: 17rem; }
+
 .main-nav-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

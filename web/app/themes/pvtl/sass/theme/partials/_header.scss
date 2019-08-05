@@ -212,6 +212,11 @@
     }
   }
 }
+.auth-buttons-visible.header-search-visible #autocompleteSearchALA form input {
+  @include media-breakpoint-down(xl) {
+    width: 17rem;
+  }
+}
 
 .main-nav-wrapper {
   display: flex;

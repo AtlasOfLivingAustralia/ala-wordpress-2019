@@ -57,9 +57,9 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 				<div class="outer-nav-wrapper">
 					<?php if ( $auth_buttons_display != 'hidden' || !$header_search_toggled ) { ?>
 			<?php if (!$header_search_toggled ) { ?>
-						<div class="top-bar d-flex header-search-visible">
+						<div class="top-bar d-flex header-search-visible auth-buttons-<?php echo $auth_buttons_display ?>">
 			<?php } else { ?>
-						<div class="top-bar d-flex header-search-toggled">
+						<div class="top-bar d-flex header-search-toggled auth-buttons-<?php echo $auth_buttons_display ?>">
 			<?php } ?>
 						<?php if (false) {
 							// commenting out user groups for now
@@ -80,8 +80,8 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 			<div class="container">
 		        <form class="form-inline" method="get" action="https://bie.ala.org.au/search" >
                     <div class="form-group flex-grow-1">
-                        <label for="search" class="sr-only">Search species, data sets, and more</label>
-                        <input type="search" name="q" class="form-control flex-grow-1 autocompleteHome" id="search" placeholder="Search species, datasets, and more..." autocomplete="off">
+                        <label for="search" class="sr-only">Search species and more</label>
+                        <input type="search" name="q" class="form-control flex-grow-1 autocompleteHome" id="search" placeholder="Search species and more..." autocomplete="off">
                     </div>
                     <button type="submit" class="btn btn-primary-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
