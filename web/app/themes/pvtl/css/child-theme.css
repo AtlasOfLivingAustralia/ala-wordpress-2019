@@ -18061,6 +18061,9 @@ readers do not read off random characters that represent icons */
     margin-right: 0;
     border-radius: 0;
     font-size: 0.95rem; }
+    @media (min-width: 992px) {
+      .header-search-visible #autocompleteSearchALA input {
+        width: 20rem; } }
   .header-search-visible #autocompleteSearchALA button {
     padding: 7px 15px; }
   .header-search-visible #autocompleteSearchALA .easy-autocomplete-container {

@@ -198,6 +198,9 @@
       margin-right: 0;
       border-radius: 0;
       font-size: 0.95rem;
+      @include media-breakpoint-up(lg) {
+        width: 20rem;
+      }
     }
     button {
       padding: 7px 15px;
