@@ -226,7 +226,9 @@
 #headerSearchToggleButton {
   margin-left: 20px;
   padding-left: 20px;
-  border-left: 1px solid rgba(255,255,255,0.4);
+  @include media-breakpoint-up(lg) {
+    border-left: 1px solid rgba(255,255,255,0.4);
+  }
 }
 
 .search-trigger, .account-mobile {

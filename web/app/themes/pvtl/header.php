@@ -124,8 +124,11 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					<?php } // end if ( $auth_buttons_display != 'hidden' ) || !$header_search_toggled ?>
 
 					<div class="main-nav-wrapper">
-						<?php //if ( $header_search_toggled ) { ?>
+						<?php if ( $header_search_toggled ) { ?>
 						<button data-toggle="collapse" data-target="#autocompleteSearchALA" id="headerSearchToggleButton" class="search-trigger hidden-xs hidden-sm collapsed collapse-trigger-button order-1 order-lg-3" title="search">
+						<?php } else { ?>
+						<button data-toggle="collapse" data-target="#autocompleteSearchALA" id="headerSearchToggleButton" class="search-trigger d-lg-none hidden-xs hidden-sm collapsed collapse-trigger-button order-1 order-lg-3" title="search">
+						<?php } ?>
 							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 22 22">
 								<defs>
 									<style>
@@ -139,7 +142,6 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 							</svg>
 							<span class="collapse visible-on-show" aria-hidden="true">×</span>
 							Search</button>
-						<?php //} ?>
 					<?php if ( $auth_buttons_display != 'hidden' ) { ?>
 					<?php if ( $auth_buttons_display == 'visible' ) { ?>
 					<?php if (is_user_logged_in() ) { ?>
