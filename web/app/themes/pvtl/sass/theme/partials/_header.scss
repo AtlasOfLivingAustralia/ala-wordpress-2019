@@ -11,6 +11,9 @@
   background-color: $primary;
   border-color: darken($primary, 5%);
   margin-bottom: 0;
+  a {
+    color: black;
+  }
 }
 
 .navbar {
