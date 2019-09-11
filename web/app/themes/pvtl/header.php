@@ -24,6 +24,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="id" content="<?php the_ID(); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
@@ -56,9 +57,9 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 				<div class="outer-nav-wrapper">
 					<?php if ( $auth_buttons_display != 'hidden' || !$header_search_toggled ) { ?>
 			<?php if (!$header_search_toggled ) { ?>
-						<div class="top-bar d-flex header-search-visible">
+						<div class="top-bar d-flex header-search-visible auth-buttons-<?php echo $auth_buttons_display ?>">
 			<?php } else { ?>
-						<div class="top-bar d-flex header-search-toggled">
+						<div class="top-bar d-flex header-search-toggled auth-buttons-<?php echo $auth_buttons_display ?>">
 			<?php } ?>
 						<?php if (false) {
 							// commenting out user groups for now
@@ -79,8 +80,8 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 			<div class="container">
 		        <form class="form-inline" method="get" action="https://bie.ala.org.au/search" >
                     <div class="form-group flex-grow-1">
-                        <label for="search" class="sr-only">Search species, data sets, and more</label>
-                        <input type="search" name="q" class="form-control flex-grow-1 autocompleteHome" id="search" placeholder="Search..." autocomplete="off">
+                        <label for="search" class="sr-only">Search species and more</label>
+                        <input type="search" name="q" class="form-control flex-grow-1 autocompleteHome" id="search" placeholder="Search species and more..." autocomplete="off">
                     </div>
                     <button type="submit" class="btn btn-primary-dark">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
@@ -124,8 +125,11 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					<?php } // end if ( $auth_buttons_display != 'hidden' ) || !$header_search_toggled ?>
 
 					<div class="main-nav-wrapper">
-						<?php //if ( $header_search_toggled ) { ?>
+						<?php if ( $header_search_toggled ) { ?>
 						<button data-toggle="collapse" data-target="#autocompleteSearchALA" id="headerSearchToggleButton" class="search-trigger hidden-xs hidden-sm collapsed collapse-trigger-button order-1 order-lg-3" title="search">
+						<?php } else { ?>
+						<button data-toggle="collapse" data-target="#autocompleteSearchALA" id="headerSearchToggleButton" class="search-trigger d-lg-none hidden-xs hidden-sm collapsed collapse-trigger-button order-1 order-lg-3" title="search">
+						<?php } ?>
 							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 22 22">
 								<defs>
 									<style>
@@ -139,7 +143,6 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 							</svg>
 							<span class="collapse visible-on-show" aria-hidden="true">×</span>
 							Search</button>
-						<?php //} ?>
 					<?php if ( $auth_buttons_display != 'hidden' ) { ?>
 					<?php if ( $auth_buttons_display == 'visible' ) { ?>
 					<?php if (is_user_logged_in() ) { ?>

@@ -17901,6 +17901,8 @@ readers do not read off random characters that represent icons */
   background-color: #f26649;
   border-color: #f05231;
   margin-bottom: 0; }
+  .alert-ala a {
+    color: black; }
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.6);
@@ -18061,12 +18063,18 @@ readers do not read off random characters that represent icons */
     margin-right: 0;
     border-radius: 0;
     font-size: 0.95rem; }
+    @media (min-width: 992px) {
+      .header-search-visible #autocompleteSearchALA input {
+        width: 20rem; } }
   .header-search-visible #autocompleteSearchALA button {
     padding: 7px 15px; }
   .header-search-visible #autocompleteSearchALA .easy-autocomplete-container {
     position: absolute;
     top: 3.1rem;
     z-index: 9999; }
+
+.auth-buttons-visible.header-search-visible #autocompleteSearchALA form input {
+  width: 17rem; }
 
 .main-nav-wrapper {
   display: -webkit-box;
@@ -18082,8 +18090,10 @@ readers do not read off random characters that represent icons */
 
 #headerSearchToggleButton {
   margin-left: 20px;
-  padding-left: 20px;
-  border-left: 1px solid rgba(255, 255, 255, 0.4); }
+  padding-left: 20px; }
+  @media (min-width: 992px) {
+    #headerSearchToggleButton {
+      border-left: 1px solid rgba(255, 255, 255, 0.4); } }
 
 .search-trigger, .account-mobile {
   font-size: 0;
@@ -18281,7 +18291,9 @@ readers do not read off random characters that represent icons */
       .footer-top .logo-column .account {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
-                justify-content: center; } }
+                justify-content: center; }
+    .footer-top .image {
+      width: 50px; } }
 
 .footer-middle {
   background-color: #f2f2f2;
