@@ -118,8 +118,27 @@ function get_experience_group_description( $groupIndex )
  */
 
 function get_ala_logout_url() {
-    return 'https://auth.ala.org.au/cas/logout';
-    // return wp_logout_url();
+    // return 'https://auth.ala.org.au/cas/logout';
+    return wp_logout_url();
+}
+
+
+function get_ala_login_url() {
+    include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+    // check if WP-Cassify plugin is active
+    if ( is_plugin_active( 'wp-cassify/wp-cassify.php' ) ) {
+        global $wp;
+        $post_login_url = home_url( $wp->request );
+        // append slash to home page
+        if ( is_front_page() ) {
+            $post_login_url = $post_login_url . '/';
+        }
+        return do_shortcode( '[wp_cassify_login_with_redirect service_redirect_url="' . $post_login_url . '"]' );
+    } else {
+        return wp_login_url();
+    }
+
 }
 
 

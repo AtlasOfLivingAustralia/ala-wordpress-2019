@@ -55,3 +55,4 @@ web/app/object-cache.php
 !web/app/plugins/gravityformscampaignmonitor
 !web/app/plugins/pvtl-recent-posts
 
+/web/nginx.conf
