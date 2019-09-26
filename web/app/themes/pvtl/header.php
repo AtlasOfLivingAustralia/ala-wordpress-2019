@@ -113,7 +113,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 								<a href="<?php echo get_ala_logout_url(); ?>" class="btn btn-outline-white btn-sm">Logout</a>
 							<?php } else { ?>
 								<a href="https://auth.ala.org.au/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign up</a>
-								<a href="<?php echo wp_login_url(); ?>" class="btn btn-primary btn-sm">Login</a>
+								<a href="<?php echo get_ala_login_url(); ?>" class="btn btn-primary btn-sm">Login</a>
 							<?php } ?>
 						<?php } else { ?>
 							<a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
@@ -161,7 +161,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 							Account</a>
 						<a href="<?php echo get_ala_logout_url(); ?>" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Logout"><i class="fa fa-sign-out"></i></a>
 					<?php } else { ?>
-						<a href="<?php echo wp_login_url(); ?>" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Login or register"><i class="fa fa-sign-in"></i></a>
+						<a href="<?php echo get_ala_login_url(); ?>" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Login"><i class="fa fa-sign-in"></i></a>
 					<?php } ?>
 					<?php } else { ?>
 						<a href="https://auth.ala.org.au/userdetails/myprofile/" class="account-mobile order-2 d-lg-none" title="My Account">
