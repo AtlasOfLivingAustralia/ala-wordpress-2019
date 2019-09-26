@@ -128,7 +128,8 @@ function get_ala_login_url() {
 
     // check if WP-Cassify plugin is active
     if ( is_plugin_active( 'wp-cassify/wp-cassify.php' ) ) {
-        return do_shortcode( '[wp_cassify_login_with_redirect service_redirect_url="' . wp_login_url() . '"]' );
+        global $wp;
+        return do_shortcode( '[wp_cassify_login_with_redirect service_redirect_url="' . home_url( $wp->request ) . '"]' );
     } else {
         return wp_login_url();
     }
