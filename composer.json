@@ -54,6 +54,7 @@
         "roots/wp-config": "1.0.0",
         "roots/wp-password-bcrypt": "1.0.0",
         "wpackagist-plugin/wp-piwik": "^1.0.22",
+        "wpackagist-plugin/zotpress": "^7.1.5",
         "wpackagist-plugin/wordpress-seo": "^11.9",
         "wpackagist-plugin/w3-total-cache": "^0.9.7.4",
         "wpackagist-plugin/wp-migrate-db": "^1.0",
