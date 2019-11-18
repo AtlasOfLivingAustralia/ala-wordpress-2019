@@ -258,6 +258,27 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 
 <?php wp_footer(); ?>
 
+<?php if ( get_field( 'matomo_tracking_active', 'option' ) ) : ?>
+<!-- ALA self hosted analytics -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.ala.org.au"]);
+  _paq.push(["setDomains", ["*.ala.org.au"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://ash.ala.org.au/";
+    _paq.push(['setTrackerUrl', u+'ash.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'ash.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="https://ash.ala.org.au/ash.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End ALA self hosted analytics -->
+<?php endif; ?>
+
 <script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js"></script>
 <script type="text/javascript">
 FreshWidget.init("", {"queryString": "&widgetType=popup&helpdesk_ticket[group_id]=6000207804&helpdesk_ticket[product_id]=6000005589&formTitle=Report+an+issue+or+ask+for+help", "utf8": "✓", "widgetType": "popup", "buttonType": "text", "buttonText": "Need help?", "buttonColor": "white", "buttonBg": "#d5502a", "alignment": "2", "offset": "220px", "formHeight": "500px", "url": "https://support.ala.org.au"} );
