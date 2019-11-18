@@ -800,6 +800,41 @@
             "layout": "vertical",
             "return_format": "value",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_5dd1e9bc402d5",
+            "label": "Matomo tracking",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5dd1e9d2402d6",
+            "label": "Matomo tracking active",
+            "name": "matomo_tracking_active",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Turn on Matomo (ALA's self-hosted equivalent to Google Analytics) for this site.",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -819,5 +854,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1564709756
+    "modified": 1574038115
 }
