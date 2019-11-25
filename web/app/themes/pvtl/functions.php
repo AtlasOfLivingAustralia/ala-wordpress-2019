@@ -12,6 +12,14 @@ function theme_setup() {
 add_action( 'after_setup_theme', 'theme_setup' );
 
 
+# hide admin bar for non-editor/admin users
+add_action('set_current_user', 'cc_hide_admin_bar');
+function cc_hide_admin_bar() {
+  if (!current_user_can('edit_posts')) {
+    add_filter('show_admin_bar', '__return_false');
+  }
+}
+
 function understrap_remove_scripts() {
     wp_dequeue_style( 'understrap-styles' );
     wp_deregister_style( 'understrap-styles' );
