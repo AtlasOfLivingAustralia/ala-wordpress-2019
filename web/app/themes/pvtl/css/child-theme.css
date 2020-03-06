@@ -17904,6 +17904,9 @@ readers do not read off random characters that represent icons */
   .alert-ala a {
     color: black; }
 
+.alert-ala-content {
+  margin: 0 auto; }
+
 .navbar {
   background-color: rgba(0, 0, 0, 0.6);
   padding: .7rem 1rem; }
