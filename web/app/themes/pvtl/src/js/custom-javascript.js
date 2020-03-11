@@ -158,20 +158,23 @@
      */
 
     $('a[data-toggle="tab"]').click(function(e) {
-        // on click: mouse/kb selection of tab
-        var id = $(this).attr('id');
-        var tabLabel = $(this).text();
-        //console.log("tab click: "+id+" label: "+tabLabel);
-        // set cookie to remember tab
-        //console.log("setting alaTab cookie with: "+id);
-        var cookieMaxAge = 60*60*24*365;
-        document.cookie = "alaTab="+id+";max-age="+cookieMaxAge;
-        // ga('send', {
-        //   hitType: 'event',
-        //   eventCategory: 'Home tabs',
-        //   eventAction: 'tab click',
-        //   eventLabel: tabLabel
-        // });
+      // on click: mouse/kb selection of tab
+      var id = $(this).attr('id');
+      var tabLabel = $(this).text();
+      //console.log("tab click: "+id+" label: "+tabLabel);
+      // set cookie to remember tab
+      //console.log("setting alaTab cookie with: "+id);
+      var cookieMaxAge = 60*60*24*365;
+      document.cookie = "alaTab="+id+";max-age="+cookieMaxAge;
+      if (typeof ga != "undefined") {
+        console.log("sending GA event: Home tab click "+tabLabel);
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Home tabs',
+          eventAction: 'tab click',
+          eventLabel: tabLabel
+        });
+      }
     });
 
     // home page: tab display
@@ -193,17 +196,20 @@
     }
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
-        // on shown: after non-default tab is displayed, either from click/kb or URL# load
-        var id = $(this).attr('id');
-        var tabLabel = $(this).text();
-        //console.log("tab shown: "+id+" label: "+tabLabel);
-        location.hash = 'tab_'+ $(e.target).attr('href').substr(1);
-        // ga('send', {
-        //   hitType: 'event',
-        //   eventCategory: 'Home tabs',
-        //   eventAction: 'tab shown',
-        //   eventLabel: tabLabel
-        // });
+      // on shown: after non-default tab is displayed, either from click/kb or URL# load
+      var id = $(this).attr('id');
+      var tabLabel = $(this).text();
+      //console.log("tab shown: "+id+" label: "+tabLabel);
+      location.hash = 'tab_'+ $(e.target).attr('href').substr(1);
+      if (typeof ga != "undefined") {
+        console.log("sending GA event: Home tab shown "+tabLabel);
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Home tabs',
+          eventAction: 'tab shown',
+          eventLabel: tabLabel
+        });
+      }
     });
 
 
