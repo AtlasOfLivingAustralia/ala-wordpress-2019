@@ -164,7 +164,8 @@
         //console.log("tab click: "+id+" label: "+tabLabel);
         // set cookie to remember tab
         //console.log("setting alaTab cookie with: "+id);
-        document.cookie = "alaTab="+id;
+        var cookieMaxAge = 60*60*24*365;
+        document.cookie = "alaTab="+id+";max-age="+cookieMaxAge;
         // ga('send', {
         //   hitType: 'event',
         //   eventCategory: 'Home tabs',
