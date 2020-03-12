@@ -246,7 +246,9 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 	    <div class="alert alert-ala fade show" role="alert">
     	    <div class="container">
     	    	<div class="row">
+    	    		<div class="alert-ala-content">
                     <?php echo wp_kses_post( get_field( 'alert_text', 'option' ) ); ?>
+	                </div>
         		</div>
     		</div>
 		</div>

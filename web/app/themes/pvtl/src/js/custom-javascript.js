@@ -157,114 +157,61 @@
      * Tabs / URLs
      */
 
-    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
-        // console.log("this", $(this).attr('id'));
-        var id = $(this).attr('id');
-        location.hash = 'tab_'+ $(e.target).attr('href').substr(1);
+    $('a[data-toggle="tab"]').click(function(e) {
+      // on click: mouse/kb selection of tab
+      var id = $(this).attr('id');
+      var tabLabel = $(this).text();
+      //console.log("tab click: "+id+" label: "+tabLabel);
+      // set cookie to remember tab
+      //console.log("setting alaTab cookie with: "+id);
+      var cookieMaxAge = 60*60*24*365;
+      document.cookie = "alaTab="+id+";max-age="+cookieMaxAge;
+      if (typeof ga != "undefined") {
+        console.log("sending GA event: Home tab click "+tabLabel);
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Home tabs',
+          eventAction: 'tab click',
+          eventLabel: tabLabel
+        });
+      }
     });
-    // catch hash URIs and trigger tabs
-    if (location.hash !== '') {
+
+    // home page: tab display
+    if ($("body.home .nav-tabs").length) {
+      // catch hash URIs and trigger tabs
+      const cookieTab = getCookie('alaTab');
+      // if a cookie is set, display that tab
+      if (cookieTab) {
+        //console.log("showing tab based on alaTab cookie: "+cookieTab);
+        $('.nav-tabs a[id="' + cookieTab + '"]').tab('show');
+      }
+      else if (location.hash !== '') {
+        // no cookie set - if there is a tab_ value in the hash, display that tab
         $('.nav-tabs a[href="' + location.hash.replace('tab_','') + '"]').tab('show');
         //$('.nav-tabs li a[href="' + location.hash.replace('tab_','') + '"]').click();
-    } else {
+      } else {
         $('.nav-tabs a:first').tab('show');
+      }
     }
 
-    /**
-     * Get/Set user experience group cookie
-     */
-    const initExperiencePopup = () => {
-      let settingExperienceCookie = false;
-      const experience = getCookie('experience');
-      const experienceModal = $('#experience-modal');
-
-      // If the experience cookie has not been set, show the popup after a delay.
-      if (experience === false) {
-        // setTimeout(() => experienceModal.modal('show'), 5000);
-      }
-
-      // Change the experience group
-      experienceModal.on('click', '.group-btn', (e) => {
-        e.preventDefault();
-
-        // Don't proceed if 'in progress'
-        if (settingExperienceCookie) return false;
-
-        const button = $(e.currentTarget);
-        const group = button.data('name');
-
-        $.ajax({
-          url: wp_ajax_object.ajax_url,
-          method: 'POST',
-          data: { action: 'set_experience_cookie', group },
-          beforeSend: () => {
-            settingExperienceCookie = true;
-          },
-          complete: () => {
-            settingExperienceCookie = false;
-            if (group !== 'null') window.location.reload();
-          },
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+      // on shown: after non-default tab is displayed, either from click/kb or URL# load
+      var id = $(this).attr('id');
+      var tabLabel = $(this).text();
+      //console.log("tab shown: "+id+" label: "+tabLabel);
+      location.hash = 'tab_'+ $(e.target).attr('href').substr(1);
+      if (typeof ga != "undefined") {
+        console.log("sending GA event: Home tab shown "+tabLabel);
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Home tabs',
+          eventAction: 'tab shown',
+          eventLabel: tabLabel
         });
-
-        return false;
-      });
-    };
-
-    /**
-     * Get/Set user experience group cookie
-     */
-    const initExperiencePopupVariant = () => {
-      let settingExperienceCookie = false;
-      const experience = getCookie('experience');
-      const experienceModal = $('#experience-modal');
-
-      // If the experience cookie has not been set, show the popup after a delay.
-      if (experience === false) {
-        $('.xp-btn').show();
       }
+    });
 
-      // Change the experience group
-      experienceModal.on('click', '.group-btn', (e) => {
-        e.preventDefault();
-
-        // Don't proceed if 'in progress'
-        if (settingExperienceCookie) return false;
-
-        const button = $(e.currentTarget);
-        const group = button.data('name');
-
-        $.ajax({
-          url: wp_ajax_object.ajax_url,
-          method: 'POST',
-          data: { action: 'set_experience_cookie', group },
-          beforeSend: () => {
-            settingExperienceCookie = true;
-          },
-          complete: () => {
-            settingExperienceCookie = false;
-            experienceModal.modal('hide');
-          },
-        });
-
-        return false;
-      });
-    };
-
-    function implementExperiment(value) {
-      if (value ===  '0') {
-        initExperiencePopup();
-      } else if (value === '1') {
-        initExperiencePopupVariant();
-      }
-    }
-
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'optimize.callback', {
-        callback: implementExperiment
-      });
-    } else {
-      // initExperiencePopup();
-    }
 
     $('[data-sticky]').stickybits({
       useStickyClasses: true,
