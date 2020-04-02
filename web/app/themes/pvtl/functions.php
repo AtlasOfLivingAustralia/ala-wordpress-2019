@@ -4,6 +4,41 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Allow additional character types in usernames
+ */
+function create_attendee_sanitize_user($username, $raw_username, $strict) {
+    
+    $allowed_symbols = "a-z0-9+_.\-@%"; //yes we allow whitespace which will be trimmed further down script
+    
+    //Strip HTML Tags
+    $username = wp_strip_all_tags ($raw_username);
+
+    //Remove Accents
+    $username = remove_accents ($username);
+
+    //Kill octets
+    $username = preg_replace ('|%([a-fA-F0-9][a-fA-F0-9])|', '', $username);
+
+    //Kill entities
+    $username = preg_replace ('/&.+?;/', '', $username);
+
+    //allow + and % symbols
+    $username = preg_replace ('|[^'.$allowed_symbols.']|iu', '', $username);
+
+    //Remove Whitespaces
+    $username = trim ($username);
+
+    // Consolidate contiguous Whitespaces
+    $username = preg_replace ('|\s+|', ' ', $username);
+
+    //Done
+    return $username;
+    
+}
+
+add_filter ('sanitize_user', 'create_attendee_sanitize_user', 10, 3);
+
+/**
  * Register support for Gutenberg wide images in your theme
  */
 function theme_setup() {
