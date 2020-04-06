@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Allow additional character types in usernames
  */
-function create_attendee_sanitize_user($username, $raw_username, $strict) {
+function ala_sanitize_user($username, $raw_username, $strict) {
     
     $allowed_symbols = "a-z0-9+_.\-@%"; //yes we allow whitespace which will be trimmed further down script
     
@@ -36,7 +36,7 @@ function create_attendee_sanitize_user($username, $raw_username, $strict) {
     
 }
 
-add_filter ('sanitize_user', 'create_attendee_sanitize_user', 10, 3);
+add_filter ('sanitize_user', 'ala_sanitize_user', 10, 3);
 
 /**
  * Register support for Gutenberg wide images in your theme
