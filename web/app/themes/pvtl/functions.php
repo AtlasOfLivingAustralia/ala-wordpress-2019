@@ -10,10 +10,10 @@ function ala_sanitize_user($username, $raw_username, $strict) {
     
     $allowed_symbols = "a-z0-9+_.\-@%"; //yes we allow whitespace which will be trimmed further down script
     
-    //Strip HTML Tags
+    //Strip HTML elements
     $username = wp_strip_all_tags ($raw_username);
 
-    //Remove Accents
+    //Remove accents
     $username = remove_accents ($username);
 
     //Kill octets
@@ -25,10 +25,10 @@ function ala_sanitize_user($username, $raw_username, $strict) {
     //allow + and % symbols
     $username = preg_replace ('|[^'.$allowed_symbols.']|iu', '', $username);
 
-    //Remove Whitespaces
+    //Remove leading/trailing whitespace
     $username = trim ($username);
 
-    // Consolidate contiguous Whitespaces
+    // Consolidate contiguous whitespace
     $username = preg_replace ('|\s+|', ' ', $username);
 
     //Done
