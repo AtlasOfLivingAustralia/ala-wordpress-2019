@@ -18283,6 +18283,10 @@ readers do not read off random characters that represent icons */
   .footer-top .image {
     min-width: 50px;
     margin-right: 15px; }
+  @media (min-width: 992px) {
+    .footer-top #inat-logo {
+      max-width: 50%;
+      margin-left: 50%; } }
   .footer-top .content {
     font-size: 1rem; }
     .footer-top .content *:last-child {
