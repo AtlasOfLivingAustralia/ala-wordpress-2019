@@ -83,7 +83,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					?>
 					<div class="d-flex">
 						<div class="image">
-							<img src="<?php echo esc_html( $image_col_1['sizes']['medium'] ); ?>" alt="<?php echo esc_html( $image_col_1['alt'] ); ?>" />
+							<img src="<?php echo esc_html( $image_col_1['sizes']['medium'] ); ?>" alt="<?php echo esc_html( $image_col_1['alt'] ); ?>" id="inat-logo" />
 						</div>
 						<div class="content">
 							<?php echo wp_kses_post( $content_col_1 ); ?>
