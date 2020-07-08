@@ -1,6 +1,20 @@
 ($ => {
   $(document).ready(($) => {
     /**
+     * Display login/logout buttons (ES6)
+     */
+    var alaAuthCookieName='ALA-Auth';
+    if (document.cookie.split(';').some((item) => item.trim().startsWith(alaAuthCookieName + '='))) {
+      console.log('The '+alaAuthCookieName+' cookie exists.');
+      $('#ala-auth-buttons-logged-in').show();
+      $('#ala-auth-buttons-logged-out').hide();
+    } else {
+      console.log('The '+alaAuthCookieName+' cookie does not exist.');
+      $('#ala-auth-buttons-logged-in').hide();
+      $('#ala-auth-buttons-logged-out').show();
+    }
+
+    /**
      * Mobile (off-canvas) menu
      */
     $('[data-toggle="offcanvas"]').on('click', function () {
