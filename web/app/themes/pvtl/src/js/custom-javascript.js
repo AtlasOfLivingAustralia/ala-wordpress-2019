@@ -6,12 +6,12 @@
     var alaAuthCookieName='ALA-Auth';
     if (document.cookie.split(';').some((item) => item.trim().startsWith(alaAuthCookieName + '='))) {
       console.log('The '+alaAuthCookieName+' cookie exists.');
-      $('#ala-auth-buttons-logged-in').show();
-      $('#ala-auth-buttons-logged-out').hide();
+      $('#ala-auth-buttons-logged-in').removeClass("d-none");
+      $('#ala-auth-buttons-logged-out').addClass("d-none");
     } else {
       console.log('The '+alaAuthCookieName+' cookie does not exist.');
-      $('#ala-auth-buttons-logged-in').hide();
-      $('#ala-auth-buttons-logged-out').show();
+      $('#ala-auth-buttons-logged-in').addClass("d-none");
+      $('#ala-auth-buttons-logged-out').removeClass("d-none");
     }
 
     /**
