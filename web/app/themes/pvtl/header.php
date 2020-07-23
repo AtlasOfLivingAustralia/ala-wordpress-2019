@@ -119,11 +119,11 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 								/div
 							-->
 							<div id="ala-auth-buttons-logged-in" class="d-none">
-								<a href="<?php get_ala_auth_server(); ?>/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
+								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
 								<a href="<?php echo get_ala_logout_url(); ?>" class="btn btn-outline-white btn-sm">Logout</a>
 							</div>
 							<div id="ala-auth-buttons-logged-out" class="d-none">
-								<a href="<?php get_ala_auth_server(); ?>/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign up</a>
+								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign up</a>
 								<a href="<?php echo get_ala_login_url(); ?>" class="btn btn-primary btn-sm">Login</a>
 							</div>
 
