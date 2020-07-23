@@ -107,7 +107,6 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 		<?php } ?>
 		<?php if ( $auth_buttons_display != 'hidden' ) { ?>
 						<div class="account d-none d-lg-block">
-						<?php if ( $auth_buttons_display == 'visible' ) { ?>
 							<!-- 
 								js: check cookie - if logged in, show loggedin & hide loggedout; else vice versa
 								div loggedin (default hidden)
@@ -119,26 +118,16 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 									login button
 								/div
 							-->
-							<div id="ala-auth-buttons-logged-in" class="hidden">
-								<a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
-								<a href="https://auth.ala.org.au/cas/logout?service=https://www.ala.org.au/" class="btn btn-outline-white btn-sm">Logout</a>
+							<div id="ala-auth-buttons-logged-in" class="d-none">
+								<a href="<?php get_ala_auth_server(); ?>/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
+								<a href="<?php echo get_ala_logout_url(); ?>" class="btn btn-outline-white btn-sm">Logout</a>
 							</div>
-							<div id="ala-auth-buttons-logged-out" class="hidden">
-								<a href="https://auth.ala.org.au/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign up</a>
-								<a href="https://auth.ala.org.au/cas/login?service=https://www.ala.org.au/" class="btn btn-primary btn-sm">Login</a>
+							<div id="ala-auth-buttons-logged-out" class="d-none">
+								<a href="<?php get_ala_auth_server(); ?>/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign up</a>
+								<a href="<?php echo get_ala_login_url(); ?>" class="btn btn-primary btn-sm">Login</a>
 							</div>
 
 
-							<?php if (is_user_logged_in() ) { ?>
-								<!-- <a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
-								<a href="<?php echo get_ala_logout_url(); ?>" class="btn btn-outline-white btn-sm">Logout</a> -->
-							<?php } else { ?>
-								<!-- <a href="https://auth.ala.org.au/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign up</a>
-								<a href="<?php echo get_ala_login_url(); ?>" class="btn btn-primary btn-sm">Login</a> -->
-							<?php } ?>
-						<?php } else { ?>
-							<!-- <a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a> -->
-						<?php } ?>
 						</div>
 		<?php } ?>
 

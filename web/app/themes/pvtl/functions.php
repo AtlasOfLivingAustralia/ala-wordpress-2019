@@ -165,7 +165,6 @@ function get_ala_logout_url() {
     return wp_logout_url();
 }
 
-
 function get_ala_login_url() {
     include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
@@ -184,6 +183,13 @@ function get_ala_login_url() {
 
 }
 
+function get_ala_auth_server() {
+    $auth_server = 'https://auth.ala.org.au';
+    if (defined('ALA_AUTH')) {
+        $auth_server = ALA_AUTH;
+    }
+    return $auth_server;
+}
 
 /**
  * Sets up theme Image sizes and registers support for featured images.
