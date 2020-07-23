@@ -1,23 +1,16 @@
 ($ => {
   $(document).ready(($) => {
 
-    function getCookie(name)
-    {
-        var re = new RegExp(name + "=([^;]+)");
-        var value = re.exec(document.cookie);
-        return (value != null) ? unescape(value[1]) : null;
-    }
-
     /**
      * Display login/logout buttons (ES6)
      */
     var alaAuthCookieName='ALA-Auth';
-    if (getCookie(alaAuthCookieName)){
-      console.log('The '+alaAuthCookieName+' cookie exists.');
+    if (typeof getCookie(alaAuthCookieName) !== 'undefined'){
+      console.log('This '+alaAuthCookieName+' cookie exists.');
       $('#ala-auth-buttons-logged-in').removeClass("d-none");
       $('#ala-auth-buttons-logged-out').addClass("d-none");
     } else {
-      console.log('The '+alaAuthCookieName+' cookie does not exist.');
+      console.log('This '+alaAuthCookieName+' cookie does not exist.');
       $('#ala-auth-buttons-logged-in').addClass("d-none");
       $('#ala-auth-buttons-logged-out').removeClass("d-none");
     }
@@ -337,3 +330,11 @@
   // end document.ready
 })(jQuery);
 
+// returns the cookie with the given name,
+// or undefined if not found
+function getCookie(name) {
+  let matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
