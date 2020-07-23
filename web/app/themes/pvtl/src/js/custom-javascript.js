@@ -4,7 +4,7 @@
      * Display login/logout buttons (ES6)
      */
     var alaAuthCookieName='ALA-Auth';
-    if (document.cookie.split(';').some((item) => item.trim().startsWith(alaAuthCookieName + '='))) {
+    if (getCookie(alaAuthCookieName)){
       console.log('The '+alaAuthCookieName+' cookie exists.');
       $('#ala-auth-buttons-logged-in').removeClass("d-none");
       $('#ala-auth-buttons-logged-out').addClass("d-none");
