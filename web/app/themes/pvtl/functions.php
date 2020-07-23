@@ -200,7 +200,7 @@ function get_ala_auth_cookie_name() {
 }
 
 function is_logged_in_ala_auth() {
-    return isset($_COOKIE[get_ala_auth_cookie_name()]));
+    return isset($_COOKIE[get_ala_auth_cookie_name()]);
 }
 
 /**
