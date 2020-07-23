@@ -41,8 +41,8 @@ define('WP_ENV', env('WP_ENV') ?: 'production');
  */
 Config::define('WP_HOME', env('WP_HOME'));
 Config::define('WP_SITEURL', env('WP_SITEURL'));
-Config::define('ALA_AUTH', env('ALA_AUTH'));
-
+Config::define('ALA_AUTH_URL', env('ALA_AUTH_URL'));
+Config::define('ALA_AUTH_COOKIE_NAME', env('ALA_AUTH_COOKIE_NAME'));
 /**
  * Custom Content Directory
  */

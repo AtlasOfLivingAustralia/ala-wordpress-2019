@@ -185,10 +185,22 @@ function get_ala_login_url() {
 
 function get_ala_auth_server() {
     $auth_server = 'https://auth.ala.org.au';
-    if (defined('ALA_AUTH')) {
-        $auth_server = ALA_AUTH;
+    if (defined('ALA_AUTH_URL')) {
+        $auth_server = ALA_AUTH_URL;
     }
     return $auth_server;
+}
+
+function get_ala_auth_cookie_name() {
+    $auth_cookie = 'ALA-Auth';
+    if (defined('ALA_AUTH_COOKIE_NAME')) {
+        $auth_cookie = ALA_AUTH_COOKIE_NAME;
+    }
+    return $auth_cookie;
+}
+
+function is_logged_in_ala_auth() {
+    return isset($_COOKIE[get_ala_auth_cookie_name()]));
 }
 
 /**
