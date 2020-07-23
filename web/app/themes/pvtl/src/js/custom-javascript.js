@@ -1,16 +1,13 @@
 ($ => {
   $(document).ready(($) => {
 
-    /**
-     * Return cookie if there's a match
-     * @param str name
-     * @return cookie|false
-     */
-    const getCookie = (name) => {
-      const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
-      return (match) ? match[2] : false;
-    };
-    
+    function getCookie(name)
+    {
+        var re = new RegExp(name + "=([^;]+)");
+        var value = re.exec(document.cookie);
+        return (value != null) ? unescape(value[1]) : null;
+    }
+
     /**
      * Display login/logout buttons (ES6)
      */
