@@ -119,6 +119,17 @@ function setup_nav_menus() {
 }
 add_action( 'init', 'setup_nav_menus' );
 
+/**
+ * Publish to the production static site
+ *
+ */
+add_action( 'admin_menu', 'register_ala_publish_menu_page' );
+function register_ala_publish_menu_page() {
+  // add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
+  add_menu_page( 'ALA publish to static', 'ALA publish', 'publish_pages', 'ala-publish.php', '', 'dashicons-megaphone', 22 );
+}
+
+
 
 /**
  * Returns the user (experience) group name for an index (0, 1 or 2)

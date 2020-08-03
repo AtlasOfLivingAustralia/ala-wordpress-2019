@@ -5,20 +5,20 @@ web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
-web/app/themes/ala-wordpress-theme/*
-web/commonui-bs2
-web/commonui-bs2/*
-web/commonui-bs3
-web/commonui-bs3/*
-web/commonui-bs3-2019
-web/commonui-bs3-2019/*
-web/commonui-bs3-v2/*
+web/app/themes/pvtl/publish/*
+!web/app/themes/pvtl/publish/.gitkeep
 web/wp-content
 
 node_modules
 
 # WordPress
-web/wp
+web/wp/wp-content/*
+web/wp/wp-includes/*
+web/wp/wp-admin/*
+!web/wp/wp-admin/ala-publish.php
+web/wp/*.php
+web/wp/*.html
+web/wp/*.txt
 web/.htaccess
 
 # Dotenv
