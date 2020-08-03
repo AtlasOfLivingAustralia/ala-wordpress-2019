@@ -90,9 +90,9 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 <h1><?php echo esc_html( $title ); ?></h1>
 
 <p><?php _e( 'When you click the button below, it will start an export from this WordPress site to update the public static site.' ); ?></p>
-<p><?php _e( 'It can take up to a minute for the publish to start. Publishing typically takes around 6 minutes. ' ); ?></p>
+<p><?php _e( 'It can take <strong>up to a minute</strong> for the publish to start. Publishing typically takes <strong>around 6 minutes</strong>. ' ); ?></p>
 <p><?php _e( 'You can see the progress below by refreshing this page. Stages include "generating", "syncing", "git", and "completed".' ); ?></p>
-<p><?php _e( 'After the publish is completed, it can take up to a minute before it is publicly visible on the static site.' ); ?></p>
+<p><?php _e( 'After the publish is completed, it can take <strong>up to a minute</strong> before it is publicly visible on the static site.' ); ?></p>
 
 <form method="post" action="ala-publish.php" name="form" novalidate="novalidate">
 	<?php if(!file_exists($publish_file)){ ?>	
