@@ -36,9 +36,24 @@ function ala_static_publish_get_history() {
 	    // reverse so most recent is first
 	    $history_csv = array_reverse($history_csv);
 	    $history_html = '<ul>';
+	    date_default_timezone_set('Australia/Sydney');
 	    foreach($history_csv as $pubevent) {
 	    	if ($pubevent['status'] == 'completed') {
-	    		$history_html .= '<li>'.$pubevent['starttime'].' by '.$pubevent['username'].' &dash; completed at '.$pubevent['endtime'].'</li>';
+	    		$starttime = FALSE;
+	    		$endtime = FALSE;
+
+				$starttime = DateTime::createFromFormat('Y-m-d H:i:s', $pubevent['starttime']);
+				$endtime = DateTime::createFromFormat('Y-m-d H:i:s', $pubevent['endtime']);
+
+	    		if ($starttime && $endtime) {
+		    		$interval = $endtime->diff($starttime);
+					$elapsed = $interval->format('%i minutes %s seconds');
+		    		$history_html .= '<li>'.$pubevent['starttime'].' by '.$pubevent['username'].' &dash; completed at '.$pubevent['endtime'].' ('.$elapsed.')</li>';
+	    		} else {
+	    			if (!$starttime) $history_html .= '<!--DEBUG starttime false-->';
+	    			if (!$endtime) $history_html .= '<!--DEBUG endtime false-->';
+	    			$history_html .= '<li>'.$pubevent['starttime'].' by '.$pubevent['username'].' &dash; completed at '.$pubevent['endtime'].'</li>';
+	    		}
 	    	} else {
 			    $history_html .= '<li><strong>'.$pubevent['starttime'].' by '.$pubevent['username'].' &dash; '.$pubevent['status'].'...</strong></li>';
 			}
