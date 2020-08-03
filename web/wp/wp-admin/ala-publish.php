@@ -48,7 +48,7 @@ function ala_static_publish_get_history() {
 	    		if ($starttime && $endtime) {
 		    		$interval = $endtime->diff($starttime);
 					$elapsed = $interval->format('%i minutes %s seconds');
-		    		$history_html .= '<li>'.$pubevent['starttime'].' by '.$pubevent['username'].' &dash; completed at '.$pubevent['endtime'].' ('.$elapsed.')</li>';
+		    		$history_html .= '<li>'.$pubevent['starttime'].' by '.$pubevent['username'].' &dash; completed at '.$endtime->format('H:i:s').' ('.$elapsed.')</li>';
 	    		} else {
 	    			if (!$starttime) $history_html .= '<!--DEBUG starttime false-->';
 	    			if (!$endtime) $history_html .= '<!--DEBUG endtime false-->';
@@ -92,7 +92,7 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 <p><?php _e( 'When you click the button below, it will start an export from this WordPress site to update the public static site.' ); ?></p>
 <p><?php _e( 'It can take up to a minute for the publish to start. Publishing typically takes around 6 minutes. ' ); ?></p>
 <p><?php _e( 'You can see the progress below by refreshing this page. Stages include "generating", "syncing", "git", and "completed".' ); ?></p>
-<p><?php _e( 'After the publish is completed, it can take up to two minutes before it is publicly visible on the static site.' ); ?></p>
+<p><?php _e( 'After the publish is completed, it can take up to a minute before it is publicly visible on the static site.' ); ?></p>
 
 <form method="post" action="ala-publish.php" name="form" novalidate="novalidate">
 	<?php if(!file_exists($publish_file)){ ?>	
