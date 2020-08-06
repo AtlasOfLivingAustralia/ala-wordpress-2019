@@ -9,7 +9,7 @@ Config::define('SAVEQUERIES', true);
 Config::define('WP_DEBUG', true);
 Config::define('WP_DEBUG_DISPLAY', true);
 Config::define('SCRIPT_DEBUG', true);
-
+Config::define('WP_DEBUG_LOG', true );
 ini_set('display_errors', 1);
 
 // Enable plugin and theme updates and installation from the admin
