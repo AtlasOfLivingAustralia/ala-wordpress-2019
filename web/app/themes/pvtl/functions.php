@@ -3,9 +3,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-/**
- * Allow additional character types in usernames
- */
+
+// Allow additional character types in usernames
+
 function ala_sanitize_user($username, $raw_username, $strict) {
     
     $allowed_symbols = "a-z0-9+_.\-@%"; //yes we allow whitespace which will be trimmed further down script
@@ -38,9 +38,9 @@ function ala_sanitize_user($username, $raw_username, $strict) {
 
 add_filter ('sanitize_user', 'ala_sanitize_user', 10, 3);
 
-/**
- * Register support for Gutenberg wide images in your theme
- */
+
+// Register support for Gutenberg wide images in your theme
+
 function theme_setup() {
     add_theme_support( 'align-wide' );
 }
@@ -120,10 +120,8 @@ function setup_nav_menus() {
 add_action( 'init', 'setup_nav_menus' );
 
 
-/**
- * Returns the user (experience) group name for an index (0, 1 or 2)
- *
- */
+
+// Returns the user (experience) group name for an index (0, 1 or 2)
 
 function get_experience_group_name( $groupIndex )
 {
@@ -138,10 +136,8 @@ function get_experience_group_name( $groupIndex )
 }
 
 
-/**
- * Returns the user (experience) group description for an index (0, 1 or 2)
- *
- */
+
+// Returns the user (experience) group description for an index (0, 1 or 2)
 
 function get_experience_group_description( $groupIndex )
 {
@@ -155,10 +151,8 @@ function get_experience_group_description( $groupIndex )
     }
 }
 
-/**
- * Returns the url to use for logout
- *
- */
+
+// Returns the url to use for logout
 
 function get_ala_logout_url() {
     // return 'https://auth.ala.org.au/cas/logout';
@@ -185,22 +179,17 @@ function get_ala_login_url() {
 }
 
 
-/**
- * Sets up theme Image sizes and registers support for featured images.
- *
- * @since 1.0
- */
+// Sets up theme Image sizes and registers support for featured images.
+
 function image_setup()
 {
     add_theme_support('post-thumbnails', array('post', 'page'));
 
-    /**
-     * All these images are set to 1px larger than what is required for the location they are uploaded into.
-     * ACF then limits their size to 1420, 768, and 400 width respectively.
-     * This is so that Wordpress won't resize them and break the GIF functionality.
-     * Technically we could delete all of these sizes now and just return the 'full' image.
-     * Will look at this post launch.
-     */
+     // All these images are set to 1px larger than what is required for the location they are uploaded into.
+     // ACF then limits their size to 1420, 768, and 400 width respectively.
+     // This is so that Wordpress won't resize them and break the GIF functionality.
+     // Technically we could delete all of these sizes now and just return the 'full' image.
+     // Will look at this post launch.
 
     //Full Width Image - max-width is 1420px and height is automatic depending on the image ratio
     add_image_size('full-width-auto-height', 1920 );
@@ -256,15 +245,11 @@ class pvtl_title_attr_walker extends Walker_Nav_Menu
     }
 }
 
-/**
- * Create Admin Pages for ACF fields
- *
- * @since 1.0
- */
+
+// Create Admin Pages for ACF fields
+
 if ( function_exists('acf_add_options_page') ) {
-    /**
-     * Site Options
-     */
+    //Site Options
     acf_add_options_page(array(
         'page_title' 	=> 'General Options',
         'menu_title' 	=> 'General Options',
@@ -274,22 +259,18 @@ if ( function_exists('acf_add_options_page') ) {
     ));
 }
 
-/**
- * Get the current Experience Group cookie.
- *
- * @param bool $escape
- *
- * @return string
- */
+
+// Get the current Experience Group cookie.
+
 function get_experience_group( $escape = true ) {
     return isset( $_COOKIE['experience'] )
         ? ( $escape ? esc_html( $_COOKIE['experience'] ) : $_COOKIE['experience'] )
         : null;
 }
 
-/**
- * Set the 'Customise Your Experience' cookie from the popup on the frontend.
- */
+
+// Set the 'Customise Your Experience' cookie from the popup on the frontend.
+
 function set_experience_cookie() {
     $experience = isset( $_REQUEST['group'] ) ? sanitize_text_field( $_REQUEST['group'] ) : 'null';
 
@@ -311,17 +292,17 @@ function set_experience_cookie() {
 add_action( 'wp_ajax_set_experience_cookie', 'set_experience_cookie' );
 add_action( 'wp_ajax_nopriv_set_experience_cookie', 'set_experience_cookie' );
 
-/**
- * Outputs the Experience Group modal in the footer.
- */
+
+// Outputs the Experience Group modal in the footer.
+
 function display_experience_popup() {
     get_template_part( 'template-parts/modal', 'experience' );
 }
 add_action( 'wp_footer', 'display_experience_popup' );
 
-/**
- * Populate the ACF field with the available experience groups.
- */
+
+// Populate the ACF field with the available experience groups.
+
 add_filter( 'acf/load_field/name=show_to_user_group', function ( $field ) {
     $groups = get_field_object( 'experience_groups', 'option' );
     $choices = [];
@@ -337,13 +318,9 @@ add_filter( 'acf/load_field/name=show_to_user_group', function ( $field ) {
     return $field;
 }, 10, 3 );
 
-/**
- * Escape all groups in an array.
- *
- * @param array $groups
- *
- * @return array
- */
+
+// Escape all groups in an array.
+
 function escape_experience_groups( $groups ) {
     $groups = array_map( function ( $group ) {
         return esc_html( $group );
@@ -354,10 +331,10 @@ function escape_experience_groups( $groups ) {
 add_filter( 'experience_groups', 'escape_experience_groups' );
 
 
-/**
- * Convert menu items with '---' as link text into menu separators
- * Based on https://wordpress.org/plugins/mhm-menu-separator (but without conversion of # URLs into unlinked items)
-*/
+
+// Convert menu items with '---' as link text into menu separators
+// Based on https://wordpress.org/plugins/mhm-menu-separator (but without conversion of # URLs into unlinked items)
+
 function menu_separatorisationise( $item_output, $item ) {
         if ( '---' === $item->post_title ) {
                 return '<hr class="menu-separator">'; // Horizontal line
@@ -367,18 +344,17 @@ function menu_separatorisationise( $item_output, $item ) {
 }
 add_filter( 'walker_nav_menu_start_el', 'menu_separatorisationise', 10, 2 );
 
-/**
- * Outputs the search modal in the footer.
- */
+
+// Outputs the search modal in the footer.
+
 function display_search_popup() {
 	get_template_part( 'template-parts/modal', 'search' );
 }
 //add_action( 'wp_footer', 'display_search_popup' );
 
 
-/**
- * Add Mobile Logo option to customizer
- */
+// Add Mobile Logo option to customizer
+
 function mobile_logo_customizer_settings($wp_customize) {
 // add a setting for the site logo
     $wp_customize->add_setting('mobile_logo');
@@ -394,10 +370,9 @@ function mobile_logo_customizer_settings($wp_customize) {
 }
 add_action('customize_register', 'mobile_logo_customizer_settings');
 
-/**
- * Returns a custom logo + custom mobile logo, linked to home.
- *
- */
+
+// Returns a custom logo + custom mobile logo, linked to home.
+
 function get_custom_logo_pvtl( $blog_id = 0 ) {
     $html = '';
     $switched_blog = false;
@@ -427,19 +402,18 @@ function get_custom_logo_pvtl( $blog_id = 0 ) {
             'itemprop' => 'logo',
         );
 
-        /*
-     * If the logo alt attribute is empty, get the site title and explicitly
-     * pass it to the attributes used by wp_get_attachment_image().
-     */
+
+     // If the logo alt attribute is empty, get the site title and explicitly
+     // pass it to the attributes used by wp_get_attachment_image().
+
         $image_alt = get_post_meta( $custom_logo_id, '_wp_attachment_image_alt', true );
         if ( empty( $image_alt ) ) {
             $custom_logo_attr['alt'] = get_bloginfo( 'name', 'display' );
         }
 
-        /*
-     * If the alt attribute is not empty, there's no need to explicitly pass
-     * it because wp_get_attachment_image() already adds the alt attribute.
-     */
+     // If the alt attribute is not empty, there's no need to explicitly pass
+     // it because wp_get_attachment_image() already adds the alt attribute.
+
         $html = sprintf( '<a href="%1$s" class="custom-logo-link navbar-brand" rel="home" itemprop="url">%2$s %3$s</a>',
             esc_url( home_url( '/' ) ),
             wp_get_attachment_image( $custom_logo_id, 'full', false, $custom_logo_attr ),
@@ -458,37 +432,23 @@ function get_custom_logo_pvtl( $blog_id = 0 ) {
         restore_current_blog();
     }
 
-    /**
-     * Filters the custom logo output.
-     *
-     * @since 4.5.0
-     * @since 4.6.0 Added the `$blog_id` parameter.
-     *
-     * @param string $html    Custom logo HTML output.
-     * @param int    $blog_id ID of the blog to get the custom logo for.
-     */
     return apply_filters( 'get_custom_logo_pvtl', $html, $blog_id );
 }
 
-/**
- * Displays a custom logo, linked to home.
- *
- * @since 4.5.0
- *
- * @param int $blog_id Optional. ID of the blog in question. Default is the ID of the current blog.
- */
+
+// Displays a custom logo, linked to home.
+
 function the_custom_logo_pvtl( $blog_id = 0 ) {
     echo get_custom_logo_pvtl( $blog_id );
 }
 
-/**
- * Right table-of-contents nav - parse headings -
- * used if $auto_toc_headings is set to true in
- * sidebar-templates/sidebar-right-anchors.php
- *
- * Pass in $blocks for the page; 
- * prints links (should be inside #anchorList)
- */
+
+// Right table-of-contents nav - parse headings -
+// used if $auto_toc_headings is set to true in
+// sidebar-templates/sidebar-right-anchors.php
+//
+// Pass in $blocks for the page; 
+// prints links (should be inside #anchorList)
 
 function ala_heading_anchor_link( $blocks ){
     $dom = new DOMDocument();
@@ -518,9 +478,8 @@ function ala_heading_anchor_link( $blocks ){
 }
 
 
-/**
- * Automatically add IDs to headings such as <h2></h2>
- */
+// Automatically add IDs to headings such as <h2></h2>
+
 function auto_id_headings( $content ) {
     $content = preg_replace_callback( '/(\<h[1-6](.*?))\>(.*)(<\/h[1-6]>)/i', function( $matches ) {
         if ( ! stripos( $matches[0], 'id=' ) ) :
@@ -554,9 +513,9 @@ function pvtl_remove_page_templates( $templates ) {
 }
 add_filter( 'theme_page_templates', 'pvtl_remove_page_templates' );
 
-/**
- * Prints HTML with meta information for the current post-date/time and author.
- */
+
+// Prints HTML with meta information for the current post-date/time and author.
+
 if ( ! function_exists( 'pvtl_posted_on' ) ) {
 	function pvtl_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
@@ -674,8 +633,8 @@ function remove_parent_filters(){ //Have to do it after theme setup, because chi
 add_action( 'init', 'remove_parent_filters' );
 
 
-/** Register each of the blocks */
+// Register each of the blocks
 require_once( 'library/register-blocks.php' );
 
-/** Adds custom admin styles */
+// Adds custom admin styles
 require_once( 'library/custom-admin-styles.php' );
