@@ -208,7 +208,7 @@
     // home page: tab display
     if ($("body.home .nav-tabs").length) {
       // catch hash URIs and trigger tabs
-      const cookieTab = getCookie('alaTab');
+      const cookieTab = readCookie('alaTab');
       // if a cookie is set, display that tab
       if (cookieTab) {
         //console.log("showing tab based on alaTab cookie: "+cookieTab);
