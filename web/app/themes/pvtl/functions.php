@@ -196,18 +196,6 @@ function get_ala_auth_server() {
     return $auth_server;
 }
 
-function get_ala_auth_cookie_name() {
-    $auth_cookie = 'ALA-Auth';
-    if (defined('ALA_AUTH_COOKIE_NAME')) {
-        $auth_cookie = ALA_AUTH_COOKIE_NAME;
-    }
-    return $auth_cookie;
-}
-
-function is_logged_in_ala_auth() {
-    return isset($_COOKIE[get_ala_auth_cookie_name()]);
-}
-
 // Sets up theme Image sizes and registers support for featured images.
 
 function image_setup()

@@ -1,6 +1,33 @@
 ($ => {
   $(document).ready(($) => {
 
+    function readCookie(name) {
+        var nameEQ = encodeURIComponent(name) + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ')
+                c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0)
+                return decodeURIComponent(c.substring(nameEQ.length, c.length));
+        }
+        return null;
+    }
+
+    /**
+     * Display login/logout buttons (ES6)
+     */
+    var alaJSAuthCookieName='ALA-js-auth';
+    var alaJSAuthCookieValue = readCookie(alaJSAuthCookieName);
+    console.log('Cookie '+alaJSAuthCookieName+' cookie has value '+alaJSAuthCookieValue);
+    if (alaJSAuthCookieValue == 'loggedin'){
+      $('#ala-auth-buttons-logged-in').removeClass("d-none");
+      $('#ala-auth-buttons-logged-out').addClass("d-none");
+    } else {
+      $('#ala-auth-buttons-logged-in').addClass("d-none");
+      $('#ala-auth-buttons-logged-out').removeClass("d-none");
+    }
+
     /**
      * Mobile (off-canvas) menu
      */

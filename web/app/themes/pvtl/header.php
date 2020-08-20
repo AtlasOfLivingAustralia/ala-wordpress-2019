@@ -106,31 +106,15 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 
 		<?php } ?>
 		<?php if ( $auth_buttons_display != 'hidden' ) { ?>
-						<div class="account d-none d-lg-block">
-							<!-- 
-								js: check cookie - if logged in, show loggedin & hide loggedout; else vice versa
-								div loggedin (default hidden)
-									profile button
-									logout button
-								/div
-								div loggedout (default visible)
-									signup button
-									login button
-								/div
-							-->
-						<?php if ( is_logged_in_ala_auth() ) { ?>
-							<div id="ala-auth-buttons-logged-in">
+						<div class="account d-lg-block">
+							<div id="ala-auth-buttons-logged-in" class="d-none">
 								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
 								<a href="<?php echo get_ala_auth_server(); ?>/cas/logout" class="btn btn-outline-white btn-sm">Logout</a>
 							</div>
-						<?php } else { ?>
 							<div id="ala-auth-buttons-logged-out">
 								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign up</a>
 								<a href="<?php echo get_ala_auth_server(); ?>/cas/login?service=<?php echo get_site_url(); ?>/" class="btn btn-primary btn-sm">Login</a>
 							</div>
-						<?php } ?>
-
-
 						</div>
 		<?php } ?>
 
