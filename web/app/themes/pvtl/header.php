@@ -113,7 +113,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 							</div>
 							<div id="ala-auth-buttons-logged-out">
 								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign up</a>
-								<a href="<?php echo get_ala_auth_server(); ?>/cas/login?service=<?php echo get_site_url(); ?>/" class="btn btn-primary btn-sm">Login</a>
+								<a href="<?php echo get_ala_auth_server(); ?>/cas/login?service=<?php echo get_home_url(); ?>/" class="btn btn-primary btn-sm">Login</a>
 							</div>
 						</div>
 		<?php } ?>
