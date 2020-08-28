@@ -21,11 +21,11 @@
     var alaJSAuthCookieValue = readCookie(alaJSAuthCookieName);
     console.log('Cookie '+alaJSAuthCookieName+' cookie has value '+alaJSAuthCookieValue);
     if (alaJSAuthCookieValue == 'loggedin'){
-      $('#ala-auth-buttons-logged-in').removeClass("d-none");
-      $('#ala-auth-buttons-logged-out').addClass("d-none");
+      $('.ala-auth-buttons-logged-in').removeClass("d-none");
+      $('.ala-auth-buttons-logged-out').addClass("d-none");
     } else {
-      $('#ala-auth-buttons-logged-in').addClass("d-none");
-      $('#ala-auth-buttons-logged-out').removeClass("d-none");
+      $('.ala-auth-buttons-logged-in').addClass("d-none");
+      $('.ala-auth-buttons-logged-out').removeClass("d-none");
     }
 
     /**
