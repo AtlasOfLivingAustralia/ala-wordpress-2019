@@ -767,8 +767,8 @@
             },
             "choices": {
                 "hidden": "Hide auth buttons completely",
-                "visible": "Show buttons to log in to WordPress (needs CAS plugin)",
-                "profile": "Show button to log in to ALA user profile"
+                "visible": "Show buttons to log in (this is the normal option)",
+                "profile": "Show button to see profile"
             },
             "allow_null": 0,
             "other_choice": 0,
