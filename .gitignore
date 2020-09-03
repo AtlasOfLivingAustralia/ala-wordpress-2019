@@ -56,3 +56,4 @@ web/app/object-cache.php
 !web/app/plugins/pvtl-recent-posts
 
 /web/nginx.conf
+web/wp/sitemap.xml
