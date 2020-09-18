@@ -41,6 +41,11 @@ div.bibliography div.bib-details{
     
 }
 
+/* bring Abstract/APA buttons closer to main entries */
+div.bibliography div.bib-details p{
+    margin-bottom: 0;
+}
+
 /* Rendering the "extra" field */
 div.bibliography div.bib-details div.bib-extra {
     display: inline;

@@ -18964,6 +18964,10 @@ div.bibliography div.short-bib-section .containertitle {
   font-style: italic; }
 
 /* details (e.g., collection, editors, years, pages, etc.) of a bib item */
+/* bring Abstract/APA buttons closer to main entries */
+div.bibliography div.bib-details p {
+  margin-bottom: 0; }
+
 /* Rendering the "extra" field */
 div.bibliography div.bib-details div.bib-extra {
   display: inline; }
