@@ -1,0 +1,210 @@
+
+@media print
+{
+    div.bibliography #bib-preamble {display:none !important;}
+}
+
+/* Collections */
+
+div.bibliography div.collection { }
+div.bibliography div.collection div.collection { /* nested collection */ }
+
+/* The entire bibliographic item */
+div.bibliography div.bib-item {
+}
+div.bibliography div.full-bib-section div.bib-item {
+    margin-bottom:25px;
+}
+/* the short format (selected works) */
+div.bibliography div.short-bib-section div.bib-item {
+    margin-bottom:5px;
+}
+
+/* numbered citations */
+
+div.bibliography div.full-bib-section li {
+    margin-bottom:10px;
+}
+div.bibliography div.short-bib-section li {
+    margin-bottom:5px;
+    /* list-style-type: none; */    /* Use this to turn off numbering */
+}
+
+
+/* the abbreviated conference or journal title in the short format section */
+div.bibliography div.short-bib-section .containertitle {
+    font-style:italic;
+}
+
+/* details (e.g., collection, editors, years, pages, etc.) of a bib item */
+div.bibliography div.bib-details{
+    
+}
+
+/* Rendering the "extra" field */
+div.bibliography div.bib-details div.bib-extra {
+    display: inline;
+}
+
+/* Venue, where published (e.g., proceedings title, journal */
+div.bibliography div.bib-item div.bib-venue {
+    display:none;
+}
+
+/* Short venue (e.g., conference acronym, journal abbreviation)
+Is hidden by default.  CSS specificity is used to override default. */
+div.bibliography div.bib-item div.bib-venue-short {
+    display:none;  /* change to block or inline to display */
+    /* See demo/style3.css for an example on formatting this. */
+}
+
+/* Citation (when visible) */
+div.bibliography div.cite {
+    max-width: 600px;
+}
+
+/* The actual BibTeX record (when visible) */
+div.bibliography div.bib {
+    font-family:Menlo,Courier,monospaced;
+    white-space: pre-wrap;
+}
+
+/* Text "bib", "abstract", and other buttons */
+div.bibliography .blinkitems .blink a {
+
+    clear: both;
+    padding:0 0.3rem;
+    margin:0;
+}
+
+/* Show/hide  area */
+div.bibliography div.blinkitems .bibshowhide {
+    background: white;
+    padding: 20px;
+    margin-left:40px;
+    z-index: 5;
+    position: absolute;
+    max-width: 600px;
+
+}
+
+/* grey border inside the white padding */
+div.bibliography div.blinkitems .bibshowhide:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 2px solid grey;
+}
+
+
+/* the .blink p style is a hack because Wordpress seems to insert <p> at times. */
+div.bibliography .blink p {
+    display:inline;
+}
+
+div.bibliography div.full-bib-section .blinkitems .blink {
+/*    margin-bottom:-30px;
+    font-size:80%;
+    text-decoration: underline;*/
+}
+div.bibliography div.short-bib-section .blinkitems .blink {
+    display:inline-block; /* needed to make margin-top work (collapsed margins) */
+    margin-bottom:10px;
+    font-size:80%;
+    text-decoration: underline;
+}
+
+
+/* The actual abstract (when visible) */
+div.bibliography div.abstract {
+    color:black;
+}
+
+
+/* Document titles */
+div.bibliography .doctitle {
+    font-weight:500;
+}
+
+/* Document titles linking to a PDF or somewhere else */
+div.bibliography a.doctitle:link,div.bibliography a.doctitle:visited,div.bibliography a.doctitle,div.bibliography a.doctitle:hover,div.bibliography a.doctitle.active {
+    color:#883524;
+    font-weight:200;
+    text-decoration:none; /* do not underline */ 
+}
+
+/* Document titles where shorted, e.g. "selected works" */
+div.bibliography .doctitle-short {
+}
+
+/* Display publication titles in their own lines.
+Remove to disable. */
+div.bibliography span.doctitle {
+    display:block;
+}
+
+/* Search box */
+div.bibliography #pubSearchButton {
+    /* border: 0 solid #d4d0ba; */
+    font-family: inherit;
+    padding: 0.1rem 1rem;
+}
+div.bibliography #pubSearchBox {
+    position:static;
+    text-align:right;
+    right:10px; top:100px;
+    display:block;
+}
+
+
+/* Categories at top of the bibliography */
+div.bibliography .bib-cat {
+    list-style: none;
+    text-indent: 0;
+    margin: 0; padding: 0; 
+}
+
+div.bibliography .bib-cat li {
+    display: inline;
+}
+div.bibliography .bib-cat:not(:first-child):before, div.bibliography .bib-cat li:not(:last-child):after {
+    content: " | ";
+}
+div.bibliography .bib-cat li:last-child:after {
+    content: ""
+}
+
+
+div.bibliography #bib-preamble {
+    margin-left:50px;
+}
+
+div.bibliography #bib-cat-year:before, div.bibliography #bib-cat-type:before, div.bibliography #bib-cat-collection:before, div.bibliography #bib-cat-tags:before {
+    /* font-weight: bold; */
+    font-style: italic;
+    display:inline-block;
+    margin-left: -50px;
+    width: 50px;
+    padding: 0;
+    margin-right:0px;
+    margin-top: 5px;
+}
+div.bibliography #bib-cat-year:before {
+    content: "Year";
+}
+div.bibliography #bib-cat-type:before {
+    content: "Type";
+}
+div.bibliography #bib-cat-collection:before {
+    content: "Topic";
+}
+div.bibliography #bib-cat-keyword:before {
+    content: "Keywords";
+}
+div.bibliography #bib-cat-tags:before {
+    content: "Tags";
+}
