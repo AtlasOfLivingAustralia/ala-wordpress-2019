@@ -159,7 +159,7 @@ div.bibliography #pubSearchButton {
     padding: 0.1rem 1rem;
 }
 div.bibliography #pubSearchBox {
-    margin-left: 50px;
+    margin-left: -50px;
     margin-top: 1rem;
 }
 
