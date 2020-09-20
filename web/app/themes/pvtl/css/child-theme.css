@@ -19062,11 +19062,8 @@ div.bibliography #pubSearchButton {
   padding: 0.1rem 1rem; }
 
 div.bibliography #pubSearchBox {
-  position: static;
-  text-align: right;
-  right: 10px;
-  top: 100px;
-  display: block; }
+  margin-left: 50px;
+  margin-top: 1rem; }
 
 /* Categories at top of the bibliography */
 div.bibliography .bib-cat {
