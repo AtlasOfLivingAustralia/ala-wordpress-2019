@@ -19063,7 +19063,8 @@ div.bibliography #pubSearchButton {
 
 div.bibliography #pubSearchBox {
   margin-left: -50px;
-  margin-top: 1rem; }
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
 
 /* Categories at top of the bibliography */
 div.bibliography .bib-cat {
