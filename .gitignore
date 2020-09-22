@@ -57,3 +57,4 @@ web/app/object-cache.php
 
 /web/nginx.conf
 web/wp/sitemap.xml
+composer.lock
