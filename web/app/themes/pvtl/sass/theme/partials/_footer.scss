@@ -146,6 +146,7 @@
 }
 
 .site-footer {
+  content-visibility: auto;
   @include media-breakpoint-down(sm) {
     .content-column:not(:last-child) {
       padding-bottom: 30px;

@@ -17197,9 +17197,11 @@ readers do not read off random characters that represent icons */
   display: inline-block;
   margin-bottom: 5px; }
 
-@media (max-width: 767.98px) {
-  .site-footer .content-column:not(:last-child) {
-    padding-bottom: 30px; } }
+.site-footer {
+  content-visibility: auto; }
+  @media (max-width: 767.98px) {
+    .site-footer .content-column:not(:last-child) {
+      padding-bottom: 30px; } }
 
 .footer-bottom {
   padding-top: 50px;
@@ -18158,6 +18160,7 @@ button.swiper-pagination-bullet {
 .feature-box {
   background: url("../images/bg-pattern.png") no-repeat center #637073;
   background-size: cover;
+  content-visibility: auto;
   color: #FFF; }
   .feature-box h3 {
     margin-bottom: 1.5em;
@@ -18594,7 +18597,8 @@ button.swiper-pagination-bullet {
     overflow: hidden; }
 
 .latest-posts-block {
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  content-visibility: auto; }
   .latest-posts-block h3 {
     color: #212121;
     margin-bottom: 1em; }
