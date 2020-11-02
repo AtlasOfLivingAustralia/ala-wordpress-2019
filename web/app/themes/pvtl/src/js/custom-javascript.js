@@ -19,7 +19,7 @@
      */
     var alaJSAuthCookieName='ALA-js-auth';
     var alaJSAuthCookieValue = readCookie(alaJSAuthCookieName);
-    console.log('Cookie '+alaJSAuthCookieName+' cookie has value '+alaJSAuthCookieValue);
+    // console.log('Cookie '+alaJSAuthCookieName+' cookie has value '+alaJSAuthCookieValue);
     if (alaJSAuthCookieValue == 'loggedin'){
       $('.ala-auth-buttons-logged-in').removeClass("d-none");
       $('.ala-auth-buttons-logged-out').addClass("d-none");
