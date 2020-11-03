@@ -19,6 +19,7 @@ web/wp/wp-admin/*
 web/wp/*.php
 web/wp/*.html
 web/wp/*.txt
+web/wp/*.json
 web/.htaccess
 
 # Dotenv

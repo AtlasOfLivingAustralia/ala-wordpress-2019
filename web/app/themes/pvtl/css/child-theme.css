@@ -3567,15 +3567,13 @@ input[type="button"].btn-block {
     background-color: #f26649;
     border: 0;
     border-radius: 1rem;
-    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     -moz-appearance: none;
          appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-moz-range-thumb {
-        -webkit-transition: none;
+        -moz-transition: none;
         transition: none; } }
     .custom-range::-moz-range-thumb:active {
       background-color: #fef2f0; }
@@ -3596,14 +3594,12 @@ input[type="button"].btn-block {
     background-color: #f26649;
     border: 0;
     border-radius: 1rem;
-    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-ms-thumb {
-        -webkit-transition: none;
+        -ms-transition: none;
         transition: none; } }
     .custom-range::-ms-thumb:active {
       background-color: #fef2f0; }
@@ -6675,7 +6671,6 @@ button.bg-white:focus {
   position: fixed !important; }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important; }
 
 .fixed-top {
@@ -6692,9 +6687,8 @@ button.bg-white:focus {
   left: 0;
   z-index: 1030; }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: sticky) {
   .sticky-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020; } }
@@ -17197,9 +17191,11 @@ readers do not read off random characters that represent icons */
   display: inline-block;
   margin-bottom: 5px; }
 
-@media (max-width: 767.98px) {
-  .site-footer .content-column:not(:last-child) {
-    padding-bottom: 30px; } }
+.site-footer {
+  content-visibility: auto; }
+  @media (max-width: 767.98px) {
+    .site-footer .content-column:not(:last-child) {
+      padding-bottom: 30px; } }
 
 .footer-bottom {
   padding-top: 50px;
@@ -18158,6 +18154,7 @@ button.swiper-pagination-bullet {
 .feature-box {
   background: url("../images/bg-pattern.png") no-repeat center #637073;
   background-size: cover;
+  content-visibility: auto;
   color: #FFF; }
   .feature-box h3 {
     margin-bottom: 1.5em;
@@ -18594,7 +18591,8 @@ button.swiper-pagination-bullet {
     overflow: hidden; }
 
 .latest-posts-block {
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  content-visibility: auto; }
   .latest-posts-block h3 {
     color: #212121;
     margin-bottom: 1em; }
