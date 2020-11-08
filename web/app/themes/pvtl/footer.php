@@ -115,14 +115,13 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 	<div class="footer-middle">
 		<div class="<?php echo esc_attr( $container ); ?>">
 			<div class="row">
-				<div class="col-md-4 col-lg-6">
-					<!-- The WordPress Menu goes here -->
+				<div class="col-md-4 col-lg-3">
 					<?php
 					wp_nav_menu(
 						array(
 							'theme_location'  => 'footer-1',
 							'container_class' => 'footer-menu',
-							'menu_class'      => 'menu menu-2-col',
+							'menu_class'      => 'menu',
 							'fallback_cb'     => '',
 							'depth'           => 2,
 							'walker'          => new pvtl_title_attr_walker(),
@@ -131,7 +130,6 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					?>
 				</div><!--col end -->
 				<div class="col-md-4 col-lg-3">
-					<!-- The WordPress Menu goes here -->
 					<?php
 					wp_nav_menu(
 						array(
@@ -144,9 +142,8 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 						)
 					);
 					?>
-				</div><!--col end -->
+				</div>
 				<div class="col-md-4 col-lg-3">
-					<!-- The WordPress Menu goes here -->
 					<?php
 					wp_nav_menu(
 						array(
@@ -159,24 +156,22 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 						)
 					);
 					?>
-				</div><!--col end -->
-				<div class="col-md-4 col-lg-6">
-					<!-- The WordPress Menu goes here -->
+				</div>
+				<div class="col-md-4 col-lg-3">
 					<?php
 					wp_nav_menu(
 						array(
-							'theme_location'  => 'footer-5',
+							'theme_location'  => 'footer-4',
 							'container_class' => 'footer-menu',
-							'menu_class'      => 'menu menu-2-col',
+							'menu_class'      => 'menu',
 							'fallback_cb'     => '',
 							'depth'           => 2,
 							'walker'          => new pvtl_title_attr_walker(),
 						)
 					);
 					?>
-				</div><!--col end -->
+				</div>
 				<div class="col-md-4 col-lg-3">
-					<!-- The WordPress Menu goes here -->
 					<?php
 					wp_nav_menu(
 						array(
@@ -189,9 +184,8 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 						)
 					);
 					?>
-				</div><!--col end -->
+				</div>
 				<div class="col-md-4 col-lg-3">
-					<!-- The WordPress Menu goes here -->
 					<?php
 					wp_nav_menu(
 						array(
@@ -204,13 +198,40 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 						)
 					);
 					?>
-				</div><!--col end -->
-				<div class="col-md-12">
-					<!-- The WordPress Menu goes here -->
+				</div>
+				<div class="col-md-4 col-lg-3">
 					<?php
 					wp_nav_menu(
 						array(
-							'theme_location'  => 'footer-4',
+							'theme_location'  => 'footer-8',
+							'container_class' => 'footer-menu',
+							'menu_class'      => 'menu',
+							'fallback_cb'     => '',
+							'depth'           => 2,
+							'walker'          => new pvtl_title_attr_walker(),
+						)
+					);
+					?>
+				</div>
+				<div class="col-md-4 col-lg-3">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'footer-9',
+							'container_class' => 'footer-menu',
+							'menu_class'      => 'menu',
+							'fallback_cb'     => '',
+							'depth'           => 2,
+							'walker'          => new pvtl_title_attr_walker(),
+						)
+					);
+					?>
+				</div>
+				<div class="col-md-12">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'footer-5',
 							'container_class' => 'footer-menu-horizontal',
 							'menu_class'      => 'menu horizontal',
 							'fallback_cb'     => '',
@@ -219,7 +240,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 						)
 					);
 					?>
-				</div><!--col end -->
+				</div>
 			</div><!-- row end -->
 		</div><!-- container end -->
 	</div>

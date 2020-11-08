@@ -96,13 +96,15 @@ function setup_nav_menus() {
 
     $menus = array(
         'mobile-nav' => esc_html__( 'Mobile', 'understrap' ),
-        'footer-1'  => esc_html__( 'Footer 1 (Double Width)', 'understrap' ),
+        'footer-1'  => esc_html__( 'Footer 1 (Single Column)', 'understrap' ),
         'footer-2'  => esc_html__( 'Footer 2 (Single Column)', 'understrap' ),
         'footer-3'  => esc_html__( 'Footer 3 (Single Column)', 'understrap' ),
-        'footer-4'  => esc_html__( 'Footer 4 (Horizontal)', 'understrap' ),
-        'footer-5'  => esc_html__( 'Footer 5 (Double Width)', 'understrap' ),
+        'footer-4'  => esc_html__( 'Footer 4 (Single Column)', 'understrap' ),
+        'footer-5'  => esc_html__( 'Footer 5 (Horizontal)', 'understrap' ),
         'footer-6'  => esc_html__( 'Footer 6 (Single Column)', 'understrap' ),
         'footer-7'  => esc_html__( 'Footer 7 (Single Column)', 'understrap' ),
+        'footer-8'  => esc_html__( 'Footer 8 (Single Column)', 'understrap' ),
+        'footer-9'  => esc_html__( 'Footer 9 (Single Column)', 'understrap' ),
         'primary'  => esc_html__( 'User Group - All', 'understrap' ),
     );
 
