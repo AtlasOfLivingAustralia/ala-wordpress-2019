@@ -115,7 +115,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 	<div class="footer-middle">
 		<div class="<?php echo esc_attr( $container ); ?>">
 			<div class="row">
-				<div class="col-md-4 col-lg-3">
+				<div class="col-md-6 col-lg-3">
 					<?php
 					wp_nav_menu(
 						array(
@@ -129,7 +129,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					);
 					?>
 				</div><!--col end -->
-				<div class="col-md-4 col-lg-3">
+				<div class="col-md-6 col-lg-3">
 					<?php
 					wp_nav_menu(
 						array(
@@ -143,7 +143,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					);
 					?>
 				</div>
-				<div class="col-md-4 col-lg-3">
+				<div class="col-md-6 col-lg-3">
 					<?php
 					wp_nav_menu(
 						array(
@@ -157,7 +157,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					);
 					?>
 				</div>
-				<div class="col-md-4 col-lg-3">
+				<div class="col-md-6 col-lg-3">
 					<?php
 					wp_nav_menu(
 						array(
@@ -171,7 +171,9 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					);
 					?>
 				</div>
-				<div class="col-md-4 col-lg-3">
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-lg-3">
 					<?php
 					wp_nav_menu(
 						array(
@@ -185,7 +187,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					);
 					?>
 				</div>
-				<div class="col-md-4 col-lg-3">
+				<div class="col-md-6 col-lg-3">
 					<?php
 					wp_nav_menu(
 						array(
@@ -199,7 +201,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					);
 					?>
 				</div>
-				<div class="col-md-4 col-lg-3">
+				<div class="col-md-6 col-lg-3">
 					<?php
 					wp_nav_menu(
 						array(
@@ -213,7 +215,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					);
 					?>
 				</div>
-				<div class="col-md-4 col-lg-3">
+				<div class="col-md-6 col-lg-3">
 					<?php
 					wp_nav_menu(
 						array(
