@@ -124,7 +124,8 @@ class WPSite {
     public function __construct() {
         $wp_upload_path_and_url = wp_upload_dir();
         $this->uploads_url = $wp_upload_path_and_url['baseurl'];
-        $this->site_url = get_home_url() . '/';
+        $this->home_url = get_home_url() . '/'; // note site_url is defined further down
+        $this->home_path = get_home_path();
         $this->parent_theme_url = get_template_directory_uri();
         $this->wp_content_url = content_url();
         $this->site_path = wp_normalize_path( ABSPATH );
@@ -170,14 +171,16 @@ class WPSite {
         return implode(
             PHP_EOL,
             [
-                "Site Path: {$this->site_path}",
+                "Wordpress Core Path (site_path): {$this->site_path}",
+                "Home Path (home_path): {$this->home_path}",
                 "WP Uploads URL: {$this->wp_uploads_url}",
                 "WP Uploads Path: {$this->wp_uploads_path}",
                 "WP Uploads ??: {$this->wp_uploads}",
-                "WP Site Path: {$this->wp_site_path}",
+                "WP Core Path (wp_site_path): {$this->wp_site_path}",
                 "WP Site Subdirectory: {$this->wp_site_subdir}",
                 "Uploads URL: {$this->uploads_url}",
-                "Site URL: {$this->site_url}",
+                "Wordpress Core URL (site_url): {$this->site_url}",
+                "Home URL (home_url): {$this->home_url}",
                 "Parent Theme URL: {$this->parent_theme_url}",
                 "Parent Theme Path: {$this->parent_theme_path}",
                 "Child Theme Path: {$this->child_theme_path}",

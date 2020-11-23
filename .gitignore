@@ -53,7 +53,6 @@ web/app/object-cache.php
 # Include these plugins
 !web/app/plugins/advanced-custom-fields-pro
 !web/app/plugins/pvtl-recent-posts
-!web/app/plugins/wp2static
 !web/app/plugins/static-html-output
 
 /web/nginx.conf
