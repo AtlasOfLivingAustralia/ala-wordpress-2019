@@ -57,6 +57,17 @@ function theme_setup() {
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 
+# JS for the ALA Publish admin page
+function enqueue_publish_script($hook) {
+    // Only add to the edit.php admin page.
+    // See WP docs.
+    if ('ala-publish.php' !== $hook) {
+        return;
+    }
+    wp_enqueue_script('ala_publish_script', get_stylesheet_directory_uri()  . '/js/ala-publish.js');
+}
+add_action('admin_enqueue_scripts', 'enqueue_publish_script');
+
 
 # hide admin bar for non-editor/admin users
 add_action('set_current_user', 'cc_hide_admin_bar');
