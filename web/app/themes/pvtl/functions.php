@@ -39,6 +39,13 @@ function ala_sanitize_user($username, $raw_username, $strict) {
 add_filter ('sanitize_user', 'ala_sanitize_user', 10, 3);
 
 
+// remove unused emoji js/css
+
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
 // Register support for Gutenberg wide images in your theme
 
 function theme_setup() {
