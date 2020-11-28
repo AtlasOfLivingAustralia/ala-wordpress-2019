@@ -1,5 +1,7 @@
 // js for ALA publish page
 
 window.setTimeout(function () {
-  window.location.reload();
+  if (jQuery('.updated.notice').length){
+    window.location.reload();
+  }
 }, 10000);
