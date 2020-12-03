@@ -38,6 +38,17 @@ function ala_sanitize_user($username, $raw_username, $strict) {
 
 add_filter ('sanitize_user', 'ala_sanitize_user', 10, 3);
 
+// remove unused emoji js/css
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+// remove embed js (we don't need embedding remote WP posts into a page!)
+function burn_the_embed(){
+    wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'burn_the_embed' );
 
 // Register support for Gutenberg wide images in your theme
 
@@ -45,6 +56,17 @@ function theme_setup() {
     add_theme_support( 'align-wide' );
 }
 add_action( 'after_setup_theme', 'theme_setup' );
+
+# JS for the ALA Publish admin page
+function enqueue_publish_script($hook) {
+    // Only add to the edit.php admin page.
+    // See WP docs.
+    if ('ala-publish.php' !== $hook) {
+        return;
+    }
+    wp_enqueue_script('ala_publish_script', get_stylesheet_directory_uri()  . '/js/ala-publish.js');
+}
+add_action('admin_enqueue_scripts', 'enqueue_publish_script');
 
 
 # hide admin bar for non-editor/admin users

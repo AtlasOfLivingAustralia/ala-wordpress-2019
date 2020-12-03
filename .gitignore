@@ -52,9 +52,8 @@ web/app/object-cache.php
 
 # Include these plugins
 !web/app/plugins/advanced-custom-fields-pro
-!web/app/plugins/gravityforms
-!web/app/plugins/gravityformscampaignmonitor
 !web/app/plugins/pvtl-recent-posts
+!web/app/plugins/static-html-output
 
 /web/nginx.conf
 web/wp/sitemap.xml
