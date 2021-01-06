@@ -14,17 +14,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<a href="<?= get_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'post' ); ?>
+	<?php if (has_post_thumbnail( $post->ID ) ): ?>
+    <?php   echo get_the_post_thumbnail( $post->ID, 'post' ); ?>
+	<?php else: ?>
+		<img src="/app/themes/pvtl/images/ALA-post-default.png" class="attachment-post size-post wp-post-image" alt="" loading="lazy" />
+	<?php endif; ?>
 
-	<div class="overlay">
+	<div class="post-splayed">
 
 		<header class="entry-header">
 
 			<?php if ( 'post' == get_post_type() ) : ?>
 
-			<div class="entry-meta">
+			<!--<div class="entry-meta">
 				<?php pvtl_posted_on(); ?>
-			</div><!-- .entry-meta -->
+			</div> -->
 
 			<?php endif; ?>
 
