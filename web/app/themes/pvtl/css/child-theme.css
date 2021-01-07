@@ -18347,8 +18347,6 @@ button.swiper-pagination-bullet {
   .post-list .type-post .entry-header, .post-list .type-post .entry-content {
     position: relative;
     z-index: 10; }
-  .post-list .type-post .entry-header .entry-meta {
-    text-shadow: 1px 1px 3px black; }
   .post-list .type-post .entry-content {
     max-height: 3em;
     overflow: hidden;

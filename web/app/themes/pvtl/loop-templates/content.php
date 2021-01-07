@@ -24,14 +24,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<header class="entry-header">
 
-			<?php if ( 'post' == get_post_type() ) : ?>
-
-			<!--<div class="entry-meta">
-				<?php pvtl_posted_on(); ?>
-			</div> -->
-
-			<?php endif; ?>
-
 			<?php
 			the_title('<h2 class="entry-title">','</h2>' );
 			?>
@@ -39,6 +31,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
+
+			<?php if ( 'post' == get_post_type() ) : ?>
+
+			<div class="entry-meta">
+				<?php pvtl_posted_on(); ?>
+			</div>
+
+			<?php endif; ?>
 
 			<?php echo pvtl_get_excerpt(80); ?>
 
