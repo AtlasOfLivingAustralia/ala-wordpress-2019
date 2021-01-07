@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php endif; ?>
 
-			<?php echo pvtl_get_excerpt(80); ?>
+			<?php echo pvtl_get_excerpt(150); ?>
 
 		</div><!-- .entry-content -->
 
