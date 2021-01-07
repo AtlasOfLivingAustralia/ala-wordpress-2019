@@ -18348,7 +18348,6 @@ button.swiper-pagination-bullet {
     position: relative;
     z-index: 10; }
   .post-list .type-post .entry-content {
-    max-height: 3em;
     overflow: hidden;
     font-size: 14px; }
 
