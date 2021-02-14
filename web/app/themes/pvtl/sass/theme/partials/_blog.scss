@@ -12,12 +12,18 @@
     }
   }
     .type-post {
+      border: 1px solid #ddd;
+      background-color: #fafafa;
+      .post-splayed {
+        padding: 0 1em 1em 1em;
+      }
       a, img {
         display: block;
       }
       a {
         position: relative;
-        color: #FFF;
+        // color: #FFF;
+        text-decoration: none;
         &:hover {
           .overlay {
             background-color: rgba($primary, 0.8);
@@ -55,20 +61,22 @@
         font-size: 18px;
         font-weight: 700;
         color: inherit;
+        margin-top: 0.8em;
+        margin-bottom: 0.4em;
       }
       //move content on top of overlay gradient
       .entry-header, .entry-content {
         position: relative;
         z-index: 10;
-        text-shadow: 0 2px 4px rgba(0,0,0,.8);
-        color: #FFF;
+        // text-shadow: 0 2px 4px rgba(0,0,0,.8);
+        // color: #FFF;
       }
       .entry-header .entry-meta {
-        text-shadow: 1px 1px 3px rgba(0,0,0,1);
+        //text-shadow: 1px 1px 3px rgba(0,0,0,1);
       }
       //truncate excerpt to 2 lines
       .entry-content {
-        max-height: 3em;
+        // max-height: 3em;
         overflow: hidden;
         font-size: 14px;
       }
