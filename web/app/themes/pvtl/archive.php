@@ -33,23 +33,23 @@ if (!is_front_page()) {
 				<?php if (have_posts()) : ?>
 
 					<?php /* Start the Loop */
-					$counter = 0;
+					//$counter = 0;
 					?>
 
 					<?php while (have_posts()) : the_post();
 						// Wrap first post in a larger 8 col div
-						if ($counter == 0) {
-							echo '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">';
-							//Wrap second post in opening 4 col div
-						} else if ($counter == 1) {
-							echo '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">';
-							//Wrap all posts from 4th onwards in the standard 4 col div
-						} else if ($counter > 2) {
-							echo '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">';
-						}
+						// if ($counter == 0) {
+						// 	echo '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">';
+						// 	//Wrap second post in opening 4 col div
+						// } else if ($counter == 1) {
+						// 	echo '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">';
+						// 	//Wrap all posts from 4th onwards in the standard 4 col div
+						// } else if ($counter > 2) {
+						// 	echo '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">';
+						// }
 
 						?>
-
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
 						<?php
 
 						/*
@@ -59,16 +59,16 @@ if (!is_front_page()) {
 						 */
 						get_template_part('loop-templates/content', get_post_format());
 						?>
-
+					</div>
 						<?php
 						//Close first large 8 col div
-						if ($counter == 0) {
-							echo '</div>';
-							// close all cols from 3rd post onwards
-						} else if ($counter >= 2) {
-							echo '</div>';
-						}
-						$counter++;
+						// if ($counter == 0) {
+						// 	echo '</div>';
+						// 	// close all cols from 3rd post onwards
+						// } else if ($counter >= 2) {
+						// 	echo '</div>';
+						// }
+						//$counter++;
 					endwhile; ?>
 
 				<?php else : ?>
