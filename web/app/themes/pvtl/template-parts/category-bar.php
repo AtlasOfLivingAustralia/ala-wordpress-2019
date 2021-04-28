@@ -1,6 +1,6 @@
 <div class="category-selector">
 	<label for="categorySelect" class="sr-only">Filter by Category</label>
-	<select id="categorySelect" name="categorySelect" class="custom-select custom-select-lg" id="" onchange='document.location.href=this.options[this.selectedIndex].value;'>
+	<select id="categorySelect" name="categorySelect" class="custom-select custom-select-lg" onchange='document.location.href=this.options[this.selectedIndex].value;'>
 		<option value=""><?php echo esc_attr(__('Filter by Category')); ?></option>
 
 		<?php
