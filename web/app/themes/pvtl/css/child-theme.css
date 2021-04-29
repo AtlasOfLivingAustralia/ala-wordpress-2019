@@ -18628,6 +18628,17 @@ button.swiper-pagination-bullet {
         display: block !important;
         opacity: 1 !important; } }
 
+.blog-sidebar article {
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  padding: 1em;
+  margin-bottom: 2em; }
+  .blog-sidebar article ul {
+    padding: 0; }
+    .blog-sidebar article ul li {
+      list-style-type: none;
+      margin-bottom: 1em; }
+
 .featured-hero {
   background-color: #f26649;
   background-size: cover;
