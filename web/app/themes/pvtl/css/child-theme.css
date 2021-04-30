@@ -18638,6 +18638,8 @@ button.swiper-pagination-bullet {
     .blog-sidebar article ul li {
       list-style-type: none;
       margin-bottom: 1em; }
+      .blog-sidebar article ul li a {
+        text-decoration: none; }
 
 .featured-hero {
   background-color: #f26649;
