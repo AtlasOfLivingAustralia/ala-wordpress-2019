@@ -18629,7 +18629,8 @@ button.swiper-pagination-bullet {
         opacity: 1 !important; } }
 
 .ala-blog-title {
-  padding-top: 0.35em; }
+  padding-top: 0.35em;
+  text-align: left; }
 
 .blog-sidebar article {
   border: 1px solid #ddd;
