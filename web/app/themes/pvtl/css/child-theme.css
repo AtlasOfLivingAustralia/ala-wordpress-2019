@@ -18628,6 +18628,9 @@ button.swiper-pagination-bullet {
         display: block !important;
         opacity: 1 !important; } }
 
+.ala-blog-title {
+  padding-top: 0.35em; }
+
 .blog-sidebar article {
   border: 1px solid #ddd;
   background-color: #fafafa;
