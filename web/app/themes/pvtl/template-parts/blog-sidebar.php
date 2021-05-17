@@ -9,7 +9,7 @@
 	    'category_name'   => 'newsletter',
 	    'tag'             => 'newsletter',
 	    'orderby'         => 'post_date',
-	    'order'           => 'ASC',
+	    'order'           => 'DESC',
 	    'post_type'       => 'post',
 	    'post_status'     => 'publish',
 	    'suppress_filters' => true ); 
@@ -29,7 +29,7 @@
 	    'offset'          => 0,
 	    'category_name'   => 'impact-stories',
 	    'orderby'         => 'post_date',
-	    'order'           => 'ASC',
+	    'order'           => 'DESC',
 	    'post_type'       => 'post',
 	    'post_status'     => 'publish',
 	    'suppress_filters' => true ); 
