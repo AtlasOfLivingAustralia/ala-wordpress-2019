@@ -380,3 +380,26 @@
     }
   }
 }
+.ala-blog-title {
+  padding-top: 0.35em;
+  text-align: left;
+}
+
+.blog-sidebar {
+  article {
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    padding: 1em;
+    margin-bottom: 2em;
+    ul {
+     padding: 0;
+      li {
+        list-style-type: none;
+        margin-bottom: 1em;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

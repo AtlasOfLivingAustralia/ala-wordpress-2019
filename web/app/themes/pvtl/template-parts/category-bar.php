@@ -1,6 +1,11 @@
 <div class="category-selector">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 order-first">
+			<h3 class="ala-blog-title">ALA Blog</h3>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
 	<label for="categorySelect" class="sr-only">Filter by Category</label>
-	<select id="categorySelect" name="categorySelect" class="custom-select custom-select-lg" id="" onchange='document.location.href=this.options[this.selectedIndex].value;'>
+	<select id="categorySelect" name="categorySelect" class="custom-select custom-select-lg" onchange='document.location.href=this.options[this.selectedIndex].value;'>
 		<option value=""><?php echo esc_attr(__('Filter by Category')); ?></option>
 
 		<?php
@@ -15,4 +20,6 @@
 		echo $option;
 		?>
 	</select>
+		</div>
+	</div>
 </div>

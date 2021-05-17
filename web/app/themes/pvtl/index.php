@@ -32,6 +32,12 @@ if (!is_front_page()) {
 
 		<?php get_template_part('template-parts/category-bar'); ?>
 
+		<div class="row"><!-- outer row -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 order-last blog-sidebar"><!-- wrap sidebar -->
+			<?php get_template_part('template-parts/blog-sidebar'); ?>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8"><!-- wrap posts block -->
+
 		<main class="site-main post-list" id="main">
 			<div class="row">
 				<?php if (have_posts()) : ?>
@@ -53,7 +59,7 @@ if (!is_front_page()) {
 						// }
 
 						?>
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 						<?php
 
 						/*
@@ -86,6 +92,8 @@ if (!is_front_page()) {
 		<!-- The pagination component -->
 		<?php understrap_pagination(); ?>
 
+	</div><!-- wrap posts block -->
+	</div><!-- outer row -->
 
 	</div><!-- #content -->
 
