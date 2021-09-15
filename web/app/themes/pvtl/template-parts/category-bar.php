@@ -10,7 +10,18 @@
 
 		<?php
 		$option = '<option value="' . get_permalink(get_option('page_for_posts')) .'">All Categories</option>'; // change category to your custom page slug
-		$categories = get_categories();
+		$defaults = array('type' => 'post',
+		    'child_of' => 0,
+		    'orderby' => 'name',
+		    'order' => 'ASC',
+		    'hide_empty' => true,
+		    'include_last_update_time' => false,
+		    'hierarchical' => 1, 
+		    'pad_counts' => false
+		);
+
+		$categories = get_categories($defaults);
+
 		foreach ($categories as $category) {
 			$option .= '<option value="'.get_option('home').'/category/'.$category->slug.'">';
 			$option .= $category->cat_name;
