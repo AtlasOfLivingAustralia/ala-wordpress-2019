@@ -43,4 +43,27 @@
 ?>
 	</ul>
 </article>
+<article>
+	<h3>ALA Webinars</h3>
+	<ul>
+<?php
+	$sideargs  = array(
+	    'posts_per_page'  => 10,
+	    'offset'          => 0,
+	    'category_name'   => 'webinars',
+	    'orderby'         => 'post_date',
+	    'order'           => 'DESC',
+	    'post_type'       => 'post',
+	    'post_status'     => 'publish',
+	    'suppress_filters' => true ); 
+	$sideposts = get_posts($sideargs);
+    foreach ($sideposts as $post) :
+    ?>
+		<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+<?php 
+	endforeach; 
+	//wp_reset_query();
+?>
+	</ul>
+</article>
 <!-- /blog sidebar -->
