@@ -2,7 +2,7 @@
 /**
  * Understrap Theme Customizer
  *
- * @package understrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.
@@ -42,7 +42,7 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				'title'       => __( 'Theme Layout Settings', 'understrap' ),
 				'capability'  => 'edit_theme_options',
 				'description' => __( 'Container width and sidebar defaults', 'understrap' ),
-				'priority'    => 160,
+				'priority'    => apply_filters( 'understrap_theme_layout_options_priority', 160 ),
 			)
 		);
 
@@ -61,10 +61,39 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 			// Get the list of possible select options.
 			$choices = $setting->manager->get_control( $setting->id )->choices;
 
-				// If the input is a valid key, return it; otherwise, return the default.
-				return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+			// If the input is a valid key, return it; otherwise, return the default.
+			return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 
 		}
+
+		$wp_customize->add_setting(
+			'understrap_bootstrap_version',
+			array(
+				'default'           => 'bootstrap4',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_bootstrap_version',
+				array(
+					'label'       => __( 'Bootstrap Version', 'understrap' ),
+					'description' => __( 'Choose between Bootstrap 4 or Bootstrap 5', 'understrap' ),
+					'section'     => 'understrap_theme_layout_options',
+					'settings'    => 'understrap_bootstrap_version',
+					'type'        => 'select',
+					'choices'     => array(
+						'bootstrap4' => __( 'Bootstrap 4', 'understrap' ),
+						'bootstrap5' => __( 'Bootstrap 5', 'understrap' ),
+					),
+					'priority'    => apply_filters( 'understrap_bootstrap_version_priority', 10 ),
+				)
+			)
+		);
 
 		$wp_customize->add_setting(
 			'understrap_container_type',
@@ -90,7 +119,40 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'container'       => __( 'Fixed width container', 'understrap' ),
 						'container-fluid' => __( 'Full width container', 'understrap' ),
 					),
-					'priority'    => '10',
+					'priority'    => apply_filters( 'understrap_container_type_priority', 10 ),
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'understrap_navbar_type',
+			array(
+				'default'           => 'collapse',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'sanitize_text_field',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_navbar_type',
+				array(
+					'label'             => __( 'Responsive Navigation Type', 'understrap' ),
+					'description'       => __(
+						'Choose between an expanding and collapsing navbar or an offcanvas drawer.',
+						'understrap'
+					),
+					'section'           => 'understrap_theme_layout_options',
+					'settings'          => 'understrap_navbar_type',
+					'type'              => 'select',
+					'sanitize_callback' => 'understrap_theme_slug_sanitize_select',
+					'choices'           => array(
+						'collapse'  => __( 'Collapse', 'understrap' ),
+						'offcanvas' => __( 'Offcanvas', 'understrap' ),
+					),
+					'priority'          => apply_filters( 'understrap_navbar_type_priority', 20 ),
 				)
 			)
 		);
@@ -125,12 +187,38 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 						'both'  => __( 'Left & Right sidebars', 'understrap' ),
 						'none'  => __( 'No sidebar', 'understrap' ),
 					),
-					'priority'          => '20',
+					'priority'          => apply_filters( 'understrap_sidebar_position_priority', 20 ),
 				)
 			)
 		);
+
+		$wp_customize->add_setting(
+			'understrap_site_info_override',
+			array(
+				'default'           => '',
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'wp_kses_post',
+				'capability'        => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'understrap_site_info_override',
+				array(
+					'label'       => __( 'Footer Site Info', 'understrap' ),
+					'description' => __( 'Override Understrap\'s site info located at the footer of the page.', 'understrap' ),
+					'section'     => 'understrap_theme_layout_options',
+					'settings'    => 'understrap_site_info_override',
+					'type'        => 'textarea',
+					'priority'    => 20,
+				)
+			)
+		);
+
 	}
-} // endif function_exists( 'understrap_theme_customize_register' ).
+} // End of if function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
 
 /**
@@ -151,3 +239,42 @@ if ( ! function_exists( 'understrap_customize_preview_js' ) ) {
 	}
 }
 add_action( 'customize_preview_init', 'understrap_customize_preview_js' );
+
+/**
+ * Loads javascript for conditionally showing customizer controls.
+ */
+if ( ! function_exists( 'understrap_customize_controls_js' ) ) {
+	/**
+	 * Setup JS integration for live previewing.
+	 */
+	function understrap_customize_controls_js() {
+		wp_enqueue_script(
+			'understrap_customizer',
+			get_template_directory_uri() . '/js/customizer-controls.js',
+			array( 'customize-preview' ),
+			'20130508',
+			true
+		);
+	}
+}
+add_action( 'customize_controls_enqueue_scripts', 'understrap_customize_controls_js' );
+
+
+
+if ( ! function_exists( 'understrap_default_navbar_type' ) ) {
+	/**
+	 * Overrides the responsive navbar type for Bootstrap 4
+	 *
+	 * @param string $current_mod
+	 * @return string
+	 */
+	function understrap_default_navbar_type( $current_mod ) {
+
+		if ( 'bootstrap5' !== get_theme_mod( 'understrap_bootstrap_version' ) ) {
+			$current_mod = 'collapse';
+		}
+
+		return $current_mod;
+	}
+}
+add_filter( 'theme_mod_understrap_navbar_type', 'understrap_default_navbar_type', 20 );

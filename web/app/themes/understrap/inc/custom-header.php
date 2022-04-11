@@ -1,8 +1,8 @@
 <?php
 /**
- * Custom header setup.
+ * Custom header setup
  *
- * @package understrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.
@@ -11,12 +11,15 @@ defined( 'ABSPATH' ) || exit;
 add_action( 'after_setup_theme', 'understrap_custom_header_setup' );
 
 if ( ! function_exists( 'understrap_custom_header_setup' ) ) {
+	/**
+	 * Set up custom header feature.
+	 */
 	function understrap_custom_header_setup() {
 
 		/**
-		 * Filter UnderStrap custom-header support arguments.
+		 * Filter Understrap custom-header support arguments.
 		 *
-		 * @since UnderStrap 0.5.2
+		 * @since Understrap 0.5.2
 		 *
 		 * @param array $args {
 		 *     An array of custom-header support arguments.

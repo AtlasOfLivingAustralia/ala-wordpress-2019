@@ -1,8 +1,8 @@
 <?php
 /**
- * Post rendering content according to caller of get_template_part.
+ * Post rendering content according to caller of get_template_part
  *
- * @package understrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.
@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 		);
 		?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
+		<?php if ( 'post' === get_post_type() ) : ?>
 
 			<div class="entry-meta">
 				<?php understrap_posted_on(); ?>
@@ -34,15 +34,9 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="entry-content">
 
-		<?php the_excerpt(); ?>
-
 		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
-		);
+		the_excerpt();
+		understrap_link_pages();
 		?>
 
 	</div><!-- .entry-content -->

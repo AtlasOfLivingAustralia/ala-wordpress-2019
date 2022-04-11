@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying 404 pages (not found).
+ * The template for displaying 404 pages (not found)
  *
- * @package understrap
+ * @package Understrap
  */
 
 // Exit if accessed directly.
@@ -33,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<div class="page-content">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'understrap' ); ?></p>
+							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'understrap' ); ?></p>
 
 							<?php get_search_form(); ?>
 
@@ -49,11 +49,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 										<?php
 										wp_list_categories(
 											array(
-												'orderby'    => 'count',
-												'order'      => 'DESC',
+												'orderby'  => 'count',
+												'order'    => 'DESC',
 												'show_count' => 1,
-												'title_li'   => '',
-												'number'     => 10,
+												'title_li' => '',
+												'number'   => 10,
 											)
 										);
 										?>
@@ -86,4 +86,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #error-404-wrapper -->
 
-<?php get_footer(); ?>
+<?php
+get_footer();
