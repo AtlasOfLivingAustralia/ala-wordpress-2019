@@ -143,10 +143,9 @@ function setup_nav_menus() {
 }
 add_action( 'init', 'setup_nav_menus' );
 
-/**
- * Publish to the production static site
- *
- */
+
+// Publish to the production static site
+
 add_action( 'admin_menu', 'register_ala_publish_menu_page' );
 function register_ala_publish_menu_page() {
   // add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
@@ -679,3 +678,4 @@ require_once( 'library/register-blocks.php' );
 
 // Adds custom admin styles
 require_once( 'library/custom-admin-styles.php' );
+
