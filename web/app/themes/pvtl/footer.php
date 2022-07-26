@@ -284,7 +284,25 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 </div><!-- #page we need this extra closing tag here -->
 
 <?php wp_footer(); ?>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-STM6SLZYD7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-STM6SLZYD7');
+</script>
+<script>
+    window.ga = window.ga || function () {
+        (ga.q = ga.q || []).push(arguments)
+    };
+    ga.l = +new Date;
+    ga('create', 'UA-4355440-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
 <?php if ( get_field( 'matomo_tracking_active', 'option' ) ) : ?>
 <!-- ALA self hosted analytics -->
 <script type="text/javascript">
