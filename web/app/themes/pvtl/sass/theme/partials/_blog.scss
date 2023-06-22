@@ -163,41 +163,6 @@
   }
 }
 
-
-.addthis_inline_share_toolbox {
-  border:        1px solid $c-text;
-  padding:       7px 10px 2px;
-  height:        auto;
-  border-radius: 0;
-  display:       inline-block;
-  position:      relative;
-  min-width:     100px;
-  min-height:    40px;
-  background-color: transparent;
-  &:before {
-    content:     'Share';
-    display:     inline-block;
-    padding:     0 8px;
-    background:  #FFF;
-    color:       $c-text;
-    position:    absolute;
-    top: -1px;
-    font-size: 12px;
-    line-height: 1px;
-    left:        6px;
-    font-weight: normal;
-  }
-  &:after {
-    content: '';
-    display: table;
-    clear:   both;
-  }
-  .at-style-responsive .at-share-btn {
-    padding: 2px;
-    background-color: transparent !important;
-  }
-}
-
 // These are the styles for the post single pages
 .single-post {
   @include media-breakpoint-up(md) {
@@ -276,9 +241,6 @@
     margin: 40px 0 0;
     padding: 30px;
     background-color: $c-page-background;
-    .addthis_inline_share_toolbox:before {
-      background-color: $c-page-background;
-    }
     .btn {
       border-width: 2px;
       padding: 7px 25px;
