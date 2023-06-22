@@ -18425,36 +18425,6 @@ button.swiper-pagination-bullet {
     display: inline-block;
     width: auto; }
 
-.addthis_inline_share_toolbox {
-  border: 1px solid #212121;
-  padding: 7px 10px 2px;
-  height: auto;
-  border-radius: 0;
-  display: inline-block;
-  position: relative;
-  min-width: 100px;
-  min-height: 40px;
-  background-color: transparent; }
-  .addthis_inline_share_toolbox:before {
-    content: 'Share';
-    display: inline-block;
-    padding: 0 8px;
-    background: #FFF;
-    color: #212121;
-    position: absolute;
-    top: -1px;
-    font-size: 12px;
-    line-height: 1px;
-    left: 6px;
-    font-weight: normal; }
-  .addthis_inline_share_toolbox:after {
-    content: '';
-    display: table;
-    clear: both; }
-  .addthis_inline_share_toolbox .at-style-responsive .at-share-btn {
-    padding: 2px;
-    background-color: transparent !important; }
-
 @media (min-width: 768px) {
   .single-post #primary {
     padding-top: 40px;
@@ -18544,8 +18514,6 @@ button.swiper-pagination-bullet {
   margin: 40px 0 0;
   padding: 30px;
   background-color: #f2f2f2; }
-  .single-post .post-footer .addthis_inline_share_toolbox:before {
-    background-color: #f2f2f2; }
   .single-post .post-footer .btn, .single-post .post-footer .gform_button, .single-post .post-footer .ala-big-button, .single-post .post-footer .is-style-standard-button .wp-block-button__link, .is-style-standard-button .single-post .post-footer .wp-block-button__link, .single-post .post-footer .is-style-outline-button .wp-block-button__link, .is-style-outline-button .single-post .post-footer .wp-block-button__link {
     border-width: 2px;
     padding: 7px 25px; }
