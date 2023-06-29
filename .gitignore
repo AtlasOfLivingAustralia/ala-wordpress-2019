@@ -58,3 +58,7 @@ web/app/object-cache.php
 /web/nginx.conf
 web/wp/sitemap.xml
 composer.lock
+web/app/themes/pvtl/.yarn/
+web/app/themes/pvtl/.*
+web/app/themes/pvtl/yarn.lock
+web/app/themes/pvtl/package-lock.json
