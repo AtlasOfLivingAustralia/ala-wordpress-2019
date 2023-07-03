@@ -284,28 +284,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 </div><!-- #page we need this extra closing tag here -->
 
 <?php wp_footer(); ?>
-<!-- Fathom analytics -->
 <script src="https://cdn.usefathom.com/script.js" data-site="QDWZORBB" defer></script>
-<!-- End Fathom analytics -->
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-STM6SLZYD7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-STM6SLZYD7');
-</script>
-<script>
-    window.ga = window.ga || function () {
-        (ga.q = ga.q || []).push(arguments)
-    };
-    ga.l = +new Date;
-    ga('create', 'UA-4355440-1', 'auto');
-    ga('send', 'pageview');
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<!-- End Google Analytics -->
 
 <script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js"></script>
 <script type="text/javascript">
