@@ -25,7 +25,8 @@ class HeroBannerSlider extends RegisterBlocks
                 $author = $slide['image_author']; // str
                 $description = $slide['image_description']; // str
             ?>
-                <div class="swiper-slide swiper-lazy" data-background="<?=$image['sizes']['full-width-auto-height']?>">
+                <div class="swiper-slide swiper-lazy">
+                    <img class="hero-swiper-image" src="<?=$image['sizes']['full-width-auto-height']?>" loading="lazy" alt="" />
                     <div class="swiper-lazy-preloader"></div>
                     <div class="authorship">
                         <?php if($description): ?>
