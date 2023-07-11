@@ -66,6 +66,7 @@ gulp.task('scripts', function(done) {
     .pipe(concat('child-theme.js'))
     .pipe(gulp.dest(paths.js));
 
+
   var customNonThemeScripts = [
     paths.dev + '/js/ala-fathom.js'
   ];
