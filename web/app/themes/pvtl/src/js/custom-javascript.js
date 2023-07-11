@@ -48,14 +48,19 @@
         preventClicks: false,
         lazyPreloadPrevNext: 1,
         navigation: false,
+        speed: 1000,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
-          clickable: true,
+          clickable: true
         },
       });
     });
-
 
     /**
     * Search / autocomplete
