@@ -65,6 +65,26 @@ gulp.task('scripts', function(done) {
     .pipe(concat('child-theme.js'))
     .pipe(gulp.dest(paths.js));
 
+  var customNonThemeScripts = [
+    paths.dev + '/js/ala-fathom.js'
+  ];
+  
+  var customNonThemeScriptsMinStream = gulp.src(customNonThemeScripts)
+    .pipe(plumber({
+      errorHandler: function (err) {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
+    .pipe(babel({presets: ['@babel/env']}))
+    .pipe(concat('ala-fathom.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.alajs));
+
+  var customNonThemeScriptsStream = gulp.src(customNonThemeScripts)
+    .pipe(concat('ala-fathom.js'))
+    .pipe(gulp.dest(paths.alajs));
+
   done();
 
 });

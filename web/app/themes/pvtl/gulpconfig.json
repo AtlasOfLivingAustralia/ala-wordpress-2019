@@ -19,6 +19,7 @@
     "dev": "./src",
     "dist": "./dist",
     "distprod": "./dist-product",
-    "vendor": ""
+    "vendor": "",
+    "alajs": "../../../alajs"
   }
 }
