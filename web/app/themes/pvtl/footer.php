@@ -285,7 +285,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 
 <?php wp_footer(); ?>
 <script src="https://cdn.usefathom.com/script.js" data-site="TZHQTOVF" defer></script>
-<script src="<?php echo esc_url( home_url( '/' ) ); ?>alajs/ala-fathom.js" defer></script>
+<script src="<?php echo esc_url( home_url( '/' ) ); ?>alajs/ala-fathom.min.js" defer></script>
 <script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js"></script>
 <script type="text/javascript">
 FreshWidget.init("", {"queryString": "&widgetType=popup&helpdesk_ticket[group_id]=6000207804&helpdesk_ticket[product_id]=6000005589&formTitle=Report+an+issue+or+ask+for+help", "utf8": "✓", "widgetType": "popup", "buttonType": "text", "buttonText": "Need help?", "buttonColor": "white", "buttonBg": "#d5502a", "alignment": "2", "offset": "220px", "formHeight": "500px", "url": "https://support.ala.org.au"} );
