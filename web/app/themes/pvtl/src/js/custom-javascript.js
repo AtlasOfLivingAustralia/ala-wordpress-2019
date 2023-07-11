@@ -42,30 +42,25 @@
     $('.swiper-container').each((index, el) => {
       $(el).addClass(`swiper-${index}`);
 
-      new Swiper(`.swiper-${index}`, {
-        loop: true,
+      const thisSwiper = new Swiper(`.swiper-${index}`, {
         slidesPerView: 1,
         spaceBetween: 0,
+        preventClicks: false,
+        lazyPreloadPrevNext: 1,
+        navigation: false,
         speed: 1000,
+        loop: true,
         autoplay: {
           delay: 5000,
-          disableOnInteraction: false
+          disableOnInteraction: false,
         },
-        preventClicks: false,
-        effect: 'fade',
-        preloadImages: false,
-        lazy: {
-          loadPrevNext: true,
-        },
-        navigation: false,
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
-          clickable: true,
+          clickable: true
         },
       });
     });
-
 
     /**
     * Search / autocomplete

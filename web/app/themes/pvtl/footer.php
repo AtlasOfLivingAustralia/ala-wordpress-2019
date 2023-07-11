@@ -284,7 +284,9 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 </div><!-- #page we need this extra closing tag here -->
 
 <?php wp_footer(); ?>
+
 <script src="https://cdn.usefathom.com/script.js" data-site="QDWZORBB" defer></script>
+<script src="<?php echo esc_url( home_url( '/' ) ); ?>alajs/ala-fathom.min.js" defer></script>
 
 <script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js"></script>
 <script type="text/javascript">

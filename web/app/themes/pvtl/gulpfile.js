@@ -5,6 +5,7 @@ var plumber = require('gulp-plumber');
 var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var debug = require('gulp-debug');
 
 // Configuration file to keep your code DRY
 var cfg = require('./gulpconfig.json');
@@ -31,7 +32,7 @@ gulp.task('scripts', function(done) {
     .pipe(uglify())
     .pipe(gulp.dest(paths.dev));
 
-  var scripts = [
+  var allScripts = [
 
     // Start - All BS4 stuff
     paths.dev + '/js/bootstrap4/bootstrap.js',
@@ -50,7 +51,7 @@ gulp.task('scripts', function(done) {
     paths.dev + '/js/custom-javascript.min.js'
 
   ];
-  var childThemeMinJsStream = gulp.src(scripts)
+  var childThemeMinJsStream = gulp.src(allScripts)
     .pipe(plumber({
       errorHandler: function (err) {
         console.log(err);
@@ -61,9 +62,20 @@ gulp.task('scripts', function(done) {
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));
 
-  var childThemeJsStream = gulp.src(scripts)
+  var childThemeJsStream = gulp.src(allScripts)
     .pipe(concat('child-theme.js'))
     .pipe(gulp.dest(paths.js));
+
+
+  var customNonThemeScripts = [
+    paths.dev + '/js/ala-fathom.js'
+  ];
+  
+  var customNonThemeScriptsMinStream = gulp.src(customNonThemeScripts)
+    .pipe(uglify())
+    .pipe(debug())
+    .pipe(concat('ala-fathom.min.js'))
+    .pipe(gulp.dest(paths.alajs));
 
   done();
 
