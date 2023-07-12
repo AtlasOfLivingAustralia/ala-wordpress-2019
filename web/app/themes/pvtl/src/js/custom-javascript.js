@@ -45,20 +45,20 @@
       const thisSwiper = new Swiper(`.swiper-${index}`, {
         slidesPerView: 1,
         spaceBetween: 0,
+        effect: "fade",
+        centeredSlides: true,
+        fadeEffect: { 
+          crossFade: true
+        },
         preventClicks: false,
         lazyPreloadPrevNext: 1,
         navigation: false,
-        speed: 1000,
         loop: true,
+        speed: 2000,
         autoplay: {
-          delay: 5000,
+          delay: 7500,
           disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-          clickable: true
-        },
+        }
       });
     });
 
