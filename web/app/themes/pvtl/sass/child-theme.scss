@@ -7,6 +7,12 @@
 @import "assets/font-awesome"; // <------- Font Awesome Icon font
 @import "assets/underscores"; // <------- Underscores media styles
 
+// swiper
+@import "../node_modules/swiper/swiper.scss";
+@import "../node_modules/swiper/modules/pagination/pagination.scss";
+@import "../node_modules/swiper/modules/autoplay/autoplay.scss";
+@import "../node_modules/swiper/modules/effect-fade/effect-fade.scss";
+
 // Any additional imported files //
 @import "theme/child_theme";  // <--------- Add your styles into this file
 
@@ -15,7 +21,6 @@
 @import "theme/partials/header";
 @import "theme/partials/footer";
 @import "theme/partials/hero";
-@import "theme/partials/swiper";
 @import "theme/partials/tabbox";
 @import "theme/partials/featurebox";
 @import "theme/partials/blog";

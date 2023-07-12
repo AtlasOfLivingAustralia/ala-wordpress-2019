@@ -1,7 +1,6 @@
 .hero-slider {
   overflow: hidden;
   position: relative;
-  margin-bottom: 30px;
   .swiper-wrapper {
     position: absolute;
     top: 0;
@@ -40,6 +39,11 @@
     margin-left: -3em;
     .swiper-pagination-bullet {
       margin-right: 1em;
+      width: 0.7em;
+      height: 0.7em;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: white;
     }
   }
   .authorship {
