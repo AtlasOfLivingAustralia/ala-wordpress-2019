@@ -91,58 +91,13 @@
 }
 
 .featured-swiper {
-  position: relative;
+  // position: relative;
   .featured-button-next, .featured-button-prev {
     display: none;
   }
-  .swiper-wrapper {
-    width: auto;
-  }
-  &.swiper-container-horizontal {
-    .swiper-wrapper {
-      width: 100%;
+  .row {
+    .swiper-slide {
+      margin-bottom: 1em;
     }
-    .featured-button-next, .featured-button-prev {
-      display: inline-block;
-      position: absolute;
-      top: 50%;
-      font-size: 48px;
-      color: $c-text;
-      z-index: 50;
-      background-color: #FFF;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
-      box-shadow: 0 3px 20px 0 rgba(0,0,0,0.2);
-      opacity: 1;
-      transition: all 150ms ease;
-      &.swiper-button-disabled {
-        opacity: 0.4;
-      }
-    }
-    .featured-button-next {
-      transform: translate(50%, -50%);
-      right: 0;
-      padding-left: 5px;
-    }
-    .featured-button-prev {
-      transform: translate(-50%, -50%);
-      left: 0;
-      padding-right: 5px;
-    }
-    .row {
-      margin: 0;
-      flex-wrap: nowrap;
-      .swiper-slide {
-        max-width: none;
-        flex: none;
-        padding: 0;
-      }
-    }
-  }
-  @include media-breakpoint-down(xs) {
-    margin: 0 20px;
   }
 }

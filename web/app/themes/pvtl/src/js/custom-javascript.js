@@ -123,41 +123,34 @@
 
       function initFeaturedSwiper() {
         var screenWidth = $(window).width();
-        if(screenWidth < 992 && featuredSwiper == undefined) {
+        //if(screenWidth < 992 && featuredSwiper == undefined) {
           featuredSwiper = new Swiper(`.featured-${index}`, {
             loop: false,
-            slidesPerView: 2,
-            spaceBetween: 40,
+            slidesPerView: auto,
+            spaceBetween: 10,
             speed: 1000,
-            autoplay: {
-              delay: 5000,
-              disableOnInteraction: false
-            },
+            autoplay: false,
             preventClicks: false,
             effect: 'slide',
             preloadImages: false,
             lazy: {
               loadPrevNext: true,
             },
-            navigation: {
-              nextEl: '.featured-button-next',
-              prevEl: '.featured-button-prev',
-            },
+            navigation: false,
             // Responsive breakpoints
             breakpoints: {
-              // when window width is <= 7637px
-              767: {
-                slidesPerView: 1,
-                spaceBetween: 40
+              // when window width is <= 
+              992: {
+                slidesPerView: 1
               }
             }
           });
-        } else if (screenWidth > 991 && featuredSwiper != undefined) {
-          featuredSwiper.destroy();
-          featuredSwiper = undefined;
-          jQuery(el).find('.swiper-wrapper').removeAttr('style');
-          jQuery(el).find('.swiper-slide').removeAttr('style');
-        }
+       // } else if (screenWidth > 991 && featuredSwiper != undefined) {
+          //featuredSwiper.destroy();
+          //featuredSwiper = undefined;
+          //jQuery(el).find('.swiper-wrapper').removeAttr('style');
+          //jQuery(el).find('.swiper-slide').removeAttr('style');
+        //}
       }
 
       //Swiper plugin initialization

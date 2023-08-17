@@ -48,7 +48,7 @@ class FeatureBox extends RegisterBlocks
 			   </div>
 			   <div class="featured-swiper">
 				   <div class="row swiper-wrapper">
-					   <div class="col-xs-12 col-md-4 swiper-slide">
+					   <div class="col-xs-12 col-md-6 col-lg-4 swiper-slide">
 						   <a href="<?= $link1; ?>" title="<?= $title1esc; ?>" class="link-box">
 							   <img src="<?= $image1['sizes']['featured'] ?>" alt="<?= $title1esc; ?>" />
 							   <div class="overlay">
@@ -58,7 +58,7 @@ class FeatureBox extends RegisterBlocks
 							   </div>
 						   </a>
 					   </div>
-					   <div class="col-xs-12 col-md-4 swiper-slide">
+					   <div class="col-xs-12 col-md-6 col-lg-4 swiper-slide">
 						   <a href="<?= $link2; ?>" title="<?= $title2esc; ?>" class="link-box">
 							   <img src="<?= $image2['sizes']['featured'] ?>" alt="<?= $title2esc; ?>" />
 							   <div class="overlay">
@@ -68,7 +68,7 @@ class FeatureBox extends RegisterBlocks
 							   </div>
 						   </a>
 					   </div>
-					   <div class="col-xs-12 col-md-4 swiper-slide">
+					   <div class="col-xs-12 col-md-6 col-lg-4 swiper-slide">
 						   <a href="<?= $link3; ?>" title="<?= $title3esc; ?>" class="link-box">
 							   <img src="<?= $image3['sizes']['featured'] ?>" alt="<?= $title3esc; ?>" />
 							   <div class="overlay">
