@@ -77,18 +77,12 @@ class LatestPosts extends RegisterBlocks
 					<div class="social-tabs">
 						<ul class="nav nav-pills">
 							<li>
-								<a class="active" href="#twitter" data-toggle="tab">Twitter</a>
-							</li>
-							<li>
 								<a href="#facebook" data-toggle="tab">Facebook</a>
 							</li>
 						</ul>
 
 						<div class="tab-content clearfix">
-							<div class="tab-pane fade active show" id="twitter">
-								<a class="twitter-timeline" data-height="246" href="https://twitter.com/atlaslivingaust?ref_src=twsrc%5Etfw">Tweets by atlaslivingaust</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-							</div>
-							<div class="tab-pane fade" id="facebook">
+							<div class="tab-pane fade active show" id="facebook">
 								<div id="fb-root"></div>
 								<script>(function(d, s, id) {
 										var js, fjs = d.getElementsByTagName(s)[0];
