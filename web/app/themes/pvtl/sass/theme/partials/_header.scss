@@ -8,8 +8,8 @@
 
 .alert-ala {
   color: black;
-  background-color: $primary;
-  border-color: darken($primary, 5%);
+  // lighter bg for contrast - matches home tabs
+  background-color: rgb(245, 142, 121);
   margin-bottom: 0;
   a {
     color: black;
