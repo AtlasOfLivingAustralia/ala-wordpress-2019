@@ -7,12 +7,12 @@
 }
 
 .alert-ala {
-  color: black;
-  // lighter bg for contrast - matches home tabs
-  background-color: rgb(245, 142, 121);
+  color: white;
+  // darker bg for contrast WCAG AAA
+  background-color: #923e2d;
   margin-bottom: 0;
   a {
-    color: black;
+    color: white;
   }
 }
 
