@@ -17,6 +17,7 @@ $custom_logo_attr = array(
 	'class'    => 'custom-logo',
 	'itemprop' => 'logo',
 );
+$auth_system_home_site = 'cognito'; // 'cas' or 'cognito'
 $auth_buttons_display = 'visible';
 if ( get_field( 'auth_buttons_display', 'option' ) ) {
 	if ( get_field( 'auth_buttons_display', 'option' ) == 'hidden' ) $auth_buttons_display = 'hidden';
@@ -62,7 +63,16 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					<div class="account">
 						<?php if ( $auth_buttons_display != 'hidden' ) { ?>
 							<?php if ( $auth_buttons_display == 'visible' ) { ?>
-
+								<?php if ( $auth_system_home_site == 'cognito' ) { ?>
+						<div class="ala-auth-buttons-logged-in d-none">
+							<a href="<?php echo get_ala_auth_server(); ?>/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
+							<a href="<?php echo get_ala_auth_server(); ?>/userdetails/logout" class="btn btn-primary btn-sm">Logout</a>
+						</div>
+						<div class="ala-auth-buttons-logged-out">
+							<a href="<?php echo get_ala_auth_server(); ?>/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign Up</a>
+							<a href="<?php echo get_ala_auth_server(); ?>/userdetails/login?path=<?php echo get_home_url(); ?>/" class="btn btn-primary btn-sm">Login</a>
+						</div>
+							<?php } else { ?>
 						<div class="ala-auth-buttons-logged-in d-none">
 							<a href="<?php echo get_ala_auth_server(); ?>/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
 							<a href="<?php echo get_ala_auth_server(); ?>/cas/logout" class="btn btn-primary btn-sm">Logout</a>
@@ -71,8 +81,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 							<a href="<?php echo get_ala_auth_server(); ?>/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign Up</a>
 							<a href="<?php echo get_ala_auth_server(); ?>/cas/login?service=<?php echo get_home_url(); ?>/" class="btn btn-primary btn-sm">Login</a>
 						</div>
-
-
+							<?php } ?>
 						<?php } else { ?>
 							<a href="https://auth.ala.org.au/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
 						<?php } ?>

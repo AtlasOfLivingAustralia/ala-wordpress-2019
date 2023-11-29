@@ -13,6 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $container = get_theme_mod( 'understrap_container_type' );
 $header_search_toggled = true;
+$auth_system_home_site = 'cognito'; // 'cas' or 'cognito'
 if ( get_field( 'search_bar_in_header', 'option' ) && get_field( 'search_bar_in_header', 'option' ) == 'visible') $header_search_toggled = false;
 $auth_buttons_display = 'visible';
 if ( get_field( 'auth_buttons_display', 'option' ) ) {
@@ -106,6 +107,18 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 
 		<?php } ?>
 		<?php if ( $auth_buttons_display != 'hidden' ) { ?>
+			<?php if ( $auth_system_home_site == 'cognito' ) { ?>
+						<div class="account d-lg-block">
+							<div class="ala-auth-buttons-logged-in d-none">
+								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
+								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/logout" class="btn btn-outline-white btn-sm">Logout</a>
+							</div>
+							<div class="ala-auth-buttons-logged-out">
+								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign up</a>
+								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/login?path=<?php echo get_home_url(); ?>/" class="btn btn-primary btn-sm">Login</a>
+							</div>
+						</div>
+			<?php } else { ?>
 						<div class="account d-lg-block">
 							<div class="ala-auth-buttons-logged-in d-none">
 								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/myprofile/" class="btn btn-outline-white btn-sm">Profile</a>
@@ -116,6 +129,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 								<a href="<?php echo get_ala_auth_server(); ?>/cas/login?service=<?php echo get_home_url(); ?>/" class="btn btn-primary btn-sm">Login</a>
 							</div>
 						</div>
+			<?php } ?>
 		<?php } ?>
 
 					</div>
@@ -142,6 +156,27 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 							Search</button>
 					<?php if ( $auth_buttons_display != 'hidden' ) { ?>
 					<?php if ( $auth_buttons_display == 'visible' ) { ?>
+						<?php if ( $auth_system_home_site == 'cognito' ) { ?>
+					<div class="ala-auth-buttons-logged-in d-none">
+						<a href="<?php echo get_ala_auth_server(); ?>/userdetails/myprofile/" class="account-mobile order-2 d-lg-none" title="My Account">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 37 41">
+								<defs>
+									<style>
+										.account-icon {
+											fill: #212121;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<path id="Account" class="account-icon" d="M614.5,107.1a11.549,11.549,0,1,0-11.459-11.549A11.516,11.516,0,0,0,614.5,107.1Zm0-21.288a9.739,9.739,0,1,1-9.664,9.739A9.711,9.711,0,0,1,614.5,85.81Zm9.621,23.452H604.874a8.927,8.927,0,0,0-8.881,8.949V125h37v-6.785A8.925,8.925,0,0,0,624.118,109.262Zm7.084,13.924H597.789v-4.975a7.12,7.12,0,0,1,7.085-7.139h19.244a7.119,7.119,0,0,1,7.084,7.139v4.975Z" transform="translate(-596 -84)"/>
+							</svg>
+							Account</a>
+						<a href="<?php echo get_ala_auth_server(); ?>/userdetails/logout" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Logout"><i class="fa fa-sign-out"></i></a>
+					</div>
+					<div class="ala-auth-buttons-logged-out">
+						<a href="<?php echo get_ala_auth_server(); ?>/userdetails/login?path=<?php echo get_home_url(); ?>/" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Login"><i class="fa fa-sign-in"></i></a>
+					</div>
+						<?php } else { ?>
 					<div class="ala-auth-buttons-logged-in d-none">
 						<a href="<?php echo get_ala_auth_server(); ?>/userdetails/myprofile/" class="account-mobile order-2 d-lg-none" title="My Account">
 							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 37 41">
@@ -161,6 +196,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 					<div class="ala-auth-buttons-logged-out">
 						<a href="<?php echo get_ala_auth_server(); ?>/cas/login?service=<?php echo get_home_url(); ?>/" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Login"><i class="fa fa-sign-in"></i></a>
 					</div>
+						<?php } ?>
 					<?php } else { ?>
 						<a href="<?php echo get_ala_auth_server(); ?>/userdetails/myprofile/" class="account-mobile order-2 d-lg-none" title="My Account">
 							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 37 41">
