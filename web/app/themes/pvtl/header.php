@@ -115,7 +115,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 							</div>
 							<div class="ala-auth-buttons-logged-out">
 								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/registration/createAccount" class="btn btn-outline-white btn-sm">Sign up</a>
-								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/login?path=<?php echo get_home_url(); ?>/" class="btn btn-primary btn-sm">Login</a>
+								<a href="<?php echo get_ala_auth_server(); ?>/userdetails/login?path=<?php echo get_ala_auth_server(); ?>/userdetails/myprofile/" class="btn btn-primary btn-sm">Login</a>
 							</div>
 						</div>
 			<?php } else { ?>
@@ -174,7 +174,7 @@ if ( get_field( 'auth_buttons_display', 'option' ) ) {
 						<a href="<?php echo get_ala_auth_server(); ?>/userdetails/logout" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Logout"><i class="fa fa-sign-out"></i></a>
 					</div>
 					<div class="ala-auth-buttons-logged-out">
-						<a href="<?php echo get_ala_auth_server(); ?>/userdetails/login?path=<?php echo get_home_url(); ?>/" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Login"><i class="fa fa-sign-in"></i></a>
+						<a href="<?php echo get_ala_auth_server(); ?>/userdetails/login?path=<?php echo get_ala_auth_server(); ?>/userdetails/myprofile/" class="account-mobile account-mobile-fa order-3 d-lg-none" title="Login"><i class="fa fa-sign-in"></i></a>
 					</div>
 						<?php } else { ?>
 					<div class="ala-auth-buttons-logged-in d-none">
