@@ -17,10 +17,11 @@
     /**
      * Display login/logout buttons (ES6)
      */
-    var alaJSAuthCookieName='ALA-js-auth';
-    var alaJSAuthCookieValue = readCookie(alaJSAuthCookieName);
-    // console.log('Cookie '+alaJSAuthCookieName+' cookie has value '+alaJSAuthCookieValue);
-    if (alaJSAuthCookieValue == 'loggedin'){
+    //var alaJSAuthCookieName='ALA-js-auth';
+    const alaJSAuthCookieName='ALA-Auth-Test';
+    const alaJSAuthCookieValue = readCookie(alaJSAuthCookieName);
+    console.log('Cookie '+alaJSAuthCookieName+' cookie has value '+alaJSAuthCookieValue);
+    if (alaJSAuthCookieValue != null){
       $('.ala-auth-buttons-logged-in').removeClass("d-none");
       $('.ala-auth-buttons-logged-out').addClass("d-none");
     } else {
