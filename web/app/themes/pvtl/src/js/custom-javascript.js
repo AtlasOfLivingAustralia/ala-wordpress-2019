@@ -19,7 +19,7 @@
      */
     //var alaJSAuthCookieName='ALA-js-auth';
     let alaJSAuthCookieName='ALA-Auth';
-    if (window.location.hostname.indexOf("-test") == -1 || window.location.hostname.indexOf("-dev") == -1) alaJSAuthCookieName='ALA-Auth-Test';
+    if (window.location.hostname.indexOf("-test") != -1 || window.location.hostname.indexOf("-dev") != -1) alaJSAuthCookieName='ALA-Auth-Test';
     const alaJSAuthCookieValue = readCookie(alaJSAuthCookieName);
     //console.log('Cookie '+alaJSAuthCookieName+' cookie has value '+alaJSAuthCookieValue);
     if (alaJSAuthCookieValue != null){
