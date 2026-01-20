@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $container = get_theme_mod( 'understrap_container_type' );
 $header_search_toggled = true;
-$auth_system_home_site = 'cognito'; // 'cas' or 'cognito'
+$auth_system_home_site = get_ala_auth_system(); // 'cas' or 'cognito'
 if ( get_field( 'search_bar_in_header', 'option' ) && get_field( 'search_bar_in_header', 'option' ) == 'visible') $header_search_toggled = false;
 $auth_buttons_display = 'visible';
 if ( get_field( 'auth_buttons_display', 'option' ) ) {

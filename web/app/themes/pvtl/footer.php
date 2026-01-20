@@ -17,7 +17,7 @@ $custom_logo_attr = array(
 	'class'    => 'custom-logo',
 	'itemprop' => 'logo',
 );
-$auth_system_home_site = 'cognito'; // 'cas' or 'cognito'
+$auth_system_home_site = get_ala_auth_system(); // 'cas' or 'cognito'
 $auth_buttons_display = 'visible';
 if ( get_field( 'auth_buttons_display', 'option' ) ) {
 	if ( get_field( 'auth_buttons_display', 'option' ) == 'hidden' ) $auth_buttons_display = 'hidden';

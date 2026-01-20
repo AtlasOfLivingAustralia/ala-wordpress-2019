@@ -219,6 +219,14 @@ function get_ala_auth_server() {
     return $auth_server;
 }
 
+function get_ala_auth_system() {
+    $auth_system = 'cas';
+    if (defined('ALA_AUTH_SYSTEM')) {
+        $auth_system = ALA_AUTH_SYSTEM;
+    }
+    return $auth_system;
+}
+
 // Sets up theme Image sizes and registers support for featured images.
 
 function image_setup()

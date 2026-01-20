@@ -43,6 +43,8 @@ Config::define('WP_HOME', env('WP_HOME'));
 Config::define('WP_SITEURL', env('WP_SITEURL'));
 Config::define('ALA_AUTH_URL', env('ALA_AUTH_URL'));
 
+Config::define('ALA_AUTH_SYSTEM', env('ALA_AUTH_SYSTEM'));
+
 /**
  * Custom Content Directory
  */
