@@ -18,7 +18,11 @@
      * Display login/logout buttons (ES6)
      */
     var alaJSAuthCookieName='ALA-js-auth';
-    var alaJSAuthCookieValue = readCookie(alaJSAuthCookieName);
+    // let alaJSAuthCookieName='ALA-Auth';
+    // if (window.location.hostname.indexOf(".test") != -1 || window.location.hostname.indexOf(".dev") != -1 || (window.location.hostname.indexOf("-test") != -1 || window.location.hostname.indexOf("-dev") != -1)) {
+    //   alaJSAuthCookieName='ALA-Auth-Test';
+    // }
+    const alaJSAuthCookieValue = readCookie(alaJSAuthCookieName);
     // console.log('Cookie '+alaJSAuthCookieName+' cookie has value '+alaJSAuthCookieValue);
     if (alaJSAuthCookieValue == 'loggedin'){
       $('.ala-auth-buttons-logged-in').removeClass("d-none");
